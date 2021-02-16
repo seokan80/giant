@@ -43,19 +43,19 @@
                             </div>
                             <div class="gnb">
                                 <ul class="dep1">
-                                    <li class="active">
+                                    <li>
                                         <a href="../company/about.html"><span>회사소개</span></a>
                                         <ul class="dep2">
                                             <li><a href="../company/about.html"><span>회사소개</span></a></li>
-                                            <li class="active"><a href="../company/history.html"><span>연혁</span></a></li>
+                                            <li><a href="../company/history.html"><span>연혁</span></a></li>
                                             <li><a href="../company/flow.html"><span>학습 FLOW</span></a></li>
                                             <li><a href="../company/location.html"><span>오시는 길</span></a></li>
                                         </ul>
                                     </li>
                                     <li><a href="../giant/giant.html"><span>책읽는 거인</span></a></li>
-                                    <li><a href="../customer/notice.html"><span>고객센터</span></a>
+                                    <li class="active"><a href="../customer/notice.html"><span>고객센터</span></a>
                                         <ul class="dep2">
-                                            <li><a href="../customer/notice.html"><span>공지사항</span></a></li>
+                                            <li class="active"><a href="../customer/notice.html"><span>공지사항</span></a></li>
                                             <li><a href="../customer/faq.html"><span>FAQ</span></a></li>
                                             <li><a href="../customer/qna.html"><span>1:1 문의</span></a></li>
                                         </ul>
@@ -77,82 +77,84 @@
                         <!-- 실 컨텐츠 -->
 
                         <div class="center">
-                            <div class="d-flex justify-content-between align-items-end border-bottom-dark pb-3">
-                                <h2 class="title">회원가입</h2>
-                                <div class="step">
-                                    <ol>
-                                        <li class="active">약관동의</li>
-                                        <li>회원정보입력</li>
-                                        <li>가입신청완료</li>
-                                    </ol>
+                            <div class="row justify-content-between align-items-center mb-3">
+                                <div class="col-auto">
+                                    <h2 class="title mb-0">공지사항</h2>
                                 </div>
-                            </div>
-                            <div class="agree">
-                                <div class="agree-item">
-                                    <h3>서비스 이용약관</h3>
-                                    <textarea name="" id="" cols="" rows="8" class="form-control" readonly>약관 내용
-약관 내용
-약관 내용
-약관 내용
-약관 내용
-약관 내용
-약관 내용
-약관 내용
-                                    </textarea>
-                                    <div class="text-right mt-2">
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="agree1">
-                                            <label class="custom-control-label" for="agree1">서비스 이용약관 내용에 동의합니다.</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="agree-item">
-                                    <h3>개인정보 취급방침</h3>
-                                    <textarea name="" id="" cols="" rows="8" class="form-control" readonly>약관 내용
-약관 내용
-약관 내용
-약관 내용
-약관 내용
-약관 내용
-약관 내용
-약관 내용
-                                    </textarea>
-                                    <div class="text-right mt-2">
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="agree2">
-                                            <label class="custom-control-label" for="agree2">개인정보 취급방침 내용에 동의합니다.</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="agree-item">
-                                    <h3>안내사항</h3>
-                                    <textarea name="" id="" cols="" rows="8" class="form-control" readonly>약관 내용
-약관 내용
-약관 내용
-약관 내용
-약관 내용
-약관 내용
-약관 내용
-약관 내용
-                                    </textarea>
-                                    <div class="text-right mt-2">
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="agree3">
-                                            <label class="custom-control-label" for="agree3">안내사항을 확인했습니다.</label>
+                                <div class="col col-md-auto">
+                                    <div class="search-form">
+                                        <div class="row row-8">
+                                            <div class="col-auto">
+                                                <select name="" id="" class="custom-select">
+                                                    <option value="">제목</option>
+                                                </select>
+                                            </div>
+                                            <div class="col col-md-auto">
+                                                <input type="text" class="form-control" placeholder="검색어 입력">
+                                            </div>
+                                            <div class="col-auto">
+                                                <button type="submit" class="btn btn-dark">검색</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="text-center mt-2">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="agreeAll">
-                                    <label class="custom-control-label" for="agreeAll">위 모든 약관에 동의합니다.</label>
-                                </div>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <caption>공지사항</caption>
+                                    <colgroup>
+                                        <col style="width:100px">
+                                        <col>
+                                        <col style="width:160px">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">번호</th>
+                                            <th class="text-center">제목</th>
+                                            <th class="text-center">등록일</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center"><span class="badge badge-dark">공지</span></td>
+                                            <td class="text-left"><a href="notice_detail.html">제목 입니다 <i class="new ml-2">N</i></a></td>
+                                            <td class="text-center">2021.02.01</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">2</td>
+                                            <td class="text-left"><a href="notice_detail.html">제목 입니다</a></td>
+                                            <td class="text-center">2021.02.01</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">1</td>
+                                            <td class="text-left"><a href="notice_detail.html">제목 입니다</a></td>
+                                            <td class="text-center">2021.02.01</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            <div class="row row-10 justify-content-center mt-6">
-                                <div class="col-auto"><a href="" class="btn btn-dark btn-lg">학생 회원으로 가입</a></div>
-                                <div class="col-auto"><a href="" class="btn btn-dark btn-lg">교사 회원으로 가입</a></div>
-                                <div class="col-auto"><a href="" class="btn btn-dark btn-lg">센터 회원으로 가입</a></div>
+                            <nav class="text-center">
+                                <ul class="pagination">
+                                    <li class="page-item page-arrow disabled">
+                                        <a class="page-link" href="#"><span class="sr-only">이전</span><i class="fas fa-angle-left"></i></a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item active"><a class="page-link" href="#">2 <span class="sr-only">(current)</span></a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                    <li class="page-item page-arrow">
+                                        <a class="page-link" href="#"><span class="sr-only">다음</span><i class="fas fa-angle-right"></i></a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="row justify-content-between align-items-center mt-3 mt-lg-0">
+                                <div class="col-auto">
+                                    <a href="" class="btn btn-outline-dark"><i class="fas fa-bars mr-2"></i>목록</a>
+                                </div>
+                                <div class="col-auto">
+
+                                </div>
                             </div>
                         </div>
 

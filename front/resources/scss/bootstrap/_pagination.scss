@@ -1,5 +1,5 @@
 .pagination {
-  display: flex;
+  display: inline-flex;
   @include list-unstyled();
   @include border-radius();
 }

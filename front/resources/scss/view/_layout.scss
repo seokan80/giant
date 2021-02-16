@@ -138,13 +138,13 @@ html.open-gnb-dep2{
         position: absolute;left: -30px;bottom: -45px;z-index: 1;width: 100%;display: none;
         > li{
             position: relative;
-            > a{display: inline-block;padding: 12px 32px;color: #fff;white-space: nowrap;}
+            > a{display: inline-block;padding: 11px 32px;color: #fff;white-space: nowrap;font-size: 1rem;font-weight: 700;}
             + li::before{
                 content: '';width: 1px;height: 12px;background: #fff;position: absolute;left: 0;top: 50%;margin-top: -5px;
             }
         }
         > li.active{
-            > a{color: $primary;font-weight: 700;}
+            > a{color: $orange;font-weight: 700;}
         }
     }
 }
@@ -299,4 +299,11 @@ html.open-gnb-dep2{
         }
         &.util{display: none;}
     }
+}
+
+.center{
+    width: 842px;margin: 0 auto;
+}
+@include media-breakpoint-down(md) {
+    .center{width: auto;}
 }

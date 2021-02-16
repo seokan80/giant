@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-Compatible" content="IE=edge">
-    <title>책 읽는 거인</title>
+    <title>책 읽는 거인 Guide</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
@@ -40,28 +40,29 @@
         <section>
             <h2>버튼</h2>
             <div>
-                <button type="button" class="btn btn-primary btn-block">버튼(block)</button>
+                <button type="button" class="btn btn-dark btn-block">버튼(block)</button>
             </div>
             <div>
+                <button type="button" class="btn btn-dark">버튼</button>
+                <button type="button" class="btn btn-darkgray">버튼</button>
+                <button type="button" class="btn btn-gray">버튼</button>
                 <button type="button" class="btn btn-primary">버튼</button>
                 <button type="button" class="btn btn-secondary">버튼</button>
                 <button type="button" class="btn btn-success">버튼</button>
                 <button type="button" class="btn btn-info">버튼</button>
                 <button type="button" class="btn btn-warning">버튼</button>
                 <button type="button" class="btn btn-danger">버튼</button>
-                <button type="button" class="btn btn-dark">버튼</button>
-                <button type="button" class="btn btn-gray">버튼</button>
-                <button type="button" class="btn btn-light">버튼</button>
             </div>
             <div>
+                <button type="button" class="btn btn-outline-dark">버튼</button>
+                <button type="button" class="btn btn-outline-darkgray">버튼</button>
+                <button type="button" class="btn btn-outline-gray">버튼</button>
                 <button type="button" class="btn btn-outline-primary">버튼</button>
                 <button type="button" class="btn btn-outline-secondary">버튼</button>
                 <button type="button" class="btn btn-outline-success">버튼</button>
                 <button type="button" class="btn btn-outline-info">버튼</button>
                 <button type="button" class="btn btn-outline-warning">버튼</button>
                 <button type="button" class="btn btn-outline-danger">버튼</button>
-                <button type="button" class="btn btn-outline-dark">버튼</button>
-                <button type="button" class="btn btn-outline-light">버튼</button>
             </div>
             <div>
                 <button type="button" class="btn btn-sm btn-primary">버튼</button>
@@ -151,18 +152,22 @@
             </div>
         </section>
         <section>
+            <h2>Badge</h2>
+            <div>
+
+                <span class="badge badge-dark">공지</span>
+                <span class="badge badge-danger">공지</span>
+                <span class="badge badge-warning">공지</span>
+                <i class="new ml-2">N</i>
+            </div>
+        </section>
+        <section>
             <h2>Tab</h2>
             <div>
-                <nav class="my-tab">
-                    <ul class="nav nav-tabs" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" data-toggle="pill" href="#t1" role="tab">Sales</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="pill" href="#t2" role="tab">Service</a>
-                        </li>
-                    </ul>
-                </nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-link active" data-toggle="tab" href="#t1" role="tab" aria-selected="true">아이디 찾기</a>
+                    <a class="nav-link" data-toggle="tab" href="#t2" role="tab" aria-selected="false">비밀번호 찾기</a>
+                </div>
             </div>
         </section>
         <section>
@@ -200,6 +205,21 @@
                         </tr>
                     </tbody>
                 </table>
+                <nav class="text-center">
+                    <ul class="pagination">
+                        <li class="page-item page-arrow disabled">
+                            <a class="page-link" href="#"><span class="sr-only">이전</span><i class="fas fa-angle-left"></i></a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item active"><a class="page-link" href="#">2 <span class="sr-only">(current)</span></a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item page-arrow">
+                            <a class="page-link" href="#"><span class="sr-only">다음</span><i class="fas fa-angle-right"></i></a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </section>
     </div>
