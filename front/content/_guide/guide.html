@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>책 읽는 거인</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/plugin/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../resources/plugin/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugin/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jquery -->
+    <script src="../../resources/plugin/jquery/jquery.min.js"></script>
+    <!-- jquery ui -->
+    <script src="../../resources/plugin/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../../resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper -->
+    <script src="../../resources/plugin/swiper/js/swiper.min.js"></script>
+</head>
+
+<body>
+    <style>
+        body{margin: 20px;}
+        h1{text-align: center;margin-bottom: 10px;}
+        #guide{overflow: hidden;}
+        section{float: left;padding: 15px 20px;width: 50%;}
+        section > div + div{margin-top: 5px;}
+        h2{margin-bottom: 15px;font-size: 22px;}
+        h2::before{content: '#';}
+        @media (max-width: 991.98px){
+            section{width: 100%;padding: 15px 0;}
+        }
+    </style>
+    <div id="guide">
+        <section>
+            <h2>버튼</h2>
+            <div>
+                <button type="button" class="btn btn-primary btn-block">버튼(block)</button>
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary">버튼</button>
+                <button type="button" class="btn btn-secondary">버튼</button>
+                <button type="button" class="btn btn-success">버튼</button>
+                <button type="button" class="btn btn-info">버튼</button>
+                <button type="button" class="btn btn-warning">버튼</button>
+                <button type="button" class="btn btn-danger">버튼</button>
+                <button type="button" class="btn btn-dark">버튼</button>
+                <button type="button" class="btn btn-gray">버튼</button>
+                <button type="button" class="btn btn-light">버튼</button>
+            </div>
+            <div>
+                <button type="button" class="btn btn-outline-primary">버튼</button>
+                <button type="button" class="btn btn-outline-secondary">버튼</button>
+                <button type="button" class="btn btn-outline-success">버튼</button>
+                <button type="button" class="btn btn-outline-info">버튼</button>
+                <button type="button" class="btn btn-outline-warning">버튼</button>
+                <button type="button" class="btn btn-outline-danger">버튼</button>
+                <button type="button" class="btn btn-outline-dark">버튼</button>
+                <button type="button" class="btn btn-outline-light">버튼</button>
+            </div>
+            <div>
+                <button type="button" class="btn btn-sm btn-primary">버튼</button>
+                <button type="button" class="btn btn-sm btn-success">버튼</button>
+                <button type="button" class="btn btn-sm btn-info">버튼</button>
+                <button type="button" class="btn btn-sm btn-danger">버튼</button>
+            </div>
+
+            <div>
+                <button type="button" class="btn btn-lg btn-primary">버튼</button>
+                <button type="button" class="btn btn-lg btn-success">버튼</button>
+                <button type="button" class="btn btn-lg btn-info">버튼</button>
+                <button type="button" class="btn btn-lg btn-danger">버튼</button>
+            </div>
+        </section>
+        <section>
+            <h2>Form</h2>
+            <div>
+                <div class="row">
+                    <div class="col-12 col-md">
+                        <div class="form-group">
+                            <label for="form1">이메일</label>
+                            <input type="text" id="form1" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="form2">첨부파일</label>
+                    <div class="input-group">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="noticeFile">
+                            <label class="custom-file-label" for="noticeFile">Choose file</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="form3">내용</label>
+                    <textarea name="" id="form3" cols="" rows="2" class="form-control" maxlength="500" data-byte-target="#byte-check-cont"></textarea>
+                    <div class="text-right mt-2">(<span id="byte-check-cont">0</span>/500)</div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Form 요소</h2>
+            <div>
+                <input type="text" class="form-control" value="input medium">
+                <input type="text" class="form-control form-control-lg" value="input large">
+                <select name="" id="" class="custom-select">
+                    <option value="">select medium</option>
+                    <option value="">20</option>
+                </select>
+                <select name="" id="" class="custom-select custom-select-lg">
+                    <option value="">select large</option>
+                    <option value="">20</option>
+                </select>
+            </div>
+            <div>
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" type="radio" id="rdo1">
+                    <label for="rdo1" class="custom-control-label">라디오</label>
+                </div>
+
+                <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" type="checkbox" id="chk1">
+                    <label for="chk1" class="custom-control-label">체크박스</label>
+                </div>
+
+            </div>
+        </section>
+        <section>
+            <h2>Text</h2>
+            <div>
+                <span class="text-primary">텍스트 컬러</span>
+                <span class="text-secondary">텍스트 컬러</span>
+                <span class="text-info">텍스트 컬러</span>
+                <span class="text-success">텍스트 컬러</span>
+                <span class="text-danger">텍스트 컬러</span>
+                <a href="#none" class="text-underline">텍스트 underline</a>
+            </div>
+        </section>
+        <section>
+            <h2>Align</h2>
+            <div>
+                <div class="text-left">텍스트 정렬</div>
+                <div class="text-center">텍스트 정렬</div>
+                <div class="text-right">텍스트 정렬</div>
+            </div>
+        </section>
+        <section>
+            <h2>Tab</h2>
+            <div>
+                <nav class="my-tab">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="pill" href="#t1" role="tab">Sales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="pill" href="#t2" role="tab">Service</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <section>
+            <h2>Card</h2>
+            <div>
+                <div class="card card-primary card-outline">
+                    <div class="card-body">
+                        카드 내용
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Table</h2>
+            <div>
+                <table class="table table-bordered table-mobile-normal">
+                    <caption>Driver Evaluation Table</caption>
+                    <thead>
+                        <tr>
+                            <th class="text-center"></th>
+                            <th class="text-center">Performance (Act/Pos)</th>
+                            <th class="text-center">Driver Evaluation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center mobile-subject">First point of contact</td>
+                            <td class="text-center" data-label="Performance (Act/Pos)">2/3</td>
+                            <td class="text-center" data-label="Driver Evaluation">5</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center mobile-subject">First point of contact</td>
+                            <td class="text-center" data-label="Performance (Act/Pos)">2/3</td>
+                            <td class="text-center" data-label="Driver Evaluation">5</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

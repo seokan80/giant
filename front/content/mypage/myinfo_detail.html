@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>책 읽는 거인</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/plugin/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="../../resources/plugin/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../../resources/plugin/fullpage/fullpage.css">
+    <link rel="stylesheet" href="../../resources/css/style.css">
+    <!-- jquery -->
+    <script src="../../resources/plugin/jquery/jquery.min.js"></script>
+    <!-- jquery ui -->
+    <script src="../../resources/plugin/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="../../resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper -->
+    <script src="../../resources/plugin/swiper/js/swiper.min.js"></script>
+    <!-- fullpage -->
+    <script src="../../resources/plugin/fullpage/fullpage.js"></script>
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header-block">
+            <div id="header">
+                <div class="container">
+                    <div class="header-wrap">
+                        <h1 class="logo"><a href="../../content/main/main.html"><span class="sr-only">책 읽는 거인</span></a></h1>
+                        <div class="mobile-header-group">
+                            <div class="h-set">
+                                <div class="h-search">
+                                    <div class="input-wrap">
+                                        <input type="text" placeholder="4주 완성 독해력">
+                                        <button type="submit" class="btn-search"><i class="icon-search"><span class="sr-only">검색</span></i></button>
+                                    </div>
+                                </div>
+                                <div class="h-menu">
+                                    <ul>
+                                        <li><a href="../mypage/myinfo.html">홍길동님</a></li>
+                                        <li><a href="">로그아웃</a></li>
+                                        <li><a href="../mypage/inbox.html"><i class="icon-bell"></i> 알림</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="gnb">
+                                <ul>
+                                    <li><a href="../notice/notice_list.html"><span>공지사항</span></a></li>
+                                    <li><a href="../study/calendar.html"><span>E-학습실</span></a>
+                                        <ul class="dep2">
+                                            <li><a href="../study/calendar.html"><span>학습 캘린더</span></a></li>
+                                            <li><a href="../study/data.html"><span>학습 자료 관리실</span></a></li>
+                                            <li><a href="../study/homework.html"><span>과제 관리</span></a></li>
+                                            <li><a href="../study/vod.html"><span>VOD 영상보기</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="on"><a href="../mypage/myinfo.html"><span>마이페이지</span></a>
+                                        <ul class="dep2">
+                                            <li class="on"><a href="../mypage/myinfo.html"><span>나의 정보</span></a></li>
+                                            <li><a href="../mypage/inbox.html"><span>쪽지함</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href=""><span>커뮤니티</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mobile-menu d-lg-none">
+                            <a role="button" data-id="btn-search"><i class="icon-search"><span class="sr-only">검색</span></i></a>
+                            <a role="button" data-id="btn-hamburger"><i class="btn-hamburger"><span class="sr-only">메뉴</span></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="container-block">
+            <div id="container">
+                <div id="visual" data-category="mypage">
+                    <div class="container">
+                        <h2 class="title">나의 정보</h2>
+                    </div>
+                </div>
+                <div id="nav">
+                    <div class="container">
+                        <div class="home">
+                            <a href="#none" class="ing">HOME</a>
+                        </div>
+                        <div class="nav-dep1">
+                            <a href="javascript:;" class="ing focus"></a>
+                            <ul></ul>
+                        </div>
+                        <div class="nav-dep2">
+                            <div>
+                                <a href="javascript:;" class="ing focus"></a>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="content">
+                    <div class="container">
+                        <!-- 실 컨텐츠 -->
+
+                        <div class="table-top">
+                            <div class="row justify-content-between align-items-center">
+                                <div class="col-auto">
+                                    <div class="count">총 <span>102개</span><span class="d-none d-md-inline">의 수강정보상세가 있습니다.</span></div>
+                                </div>
+                                <div class="col col-md-auto">
+                                    <div class="search-form">
+                                        <div class="row row-10">
+                                            <div class="col-auto">
+                                                <select name="" id="" class="form-control">
+                                                    <option value="">제목</option>
+                                                </select>
+                                            </div>
+                                            <div class="col col-md-auto">
+                                                <input type="text" class="form-control" placeholder="검색어 입력">
+                                            </div>
+                                            <div class="col-auto">
+                                                <button type="submit" class="btn-search"><i class="icon-search"><span class="sr-only">검색</span></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <caption>나의 수강정보 상세</caption>
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">날짜</th>
+                                        <th class="text-center">과목명</th>
+                                        <th class="text-center">수업시간</th>
+                                        <th class="text-center">강사명</th>
+                                        <th class="text-center">출결</th>
+                                        <th class="text-center">보강여부</th>
+                                        <th class="text-center">학기년도</th>
+                                        <th class="text-center">등록 여부</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center">2020.08.03 월요일</td>
+                                        <td class="text-center text-nowrap-m">중등기초</td>
+                                        <td class="text-center text-nowrap-m">18:00 ~ 20:00</td>
+                                        <td class="text-center">김강사</td>
+                                        <td class="text-center">출석</td>
+                                        <td class="text-center">-</td>
+                                        <td class="text-center">2020</td>
+                                        <td class="text-center">1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2020.08.03 월요일</td>
+                                        <td class="text-center text-nowrap-m">중등기초</td>
+                                        <td class="text-center text-nowrap-m">18:00 ~ 20:00</td>
+                                        <td class="text-center">김강사</td>
+                                        <td class="text-center">출석</td>
+                                        <td class="text-center">-</td>
+                                        <td class="text-center">2020</td>
+                                        <td class="text-center">1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2020.08.03 월요일</td>
+                                        <td class="text-center text-nowrap-m">중등기초</td>
+                                        <td class="text-center text-nowrap-m">18:00 ~ 20:00</td>
+                                        <td class="text-center">김강사</td>
+                                        <td class="text-center">출석</td>
+                                        <td class="text-center">-</td>
+                                        <td class="text-center">2020</td>
+                                        <td class="text-center">1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <nav>
+                            <ul class="pagination">
+                                <li class="page-item page-arrow disabled">
+                                    <a class="page-link" href="#"><span class="sr-only">이전</span><i class="icon-page-prev"></i></a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item active"><a class="page-link" href="#">2 <span class="sr-only">(current)</span></a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                <li class="page-item page-arrow">
+                                    <a class="page-link" href="#"><span class="sr-only">다음</span><i class="icon-page-next"></i></a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <!-- //실 컨텐츠 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer-block">
+            <div id="footer">
+                <div class="footer-top">
+                    <div class="container">
+                        <div class="row row-0 align-items-center justify-content-between">
+                            <div class="col-auto">
+                                <ul class="f-menu">
+                                    <li><a href="">서비스이용약관</a></li>
+                                    <li><a href=""><strong>개인정보처리방침</strong></a></li>
+                                    <li><a href="">공식 블로그</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-auto">
+                                <ul class="f-social">
+                                    <li><a href=""><i class="icon-blog"><span class="sr-only">blog</span></i></a></li>
+                                    <li><a href=""><i class="icon-facebook"><span class="sr-only">페이스북</span></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="container">
+                        <div class="logo"><img src="../../resources/images/logo-footer.png" alt="책 읽는 거인"></div>
+                        <div class="company">
+                            SG 청운학원 ㅣ 고객센터 : 02-0000-0000 ㅣ 메일 : abc123@co.kr
+                            경기도 수원시 영통구 영통로213번길 8 ㅣ 대표 : 홍길동 ㅣ 사업자등록번호 : 000-00-000000
+                        </div>
+                        <p class="copyright">Copyright © . All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+    </script>
+</body>
+</html>
