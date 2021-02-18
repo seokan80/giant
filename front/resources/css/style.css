@@ -144,7 +144,7 @@ html.has-dep2 #header::after, html.open-gnb-dep2 #header::after { background: #2
   .h-menu ul li + li { margin-left: 1rem; }
   .h-menu ul li + li::before { margin-right: 1rem; } }
 
-@media (max-width: 991.98px) { .mobile-header-group { background: url("../images/bg-gnb-mobile.jpg") no-repeat 0 0; background-size: auto 100%; position: fixed; width: 100%; height: 100%; left: 0; top: 0; z-index: 999; transform: translate(100%); overflow-x: hidden; padding: 70px 2rem 20px; }
+@media (max-width: 991.98px) { .mobile-header-group { background: rgba(0, 0, 0, 0.7) url("../images/bg-gnb-mobile.jpg") no-repeat 0 0; background-size: auto 100%; position: fixed; width: 100%; height: 100%; left: 0; top: 0; z-index: 999; transform: translate(100%); overflow-x: hidden; padding: 70px 2rem 20px; }
   .mobile-menu { position: absolute; right: 1rem; top: 21px; z-index: 1000; display: flex; align-items: center; }
   .mobile-menu a { display: block; }
   .mobile-menu a + a { margin-left: 15px; }
@@ -156,7 +156,6 @@ html.has-dep2 #header::after, html.open-gnb-dep2 #header::after { background: #2
 
 @media (max-width: 991.98px) { html.open-mobile-menu body, html.open-mobile-search body { overflow: hidden !important; }
   html.open-mobile-menu .mobile-header-group, html.open-mobile-search .mobile-header-group { transform: translate(0); transition: all .25s .03s ease-in-out; }
-  html.open-mobile-menu .mobile-menu, html.open-mobile-search .mobile-menu { top: 25px; right: -3px; }
   html.open-mobile-menu .btn-hamburger, html.open-mobile-search .btn-hamburger { transform: rotate(45deg) translateY(13px); background-color: #fff; }
   html.open-mobile-menu .btn-hamburger:before, html.open-mobile-menu .btn-hamburger:after, html.open-mobile-search .btn-hamburger:before, html.open-mobile-search .btn-hamburger:after { background-color: #fff; }
   html.open-mobile-menu .btn-hamburger:before, html.open-mobile-search .btn-hamburger:before { opacity: 0; }
@@ -204,15 +203,12 @@ html.has-dep2 #header::after, html.open-gnb-dep2 #header::after { background: #2
   .gnb .dep1 { display: block; border: 0; }
   .gnb .dep1 > li { width: 100%; margin: 1rem 0 !important; border: 0 !important; }
   .gnb .dep1 > li > a { text-align: left; line-height: 1.6; font-size: 20px; }
-  .gnb .dep1 > li > a span { position: relative; padding-bottom: 10px; }
-  .gnb .dep1 > li > a span::before { content: ''; width: 36px; height: 3px; position: absolute; bottom: 0; left: 0; }
-  .gnb .dep1 > li.active > a { color: #fff; font-weight: 500; }
-  .gnb .dep1 > li.active > a span::before { background: #fff; }
-  .gnb .dep2 { position: static; text-align: left; display: block; padding-top: 8px; }
+  .gnb .dep1 > li.active > a { color: #ffff29 !important; }
+  .gnb .dep2 { position: static; text-align: left; display: block !important; padding-top: 8px; }
   .gnb .dep2 > li { display: block; }
   .gnb .dep2 > li + li:before { display: none; }
-  .gnb .dep2 > li > a { font-size: 16px; padding: 5px 15px; }
-  .gnb .dep2 > li.active > a { color: #fff; } }
+  .gnb .dep2 > li > a { font-size: 16px; padding: .5rem 1rem; }
+  .gnb .dep2 > li.active > a { color: #ffff29 !important; } }
 
 #container-block { padding-bottom: 200px; padding-top: 70px; }
 

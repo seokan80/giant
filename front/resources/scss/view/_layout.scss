@@ -69,7 +69,7 @@ html.open-gnb-dep2{
 
 @include media-breakpoint-down(md) {
     .mobile-header-group{
-        background: url('../images/bg-gnb-mobile.jpg') no-repeat 0 0;background-size: auto 100%;position: fixed;width: 100%;height: 100%;left: 0;top: 0;z-index: 999;transform: translate(100%);overflow-x: hidden;padding: 70px 2rem 20px;
+        background: rgba(0,0,0,0.7) url('../images/bg-gnb-mobile.jpg') no-repeat 0 0;background-size: auto 100%;position: fixed;width: 100%;height: 100%;left: 0;top: 0;z-index: 999;transform: translate(100%);overflow-x: hidden;padding: 70px 2rem 20px;
     }
     .mobile-menu{
         position: absolute;right: 1rem;top: 21px;z-index: 1000;display: flex;align-items: center;
@@ -92,7 +92,7 @@ html.open-gnb-dep2{
     html.open-mobile-search{
         body{overflow: hidden !important;}
         .mobile-header-group{transform: translate(0);transition: all .25s .03s ease-in-out;}
-        .mobile-menu{top: 25px;right: -3px;}
+        .mobile-menu{}
         .btn-hamburger {
             transform: rotate(45deg) translateY(13px);background-color: $white;
             &:before, &:after {background-color: $white;}
@@ -166,26 +166,23 @@ html.open-gnb-dep2{
             > li{width: 100%;margin:1rem 0 !important;border: 0 !important;
                 > a{
                     text-align: left;line-height: 1.6;font-size: 20px;
-                    span{position: relative;padding-bottom: 10px;}
-                    span::before{content: '';width: 36px;height: 3px;position: absolute;bottom: 0;left: 0;}
                 }
             }
             > li.active{
                 > a{
-                    color: #fff;font-weight: 500;
-                    span::before{background: #fff;}
+                    color: #ffff29 !important;
                 }
             }
         }
         .dep2{
-            position: static;text-align: left;display: block;padding-top: 8px;
+            position: static;text-align: left;display: block !important;padding-top: 8px;
             > li{
                 display: block;
                 & + li:before{display: none;}
-                > a{font-size: 16px;padding: 5px 15px}
+                > a{font-size: 16px;padding: .5rem 1rem}
             }
             > li.active{
-                > a{color: #fff;}
+                > a{color: #ffff29 !important;}
             }
 
         }
