@@ -190,14 +190,16 @@ html.open-gnb-dep2{
 }
 
 #container-block{
-    padding-bottom: 200px;padding-top:70px;
+    padding-bottom: 200px;
 }
 #container{padding-bottom: 150px;}
 @include media-breakpoint-down(md) {
-    #container-block{
-        padding-top: 2rem;
-    }
     #container{padding-bottom: 60px;}
+}
+
+#content{padding-top: 80px;}
+@include media-breakpoint-down(md) {
+    #content{padding-top: 2rem;}
 }
 
 #footer{

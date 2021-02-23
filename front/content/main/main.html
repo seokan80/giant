@@ -8,9 +8,10 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
     <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="../../resources/plugin/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="../../resources/plugin/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="../../resources/plugin/swiper/css/swiper.min.css">
-    <link rel="stylesheet" href="../../resources/plugin/fullpage/fullpage.css">
+    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
     <link rel="stylesheet" href="../../resources/css/style.css">
     <!-- jquery -->
     <script src="../../resources/plugin/jquery/jquery.min.js"></script>
@@ -20,385 +21,94 @@
     <script src="../../resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Swiper -->
     <script src="../../resources/plugin/swiper/js/swiper.min.js"></script>
-    <!-- fullpage -->
-    <script src="../../resources/plugin/fullpage/fullpage.js"></script>
-    <!-- ui 관련 -->
-    <script src="../../resources/js/ui.js"></script>
 </head>
 
-<body class="body-main"> <!-- 메인에 .body-main 추가 -->
+<body>
     <div id="wrap">
         <div id="header-block">
             <div id="header">
                 <div class="container">
                     <div class="header-wrap">
-                        <h1 class="logo"><a href="../../content/main/main.html"><span class="sr-only">책 읽는 거인</span></a></h1>
+                        <h1 class="logo"><a href="../main/main.html"><span class="sr-only">책 읽는 거인</span></a></h1>
                         <div class="mobile-header-group">
                             <div class="h-set">
-                                <div class="h-search">
-                                    <div class="input-wrap">
-                                        <input type="text" placeholder="4주 완성 독해력">
-                                        <button type="submit" class="btn-search"><i class="icon-search"><span class="sr-only">검색</span></i></button>
-                                    </div>
-                                </div>
                                 <div class="h-menu">
                                     <ul>
-                                        <li><a href="../mypage/myinfo.html">홍길동님</a></li>
-                                        <li><a href="#modal-login" data-toggle="modal" data-role="button">로그인</a></li>
-                                        <li><a href="">로그아웃</a></li>
-                                        <li><a href="../mypage/inbox.html"><i class="icon-bell"></i> 알림</a></li>
+                                        <li><a href="../login/login.html">로그인</a></li>
+                                        <li><a href="../join/agree.html">회원가입</a></li>
+                                        <li><a href="../mypage/mypage.html">홍길동님</a></li>
+                                        <li><a href="../login/login.html">로그아웃</a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="gnb">
-                                <ul>
-                                    <li class="on"><a href="#sg7"><span>공지사항</span></a></li>
-                                    <li><a href="../study/calendar.html"><span>E-학습실</span></a>
+                                <ul class="dep1">
+                                    <li>
+                                        <a href="../company/about.html"><span>회사소개</span></a>
                                         <ul class="dep2">
-                                            <li><a href="../study/calendar.html"><span>학습 캘린더</span></a></li>
-                                            <li><a href="../study/data.html"><span>학습 자료 관리실</span></a></li>
-                                            <li><a href="../study/homework.html"><span>과제 관리</span></a></li>
-                                            <li><a href="../study/vod.html"><span>VOD 영상보기</span></a></li>
+                                            <li><a href="../company/about.html"><span>회사소개</span></a></li>
+                                            <li><a href="../company/history.html"><span>연혁</span></a></li>
+                                            <li><a href="../company/flow.html"><span>학습 FLOW</span></a></li>
+                                            <li><a href="../company/location.html"><span>오시는 길</span></a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="../mypage/myinfo.html"><span>마이페이지</span></a>
+                                    <li><a href="../giant/giant.html"><span>책읽는 거인</span></a></li>
+                                    <li><a href="../customer/notice.html"><span>고객센터</span></a>
                                         <ul class="dep2">
-                                            <li><a href="../mypage/myinfo.html"><span>나의 정보</span></a></li>
-                                            <li><a href="../mypage/inbox.html"><span>쪽지함</span></a></li>
+                                            <li><a href="../customer/notice.html"><span>공지사항</span></a></li>
+                                            <li><a href="../customer/faq.html"><span>FAQ</span></a></li>
+                                            <li><a href="../customer/qna.html"><span>1:1 문의</span></a></li>
                                         </ul>
                                     </li>
-                                    <li><a href=""><span>커뮤니티</span></a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="mobile-menu d-lg-none">
-                            <a role="button" data-id="btn-search"><i class="icon-search"><span class="sr-only">검색</span></i></a>
                             <a role="button" data-id="btn-hamburger"><i class="btn-hamburger"><span class="sr-only">메뉴</span></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="main-block">
-            <div id="main">
-                <div id="fullpage">
-                    <div class="section" id="section1" data-event="revealed">
-                        <div class="container">
-                            <div class="main-title">교육철학</div>
-                            <div class="main-text">랜선 맞춤형 교육 <br>참여형 학습 청운 학원 입니다.</div>
-                        </div>
-                    </div>
-                    <div class="section" id="section2" data-event="revealed">
-                        <div class="container">
-                            <div class="main-title">청운’s 커리큘럼</div>
-                            <div class="curriculum">
-                                <div class="swiper-container">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <img src="../../resources/images/con-img-01.jpg" alt="">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="../../resources/images/con-img-02.jpg" alt="">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="../../resources/images/con-img-01.jpg" alt="">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="../../resources/images/con-img-02.jpg" alt="">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="../../resources/images/con-img-01.jpg" alt="">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="../../resources/images/con-img-02.jpg" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section" id="section3" data-event="revealed">
-                        <div class="container">
-                            <div class="main-title">청운학원 특장점</div>
-                            <div class="merit">
-                                <div class="swiper-container">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <div class="item">
-                                                <div class="img"><img src="../../resources/images/con-img-07.jpg" alt="랜선 맞춤형 교육"></div>
-                                                <div class="info">
-                                                    <strong>랜선 맞춤형 교육</strong>
-                                                    <p>수준별 맞춤교육으로 즐거운 배움을 줍니다.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="item">
-                                                <div class="img"><img src="../../resources/images/con-img-08.jpg" alt="랜선 맞춤형 교육"></div>
-                                                <div class="info">
-                                                    <strong>랜선 체계적 교육</strong>
-                                                    <p>수준별 맞춤교육으로 즐거운 배움을 줍니다.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="item">
-                                                <div class="img"><img src="../../resources/images/con-img-09.jpg" alt="랜선 최고를 향한 수능준비"></div>
-                                                <div class="info">
-                                                    <strong>랜선 최고를 향한 수능준비</strong>
-                                                    <p>흔들리지 않고 자신있게  준비하라! 청운학원에서 체계적인 맞춤 교육으로 수능 준비를 튼튼하게 할 수 있도록 도와드립니다! </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section" id="section4" data-event="revealed">
-                        <div class="container">
-                            <div class="main-title">청운학원 홍보 동영상</div>
-                            <div class="row row-20 align-items-center justify-content-between">
-                                <div class="col-12 col-lg-auto">
-                                    <div class="video">
-                                        <div class="video-frame">
-                                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/I6JcOypi8NA?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-lg">
-                                    <div class="main-text">
-                                        <strong>청운학원 홍보 text 제목</strong>
-                                        <p>실시간으로 진행되는 문제 풀이 수업부터 선생님과 1:1 질문까지, <br>차별화 된 청운학원의 비대면 온라인 수업을 경험하세요! </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section" id="section5" data-event="revealed">
-                        <div class="container">
-                            <div class="row align-items-center justify-content-between">
-                                <div class="col-12 col-md-auto">
-                                    <div class="main-text">
-                                        오프라인 그 이상, <br>
-                                        <strong> 비대면 수업의 새로운 기준</strong>
-                                        <p>실시간으로 진행되는 문제 풀이 수업부터 선생님과 1:1 질문까지, <br>차별화 된 청운학원의 비대면 온라인 수업을 경험하세요!</p>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-auto">
-                                    <div><img src="../../resources/images/con-img-10.png" alt=""></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section" id="section6" data-event="revealed">
-                        <div class="container">
-                            <div class="row align-items-center justify-content-between">
-                                <div class="col-12 col-md-auto">
-                                    <div class="main-text">
-                                        청운학원이 <br>
-                                        <strong>비대면 온라인 수업을 <br>선택한 이유는?</strong>
-                                        <p>시/공간에 제약 없이 언제 어디서든 <br>자유로운 수업이 가능합니다.</p>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-auto">
-                                    <div class="ontact">
-                                        <div class="item">
-                                            <div class="img"><img src="../../resources/images/con-img-11.png" alt=""></div>
-                                            <p><span>첫째,</span> 학생이 선생님의 화이트 보드를 보며 수업을 진행합니다.</p>
-                                        </div>
-                                        <div class="item">
-                                            <div class="img"><img src="../../resources/images/con-img-12.png" alt=""></div>
-                                            <p><span>둘째,</span> 실시간으로 선생님이 학생의 풀이 과정을 확인합니다! </p>
-                                        </div>
-                                        <div class="item">
-                                            <div class="img"><img src="../../resources/images/con-img-13.png" alt=""></div>
-                                            <p><span>셋째,</span> 학생과 선생님의 1:1 대면 수업이가능합니다. </p>
-                                        </div>
-                                        <div class="item">
-                                            <div class="img"><img src="../../resources/images/con-img-14.png" alt=""></div>
-                                            <p><span>넷째,</span> 전체 수업 이외에도 수업 중 1:1 질문이 가능합니다.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section fp-auto-height" id="section7" data-event="revealed">
-                        <div class="news-area">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-12 col-lg-6">
-                                        <div class="title">공지사항</div>
-                                        <div class="news">
-                                            <ul>
-                                                <li>
-                                                    <strong>[특강]</strong>
-                                                    <a href="">2020년 가을 비대면 온라인 수업 안내 공지사항 2020년 가을 비대면 온라인 수업 안내 공지사항</a>
-                                                    <span>2020.09.02</span>
-                                                </li>
-                                                <li>
-                                                    <strong>[특강]</strong>
-                                                    <a href="">2020년 가을 비대면 온라인 수업 안내 공지사항 2020년 가을 비대면 온라인 수업 안내 공지사항</a>
-                                                    <span>2020.09.02</span>
-                                                </li>
-                                                <li>
-                                                    <strong>[특강]</strong>
-                                                    <a href="">2020년 가을 비대면 온라인 수업 안내 공지사항 2020년 가을 비대면 온라인 수업 안내 공지사항</a>
-                                                    <span>2020.09.02</span>
-                                                </li>
-                                                <li>
-                                                    <strong>[특강]</strong>
-                                                    <a href="">2020년 가을 비대면 온라인 수업 안내 공지사항 2020년 가을 비대면 온라인 수업 안내 공지사항</a>
-                                                    <span>2020.09.02</span>
-                                                </li>
-                                                <li>
-                                                    <strong>[특강]</strong>
-                                                    <a href="">2020년 가을 비대면 온라인 수업 안내 공지사항 2020년 가을 비대면 온라인 수업 안내 공지사항</a>
-                                                    <span>2020.09.02</span>
-                                                </li>
-                                                <li>
-                                                    <strong>[특강]</strong>
-                                                    <a href="">2020년 가을 비대면 온라인 수업 안내 공지사항 2020년 가을 비대면 온라인 수업 안내 공지사항</a>
-                                                    <span>2020.09.02</span>
-                                                </li>
-                                                <li>
-                                                    <strong>[특강]</strong>
-                                                    <a href="">2020년 가을 비대면 온라인 수업 안내 공지사항 2020년 가을 비대면 온라인 수업 안내 공지사항</a>
-                                                    <span>2020.09.02</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-6">
-                                        <div class="title">오시는 길</div>
-                                        <div class="location">
-                                            <div id="map"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="footer">
-                            <div class="footer-top">
-                                <div class="container">
-                                    <div class="row row-0 align-items-center justify-content-between">
-                                        <div class="col-auto">
-                                            <ul class="f-menu">
-                                                <li><a href="">서비스이용약관</a></li>
-                                                <li><a href=""><strong>개인정보처리방침</strong></a></li>
-                                                <li><a href="">공식 블로그</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-auto">
-                                            <ul class="f-social">
-                                                <li><a href=""><i class="icon-blog"><span class="sr-only">blog</span></i></a></li>
-                                                <li><a href=""><i class="icon-facebook"><span class="sr-only">페이스북</span></i></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="footer-bottom">
-                                <div class="container">
-                                    <div class="logo"><img src="../../resources/images/logo-footer.png" alt="책 읽는 거인"></div>
-                                    <div class="company">
-                                        SG 청운학원 ㅣ 고객센터 : 02-0000-0000 ㅣ 메일 : abc123@co.kr
-                                        경기도 수원시 영통구 영통로213번길 8 ㅣ 대표 : 홍길동 ㅣ 사업자등록번호 : 000-00-000000
-                                    </div>
-                                    <p class="copyright">Copyright © . All Rights Reserved.</p>
-                                </div>
-                            </div>
-                        </div>
+        <div id="container-block">
+            <div id="container">
+                <div id="content">
+                    <div class="container">
+                        <!-- 실 컨텐츠 -->
+
+                        메인
+
+                        <!-- //실 컨텐츠 -->
                     </div>
                 </div>
-                <div class="scroll-animation">
-                    <div class="mouse">
-                        <div class="wheel"></div>
+            </div>
+        </div>
+        <div id="footer-block">
+            <div id="footer">
+                <div class="container">
+                    <ul class="f-menu">
+                        <li><a href="">회사소개</a></li>
+                        <li><a href="">이용약관</a></li>
+                        <li><a href=""><strong>개인정보취급방침</strong></a></li>
+                    </ul>
+                    <div class="f-info">
+                        회사명 : 주식회사 메타스콜레   대표이사 : 정해영   사업자등록번호 : 856-88-01642   이메일 : metas@metaschole.co.kr <br>
+                        팩스 : 02-553-3482  문의전화 : 1688-3482  주소 : (우:06197) 서울특별시 강남구 역삼로 423 7층 (대치동, 화남빌딩)
                     </div>
-                    <div class="arrows">
-                        <span class="first"></span>
-                        <span class="second"></span>
-                        <span class="third"></span>
-                    </div>
+                    <p class="copyright">Copyright ⓒ All rights reserved.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- modal : 로그인 -->
-    <div class="modal" tabindex="-1" id="modal-login">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <i class="icon-close-black"><span class="sr-only">레이어 닫기</span></i>
-                </button>
-                <div class="modal-header">
-                    <h5 class="modal-title">로그인</h5>
-                </div>
-                <form>
-                    <div class="modal-body">
-                        <div class="login">
-                            <div class="form-group">
-                                <label for="userId">User ID</label>
-                                <input type="text" class="form-control" placeholder="아이디 입력" id="userId">
-                            </div>
-                            <div class="form-group">
-                                <label for="userPw">Password</label>
-                                <input type="password" class="form-control" placeholder="비밀번호 입력" id="userPw">
-                            </div>
-                            <div class="form-group justify-content-end">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="idSave">
-                                    <label class="custom-control-label" for="idSave">Remember Me</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <div class="row row-0">
-                            <div class="col">
-                                <button type="button" class="btn btn-primary btn-block">로그인</button>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+
+    <!-- ui 관련 -->
+    <script src="../../resources/js/ui.js"></script>
 
     <script>
-        const breakpoint = window.matchMedia( '(min-width:992px)' );
-        let swiperCurriculum;
-        let swiperMerit;
-        const breakpointChecker = function() {
-            if ( breakpoint.matches === true ) {
-                if ( swiperCurriculum !== undefined ) swiperCurriculum.destroy( true, true );
-                if ( swiperMerit !== undefined ) swiperMerit.destroy( true, true );
-                return;
-            } else if ( breakpoint.matches === false ) {
-                return enableSwiper();
-            }
-        }
-        const enableSwiper = function() {
-            /* swiperCurriculum = new Swiper('.curriculum .swiper-container', {
-                slidesPerView: 'auto',
-                spaceBetween: 15,
-                slidesOffsetBefore: 15,
-                slidesOffsetAfter: 15,
-                freeMode: true,
-            }); */
-            swiperMerit = new Swiper('.merit .swiper-container', {
-                slidesPerView: 'auto',
-                spaceBetween: 15,
-                slidesOffsetBefore: 15,
-                slidesOffsetAfter: 15,
-                freeMode: true,
-            });
-        }
-        breakpoint.addListener(breakpointChecker);
-        breakpointChecker();
+        $(document).ready(function(){
 
+        });
     </script>
 </body>
 </html>
