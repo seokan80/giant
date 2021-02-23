@@ -332,11 +332,18 @@ html.has-dep2 #header::after, html.open-gnb-dep2 #header::after { background: #2
     transform: translateY(0) translateX(0);
     opacity: 1; } }
 
-@keyframes slide-in-bl { 0% { -webkit-transform: translateY(1000px) translateX(-1000px);
-    transform: translateY(1000px) translateX(-1000px);
+@-webkit-keyframes roll-in-left { 0% { -webkit-transform: translateX(-800px) rotate(-540deg);
+    transform: translateX(-800px) rotate(-540deg);
     opacity: 0; }
-  100% { -webkit-transform: translateY(0) translateX(0);
-    transform: translateY(0) translateX(0);
+  100% { -webkit-transform: translateX(0) rotate(0deg);
+    transform: translateX(0) rotate(0deg);
+    opacity: 1; } }
+
+@keyframes roll-in-left { 0% { -webkit-transform: translateX(-800px) rotate(-540deg);
+    transform: translateX(-800px) rotate(-540deg);
+    opacity: 0; }
+  100% { -webkit-transform: translateX(0) rotate(0deg);
+    transform: translateX(0) rotate(0deg);
     opacity: 1; } }
 
 .paint { position: relative; z-index: 0; }
@@ -463,11 +470,11 @@ html.has-dep2 #header::after, html.open-gnb-dep2 #header::after { background: #2
 
 .mypage .container { position: relative; min-height: 600px; background: url("../images/bg-mypage.png") no-repeat 345px 53px; }
 
-.mypage .container::before { content: ''; display: block; background: url("../images/bg-mypage-pencil.png") no-repeat 0 0; width: 274px; height: 74px; position: absolute; left: 844px; top: 55px; -webkit-animation: roll-in-top 0.6s ease-out both .3s; animation: roll-in-top 0.6s ease-out both .3s; }
+.mypage .container::before { content: ''; display: block; background: url("../images/bg-mypage-pencil.png") no-repeat 0 0; width: 274px; height: 74px; position: absolute; left: 844px; top: 55px; -webkit-animation: roll-in-top 0.8s ease-out both .4s; animation: roll-in-top 0.8s ease-out both .4s; }
 
-.mypage .container::after { content: ''; display: block; background: url("../images/bg-mypage-pencil2.png") no-repeat 0 0; width: 382px; height: 301px; position: absolute; left: 92px; top: 385px; -webkit-animation: slide-in-bl 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; animation: slide-in-bl 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+.mypage .container::after { content: ''; display: block; background: url("../images/bg-mypage-pencil2.png") no-repeat 0 0; width: 382px; height: 301px; position: absolute; left: 92px; top: 385px; -webkit-animation: slide-in-bl 0.7s ease-out both; animation: slide-in-bl 0.7s ease-out both; }
 
-.mypage .container .point { content: ''; display: block; background: url("../images/bg-mypage-point.png") no-repeat 0 0; width: 53px; height: 64px; position: absolute; left: 290px; top: 128px; -webkit-animation: pulsate-fwd 0.5s ease-in-out infinite both; animation: pulsate-fwd 0.5s ease-in-out infinite both; }
+.mypage .container .point { content: ''; display: block; background: url("../images/bg-mypage-point.png") no-repeat 0 0; width: 53px; height: 64px; position: absolute; left: 290px; top: 128px; -webkit-animation: pulsate-fwd 0.6s ease-in-out infinite both; animation: pulsate-fwd 0.6s ease-in-out infinite both; }
 
 .mypage .side { background-color: #fff; width: 216px; height: 100%; position: absolute; left: 0; top: 0; z-index: 1; padding: 2rem; }
 
@@ -495,7 +502,31 @@ html.has-dep2 #header::after, html.open-gnb-dep2 #header::after { background: #2
 
 .mypage-test p { font-size: 18px; line-height: 31px; text-align: center; }
 
-.ping { -webkit-animation: ping 0.8s ease-in-out infinite both; animation: ping 0.8s ease-in-out infinite both; }
+.choice label { cursor: pointer; margin: 0 25px 0 0; display: inline-flex; align-items: center; font-family: arial; }
+
+.choice label input { position: absolute; opacity: 0; visibility: hidden; height: 0; width: 0; }
+
+.choice label i { display: inline-block; vertical-align: middle; width: 18px; height: 18px; line-height: 17px; text-align: center; border-radius: 50%; border: 1px solid #ccc; color: #555; font-size: 11px; font-family: arial; }
+
+.choice label span { margin-left: .5rem; }
+
+.choice label input:checked + i { border-color: #333; background-color: #333; color: #fff; font-weight: 500; }
+
+.questions > li { display: flex; margin-bottom: 1.5rem; }
+
+.questions > li .num { flex: 0 0 30px; font-weight: 700; padding: 1px; }
+
+.questions > li .question { line-height: 1.6; white-space: pre-wrap; }
+
+.questions > li .choice { margin-top: .5rem; }
+
+.test-header { color: #fff; padding: 1.5rem 2rem; background: #aeaf19; }
+
+.test-header h1 { font-size: 34px; font-weight: 900; margin-bottom: 0; }
+
+.test-header span { font-size: 22px; font-weight: 700; }
+
+.test-body { padding: 2rem; }
 
 @keyframes mouse-scroll { 0% { opacity: 0; }
   50% { opacity: 1; }

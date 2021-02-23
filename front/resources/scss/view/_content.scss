@@ -15,7 +15,6 @@
         transform: scale(1);
     }
 }
-
 @keyframes pulsate-fwd {
     0% {
         -webkit-transform: scale(1);
@@ -45,7 +44,6 @@
         opacity: 1;
     }
 }
-
 @keyframes roll-in-top {
     0% {
         -webkit-transform: translateY(-800px) rotate(-540deg);
@@ -72,20 +70,33 @@
         opacity: 1;
     }
 }
-
-@keyframes slide-in-bl {
+@-webkit-keyframes roll-in-left {
     0% {
-        -webkit-transform: translateY(1000px) translateX(-1000px);
-        transform: translateY(1000px) translateX(-1000px);
+        -webkit-transform: translateX(-800px) rotate(-540deg);
+        transform: translateX(-800px) rotate(-540deg);
         opacity: 0;
     }
 
     100% {
-        -webkit-transform: translateY(0) translateX(0);
-        transform: translateY(0) translateX(0);
+        -webkit-transform: translateX(0) rotate(0deg);
+        transform: translateX(0) rotate(0deg);
         opacity: 1;
     }
 }
+@keyframes roll-in-left {
+    0% {
+        -webkit-transform: translateX(-800px) rotate(-540deg);
+        transform: translateX(-800px) rotate(-540deg);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0) rotate(0deg);
+        transform: translateX(0) rotate(0deg);
+        opacity: 1;
+    }
+}
+
 
 .paint{
     position: relative;z-index: 0;
@@ -251,16 +262,16 @@
     .container{
         position: relative;min-height: 600px;background: url('../images/bg-mypage.png') no-repeat 345px 53px;
         &::before{content: '';display: block;background: url('../images/bg-mypage-pencil.png') no-repeat 0 0;width: 274px;height: 74px;position: absolute;left: 844px;top: 55px;
-            -webkit-animation: roll-in-top 0.6s ease-out both .3s;
-	        animation: roll-in-top 0.6s ease-out both .3s;
+            -webkit-animation: roll-in-top 0.8s ease-out both .4s;
+	        animation: roll-in-top 0.8s ease-out both .4s;
         }
         &::after{content: '';display: block;background: url('../images/bg-mypage-pencil2.png') no-repeat 0 0;width: 382px;height: 301px;position: absolute;left: 92px;top: 385px;
-            -webkit-animation: slide-in-bl 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-in-bl 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            -webkit-animation: slide-in-bl 0.7s ease-out both;
+	        animation: slide-in-bl 0.7s ease-out both;
         }
         .point{content: '';display: block;background: url('../images/bg-mypage-point.png') no-repeat 0 0;width: 53px;height: 64px;position: absolute;left: 290px;top: 128px;
-            -webkit-animation: pulsate-fwd 0.5s ease-in-out infinite both;
-	        animation: pulsate-fwd 0.5s ease-in-out infinite both;
+            -webkit-animation: pulsate-fwd 0.6s ease-in-out infinite both;
+	        animation: pulsate-fwd 0.6s ease-in-out infinite both;
         }
     }
     .side{background-color: #fff;width: 216px;height: 100%;position: absolute;left: 0;top: 0;z-index: 1;padding: 2rem;}
@@ -288,7 +299,33 @@
     p{font-size: 18px;line-height: 31px;text-align: center;}
 }
 
-.ping {
-	-webkit-animation: ping 0.8s ease-in-out infinite both;
-	        animation: ping 0.8s ease-in-out infinite both;
+.choice{
+    label{
+        cursor: pointer;margin: 0 25px 0 0;display: inline-flex;align-items: center;font-family: arial;
+        input{position: absolute;opacity: 0;visibility: hidden;height: 0;width: 0;}
+        i{display: inline-block;vertical-align: middle;width: 18px;height: 18px;line-height: 17px;text-align: center;border-radius: 50%;border: 1px solid #ccc;color: #555;font-size: 11px;font-family: arial;}
+        span{margin-left: .5rem;}
+        input:checked + i{border-color: $dark;background-color: $dark;color: #fff;font-weight: 500;}
+    }
+}
+
+.questions{
+    > li{
+        display: flex;margin-bottom: 1.5rem;
+        .num{flex: 0 0 30px;font-weight: 700;padding: 1px;}
+        .question{line-height: 1.6;white-space: pre-wrap;}
+        .choice{margin-top: .5rem;}
+    }
+}
+
+.test-wrap{
+
+}
+.test-header{
+    color: #fff;padding: 1.5rem 2rem;background: $primary;
+    h1{font-size: 34px;font-weight: 900;margin-bottom: 0;}
+    span{font-size: 22px;font-weight: 700;}
+}
+.test-body{
+    padding: 2rem;
 }

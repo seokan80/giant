@@ -74,6 +74,7 @@
             <div id="container">
                 <div id="content" class="pt-0">
 
+                     <!-- 실 컨텐츠 -->
                     <div class="mypage">
                         <div class="container">
                             <span class="point"></span>
@@ -113,18 +114,13 @@
                                 <strong>입학 테스트 결과를 통해 학습 레벨이 결정됩니다.</strong>
                             </p>
                             <div class="row row-10 justify-content-center mt-6">
-                                <div class="col-auto"><a href="" class="btn btn-info btn-lg">지문독해 테스트</a></div>
-                                <div class="col-auto"><a href="" class="btn btn-primary btn-lg">문장독해 테스트</a></div>
+                                <div class="col-auto"><a href="#none" class="btn btn-info btn-lg" id="btn-text-test">지문독해 테스트</a></div>
+                                <div class="col-auto"><a href="#none" class="btn btn-primary btn-lg" id="btn-sentence-test">문장독해 테스트</a></div>
                             </div>
                         </div>
                     </div>
-                    <div class="container">
-                        <!-- 실 컨텐츠 -->
+                    <!-- //실 컨텐츠 -->
 
-
-
-                        <!-- //실 컨텐츠 -->
-                    </div>
                 </div>
             </div>
         </div>
@@ -151,9 +147,10 @@
     <script src="../../resources/js/ui.js"></script>
 
     <script>
-        $(document).ready(function(){
-
-        });
+        let btnSentence = document.getElementById('btn-sentence-test');
+        btnSentence.addEventListener('click', function(){
+            window.open('../test/test_sentence.html', 'popup', 'width=800, height=980, status=no, menubar=no, toolbar=no, resizable=no');
+        })
     </script>
 </body>
 </html>
