@@ -297,6 +297,48 @@ html.has-dep2 #header::after, html.open-gnb-dep2 #header::after { background: #2
 
 @media (max-width: 991.98px) { .center { width: auto; } }
 
+@-webkit-keyframes pulsate-fwd { 0% { -webkit-transform: scale(1);
+    transform: scale(1); }
+  50% { -webkit-transform: scale(1.3);
+    transform: scale(1.3); }
+  100% { -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@keyframes pulsate-fwd { 0% { -webkit-transform: scale(1);
+    transform: scale(1); }
+  50% { -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
+  100% { -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@-webkit-keyframes roll-in-top { 0% { -webkit-transform: translateY(-800px) rotate(-540deg);
+    transform: translateY(-800px) rotate(-540deg);
+    opacity: 0; }
+  100% { -webkit-transform: translateY(0) rotate(0deg);
+    transform: translateY(0) rotate(0deg);
+    opacity: 1; } }
+
+@keyframes roll-in-top { 0% { -webkit-transform: translateY(-800px) rotate(-540deg);
+    transform: translateY(-800px) rotate(-540deg);
+    opacity: 0; }
+  100% { -webkit-transform: translateY(0) rotate(0deg);
+    transform: translateY(0) rotate(0deg);
+    opacity: 1; } }
+
+@-webkit-keyframes slide-in-bl { 0% { -webkit-transform: translateY(1000px) translateX(-1000px);
+    transform: translateY(1000px) translateX(-1000px);
+    opacity: 0; }
+  100% { -webkit-transform: translateY(0) translateX(0);
+    transform: translateY(0) translateX(0);
+    opacity: 1; } }
+
+@keyframes slide-in-bl { 0% { -webkit-transform: translateY(1000px) translateX(-1000px);
+    transform: translateY(1000px) translateX(-1000px);
+    opacity: 0; }
+  100% { -webkit-transform: translateY(0) translateX(0);
+    transform: translateY(0) translateX(0);
+    opacity: 1; } }
+
 .paint { position: relative; z-index: 0; }
 
 .paint::before { content: ''; display: block; width: 100%; height: 14px; position: absolute; left: 0; bottom: -4px; background-color: rgba(94, 107, 220, 0.25); z-index: -1; }
@@ -417,27 +459,43 @@ html.has-dep2 #header::after, html.open-gnb-dep2 #header::after { background: #2
 
 .form { border-top: 1px solid #333; border-bottom: 1px solid #333; padding: 2.5rem 0; }
 
-.mypage { background: #fcce4b; margin-top: -45px; }
+.mypage { background: #fcce4b url("../images/bg-mypage-yellow.png") repeat-x 50% 50%; margin-top: -45px; }
 
-.mypage .container { position: relative; min-height: 600px; }
+.mypage .container { position: relative; min-height: 600px; background: url("../images/bg-mypage.png") no-repeat 345px 53px; }
 
-.mypage .side { background-color: #fff; width: 216px; height: 100%; position: absolute; left: 0; top: 0; padding: 2rem; }
+.mypage .container::before { content: ''; display: block; background: url("../images/bg-mypage-pencil.png") no-repeat 0 0; width: 274px; height: 74px; position: absolute; left: 844px; top: 55px; -webkit-animation: roll-in-top 0.6s ease-out both .3s; animation: roll-in-top 0.6s ease-out both .3s; }
+
+.mypage .container::after { content: ''; display: block; background: url("../images/bg-mypage-pencil2.png") no-repeat 0 0; width: 382px; height: 301px; position: absolute; left: 92px; top: 385px; -webkit-animation: slide-in-bl 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; animation: slide-in-bl 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+
+.mypage .container .point { content: ''; display: block; background: url("../images/bg-mypage-point.png") no-repeat 0 0; width: 53px; height: 64px; position: absolute; left: 290px; top: 128px; -webkit-animation: pulsate-fwd 0.5s ease-in-out infinite both; animation: pulsate-fwd 0.5s ease-in-out infinite both; }
+
+.mypage .side { background-color: #fff; width: 216px; height: 100%; position: absolute; left: 0; top: 0; z-index: 1; padding: 2rem; }
 
 .mypage .user { text-align: center; }
 
-.mypage .user .profile { display: flex; align-items: center; justify-content: center; width: 144px; height: 144px; border-radius: 50%; overflow: hidden; background: url("../images/profile.png") no-repeat 50% 50%; }
+.mypage .user .profile { display: flex; align-items: center; justify-content: center; width: 144px; height: 144px; border-radius: 50%; overflow: hidden; background: url("../images/profile.png") no-repeat 50% 50%; margin: 0 auto; }
 
 .mypage .user .profile.has-img { background: none; border-radius: 0; }
 
 .mypage .user .profile img { width: 144px; height: 144px; object-fit: contain; }
 
-.mypage .user .name { font-size: 18px; }
+.mypage .user .name { font-size: 18px; margin-bottom: 1rem; margin-top: .75rem; }
+
+.mypage .info { font-size: 16px; border-top: 1px solid #333; padding-top: 1rem; }
+
+.mypage .info dt { clear: left; float: left; font-weight: 400; }
+
+.mypage .info dd { text-align: right; margin-bottom: 1.25rem; font-weight: 700; }
+
+.mypage .btns { margin-top: 2rem; }
 
 .mypage-test .title-area { background-color: #333; margin-bottom: 3rem; }
 
 .mypage-test .title-area h2 { color: #fff; font-size: 28px; font-weight: 900; line-height: 50px; padding-left: 280px; }
 
 .mypage-test p { font-size: 18px; line-height: 31px; text-align: center; }
+
+.ping { -webkit-animation: ping 0.8s ease-in-out infinite both; animation: ping 0.8s ease-in-out infinite both; }
 
 @keyframes mouse-scroll { 0% { opacity: 0; }
   50% { opacity: 1; }
