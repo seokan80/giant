@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>책 읽는 거인</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="/front/resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/front/resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="/front/resources/plugin/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="/front/resources/plugin/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="/front/resources/plugin/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="/front/resources/css/bootstrap.css">
+    <link rel="stylesheet" href="/front/resources/css/style.css">
+    <!-- jquery -->
+    <script src="/front/resources/plugin/jquery/jquery.min.js"></script>
+    <!-- jquery ui -->
+    <script src="/front/resources/plugin/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="/front/resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper -->
+    <script src="/front/resources/plugin/swiper/js/swiper.min.js"></script>
+</head>
+
+<body>
+
+    <div class="test-wrap">
+        <div class="test-header">
+            <div class="d-flex align-items-end">
+                <h1>문장 독해 테스트</h1>
+                <span class="ml-4">Level A</span>
+            </div>
+            <button type="button" class="btn btn-dark" onclick="window.print()"><i class="fas fa-print mr-2"></i>출력하기</button>
+        </div>
+        <div class="test-body">
+            <div class="test-result">
+                <div class="page">
+                    <div class="test-summary">
+                        <h2><span>문장 독해 검사결과</span></h2>
+                        <p><b>ooo 학생</b>의 문장 독해 테스트 결과는 다음과 같습니다</p>
+                        <ul>
+                            <li>
+                                <div class="item">독해 정확도</div>
+                                <div class="circle"><strong class="text-primary">100점</strong></div>
+                            </li>
+                            <li>
+                                <div class="item">독해 속도 <span>(분당 글 읽는 속도)</span></div>
+                                <div class="circle"><strong class="text-info">1004자</strong></div>
+                            </li>
+                            <li>
+                                <div class="item">정보처리 시간</div>
+                                <div class="circle"><strong class="text-orange">20분 17초</strong></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <h2 class="title text-primary mt-6">수준별 독해평가 내용</h2>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th class="text-center" colspan="2">구분</th>
+                                <th class="text-center">분석지표 기준</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center" rowspan="3">사실적 이해</td>
+                                <td class="text-center">단어 및 문장 연결 이해</td>
+                                <td>문맥적 단서를 통해 단어나 문장의 의미 파악 하기</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">세부정보 파악</td>
+                                <td>주장과 의견, 중심문장과 부속 문장, 핵심어, 화제, 명확한 주체 등 명시적으로 진술 된 정보의 의미 파악하기</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">중심내용 파악</td>
+                                <td>주요 내용을 연결하여 중심 생각을 파악하거나, 거시적인 차원에서 내용 요약하기</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center" rowspan="3">추론적 이해</td>
+                                <td class="text-center">생략된 내용 파악</td>
+                                <td>텍스트의 문맥, 독자의 배경지식을 활용하여 생략된 정보를 추론하기</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">이어질 내용 파악</td>
+                                <td>텍스트의 문맥, 독자의 배경지식을 활용하여 이어질 내용을 예측하기</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">글의 구조 파악</td>
+                                <td>비교-대조, 원인-결과, 문제-해결, 주장-논거 등 글의 수사적 상위 구조 파악하기</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="page">
+                    <h2 class="title text-primary">문장 독해</h2>
+                    <div class="chart-group">
+                        <div class="chart-area">차트</div>
+                        <p class="chart-name text-sky">사실적 이해</p>
+                    </div>
+                    <div class="chart-group">
+                        <div class="chart-area">차트</div>
+                        <p class="chart-name text-peach">추론적 이해</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ui 관련 -->
+    <script src="/front/resources/js/ui.js"></script>
+
+    <script>
+    </script>
+</body>
+</html>

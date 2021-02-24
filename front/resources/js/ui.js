@@ -112,8 +112,13 @@ var Header = {
 		}
 	},
 	gnb : function(){
-		var $ingDep2 = $('.gnb > ul > li.active');
-		$('.gnb > ul > li > a').on('mouseenter',function(){
+		var url = window.location.pathname;
+		var $active = $('.gnb a[href="'+url+'"]');
+		$active.parent().addClass('active');
+		$active.parent().parents('li').addClass('active');
+
+		var $ingDep2 = $('.dep1 > li.active');
+		$('.dep1 > li > a').on('mouseenter',function(){
 			$(this).parent('li').siblings().removeClass('hover');
 			$(this).parent('li').siblings().removeClass('active');
 			$(this).parent('li').addClass('hover');
@@ -125,10 +130,10 @@ var Header = {
 		});
 		$('.gnb').on('mouseleave',function(){
 			$('html').removeClass('open-gnb-dep2');
-			$('.gnb > ul > li').removeClass('hover');
+			$('.dep1 > li').removeClass('hover');
 			$ingDep2.addClass('active');
 		});
-		if($('.gnb .dep2 > li.active').length > 0){
+		if($('.dep2 > li.active').length > 0){
 			$('html').addClass('has-dep2');
 		}
 	},

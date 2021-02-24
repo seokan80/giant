@@ -6,21 +6,21 @@
     <title>책 읽는 거인</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
-    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
-    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
-    <link rel="stylesheet" href="../../resources/plugin/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="../../resources/plugin/jquery-ui/jquery-ui.min.css">
-    <link rel="stylesheet" href="../../resources/plugin/swiper/css/swiper.min.css">
-    <link rel="stylesheet" href="../../resources/css/bootstrap.css">
-    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="icon" href="/front/resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/front/resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="/front/resources/plugin/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="/front/resources/plugin/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="/front/resources/plugin/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="/front/resources/css/bootstrap.css">
+    <link rel="stylesheet" href="/front/resources/css/style.css">
     <!-- jquery -->
-    <script src="../../resources/plugin/jquery/jquery.min.js"></script>
+    <script src="/front/resources/plugin/jquery/jquery.min.js"></script>
     <!-- jquery ui -->
-    <script src="../../resources/plugin/jquery-ui/jquery-ui.min.js"></script>
+    <script src="/front/resources/plugin/jquery-ui/jquery-ui.min.js"></script>
     <!-- bootstrap -->
-    <script src="../../resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/front/resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Swiper -->
-    <script src="../../resources/plugin/swiper/js/swiper.min.js"></script>
+    <script src="/front/resources/plugin/swiper/js/swiper.min.js"></script>
 </head>
 
 <body>
@@ -82,15 +82,19 @@
                 </li>
             </ol>
             <div class="row row-10 justify-content-center mt-6">
-                <div class="col-auto"><a href="#none" class="btn btn-primary btn-lg">결과제출</a></div>
+                <div class="col-auto"><a href="#none" class="btn btn-primary btn-lg" id="btn-sentence-result">결과제출</a></div>
             </div>
         </div>
     </div>
 
     <!-- ui 관련 -->
-    <script src="../../resources/js/ui.js"></script>
+    <script src="/front/resources/js/ui.js"></script>
 
     <script>
+        const btnSentenceResult = document.getElementById('btn-sentence-result');
+        btnSentenceResult.addEventListener('click', function(){
+            window.open('/front/content/test/test_sentence_result.html', 'popup2', 'width=1920, height=1080, status=no, menubar=no, toolbar=no, resizable=no');
+        })
     </script>
 </body>
 </html>

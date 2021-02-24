@@ -520,13 +520,56 @@ html.has-dep2 #header::after, html.open-gnb-dep2 #header::after { background: #2
 
 .questions > li .choice { margin-top: .5rem; }
 
-.test-header { color: #fff; padding: 1.5rem 2rem; background: #aeaf19; }
+.test-header { color: #fff; padding: 1.25rem 2rem; background: #aeaf19; position: relative; }
 
-.test-header h1 { font-size: 34px; font-weight: 900; margin-bottom: 0; }
+.test-header h1 { font-size: 32px; font-weight: 900; margin-bottom: 0; }
 
 .test-header span { font-size: 22px; font-weight: 700; }
 
+.test-header .btn { position: absolute; right: 2rem; top: 50%; transform: translateY(-50%); }
+
 .test-body { padding: 2rem; }
+
+.test-result { padding: 2rem 0; display: flex; }
+
+.test-result .title { font-size: 22px; font-weight: 900; margin-bottom: .75rem; }
+
+.test-result .page { flex: 1 1 100%; padding: 0 4.5rem; }
+
+@media print { .test-result { display: block; }
+  .test-result .page + .page { margin-top: 2.5rem; } }
+
+.test-summary { border-radius: 20px; border: 5px solid #aeaf19; text-align: center; position: relative; padding: 2rem; }
+
+.test-summary h2 { position: absolute; left: 50%; top: -24px; transform: translateX(-50%); color: #aeaf19; font-weight: 900; font-size: 36px; }
+
+.test-summary h2 span { background-color: #fff; padding: 0 1rem; }
+
+.test-summary p { font-size: 16px; }
+
+.test-summary p b { font-size: 18px; }
+
+.test-summary ul { display: flex; justify-content: center; align-items: center; margin-top: 2rem; }
+
+.test-summary ul li { padding: 0 .5rem; }
+
+.test-summary ul .item { font-size: 24px; font-weight: 900; height: 75px; }
+
+.test-summary ul .item span { display: block; font-size: 16px; font-weight: 400; }
+
+.test-summary ul .circle { border-radius: 50%; border: 5px solid #aeaf19; width: 180px; height: 180px; display: flex; align-items: center; justify-content: center; }
+
+.test-summary ul .circle strong { font-size: 34px; font-weight: 900; }
+
+.text-sky { color: #a0cee4 !important; }
+
+.text-peach { color: #fbd185 !important; }
+
+.chart-group .chart-area { height: 360px; }
+
+.chart-group .chart-name { font-size: 22px; font-weight: 900; text-align: center; margin-top: .5rem; }
+
+.chart-group + .chart-group { margin-top: 2rem; }
 
 @keyframes mouse-scroll { 0% { opacity: 0; }
   50% { opacity: 1; }

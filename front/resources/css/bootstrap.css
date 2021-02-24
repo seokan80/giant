@@ -538,7 +538,7 @@ mark, .mark { padding: 0.2em; background-color: #fcf8e3; }
 
 .table-bordered th, .table-bordered td { border: 1px solid #dee2e6; }
 
-.table-bordered thead th, .table-bordered thead td { border-bottom-width: 1px; }
+.table-bordered thead th, .table-bordered thead td { border-bottom-width: 1px; border-color: #dee2e6; }
 
 .table-borderless th, .table-borderless td, .table-borderless thead th, .table-borderless tbody + tbody { border: 0; }
 
