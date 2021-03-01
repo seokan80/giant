@@ -12,7 +12,7 @@
 
 .icon-refrash { background-image: url("../images/icon-refrash.png"); width: 22px; height: 22px; }
 
-.icon-search { background-image: url("../images/icon-search-white.svg"); width: 24px; height: 24px; vertical-align: middle; }
+.icon-search { background-image: url("../images/icon-search-black.svg"); width: 20px; height: 20px; vertical-align: middle; }
 
 .icon-bell { background-image: url("../images/icon-bell.png"); width: 17px; height: 16px; vertical-align: middle; }
 
@@ -465,6 +465,21 @@ html.has-dep2 #header::after, html.open-gnb-dep2 #header::after { background: #2
   .accordion-list .a .text { padding: 1rem .75rem; } }
 
 .form { border-top: 1px solid #333; border-bottom: 1px solid #333; padding: 2.5rem 0; }
+
+.form .inner { width: 550px; }
+
+@media (max-width: 991.98px) { .form .inner { width: auto; } }
+
+.welcome { border-top: 1px solid #333; border-bottom: 1px solid #333; min-height: 600px; }
+
+.welcome strong { text-shadow: 0px 6px 4px rgba(0, 0, 0, 0.1); font-size: 37px; font-weight: 700; letter-spacing: -0.93px; margin-top: 110px; }
+
+.welcome p { line-height: 1.55; font-size: 22px; letter-spacing: -0.55px; margin-top: 30px; word-break: keep-all; }
+
+@media (max-width: 991.98px) { .welcome { min-height: auto; padding: 3.5rem 0; }
+  .welcome .text img { width: 300px; }
+  .welcome strong { font-size: 20px; margin-top: 2rem; }
+  .welcome p { font-size: 14px; margin-top: 2rem; text-align: center; } }
 
 .mypage { background: #fcce4b url("../images/bg-mypage-yellow.png") repeat-x 50% 50%; margin-top: -45px; }
 
