@@ -586,6 +586,50 @@ html.has-dep2 #header::after, html.open-gnb-dep2 #header::after { background: #2
 
 .chart-group + .chart-group { margin-top: 2rem; }
 
+.learning-progress h2 { font-size: 20px; font-weight: 700; margin-bottom: 25px; }
+
+.learning-progress .progress { border-radius: 10px; height: 10px; position: relative; overflow: visible; }
+
+.learning-progress .progress .point { display: block; width: 9px; height: 9px; border-radius: 50%; background-color: #fff; position: absolute; top: 0.5px; }
+
+.learning-progress .progress .point:nth-of-type(1) { left: 14.2857%; }
+
+.learning-progress .progress .point:nth-of-type(2) { left: 28.5714%; }
+
+.learning-progress .progress .point:nth-of-type(3) { left: 42.8571%; }
+
+.learning-progress .progress .point:nth-of-type(4) { left: 57.1428%; }
+
+.learning-progress .progress .point:nth-of-type(5) { left: 71.4258%; }
+
+.learning-progress .progress .point:nth-of-type(6) { left: 85.7142%; }
+
+.learning-progress .progress .point.active { z-index: 12; }
+
+.learning-progress .progress .point.active::before { content: ''; display: block; width: 14px; height: 14px; background-color: #aeaf19; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border-radius: 50%; z-index: 1; }
+
+.progress-list .item { overflow: hidden; }
+
+.progress-list .item.disabled .item-header { opacity: .5; }
+
+.progress-list .item.disabled .item-body { border-color: #dbdbdb; }
+
+.progress-list .item-header { background-color: #489d9c; padding: .5rem 0; text-align: center; border-radius: 5px 5px 0 0; position: relative; }
+
+.progress-list .item-header::after { content: ''; width: 0; height: 0; border-style: solid; border-width: 8px 8px 0 8px; border-color: #489d9c transparent transparent transparent; position: absolute; left: 50%; bottom: -7px; transform: translateX(-50%); }
+
+.progress-list .item-body { border: 1px solid #489d9c; border-top: 0; border-radius: 0 0 5px 5px; padding-top: 10px; background-color: #f9f8f8; }
+
+.progress-list .group { padding: 20px 15px; }
+
+.progress-list .group + .group { border-top: 1px dashed #dbdbdb; }
+
+.progress-list .num { font-size: 16px; font-family: 'Play'; color: #fff; font-weight: 700; }
+
+.progress-list .text { font-size: 14px; text-align: center; color: #707070; margin-bottom: 20px; }
+
+.progress-list .btn { font-size: 13px; }
+
 @keyframes mouse-scroll { 0% { opacity: 0; }
   50% { opacity: 1; }
   100% { opacity: .5; } }

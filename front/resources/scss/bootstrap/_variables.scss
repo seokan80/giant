@@ -37,13 +37,13 @@ $grays: map-merge(
 $blue:    #2980c9 !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
-$pink:    #e83e8c !default;
+$pink:    #ba8b90 !default;
 $red:     #dc3545 !default;
 $orange:  #ff9b1a !default;
 $yellow:  #fcce4b !default;
 $green:   #28a745 !default;
 $teal:    #20c997 !default;
-$cyan:    #17a2b8 !default;
+$cyan:    #489d9c !default;
 $gray:    #888 !default;
 $olive:    #aeaf19 !default;
 $brown:    #7a1b1d !default;
@@ -71,7 +71,7 @@ $colors: map-merge(
 
 $primary:       $olive !default;
 $secondary:     $brown !default;
-$success:       $green !default;
+$success:       $cyan !default;
 $info:          $blue !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
@@ -94,6 +94,7 @@ $theme-colors: map-merge(
     "dark":       $dark,
     "darkgray":   $darkgray,
     "navy":   $navy,
+    "pink":   $pink,
   ),
   $theme-colors
 );
@@ -439,7 +440,7 @@ $btn-font-weight:             $font-weight-bold !default;
 $btn-box-shadow:              inset 0 1px 0 rgba($white, .15), 0 1px 1px rgba($black, .075) !default;
 $btn-focus-width:             $input-btn-focus-width !default;
 $btn-focus-box-shadow:        $input-btn-focus-box-shadow !default;
-$btn-disabled-opacity:        .65 !default;
+$btn-disabled-opacity:        .5 !default;
 $btn-active-box-shadow:       inset 0 3px 5px rgba($black, .125) !default;
 
 $btn-link-disabled-color:     $gray-600 !default;

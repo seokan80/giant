@@ -391,3 +391,40 @@
     & + .chart-group{margin-top: 2rem;}
 }
 
+.learning-progress{
+    h2{font-size: 20px;font-weight: 700;margin-bottom: 25px;}
+    .progress{
+        border-radius: 10px;height: 10px;position: relative;overflow: visible;
+        .progress-bar{}
+        .point{display: block;width: 9px;height: 9px;border-radius: 50%;background-color: #fff;position: absolute;top: 0.5px;}
+        .point:nth-of-type(1){left: 14.2857%;}
+        .point:nth-of-type(2){left: 28.5714%;}
+        .point:nth-of-type(3){left: 42.8571%;}
+        .point:nth-of-type(4){left: 57.1428%;}
+        .point:nth-of-type(5){left: 71.4258%;}
+        .point:nth-of-type(6){left: 85.7142%;}
+        .point.active{z-index: 12;}
+        .point.active::before{content: '';display: block;width: 14px;height: 14px;background-color: $primary;position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);border-radius: 50%;z-index: 1;}
+    }
+}
+.progress-list{
+    .item{
+        overflow: hidden;
+        &.disabled{
+            .item-header{opacity: .5;}
+            .item-body{border-color: #dbdbdb;}
+        }
+    }
+    .item-header{
+        background-color: $success;padding: .5rem 0;text-align: center;border-radius: 5px 5px 0 0;position: relative;
+        &::after{content: '';width: 0;height: 0;border-style: solid;border-width: 8px 8px 0 8px;border-color: $success transparent transparent transparent;position: absolute;left: 50%;bottom: -7px;transform: translateX(-50%);}
+    }
+    .item-body{border: 1px solid $success;border-top: 0;border-radius: 0 0 5px 5px;padding-top: 10px;background-color: #f9f8f8;}
+    .group{padding: 20px 15px;}
+    .group + .group{
+        border-top: 1px dashed #dbdbdb;
+    }
+    .num{font-size: 16px;font-family: 'Play';color: #fff;font-weight: 700;}
+    .text{font-size: 14px;text-align: center;color: #707070;margin-bottom: 20px;}
+    .btn{font-size: 13px;}
+}
