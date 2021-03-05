@@ -1,6 +1,7 @@
-[class^=icon-]{display: inline-block;background-size: contain;background-repeat: no-repeat;background-position: 0 0;font-style: normal;}
+[class^=icon-]{display: inline-block;background-size: contain;background-repeat: no-repeat;background-position: 0 0;font-style: normal;font-size: 0;line-height: 1;}
 .icon-close-black{background-image: url('../images/icon-close-black.png');width: 21px;height: 21px;}
 .icon-close-white{background-image: url('../images/x-white.svg');width: 35px;height: 34px;}
+.icon-delete{background-image: url('../images/icon-delete.svg');width: 16px;height: 16px;}
 .icon-down-white{background-image: url('../images/chevron-down-solid.svg');width: 15px;height: 15px;}
 .icon-new{font-size: 15px;width: 25px;height: 25px;padding-right: 1px;background: #fe561c;color: #fff;text-align: center;line-height: 25px;font-weight: 700;}
 .icon-refrash{background-image: url('../images/icon-refrash.png');width: 22px;height: 22px;}
@@ -12,6 +13,8 @@
 .icon-blog{background-image: url('../images/icon-blog.svg');width: 37px;height: 37px;vertical-align: top;}
 .icon-facebook{background-image: url('../images/icon-facebook.svg');width: 37px;height: 37px;vertical-align: top;}
 .icon-calendar{background-image: url('../images/icon-calendar.png');width: 21px;height: 21px;vertical-align: top;}
+.icon-camera{background-image: url('../images/icon-camera.svg');width: 26.3px;height: 20.9px;vertical-align: top;}
+.icon-arrow-right-sm{background-image: url('../images/icon-arrow-right-sm.svg');width: 3px;height: 5px;}
 @include media-breakpoint-down(md) {
     .icon-new{width: 22px;height: 22px;font-size: 13px;line-height: 23px;}
     .icon-refrash{width: 18px;height: 18px;}

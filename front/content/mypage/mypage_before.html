@@ -36,7 +36,7 @@
                                     <ul>
                                         <li><a href="/front/content/login/login.html">로그인</a></li>
                                         <li><a href="/front/content/join/agree.html">회원가입</a></li>
-                                        <li><a href="/front/content/mypage/mypage.html">홍길동님</a></li>
+                                        <li class="active"><a href="/front/content/mypage/mypage.html">홍길동님</a></li>
                                         <li><a href="/front/content/login/login.html">로그아웃</a></li>
                                     </ul>
                                 </div>
@@ -72,91 +72,60 @@
         </div>
         <div id="container-block">
             <div id="container">
-                <div id="content" class="pt-0">
+                <div class="container">
 
-                     <!-- 실 컨텐츠 -->
-                    <div class="mypage-progress">
-                        <div class="container">
-                            <div class="side">
-                                <div class="user">
+                    <!-- 실 컨텐츠 -->
+                    <div class="mypage">
+                        <div class="side">
+                            <div class="user">
+                                <div class="profile-wrap">
                                     <div class="profile"> <!-- 이미지 있을때 .has-img 추가 -->
                                         <!-- <img src="/front/resources/images/@portrait.png" alt=""> -->
-                                        <button type="button" class="btn-img-upload"><i class="icon-camera"></i></button>
+                                        <a href="javascript:;" class="btn-upload"><i class="icon-camera"><span class="sr-only">사진등록</span></i></a>
                                     </div>
-                                    <div class="name">홍길동</div>
                                 </div>
-                                <dl class="info">
-                                    <dt>센터</dt>
-                                    <dd>센터명</dd>
-                                    <dt>학교</dt>
-                                    <dd>학교명</dd>
-                                    <dt>학년</dt>
-                                    <dd>n학년</dd>
-                                </dl>
-                                <div class="btns">
-                                    <a href="/front/content/mypage/myinfo.html">내 정보</a>
-                                    <a href="">학습결과</a>
-                                    <a href="">쪽지함</a>
-                                </div>
+                                <div class="name">홍길동</div>
+                            </div>
+                            <dl class="info">
+                                <dt><i class="fas fa-flag"><span class="sr-only">센터</span></i></dt>
+                                <dd>센터명</dd>
+                                <dt><i class="fas fa-school"><span class="sr-only">학교</span></i></dt>
+                                <dd>학교명</dd>
+                                <dt><i class="fas fa-user-graduate"><span class="sr-only">학년</span></i></dt>
+                                <dd>n학년</dd>
+                            </dl>
+                            <div class="btns">
+                                <a href="myinfo.html" class="">내 정보</a>
+                                <a href="" class="">학습결과</a>
+                                <a href="" class="">쪽지함</a>
                             </div>
                         </div>
-                        <div class="learning-progress">
-                            <h2>학습진도</h2>
-                            <div class="progress">
-                                <!--  14.2857%
-                                    28.5714%
-                                    42.8571%
-                                    57.1428%
-                                    71.4258%
-                                    85.7142% -->
-                                <div class="progress-bar bg-primary" role="progressbar" style="width: 42.8571%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                <span class="point"></span>
-                                <span class="point"></span>
-                                <span class="point active"></span>
-                                <span class="point"></span>
-                                <span class="point"></span>
-                                <span class="point"></span>
-                            </div>
-                            <div class="progress-list">
-                                <div class="row row-20">
-                                    <div class="col-3">
-                                        <div class="item disabled">
-                                            <div class="item-header">
-                                                <div class="num">01</div>
-                                            </div>
-                                            <div class="item-body">
-                                                <div class="group">
-                                                    <button type="button" class="btn btn-success btn-block" disabled>완료</button>
-                                                    <button type="button" class="btn btn-success btn-block" disabled>완료</button>
-                                                </div>
-                                                <div class="group">
-                                                    <div class="text">선택학습</div>
-                                                    <button type="button" class="btn btn-pink btn-block" disabled>완료</button>
-                                                </div>
-                                            </div>
-                                        </div>
+
+                        <div class="right">
+                            <div class="mypage-test">
+                                <div class="levelup">
+                                    <div class="bar">
+                                        <strong>level up!</strong>
+                                        <img src="/front/resources/images/img-test-bar.png" alt="">
+                                        <div class="marker1"></div>
+                                        <div class="marker2"></div>
+                                        <div class="marker3"></div>
+                                        <div class="marker4"></div>
                                     </div>
-                                    <div class="col-3">
-                                        <div class="item">
-                                            <div class="item-header">
-                                                <div class="num">01</div>
-                                            </div>
-                                            <div class="item-body">
-                                                <div class="group">
-                                                    <button type="button" class="btn btn-success btn-block">몰입독서법</button>
-                                                    <button type="button" class="btn btn-success btn-block">독해다지기</button>
-                                                </div>
-                                                <div class="group">
-                                                    <div class="text">선택학습</div>
-                                                    <button type="button" class="btn btn-pink btn-block">사유독평</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                </div>
+                                <p>
+                                    책 읽는 거인 프로그램을 시작하기 위해 독해 실력 진단평가가 필요합니다. <br>
+                                    아래의 레벨 테스트를 진행해 주세요. <br>
+                                    <strong>입학 테스트 결과를 통해 학습 레벨이 결정됩니다.</strong>
+                                </p>
+                                <div class="row row-10 justify-content-center mt-8">
+                                    <div class="col-auto"><a href="#none" class="btn btn-success btn-xl" id="btn-text-test">지문독해 테스트</a></div>
+                                    <div class="col-auto"><a href="#none" class="btn btn-primary btn-xl" id="btn-sentence-test">문장독해 테스트</a></div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <!-- //실 컨텐츠 -->
 
                 </div>

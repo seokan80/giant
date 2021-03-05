@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>책 읽는 거인</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="/front/resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/front/resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="/front/resources/plugin/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="/front/resources/plugin/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="/front/resources/plugin/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="/front/resources/css/bootstrap.css">
+    <link rel="stylesheet" href="/front/resources/css/style.css">
+    <!-- jquery -->
+    <script src="/front/resources/plugin/jquery/jquery.min.js"></script>
+    <!-- jquery ui -->
+    <script src="/front/resources/plugin/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="/front/resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper -->
+    <script src="/front/resources/plugin/swiper/js/swiper.min.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header-block">
+            <div id="header">
+                <div class="container">
+                    <div class="header-wrap">
+                        <h1 class="logo"><a href="/front/content/main/main.html"><span class="sr-only">책 읽는 거인</span></a></h1>
+                        <div class="mobile-header-group">
+                            <div class="h-set">
+                                <div class="h-menu">
+                                    <ul>
+                                        <li><a href="/front/content/login/login.html">로그인</a></li>
+                                        <li><a href="/front/content/join/agree.html">회원가입</a></li>
+                                        <li class="active"><a href="/front/content/mypage/mypage.html">홍길동님</a></li>
+                                        <li><a href="/front/content/login/login.html">로그아웃</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="gnb">
+                                <ul class="dep1">
+                                    <li>
+                                        <a href="/front/content/company/about.html"><span>회사소개</span></a>
+                                        <ul class="dep2">
+                                            <li><a href="/front/content/company/about.html"><span>회사소개</span></a></li>
+                                            <li><a href="/front/content/company/history.html"><span>연혁</span></a></li>
+                                            <li><a href="/front/content/company/flow.html"><span>학습 FLOW</span></a></li>
+                                            <li><a href="/front/content/company/location.html"><span>오시는 길</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/front/content/giant/giant.html"><span>책읽는 거인</span></a></li>
+                                    <li><a href="/front/content/customer/notice.html"><span>고객센터</span></a>
+                                        <ul class="dep2">
+                                            <li><a href="/front/content/customer/notice.html"><span>공지사항</span></a></li>
+                                            <li><a href="/front/content/customer/faq.html"><span>FAQ</span></a></li>
+                                            <li><a href="/front/content/customer/qna.html"><span>1:1 문의</span></a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mobile-menu d-lg-none">
+                            <a role="button" data-id="btn-hamburger"><i class="btn-hamburger"><span class="sr-only">메뉴</span></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="container-block">
+            <div id="container">
+                <div class="container">
+
+                    <!-- 실 컨텐츠 -->
+                    <div class="mypage">
+                        <div class="side">
+                            <div class="user">
+                                <div class="profile-wrap">
+                                    <div class="profile"> <!-- 이미지 있을때 .has-img 추가 -->
+                                        <!-- <img src="/front/resources/images/@portrait.png" alt=""> -->
+                                        <a href="javascript:;" class="btn-upload"><i class="icon-camera"><span class="sr-only">사진등록</span></i></a>
+                                    </div>
+                                </div>
+                                <div class="name">홍길동</div>
+                            </div>
+                            <dl class="info">
+                                <dt><i class="fas fa-flag"><span class="sr-only">센터</span></i></dt>
+                                <dd>센터명</dd>
+                                <dt><i class="fas fa-school"><span class="sr-only">학교</span></i></dt>
+                                <dd>학교명</dd>
+                                <dt><i class="fas fa-user-graduate"><span class="sr-only">학년</span></i></dt>
+                                <dd>n학년</dd>
+                            </dl>
+                            <div class="btns">
+                                <a href="myinfo.html" class="">내 정보</a>
+                                <a href="" class="">학습결과</a>
+                                <a href="" class="">쪽지함</a>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="learning-progress">
+                                <h2>학습진도</h2>
+                                <div class="progress">
+                                    <!--  14.2857%
+                                        28.5714%
+                                        42.8571%
+                                        57.1428%
+                                        71.4258%
+                                        85.7142% -->
+                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 42.8571%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <span class="point"><i></i></span>
+                                    <span class="point"><i></i></span>
+                                    <span class="point active"><i></i></span>
+                                    <span class="point"><i></i></span>
+                                    <span class="point"><i></i></span>
+                                    <span class="point"><i></i></span>
+                                </div>
+                                <div class="progress-list">
+                                    <div class="row row-20">
+                                        <div class="col-6 col-lg-3">
+                                            <div class="item">
+                                                <div class="item-header">
+                                                    <div class="num">01</div>
+                                                </div>
+                                                <div class="item-body">
+                                                    <div class="group">
+                                                        <button type="button" class="btn btn-success btn-block" disabled>완료</button>
+                                                        <button type="button" class="btn btn-success btn-block" disabled>완료</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-lg-3">
+                                            <div class="item">
+                                                <div class="item-header">
+                                                    <div class="num">01</div>
+                                                </div>
+                                                <div class="item-body">
+                                                    <div class="group">
+                                                        <button type="button" class="btn btn-success btn-block">어휘력훈련</button>
+                                                        <button type="button" class="btn btn-success btn-block">독해다지기</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-lg-3">
+                                            <div class="item">
+                                                <div class="item-header">
+                                                    <div class="num">01</div>
+                                                </div>
+                                                <div class="item-body">
+                                                    <div class="group">
+                                                        <button type="button" class="btn btn-success btn-block">어휘력훈련</button>
+                                                        <button type="button" class="btn btn-success btn-block">독해다지기</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-lg-3">
+                                            <div class="item">
+                                                <div class="item-header">
+                                                    <div class="num">01</div>
+                                                </div>
+                                                <div class="item-body">
+                                                    <div class="group">
+                                                        <button type="button" class="btn btn-success btn-block">어휘력훈련</button>
+                                                        <button type="button" class="btn btn-success btn-block">독해다지기</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-lg-3">
+                                            <div class="item disabled">
+                                                <div class="item-header">
+                                                    <div class="num">01</div>
+                                                </div>
+                                                <div class="item-body">
+                                                    <div class="group">
+                                                        <button type="button" class="btn btn-success btn-block" disabled>완료</button>
+                                                        <button type="button" class="btn btn-success btn-block" disabled>완료</button>
+                                                    </div>
+                                                    <div class="group">
+                                                        <div class="text">선택학습</div>
+                                                        <button type="button" class="btn btn-pink btn-block" disabled>완료</button>
+                                                        <button type="button" class="btn btn-pink btn-block">교과서 독해</button>
+                                                        <button type="button" class="btn btn-pink btn-block">비문학 독해</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-lg-3">
+                                            <div class="item">
+                                                <div class="item-header">
+                                                    <div class="num">01</div>
+                                                </div>
+                                                <div class="item-body">
+                                                    <div class="group">
+                                                        <button type="button" class="btn btn-success btn-block">몰입독서법</button>
+                                                        <button type="button" class="btn btn-success btn-block">독해다지기</button>
+                                                    </div>
+                                                    <div class="group">
+                                                        <div class="text">선택학습</div>
+                                                        <button type="button" class="btn btn-pink btn-block">사유독평</button>
+                                                        <button type="button" class="btn btn-pink btn-block">교과서 독해</button>
+                                                        <button type="button" class="btn btn-pink btn-block">비문학 독해</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-lg-3">
+                                            <div class="item">
+                                                <div class="item-header">
+                                                    <div class="num">01</div>
+                                                </div>
+                                                <div class="item-body">
+                                                    <div class="group">
+                                                        <button type="button" class="btn btn-success btn-block">몰입독서법</button>
+                                                        <button type="button" class="btn btn-success btn-block">독해다지기</button>
+                                                    </div>
+                                                    <div class="group">
+                                                        <div class="text">선택학습</div>
+                                                        <button type="button" class="btn btn-pink btn-block">사유독평</button>
+                                                        <button type="button" class="btn btn-pink btn-block">교과서 독해</button>
+                                                        <button type="button" class="btn btn-pink btn-block">비문학 독해</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-lg-3">
+                                            <div class="item">
+                                                <div class="item-header">
+                                                    <div class="num">01</div>
+                                                </div>
+                                                <div class="item-body">
+                                                    <div class="group">
+                                                        <button type="button" class="btn btn-success btn-block">몰입독서법</button>
+                                                        <button type="button" class="btn btn-success btn-block">독해다지기</button>
+                                                    </div>
+                                                    <div class="group">
+                                                        <div class="text">선택학습</div>
+                                                        <button type="button" class="btn btn-pink btn-block">사유독평</button>
+                                                        <button type="button" class="btn btn-pink btn-block">교과서 독해</button>
+                                                        <button type="button" class="btn btn-pink btn-block">비문학 독해</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- //실 컨텐츠 -->
+
+                </div>
+            </div>
+        </div>
+        <div id="footer-block">
+            <div id="footer">
+                <div class="container">
+                    <ul class="f-menu">
+                        <li><a href="">회사소개</a></li>
+                        <li><a href="">이용약관</a></li>
+                        <li><a href=""><strong>개인정보취급방침</strong></a></li>
+                    </ul>
+                    <div class="f-info">
+                        회사명 : 주식회사 메타스콜레   대표이사 : 정해영   사업자등록번호 : 856-88-01642   이메일 : metas@metaschole.co.kr <br>
+                        팩스 : 02-553-3482  문의전화 : 1688-3482  주소 : (우:06197) 서울특별시 강남구 역삼로 423 7층 (대치동, 화남빌딩)
+                    </div>
+                    <p class="copyright">Copyright ⓒ All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ui 관련 -->
+    <script src="/front/resources/js/ui.js"></script>
+
+    <script>
+    </script>
+</body>
+</html>
