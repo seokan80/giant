@@ -713,6 +713,10 @@ html.has-dep2 #header::after, html.open-gnb-dep2 #header::after { background: #2
 
 .progress-list .btn { font-size: 13px; }
 
+.popup-head.bg-dark { padding: 1rem; }
+
+.popup-head.bg-dark .popup-title { color: #fff; font-size: 22px; font-weight: 700; margin: 0; }
+
 .popup-top-search { position: relative; border-bottom: 1px solid #333; display: flex; align-items: center; padding-right: 1rem; }
 
 .popup-top-search .form-control { border-radius: 0; border: 0; flex: 1; }

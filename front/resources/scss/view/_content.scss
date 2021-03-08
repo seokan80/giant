@@ -386,7 +386,12 @@
     .btn{font-size: 13px;}
 }
 
-.popup-head{}
+.popup-head{
+    &.bg-dark{
+        padding: 1rem;
+        .popup-title{color: #fff;font-size: 22px;font-weight: 700;margin: 0;}
+    }
+}
 .popup-body{}
 
 .popup-top-search{

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>책 읽는 거인</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="/front/resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/front/resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="/front/resources/plugin/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="/front/resources/plugin/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="/front/resources/plugin/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="/front/resources/css/bootstrap.css">
+    <link rel="stylesheet" href="/front/resources/css/style.css">
+    <!-- jquery -->
+    <script src="/front/resources/plugin/jquery/jquery.min.js"></script>
+    <!-- jquery ui -->
+    <script src="/front/resources/plugin/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="/front/resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper -->
+    <script src="/front/resources/plugin/swiper/js/swiper.min.js"></script>
+</head>
+
+<body>
+
+    <div class="popup">
+        <div class="popup-head">
+            <div class="popup-top-search">
+                <input type="text" class="form-control form-control-lg" placeholder="학교검색">
+                <button type="button"><i class="icon-delete"><span class="sr-only">삭제</span></i></button>
+                <button type="button"><i class="icon-search"><span class="sr-only">검색</span></i></button>
+            </div>
+            <div class="popup-top-desc">
+                <p>
+                    <strong>검색결과가 많습니다.</strong>  검색어에 아래와 같은 조합을 이용하시면 더욱 정확한 결과가 검색됩니다.
+                    <em>‘도로명+건물번호’</em>
+                    <em>‘지역명+지번’</em>
+                    <em>‘사서함명+번호’</em>
+                </p>
+            </div>
+        </div>
+        <div class="popup-body">
+            <div class="popup-info">
+                <h2 class="tit-tip">tip</h2>
+                <p class="desc-tip">아래와 같은 조합으로 검색을 하시면 더욱 정확한 결과가 검색됩니다.</p>
+                <p class="desc-tip">도로명 + 건물번호</p>
+                <span class="txt-example">예) 판교역로 235,&nbsp;&nbsp;제주 첨단로 242</span>
+                <p class="desc-tip2">지역명(동/리) + 번지</p>
+                <span class="txt-example">예) 삼평동 681,&nbsp;&nbsp;제주 영평동 2181</span>
+                <p class="desc-tip2">지역명(동/리) + 건물명(아파트명)</p>
+                <span class="txt-example">예) 분당 주공,&nbsp;&nbsp;연수동 주공3차</span>
+                <p class="desc-tip2">사서함명 + 번호</p>
+                <span class="txt-example">예) 분당우체국사서함 1~100</span>
+            </div>
+
+            <div class="school-list">
+                <ul>
+                    <li>
+                        <a href="">ㅇㅇㅇ초등학교</a>
+                    </li>
+                    <li>
+                        <a href="">ㅇㅇㅇ초등학교</a>
+                    </li>
+                    <li>
+                        <a href="">ㅇㅇㅇ초등학교</a>
+                    </li>
+                    <li>
+                        <a href="">ㅇㅇㅇ초등학교</a>
+                    </li>
+                    <li>
+                        <a href="">ㅇㅇㅇ초등학교</a>
+                    </li>
+                    <li>
+                        <a href="">ㅇㅇㅇ초등학교</a>
+                    </li>
+                    <li>
+                        <a href="">ㅇㅇㅇ초등학교</a>
+                    </li>
+                    <li>
+                        <a href="">ㅇㅇㅇ초등학교</a>
+                    </li>
+                </ul>
+                <nav class="text-center mt-2">
+                    <ul class="pagination">
+                        <li class="page-item page-arrow disabled">
+                            <a class="page-link" href="#"><span class="sr-only">이전</span><i class="fas fa-angle-left"></i></a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item active"><a class="page-link" href="#">2 <span class="sr-only">(current)</span></a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item page-arrow">
+                            <a class="page-link" href="#"><span class="sr-only">다음</span><i class="fas fa-angle-right"></i></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ui 관련 -->
+    <script src="/front/resources/js/ui.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+        });
+    </script>
+</body>
+</html>
