@@ -50,7 +50,7 @@ ol ol, ul ul, ol ul, ul ol { margin-bottom: 0; }
 
 dt { font-weight: 700; }
 
-dd { margin-bottom: .5rem; margin-left: 0; }
+dd { margin: 0; }
 
 blockquote { margin: 0 0 1rem; }
 

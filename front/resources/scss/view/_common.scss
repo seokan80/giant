@@ -34,6 +34,8 @@ i.new{display: inline-block;background: #cb1c1c;width: 13px;height: 13px;border-
     }
 }
 
+.btn-round{border-radius: 50rem;}
+
 .title{font-size: 28px;font-weight: 700;color: #333;}
 @include media-breakpoint-down(md) {
     .title{font-size: 20px;}
