@@ -174,3 +174,24 @@
          transform: translateY(0);
      }
  }
+
+
+@-webkit-keyframes bounce-vertical {
+    from{
+        transform: translateY(0);
+    }
+
+    to{
+        transform: translateY(-20px);
+    }
+}
+@keyframes bounce-vertical {
+    from{
+        transform: translateY(0);
+    }
+
+    to{
+        transform: translateY(-20px);
+    }
+}
+
