@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>책 읽는 거인 Admin</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="/admin/resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/admin/resources/images/favicon-128.png" sizes="128x128">
+
+    <link rel="stylesheet" href="/admin/resources/plugin/fontawesome-free/css/all.min.css">
+
+     <!-- TOAST UI -->
+    <link rel="stylesheet" href="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.css">
+    <link rel="stylesheet" href="https://uicdn.toast.com/grid/latest/tui-grid.css">
+
+    <link rel="stylesheet" href="/admin/resources/css/bootstrap.css">
+    <link rel="stylesheet" href="/admin/resources/css/style.css">
+
+    <!-- jquery -->
+    <script src="/admin/resources/plugin/jquery/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="/admin/resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- TOAST UI -->
+    <script src="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.js"></script>
+    <script src="https://uicdn.toast.com/grid/latest/tui-grid.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header-block">
+            <div id="header">
+                <div class="container-fluid">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-auto">
+                            <h1><a href=""><img src="/admin/resources/images/logo-white.png" alt="책 읽는 거인"> 관리자</a></h1>
+                        </div>
+                        <div class="col-auto">
+                            <span class="name">홍길동님</span>
+                            <button type="button" class="btn btn-primary">LOGOUT</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="container-block">
+            <div id="side">
+                <div class="container-fluid">
+                    <div id="gnb">
+                        <ul class="dep1">
+                            <li>
+                                <a href="" class="dep1-link"><span><i class="fas fa-user-graduate"></i>학생 관리</span></a>
+                            </li>
+                            <li>
+                                <a href="" class="dep1-link"><span><i class="fas fa-chalkboard-teacher"></i>교사 관리</span></a>
+                            </li>
+                            <li>
+                                <a href="" class="dep1-link"><span><i class="fas fa-flag"></i>센터 관리</span></a>
+                            </li>
+                            <li class="has-treeview active open">
+                                <a href="" class="dep1-link"><span><i class="fas fa-chalkboard"></i>학습 관리</span></a>
+                                <ul class="dep2">
+                                    <li><a href="../learning/learing_list.html" class="dep2-link"><span>학습 관리</span></a></li>
+                                    <li class="active"><a href="../learning/learing_form.html" class="dep2-link"><span>학습 등록</span></a></li>
+                                    <li><a href="" class="dep2-link"><span>커리큘럼 관리</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="has-treeview">
+                                <a href="" class="dep1-link"><span><i class="fas fa-list"></i>게시판 관리</span></a>
+                                <ul class="dep2">
+                                    <li><a href="" class="dep2-link"><span>공지사항</span></a></li>
+                                    <li><a href="" class="dep2-link"><span>FAQ</span></a></li>
+                                    <li><a href="" class="dep2-link"><span>1:1 문의</span></a></li>
+                                    <li><a href="" class="dep2-link"><span>약관</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="" class="dep1-link"><span><i class="fas fa-images"></i>메인 배너 관리</span></a>
+                            </li>
+                            <li>
+                                <a href="" class="dep1-link"><span><i class="fas fa-envelope-open"></i>쪽지 관리</span></a>
+                            </li>
+                            <li>
+                                <a href="" class="dep1-link"><span><i class="fas fa-money-check"></i>결제 관리</span></a>
+                            </li>
+                            <li>
+                                <a href="" class="dep1-link"><span><i class="fas fa-chart-pie"></i>통계</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="content">
+                <div class="container-fluid">
+
+                    <div class="top-area mb-4">
+                        <h2 class="title">학습관리</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">Home</li>
+                                <li class="breadcrumb-item">학습관리</li>
+                                <li class="breadcrumb-item" aria-current="page">학습 등록</li>
+                            </ol>
+                        </nav>
+                    </div>
+
+                    <h3 class="table-title mt-4 mb-3">기본 정보</h3>
+                    <table class="table table-bordered">
+                        <colgroup>
+                            <col style="width:200px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th class="text-center">카테고리</th>
+                                <td>
+                                    <select name="" id="" class="custom-select" style="width:auto">
+                                        <option value="">입학테스트</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">분류</th>
+                                <td>
+                                    <select name="" id="" class="custom-select" style="width:auto">
+                                        <option value="">지문독해</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">레벨</th>
+                                <td>
+                                    <select name="" id="" class="custom-select" style="width:auto">
+                                        <option value="">LV 1</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">회차수</th>
+                                <td>
+                                    <select name="" id="" class="custom-select" style="width:auto">
+                                        <option value="">-</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">제목</th>
+                                <td>
+                                    <input type="text" class="form-control">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">문제풀이 시간</th>
+                                <td>
+                                    <select name="" id="" class="custom-select" style="width:auto">
+                                        <option value="">0분</option>
+                                    </select>
+                                    <select name="" id="" class="custom-select" style="width:auto">
+                                        <option value="">0초</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">출제 유형</th>
+                                <td>
+                                    <label class="form-radio">
+                                        <input type="radio" id="" name="questionType"><span>닥스콘</span>
+                                    </label>
+                                    <label class="form-radio ml-3">
+                                        <input type="radio" id="" name="questionType"><span>직접 출제</span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">상태</th>
+                                <td>
+                                    <select name="" id="" class="custom-select" style="width:auto">
+                                        <option value="">정상</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3 class="table-title mt-4 mb-3">문항 정보</h3>
+                    <table class="table table-bordered">
+                        <colgroup>
+                            <col style="width:200px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th class="text-center">지문</th>
+                                <td>
+                                    <div>
+                                        <button type="button" class="btn btn-secondary">작성하기</button>
+                                        <button type="button" class="btn btn-secondary">저장</button>
+                                    </div>
+                                    <div class="mt-2">
+                                        에디터영역
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="table table-bordered">
+                        <colgroup>
+                            <col style="width:40px">
+                            <col style="width:40px">
+                            <col style="width:120px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td class="text-center" rowspan="8">
+                                    <label class="form-checkbox">
+                                        <input type="checkbox" id="">
+                                    </label>
+                                </td>
+                                <td class="text-center" rowspan="8">1</td>
+                                <th class="text-center">유형</th>
+                                <td>
+                                    <select name="" id="" class="custom-select" style="width:auto">
+                                        <option value="">보기 중 하나 선택 </option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">질문 1</th>
+                                <td>
+                                    <div class="row row-10 align-items-center justify-content-between">
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-secondary">수정</button>
+                                            <button type="button" class="btn btn-secondary">저장</button>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-secondary btn-sm">문항 삭제</button>
+                                        </div>
+                                    </div>
+                                    <div class="mt-2">
+                                        에디터영역
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">보기 1</th>
+                                <td>
+                                    <div class="row row-10 align-items-center justify-content-between">
+                                        <div class="col">
+                                            <div class="row row-10 ">
+                                                <div class="col">
+                                                    보기 내용
+                                                </div>
+                                                <div class="col-auto">|</div>
+                                                <div class="col">
+                                                    해설 내용
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 text-right">
+                                            <button type="button" class="btn btn-secondary btn-sm">보기 삭제</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">보기 2</th>
+                                <td>
+                                    <div class="row row-10 align-items-center justify-content-between">
+                                        <div class="col">
+                                            <div class="row row-10 ">
+                                                <div class="col">
+                                                    보기 내용
+                                                </div>
+                                                <div class="col-auto">|</div>
+                                                <div class="col">
+                                                    해설 내용
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 text-right">
+                                            <button type="button" class="btn btn-secondary btn-sm">보기 삭제</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">보기 3</th>
+                                <td>
+                                    <div class="row row-10 align-items-center justify-content-between">
+                                        <div class="col">
+                                            <div class="row row-10 ">
+                                                <div class="col">
+                                                    보기 내용
+                                                </div>
+                                                <div class="col-auto">|</div>
+                                                <div class="col">
+                                                    해설 내용
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 text-right">
+                                            <button type="button" class="btn btn-secondary btn-sm">보기 추가</button>
+                                            <button type="button" class="btn btn-secondary btn-sm">보기 삭제</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">정답</th>
+                                <td>
+                                    1
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="table table-bordered">
+                        <colgroup>
+                            <col style="width:40px">
+                            <col style="width:40px">
+                            <col style="width:120px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td class="text-center" rowspan="8">
+                                    <label class="form-checkbox">
+                                        <input type="checkbox" id="">
+                                    </label>
+                                </td>
+                                <td class="text-center" rowspan="8">2</td>
+                                <th class="text-center">유형</th>
+                                <td>
+                                    <select name="" id="" class="custom-select" style="width:auto">
+                                        <option value="">보기 중 하나 선택 </option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">질문 2</th>
+                                <td>
+                                    <div class="row row-10 align-items-center justify-content-between">
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-secondary">수정</button>
+                                            <button type="button" class="btn btn-secondary">저장</button>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-secondary btn-sm">문항 삭제</button>
+                                        </div>
+                                    </div>
+                                    <div class="mt-2">
+                                        에디터영역
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">보기 1</th>
+                                <td>
+                                    <div class="row row-10 align-items-center justify-content-between">
+                                        <div class="col">
+                                            <div class="row row-10 ">
+                                                <div class="col">
+                                                    보기 내용
+                                                </div>
+                                                <div class="col-auto">|</div>
+                                                <div class="col">
+                                                    해설 내용
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 text-right">
+                                            <button type="button" class="btn btn-secondary btn-sm">보기 추가</button>
+                                            <button type="button" class="btn btn-secondary btn-sm">보기 삭제</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">정답</th>
+                                <td>
+                                    1
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                    <div class="row align-items-center justify-content-between mt-3">
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-primary" style="width:90px">삭제</button>
+                            <button type="button" class="btn btn-primary ml-1" style="width:90px">수정</button>
+                        </div>
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-primary" style="width:90px">목록</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ui 관련 -->
+    <script src="/admin/resources/js/ui.js"></script>
+
+
+    <script>
+    </script>
+</body>
+</html>

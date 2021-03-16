@@ -1,0 +1,27 @@
+[class^=icon-]{display: inline-block;background-size: contain;background-repeat: no-repeat;background-position: 0 0;font-style: normal;font-size: 0;line-height: 1;}
+
+.tui-datepicker-input{height: 35px;}
+.tui-datepicker-input.tui-has-focus{border-color: #ddd;}
+.tui-datepicker-input > input{font-size: 14px;padding-top: 5px;padding-left: .75rem;padding-right: .75rem;}
+.tui-datepicker-input .tui-ico-date + div{position: relative;z-index: 99;}
+
+.tui-grid-table{
+    input[type=checkbox],
+    input[type=radio]{
+        vertical-align: middle;
+    }
+}
+
+.form-radio{
+    margin-bottom: 0;
+    input[type=radio]{vertical-align: middle;}
+    input[type=radio] + span{vertical-align: middle;margin-left: 5px;}
+}
+
+.form-checkbox{
+    margin-bottom: 0;
+    input[type=checkbox]{vertical-align: middle;}
+    input[type=checkbox] + span{vertical-align: middle;margin-left: 5px;}
+}
+
+.table-title{font-size: 18px;font-weight: 700;}
