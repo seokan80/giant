@@ -267,31 +267,42 @@
     }
 }
 
+label.number{
+    cursor: pointer;display: inline-flex;align-items: center;font-family: arial;margin-bottom: 0;
+    input{position: absolute;opacity: 0;visibility: hidden;height: 0;width: 0;}
+    i{display: inline-block;vertical-align: middle;width: 18px;height: 18px;line-height: 17px;text-align: center;border-radius: 50%;border: 1px solid #ccc;color: #555;font-size: 12px;font-family: arial;transform: translateY(-1px);}
+    span{margin-left: .5rem;}
+    input:checked + i{border-color: $dark;background-color: $dark;color: #fff;font-weight: 500;}
+}
+
 .choice{
     margin-top: 10px;
     > div{margin: 5px 0;}
-    label{
-        cursor: pointer;display: inline-flex;align-items: center;font-family: arial;margin-bottom: 0;
-        input{position: absolute;opacity: 0;visibility: hidden;height: 0;width: 0;}
-        i{display: inline-block;vertical-align: middle;width: 18px;height: 18px;line-height: 17px;text-align: center;border-radius: 50%;border: 1px solid #ccc;color: #555;font-size: 12px;font-family: arial;transform: translateY(-1px);}
-        span{margin-left: .5rem;}
-        input:checked + i{border-color: $dark;background-color: $dark;color: #fff;font-weight: 500;}
-    }
     &.inline{
         > div{
             display: inline-flex;align-items: center;margin: 0 25px 0 0;
-            label{}
         }
     }
 }
 
 .type-in-order{
     text-align: center;
-    .item{border: 1px solid #ddd;text-align: center;padding: 5px;}
+    .item{text-align: center;padding: 3px 5px;background: #f1f1f1;border-radius: 30px;}
 }
 
 .type-box{
     border: 1px solid #999;padding: 1rem;border-radius: 2px;
+}
+
+.type-table{
+    display: flex;align-items: center;width: 100%;
+    .item{flex-basis: 0;flex-grow: 1;max-width: 100%;}
+    .arr{flex: 0 0 auto;width: auto;max-width: 100%;text-align: center;padding: 0 .5rem;}
+    table{width: 100%;
+        th{background-color: $light;}
+        th,
+        td{font-weight: 400;border: 1px solid #ddd;padding: 3px 8px;height: 36px;}
+    }
 }
 
 .questions{
@@ -300,6 +311,7 @@
     > li{
         display: flex;margin-bottom: 1.5rem;font-size: 17px;
         .num{flex: 0 0 30px;font-weight: 700;}
+        .text{flex: 1;}
         .question{line-height: 1.6;white-space: pre-wrap;margin-bottom:10px;}
     }
 }
