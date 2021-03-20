@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>책 읽는 거인</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="/front/resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/front/resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="/front/resources/plugin/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="/front/resources/plugin/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="/front/resources/plugin/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="/front/resources/css/bootstrap.css">
+    <link rel="stylesheet" href="/front/resources/css/style.css">
+    <!-- jquery -->
+    <script src="/front/resources/plugin/jquery/jquery.min.js"></script>
+    <!-- jquery ui -->
+    <script src="/front/resources/plugin/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="/front/resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper -->
+    <script src="/front/resources/plugin/swiper/js/swiper.min.js"></script>
+
+    <!-- chartjs -->
+    <link rel="stylesheet" href="https://uicdn.toast.com/chart/latest/toastui-chart.min.css" />
+    <script src="https://uicdn.toast.com/chart/latest/toastui-chart.min.js"></script>
+</head>
+
+<body>
+
+    <div class="test-wrap">
+        <div class="test-header">
+            <div class="d-flex align-items-end">
+                <h1>지문 독해 테스트</h1>
+                <span class="ml-4">결과 확인</span>
+            </div>
+        </div>
+        <div class="test-body">
+            <div class="test-result">
+                <div class="test-summary">
+                    <p class="test-desc"><b>[ooo]</b> 학생의 지문 독해 테스트 결과는 다음과 같습니다</p>
+                    <div class="chart-wrap">
+                        <div class="chart">
+                            <div id="chart-area1"></div>
+                            <div class="legend">
+                                <div>
+                                    <p>독해 정확도</p>
+                                    <strong>100<i>점</i></strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart">
+                            <div id="chart-area2"></div>
+                            <div class="legend">
+                                <div>
+                                    <p>독해 속도</p>
+                                    <span>(분당 글 읽는 속도)</span>
+                                    <strong>1004<i>자</i></strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart">
+                            <div id="chart-area3"></div>
+                            <div class="legend">
+                                <div>
+                                    <p>정보처리 시간</p>
+                                    <strong>25<i>분</i> 17<i>초</i></strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6">
+                    <h2 class="subtitle d-inline">레벨</h2>
+                    <p class="test-desc d-inline ml-5"><b>[ooo]</b> 학생의 레벨은 <b>[ 1 ]</b> 입니다.</p>
+                </div>
+                <div class="px-8">
+                    <div class="progress level10 mt-6">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                        <span data-level="level. 1" class="point active"><i></i></span>
+                        <span data-level="level. 2" class="point"><i></i></span>
+                        <span data-level="level. 3" class="point"><i></i></span>
+                        <span data-level="level. 4" class="point"><i></i></span>
+                        <span data-level="level. 5" class="point"><i></i></span>
+                        <span data-level="level. 6" class="point"><i></i></span>
+                        <span data-level="level. 7" class="point"><i></i></span>
+                        <span data-level="level. 8" class="point"><i></i></span>
+                        <span data-level="level. 9" class="point"><i></i></span>
+                        <span data-level="level. 10" class="point"><i></i></span>
+                    </div>
+                </div>
+
+                <div class="chart-radar">
+                    <div id="chart-radar"></div>
+                </div>
+
+                <p class="reference-title">* 독해력 점수와 읽기 속도 참고자료</p>
+                <div class="test-reference row">
+                    <div class="col">
+                        <table class="table table-bordered table-fixed">
+                            <colgroup>
+                                <col style="width:100px">
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="text-center bg1" colspan="2">지문 이해도</th>
+                                </tr>
+                                <tr>
+                                    <th class="text-center">독해 점수</th>
+                                    <th class="text-center">독해 능력 평가</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center">91점 이상</td>
+                                    <td>독서량이 많고 매우 수준 높은 독해 능력을 갖춤</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">90점 ~ 81점</td>
+                                    <td>우수한 수준의 독해 능력을 갖춤</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">80점 ~ 61점</td>
+                                    <td>독해 능력은 양호하나 신중함이 요구됨</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">60점 ~ 41점</td>
+                                    <td>대략적 내용을 이해하고 있으나 글을 깊이 사고하며 읽는 태도가 필요함</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">40점 이하</td>
+                                    <td>독해 능력과 읽기 태도에 보완이 필요함</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col">
+                        <table class="table table-bordered table-fixed">
+                            <colgroup>
+                                <col style="width:120px">
+                                <col style="width:140px">
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="text-center bg2" colspan="3">평균적 읽기 속도 </th>
+                                </tr>
+                                <tr>
+                                    <th class="text-center">학년</th>
+                                    <th class="text-center">평균 속도/1분</th>
+                                    <th class="text-center">비 고</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center">초1 ~ 초2상</td>
+                                    <td class="text-center">200자 ~ 300자</td>
+                                    <td rowspan="6">
+                                        <strong>* 개인별 읽기 속도 판단의 기준</strong> : 글을 읽고 난 후 문제를 풀며 이해도를 측정했을 때 최소 70% 이상의 정확도가 나올 경우 그 속도가 인정됨
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">초3 ~ 초4</td>
+                                    <td class="text-center">300자 ~ 400자</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">초5 ~ 초6</td>
+                                    <td class="text-center">500자 ~ 600자</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">중1 ~ 중2</td>
+                                    <td class="text-center">700자 ~ 800자</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">중3 ~ 고1</td>
+                                    <td class="text-center">900자 ~ 1000자</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">고2 이상</td>
+                                    <td class="text-center">1100자 내외</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <h2 class="subtitle mt-6 mb-4">지문독해 해설</h2>
+                <table class="table table-bordered table-fixed">
+                    <colgroup>
+                        <col style="width:100px">
+                        <col style="width:100px">
+                        <col style="width:60px">
+                        <col style="width:60px">
+                        <col>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th class="text-center">문제 번호</th>
+                            <th class="text-center">진단영역</th>
+                            <th class="text-center">점수</th>
+                            <th class="text-center" colspan="2">총평 / 결과 해설</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center" rowspan="2">01</td>
+                            <td class="text-center" rowspan="2">사실적이해</td>
+                            <td class="text-center" rowspan="2"><i class="far fa-circle"></i></td>
+                            <td class="text-center bg1">총평</td>
+                            <td><strong>주인공이란 글에서 사건의 중심이 되는 인물입니다. 이야기 글에서 주인공을  파악하며 읽는 힘이 있습니다.</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center bg3">해설</td>
+                            <td>글에서 토끼를 중심으로 사건이 이이지고 있기 때문에 토끼가 주인공이다.</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center" rowspan="2">02</td>
+                            <td class="text-center" rowspan="2">추론적이해</td>
+                            <td class="text-center" rowspan="2"><i class="fas fa-times"></i></td>
+                            <td class="text-center bg1">총평</td>
+                            <td><strong>주인공이란 글에서 사건의 중심이 되는 인물입니다. 이야기 글에서 주인공을  파악하며 읽는 힘이 있습니다.</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center bg3">해설</td>
+                            <td>글에서 토끼를 중심으로 사건이 이이지고 있기 때문에 토끼가 주인공이다.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="test-footer">
+            <div class="text-center">
+                <button type="button" class="btn btn-success btn-xl" style="width:265px" onclick="window.print()"><i class="fas fa-print mr-2"></i>출력하기</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ui 관련 -->
+    <script src="/front/resources/js/ui.js"></script>
+
+    <script>
+        //도넛 차트
+        const el = document.getElementById('chart-area1');
+        const data = {
+            categories: ['accuracy'],
+            series: [
+                {
+                    name: '점수', data: 100,
+                },
+            ],
+        };
+        const theme = {
+            series: {
+                colors: ['#a7af38'],
+                areaOpacity: 1,
+            },
+        };
+        const options = {
+            legend: { visible: false, },
+            exportMenu: { visible: false },
+            chart: { width: 280, height: 280 },
+            series: { radiusRange: { inner: '80%', outer: '100%' }, },
+            theme,
+        };
+        const chart = toastui.Chart.pieChart({ el, data, options });
+
+        //레이더 차트
+        /* const el = document.getElementById('chart-radar');
+        const data = {
+            categories: ['사실적 이해', '추론적 이해', '비판적 이해', '창의적 이해', '어휘력'],
+            series: [
+                {
+                    name: '결과',
+                    data: [50, 100, 60, 70, 60,],
+                },
+                {
+                    name: '평균',
+                    data: [80, 60, 70, 100, 70,],
+                },
+            ],
+        };
+        const options = {
+            theme: {
+                series: {
+                    colors: ['#489d9c', '#e9ebcd'],
+                    lineWidth: 1,
+                    areaOpacity: 0.4,
+                    dot: {
+                        radius: 3,
+                    },
+                }
+            },
+            legend: { visible: true, align: 'bottom'},
+            exportMenu: { visible: false },
+            chart: { width: 700, height: 500 },
+            series: { showDot: true, showArea: true },
+        };
+        const chart = toastui.Chart.radarChart({ el, data, options }); */
+    </script>
+</body>
+</html>

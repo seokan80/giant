@@ -41,6 +41,11 @@ i.new{display: inline-block;background: #cb1c1c;width: 13px;height: 13px;border-
     .title{font-size: 20px;}
 }
 
+.subtitle{
+    position: relative;padding-left: 17px;font-size: 24px;font-weight: 700;color: #333;
+    &::before{content: '';width: 5px;height: 20px;background: #333;position: absolute;left: 0;top: 4px;}
+}
+
 .border-bottom-dark{
     border-bottom: 1px solid #333;
 }
@@ -75,14 +80,15 @@ textarea.form-control{padding-top: .75rem;padding-bottom: .75rem;}
     .nav-tabs{margin-bottom: 2rem;}
 }
 
+.table-fixed{table-layout: fixed;}
 .table{
     border-bottom: 1px solid $border-color;border-top: 1px solid #333;
     tr{transition: background-color .15s;}
 }
 @include media-breakpoint-down(md) {
-    .table{
+    /* .table{
         colgroup{display: none;}
-    }
+    } */
 }
 
 .board-detail{

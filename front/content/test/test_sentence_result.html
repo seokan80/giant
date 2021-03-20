@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -21,6 +22,10 @@
     <script src="/front/resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Swiper -->
     <script src="/front/resources/plugin/swiper/js/swiper.min.js"></script>
+
+    <!-- chartjs -->
+    <link rel="stylesheet" href="https://uicdn.toast.com/chart/latest/toastui-chart.min.css" />
+    <script src="https://uicdn.toast.com/chart/latest/toastui-chart.min.js"></script>
 </head>
 
 <body>
@@ -29,81 +34,89 @@
         <div class="test-header">
             <div class="d-flex align-items-end">
                 <h1>문장 독해 테스트</h1>
-                <span class="ml-4">Level A</span>
+                <span class="ml-4">결과 확인</span>
             </div>
-            <button type="button" class="btn btn-dark" onclick="window.print()"><i class="fas fa-print mr-2"></i>출력하기</button>
         </div>
         <div class="test-body">
             <div class="test-result">
-                <div class="page">
-                    <div class="test-summary">
-                        <h2><span>문장 독해 검사결과</span></h2>
-                        <p><b>ooo 학생</b>의 문장 독해 테스트 결과는 다음과 같습니다</p>
-                        <ul>
-                            <li>
-                                <div class="item">독해 정확도</div>
-                                <div class="circle"><strong class="text-primary">100점</strong></div>
-                            </li>
-                            <li>
-                                <div class="item">독해 속도 <span>(분당 글 읽는 속도)</span></div>
-                                <div class="circle"><strong class="text-info">1004자</strong></div>
-                            </li>
-                            <li>
-                                <div class="item">정보처리 시간</div>
-                                <div class="circle"><strong class="text-orange">20분 17초</strong></div>
-                            </li>
-                        </ul>
+                <div class="test-summary">
+                    <p class="test-desc"><b>[ooo]</b> 학생의 문장 독해 테스트 결과는 다음과 같습니다</p>
+                    <div class="chart-wrap">
+                        <div class="chart">
+                            <div id="chart-area1"></div>
+                            <div class="legend">
+                                <div>
+                                    <p>독해 정확도</p>
+                                    <strong>100<i>점</i></strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart">
+                            <div id="chart-area2"></div>
+                            <div class="legend">
+                                <div>
+                                    <p>정보처리 시간</p>
+                                    <strong>25<i>분</i> 17<i>초</i></strong>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </div>
 
-                    <h2 class="title text-primary mt-6">수준별 독해평가 내용</h2>
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th class="text-center" colspan="2">구분</th>
-                                <th class="text-center">분석지표 기준</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="text-center" rowspan="3">사실적 이해</td>
-                                <td class="text-center">단어 및 문장 연결 이해</td>
-                                <td>문맥적 단서를 통해 단어나 문장의 의미 파악 하기</td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">세부정보 파악</td>
-                                <td>주장과 의견, 중심문장과 부속 문장, 핵심어, 화제, 명확한 주체 등 명시적으로 진술 된 정보의 의미 파악하기</td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">중심내용 파악</td>
-                                <td>주요 내용을 연결하여 중심 생각을 파악하거나, 거시적인 차원에서 내용 요약하기</td>
-                            </tr>
-                            <tr>
-                                <td class="text-center" rowspan="3">추론적 이해</td>
-                                <td class="text-center">생략된 내용 파악</td>
-                                <td>텍스트의 문맥, 독자의 배경지식을 활용하여 생략된 정보를 추론하기</td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">이어질 내용 파악</td>
-                                <td>텍스트의 문맥, 독자의 배경지식을 활용하여 이어질 내용을 예측하기</td>
-                            </tr>
-                            <tr>
-                                <td class="text-center">글의 구조 파악</td>
-                                <td>비교-대조, 원인-결과, 문제-해결, 주장-논거 등 글의 수사적 상위 구조 파악하기</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="page">
-                    <h2 class="title text-primary">문장 독해</h2>
-                    <div class="chart-group">
-                        <div class="chart-area">차트</div>
-                        <p class="chart-name text-sky">사실적 이해</p>
+                <h2 class="subtitle mt-6 mb-4">수준별 독해평가 내용</h2>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="text-center" colspan="2">구분</th>
+                            <th class="text-center">분석지표 기준</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center" rowspan="3">사실적 이해</td>
+                            <td class="text-center">단어 및 문장 연결 이해</td>
+                            <td>문맥적 단서를 통해 단어나 문장의 의미 파악 하기</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">세부정보 파악</td>
+                            <td>주장과 의견, 중심문장과 부속 문장, 핵심어, 화제, 명확한 주체 등 명시적으로 진술 된 정보의 의미 파악하기</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">중심내용 파악</td>
+                            <td>주요 내용을 연결하여 중심 생각을 파악하거나, 거시적인 차원에서 내용 요약하기</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center" rowspan="3">추론적 이해</td>
+                            <td class="text-center">생략된 내용 파악</td>
+                            <td>텍스트의 문맥, 독자의 배경지식을 활용하여 생략된 정보를 추론하기</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">이어질 내용 파악</td>
+                            <td>텍스트의 문맥, 독자의 배경지식을 활용하여 이어질 내용을 예측하기</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">글의 구조 파악</td>
+                            <td>비교-대조, 원인-결과, 문제-해결, 주장-논거 등 글의 수사적 상위 구조 파악하기</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2 class="subtitle mt-6 mb-4">수준별 독해평가 결과</h2>
+
+                <div class="chart-bar">
+                    <div class="chart-bar-title bg1">사실적 이해</div>
+                    <div id="chart-bar1">
+
                     </div>
-                    <div class="chart-group">
-                        <div class="chart-area">차트</div>
-                        <p class="chart-name text-peach">추론적 이해</p>
-                    </div>
+                    <div class="chart-bar-title bg2">추론적 이해</div>
+                    <div id="chart-bar2"></div>
                 </div>
+
+            </div>
+        </div>
+        <div class="test-footer">
+            <div class="text-center">
+                <button type="button" class="btn btn-success btn-xl" style="width:265px" onclick="window.print()"><i class="fas fa-print mr-2"></i>출력하기</button>
             </div>
         </div>
     </div>
@@ -112,6 +125,62 @@
     <script src="/front/resources/js/ui.js"></script>
 
     <script>
+        //도넛 차트
+        /* const el = document.getElementById('chart-area1');
+        const data = {
+            categories: ['accuracy'],
+            series: [
+                {
+                    name: '점수', data: 100,
+                },
+            ],
+        };
+        const theme = {
+            series: {
+                colors: ['#a7af38'],
+                areaOpacity: 1,
+            },
+        };
+        const options = {
+            legend: { visible: false, },
+            exportMenu: { visible: false },
+            chart: { width: 280, height: 280 },
+            series: { radiusRange: { inner: '80%', outer: '100%' }, },
+            theme,
+        };
+        const chart = toastui.Chart.pieChart({ el, data, options }); */
+
+        //bar 차트
+        const el = document.getElementById('chart-bar1');
+        const data = {
+            categories: ['단어 및 문장 연결 이해', '세부정보 파악', '중심내용 파악'],
+            series: [
+                {
+                    name: '결과',
+                    data: [60, 80, 95],
+                },
+                {
+                    name: '평균',
+                    data: [100, 85, 90],
+                },
+            ],
+        };
+        const theme = {
+            series: {
+                barWidth: 20,
+                colors: ['#d3d79b', '#f1f1f1'],
+                areaOpacity: 1,
+            },
+        };
+        const options = {
+            legend: { visible: true, align: 'bottom'},
+            exportMenu: { visible: false },
+            chart: { width: '100%', height: 400 },
+            theme,
+        };
+
+        const chart = toastui.Chart.barChart({ el, data, options });
     </script>
 </body>
 </html>
+
