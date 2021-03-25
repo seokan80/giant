@@ -537,3 +537,74 @@ label.number{
     }
 }
 
+.about-top{
+    margin-top: -80px;
+    background: url('../images/img-about-top.png') no-repeat 50% 0;height: 910px;
+}
+@include media-breakpoint-down(lg) {
+    .about-top{height: 700px;background-size: cover;margin-bottom: -50px;}
+}
+@include media-breakpoint-down(md) {
+    .about-top{margin-top: -2rem;height: 300px;margin-bottom: -20px;}
+}
+
+.ceo{
+    h2{font-family: 'Nanum Myeongjo';font-size: 48px;font-weight: 700;line-height: 1;}
+    strong{
+        font-family: 'Nanum Myeongjo';font-size: 27px;font-weight: 700;line-height: 2.3;display: block;
+        &::before{content:'“';display: block;font-family: 'Nanum Myeongjo';font-size: 70px;font-weight: 700;line-height: 1;margin-top: 50px;}
+        &::after{content:'”';display: block;font-family: 'Nanum Myeongjo';font-size: 70px;font-weight: 700;line-height: 1;margin-top: 50px;}
+    }
+    p{font-size: 18px;line-height: 1.67;}
+    .from{font-size: 18px;line-height: 1.67;text-align: right;margin-top: 2rem;}
+    img{float: left;margin: 0 1rem .5rem 0;}
+    &::after{content: '';display: block;clear: both;}
+}
+@include media-breakpoint-down(md) {
+    .ceo{
+        h2{font-size: 18px;}
+        strong{
+            font-size: 16px;line-height: 2;
+            &::before{font-size: 30px;margin-top: 30px;}
+            &::after{font-size: 30px;margin-top: 30px;}
+        }
+        p{font-size: 14px;}
+        img{width: 180px;}
+        .from{font-size: 16px;line-height: 1.4;text-align: right;margin-top: 2rem;}
+    }
+}
+
+.location{
+    position: relative;
+    .map-area{width: 100%;height: 690px;background-color: #f9f9f9;}
+    .dim{position: absolute;left: 0;top: 0;background-color: rgba(51, 51, 51, .8);height: 100%;padding: 60px 30px;display: flex;flex-direction: column;justify-content: space-between;}
+    h2{font-family: 'Nanum Myeongjo';font-size: 36px;font-weight: 700;line-height: 1;color: #fff;}
+    .way{
+        color: #fff;font-size: 18px;
+        p{margin-bottom: 1rem;}
+        .subway{font-weight: 700;margin-bottom: .5rem;}
+        .green{color: #3ab449;}
+        .yellow{color: #d6b428}
+    }
+    .info{color: #fff;font-size: 18px;letter-spacing: -0.05em;
+        i{display: inline-block;width: 24px;}
+    }
+}
+@include media-breakpoint-down(md) {
+    .location{
+        .map-area{height: 300px;}
+        .dim{position: static;padding: 1rem;}
+        h2{font-size: 18px;}
+        .way{
+            font-size: 15px;
+        }
+        .info{
+            font-size: 14px;
+            i{width: 20px;}
+        }
+    }
+}
+
+.flow{
+    text-align: center;
+}

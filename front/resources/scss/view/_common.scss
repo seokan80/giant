@@ -132,3 +132,16 @@ textarea.form-control{padding-top: .75rem;padding-bottom: .75rem;}
     }
 }
 
+.my-tab{
+    a.nav-link{
+        background: #d3d79b;border: 1px solid #a7af38;border-radius: 0;font-size: 24px;color: #707070;padding: 1rem;font-weight: 700;
+        &.active{background: #a7af38;}
+    }
+}
+@include media-breakpoint-down(md) {
+    .my-tab{
+        a.nav-link{
+            font-size: 14px;padding: .5rem;
+        }
+    }
+}

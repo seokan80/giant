@@ -1,4 +1,5 @@
 /*! Bootstrap v4.3.1 (https://getbootstrap.com/) Copyright 2011-2019 The Bootstrap Authors Copyright 2011-2019 Twitter, Inc. Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE) */
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap");
 @font-face { font-family: 'NanumGothic'; font-weight: 400; src: url(../fonts/NanumGothic/NanumGothic-Regular.eot); src: url(../fonts/NanumGothic/NanumGothic-Regular.eot?#iefix) format("embedded-opentype"), url(../fonts/NanumGothic/NanumGothic-Regular.woff) format("woff"), url(../fonts/NanumGothic/NanumGothic-Regular.ttf) format("truetype"); }
 
 @font-face { font-family: 'NanumGothic'; font-weight: 700; src: url(../fonts/NanumGothic/NanumGothic-Bold.eot); src: url(../fonts/NanumGothic/NanumGothic-Bold.eot?#iefix) format("embedded-opentype"), url(../fonts/NanumGothic/NanumGothic-Bold.woff) format("woff"), url(../fonts/NanumGothic/NanumGothic-Bold.ttf) format("truetype"); }
@@ -1437,7 +1438,7 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 
 .nav-fill .nav-item { flex: 1 1 auto; text-align: center; }
 
-.nav-justified .nav-item { flex-basis: 0; flex-grow: 1; text-align: center; }
+.nav-justified > .nav-link, .nav-justified > .nav-item { flex-basis: 0; flex-grow: 1; text-align: center; }
 
 .tab-content > .tab-pane { display: none; }
 
