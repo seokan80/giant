@@ -786,7 +786,7 @@ label.number input:checked + i { border-color: #333; background-color: #333; col
 
 .progress { border-radius: 10px; height: 10px; position: relative; overflow: visible; margin-bottom: 50px; background: #d8dbb2; }
 
-.progress .progress-bar { border-radius: 10px 0 0 10px; }
+.progress .progress-bar { border-radius: 10px; }
 
 .progress .point { display: block; border-radius: 50%; width: 18px; height: 18px; position: absolute; top: -4px; border-radius: 50%; margin-left: -9px; }
 
@@ -828,7 +828,7 @@ label.number input:checked + i { border-color: #333; background-color: #333; col
 
 .progress.level10 .point:nth-of-type(9) { left: 90%; }
 
-.progress.level10 .point:nth-of-type(10) { left: 100%; }
+.progress.level10 .point:nth-of-type(10) { left: 100%; display: none; }
 
 .progress.level10 .point::before { content: attr(data-level); background: #e9ebcd; padding: 10px 0 0; border-radius: 5px; font-size: 18px; font-weight: 700; position: absolute; left: 50%; top: 30px; margin-left: -44px; width: 88px; height: 50px; text-align: center; display: none; }
 
