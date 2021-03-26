@@ -792,17 +792,23 @@ label.number input:checked + i { border-color: #333; background-color: #333; col
 
 .progress .point i { display: block; width: 9px; height: 9px; background-color: #fff; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border-radius: 50%; }
 
-.progress .point:nth-of-type(1) { left: 14.2857%; }
+.progress .point:nth-of-type(1) { left: 0; }
 
-.progress .point:nth-of-type(2) { left: 28.5714%; }
+.progress .point:nth-of-type(2) { left: 14.2857%; }
 
-.progress .point:nth-of-type(3) { left: 42.8571%; }
+.progress .point:nth-of-type(3) { left: 28.5714%; }
 
-.progress .point:nth-of-type(4) { left: 57.1428%; }
+.progress .point:nth-of-type(4) { left: 42.8571%; }
 
-.progress .point:nth-of-type(5) { left: 71.4258%; }
+.progress .point:nth-of-type(5) { left: 57.1428%; }
 
-.progress .point:nth-of-type(6) { left: 85.7142%; }
+.progress .point:nth-of-type(6) { left: 71.4258%; }
+
+.progress .point:nth-of-type(7) { left: 85.7142%; }
+
+.progress .point:nth-of-type(8) { left: 100%; }
+
+.progress .point:not(.active):nth-of-type(1) i, .progress .point:not(.active):nth-of-type(8) i { opacity: 0; }
 
 .progress .point.active { background-color: #aeaf19; }
 
