@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>책 읽는 거인 PAGELIST</title>
+        <link rel="icon" href="resources/images/favicon-32.png" sizes="32x32">
+        <link rel="icon" href="resources/images/favicon-128.png" sizes="128x128">
+        <style type="text/css">
+            body{padding:20px;position:relative;}
+            *{margin:0;padding:0;font-size:12px;color:#222;line-height:1.5em;font-family:'NanumGothic';}
+            h1{margin-bottom:20px;font-size:20px;text-align: center;}
+            table{width:100%;border-collapse:collapse;margin: 0 auto;}
+            table th,
+            table td{border:1px solid #eccbc7;padding:4px 10px;word-break: keep-all}
+            table th{background:#df7b6e;color:#fff;padding:10px;font-size:14px;}
+            table td a{color:#eb6553;text-decoration:none;}
+            table td a:hover{text-decoration:underline;}
+            table tbody tr:hover{background-color: #fdecec;}
+            .noteTable{display: table;width: 100%;}
+            .noteTable .date{display: table-cell;color: #e04545;width: 40px;}
+            .noteTable .note{display: table-cell;}
+            .center{text-align: center;}
+            .bg{background: #fff5f5;}
+            ul.float{position:absolute;right:20px;top:20px;}
+            ul.float li{list-style:none;border:1px solid #ccc;padding:2px 5px;display:inline-block;}
+            .end{background:#ffffcc;}
+            .ing{background:#f6b1a6;}
+            .list{text-align:center;padding:0 0 20px;}
+            .list a{text-decoration:none;margin:0 10px;}
+            .list a:hover{text-decoration:underline;}
+        </style>
+    </head>
+
+    <body>
+        <h1>책 읽는 거인 PAGELIST</h1>
+        <table>
+            <colgroup>
+                <col style="width:6%">
+                <col style="width:10%">
+                <col style="width:16%">
+                <col style="width:10%">
+                <col>
+                <col style="width:10%">
+                <col style="width:15%">
+                <col style="width:6%">
+                <col style="width:6%">
+                <col>
+                <col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Depth 1</th>
+                    <th>Depth 2</th>
+                    <th>Depth 3</th>
+                    <th>Depth 4</th>
+                    <th>File</th>
+                    <th>pageLink</th>
+                    <th>최초작업일</th>
+                    <th>수정일</th>
+                    <th></th>
+                    <th>Note</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td>Guide</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>/_guide/</td>
+                    <td><a target="_blank" href="content/_guide/guide.html">guide.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>로그인</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>/login/</td>
+                    <td><a target="_blank" href="content/login/login.html">login.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>아이디/비밀번호 찾기</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/login/forgot.html">forgot.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>회원가입</td>
+                    <td>약관동의</td>
+                    <td></td>
+                    <td></td>
+                    <td>/join/</td>
+                    <td><a target="_blank" href="content/join/agree.html">agree.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>회원정보입력</td>
+                    <td>학생</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/join/student.html">student.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>교사</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/join/teacher.html">teacher.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>센터</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/join/center.html">center.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>가입신청완료</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/join/welcome.html">welcome.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>회사소개</td>
+                    <td>연혁</td>
+                    <td></td>
+                    <td></td>
+                    <td>/company/</td>
+                    <td><a target="_blank" href="content/company/history.html">history.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>고객센터</td>
+                    <td>공지사항</td>
+                    <td>list</td>
+                    <td></td>
+                    <td>/customer/</td>
+                    <td><a target="_blank" href="content/customer/notice.html">notice.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>detail</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/customer/notice_detail.html">notice_detail.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>FAQ</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/customer/faq.html">faq.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>1:1 문의</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/customer/qna.html">qna.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>마이페이지</td>
+                    <td>index</td>
+                    <td>테스트 전</td>
+                    <td></td>
+                    <td>/mypage/</td>
+                    <td><a target="_blank" href="content/mypage/mypage_before.html">mypage_before.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>테스트 후</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/mypage/mypage_after.html">mypage_after.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>테스트</td>
+                    <td>문장독해 테스트</td>
+                    <td></td>
+                    <td></td>
+                    <td>/test/</td>
+                    <td><a target="_blank" href="content/test/test_sentence.html">test_sentence.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>결과</td>
+                    <td></td>
+                    <td></td>
+                    <td><a target="_blank" href="content/test/test_sentence_result.html">test_sentence_result.html</a></td>
+                    <td class="center"></td>
+                    <td class="center"></td>
+                    <td></td>
+                    <td>
+                        <div class="noteTable">
+                            <div class="date"></div>
+                            <div class="note"></div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <script>
+            var l = document.querySelectorAll('tbody tr').length - 1;
+            console.log(l);
+        </script>
+    </body>
+</html>

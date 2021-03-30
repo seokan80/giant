@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>책 읽는 거인 Admin</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="/admin/resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/admin/resources/images/favicon-128.png" sizes="128x128">
+
+    <link rel="stylesheet" href="/admin/resources/plugin/fontawesome-free/css/all.min.css">
+
+     <!-- TOAST UI -->
+    <link rel="stylesheet" href="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.css">
+    <link rel="stylesheet" href="https://uicdn.toast.com/grid/latest/tui-grid.css">
+
+    <link rel="stylesheet" href="/admin/resources/css/bootstrap.css">
+    <link rel="stylesheet" href="/admin/resources/css/style.css">
+
+    <!-- jquery -->
+    <script src="/admin/resources/plugin/jquery/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="/admin/resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- TOAST UI -->
+    <script src="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.js"></script>
+    <script src="https://uicdn.toast.com/grid/latest/tui-grid.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header-block">
+            <div id="header">
+                <div class="container-fluid">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-auto">
+                            <h1><a href=""><img src="/admin/resources/images/logo-white.png" alt="책 읽는 거인"> 관리자</a></h1>
+                        </div>
+                        <div class="col-auto">
+                            <span class="name">홍길동님</span>
+                            <button type="button" class="btn btn-primary">LOGOUT</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="container-block">
+            <div id="side">
+                <div class="container-fluid">
+                    <div id="gnb">
+                        <ul class="dep1">
+                            <li class="active open">
+                                <a href="" class="dep1-link"><span><i class="fas fa-flag"></i>센터 관리</span></a>
+                                <ul class="dep2">
+                                    <li class="active"><a href="" class="dep2-link"><span>학생 관리</span></a></li>
+                                    <li><a href="" class="dep2-link"><span>교사 관리</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="" class="dep1-link"><span><i class="fas fa-book"></i>학습 관리</span></a>
+                                <ul class="dep2">
+                                    <li><a href="" class="dep2-link"><span>직접 출제</span></a></li>
+                                    <li><a href="" class="dep2-link"><span>닥스콘 출제</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="" class="dep1-link"><span><i class="fas fa-list"></i>게시판 관리</span></a>
+                                <ul class="dep2">
+                                    <li><a href="" class="dep2-link"><span>공지사항</span></a></li>
+                                    <li><a href="" class="dep2-link"><span>FAQ</span></a></li>
+                                    <li><a href="" class="dep2-link"><span>1:1 문의</span></a></li>
+                                    <li><a href="" class="dep2-link"><span>약관</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="content">
+                <div class="container-fluid">
+
+                    <div class="top-area">
+                        <h2 class="title">센터관리</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">Home</li>
+                                <li class="breadcrumb-item" aria-current="page">센터관리</li>
+                            </ol>
+                        </nav>
+                    </div>
+
+                    <div class="tui-datepicker-input tui-datetime-input tui-has-focus">
+                        <input type="text" id="tui-date-picker-target" aria-label="Date-Time">
+                        <span class="tui-ico-date"></span>
+                    </div>
+                    <div id="tui-date-picker-container" style="margin-top: -1px;"></div>
+
+                    <div id="grid"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ui 관련 -->
+    <script src="/admin/resources/js/ui.js"></script>
+
+
+    <script>
+        const DatePicker = tui.DatePicker;
+
+        const container = document.getElementById('tui-date-picker-container');
+        const target = document.getElementById('tui-date-picker-target');
+
+        const datepicker = new DatePicker(container, {
+            language: 'ko',
+            date: new Date(),
+            input: {
+                element: target,
+                format: 'yyyy-MM-dd',
+            }
+        });
+
+
+        const Grid = tui.Grid;
+        const instance = new Grid({
+            el: document.getElementById('grid'), // Container element
+            columns: [
+                {
+                header: 'Name',
+                name: 'name'
+                },
+                {
+                header: 'Artist',
+                name: 'artist'
+                },
+                {
+                header: 'Release',
+                name: 'release'
+                },
+                {
+                header: 'Genre',
+                name: 'genre'
+                }
+            ],
+            data: [
+                {
+                name: 'Beautiful Lies',
+                artist: 'Birdy',
+                release: '2016.03.26',
+                genre: 'Pop'
+                }
+            ]
+        });
+        instance.resetData(newData); // Call API of instance's public method
+        Grid.applyTheme('striped'); // Call API of static method
+    </script>
+</body>
+</html>

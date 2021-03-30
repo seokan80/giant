@@ -143,6 +143,8 @@ i.new { display: inline-block; background: #cb1c1c; width: 13px; height: 13px; b
 
 @media (max-width: 991.98px) { .title { font-size: 20px; } }
 
+@media (max-width: 991.98px) { .btn-xl { padding: .8rem 1.5rem; } }
+
 .subtitle { position: relative; padding-left: 17px; font-size: 24px; font-weight: 700; color: #333; }
 
 .subtitle::before { content: ''; width: 5px; height: 20px; background: #333; position: absolute; left: 0; top: 4px; }
@@ -637,9 +639,16 @@ html.has-dep2 #header::after, html.open-gnb-dep2 #header::after { background: #2
 
 .levelup .marker4 { display: block; background: url("../images/img-test-icon4.png") no-repeat 50% 50%; width: 58px; height: 79px; left: 533px; animation-delay: .6s; }
 
+@media (max-width: 991.98px) { .levelup .marker1 { left: 0; }
+  .levelup .marker2 { left: 20%; }
+  .levelup .marker3 { left: auto; right: 20%; }
+  .levelup .marker4 { left: auto; right: 0; } }
+
 .mypage-test p { font-size: 24px; line-height: 2.08; text-align: center; letter-spacing: -0.6px; }
 
 .mypage-test p strong { display: block; color: #7a1b1d; }
+
+@media (max-width: 991.98px) { .mypage-test p { font-size: 17px; line-height: 1.8; } }
 
 label.number { cursor: pointer; display: inline-flex; font-family: arial; margin-bottom: 0; vertical-align: middle; }
 
@@ -717,6 +726,8 @@ label.number input:checked + i { border-color: #333; background-color: #333; col
 
 .test-footer { border: 10px solid #a8d1cb; border-top: 1px solid #a8d1cb; height: 150px; display: flex; align-items: center; justify-content: center; position: fixed; left: 0; bottom: 0; width: 100%; }
 
+@media (max-width: 991.98px) { .test-header h1 { font-size: 28px; } }
+
 @media print { .test-result { height: auto !important; }
   .test-footer { display: none; } }
 
@@ -736,7 +747,7 @@ label.number input:checked + i { border-color: #333; background-color: #333; col
 
 .chart-wrap { display: flex; align-items: center; justify-content: center; }
 
-.chart-wrap .chart { margin: 0 1rem; position: relative; width: 280px; height: 280px; }
+.chart-wrap .chart { position: relative; width: 280px; height: 280px; flex: 0 0 280px; }
 
 .chart-wrap .legend { position: absolute; left: 0; top: 0; bottom: 0; right: 0; display: flex; align-items: center; text-align: center; justify-content: center; }
 
@@ -745,6 +756,8 @@ label.number input:checked + i { border-color: #333; background-color: #333; col
 .chart-wrap .legend strong { display: block; font-size: 48px; font-weight: 700; }
 
 .chart-wrap .legend strong i { font-size: 20px; }
+
+@media (max-width: 991.98px) { .chart-wrap { flex-wrap: wrap; } }
 
 .chart-radar { display: flex; justify-content: center; }
 
@@ -767,6 +780,8 @@ label.number input:checked + i { border-color: #333; background-color: #333; col
 .test-desc { font-size: 18px; margin-bottom: 1rem; text-align: center; }
 
 .test-desc b { font-weight: 900; }
+
+@media (max-width: 991.98px) { .test-desc { font-size: 14px; } }
 
 .text-sky { color: #a0cee4 !important; }
 
@@ -808,7 +823,9 @@ label.number input:checked + i { border-color: #333; background-color: #333; col
 
 .progress .point:nth-of-type(8) { left: 100%; }
 
-.progress .point:not(.active):nth-of-type(1) i, .progress .point:not(.active):nth-of-type(8) i { opacity: 0; }
+.progress .point:not(.active):nth-of-type(1) i { opacity: 0; }
+
+.progress .point:not(.active):last-of-type i { opacity: 0; }
 
 .progress .point.active { background-color: #aeaf19; }
 
@@ -817,6 +834,8 @@ label.number input:checked + i { border-color: #333; background-color: #333; col
 .progress.level10 { margin-bottom: 80px; }
 
 .progress.level10 .point:nth-of-type(1) { left: 10%; }
+
+.progress.level10 .point:nth-of-type(1) i { opacity: 1; }
 
 .progress.level10 .point:nth-of-type(2) { left: 20%; }
 
@@ -834,7 +853,7 @@ label.number input:checked + i { border-color: #333; background-color: #333; col
 
 .progress.level10 .point:nth-of-type(9) { left: 90%; }
 
-.progress.level10 .point:nth-of-type(10) { left: 100%; display: none; }
+.progress.level10 .point:nth-of-type(10) { left: 100%; }
 
 .progress.level10 .point::before { content: attr(data-level); background: #e9ebcd; padding: 10px 0 0; border-radius: 5px; font-size: 18px; font-weight: 700; position: absolute; left: 50%; top: 30px; margin-left: -44px; width: 88px; height: 50px; text-align: center; display: none; }
 
