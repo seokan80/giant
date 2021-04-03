@@ -32,14 +32,14 @@
     <div class="test-wrap">
         <div class="test-header">
             <div class="d-flex align-items-end">
-                <h1>지문 독해 테스트</h1>
+                <h1>독해력 테스트</h1>
                 <span class="ml-4">결과 확인</span>
             </div>
         </div>
         <div class="test-body">
             <div class="test-result">
                 <div class="test-summary">
-                    <p class="test-desc"><b>[ooo]</b> 학생의 지문 독해 테스트 결과는 다음과 같습니다</p>
+                    <p class="test-desc"><b>[ooo]</b> 학생의 독해력 테스트 결과는 다음과 같습니다</p>
                     <div class="chart-wrap">
                         <div class="chart">
                             <div id="chart-area1"></div>
@@ -101,7 +101,7 @@
                     <div class="col-12 col-md">
                         <table class="table table-bordered table-fixed">
                             <colgroup>
-                                <col style="width:100px">
+                                <col style="width:110px">
                                 <col>
                             </colgroup>
                             <thead>
@@ -240,65 +240,95 @@
 
     <!-- ui 관련 -->
     <script src="/front/resources/js/ui.js"></script>
-
     <script>
-        //도넛 차트
-        const el = document.getElementById('chart-area1');
-        const data = {
-            categories: ['accuracy'],
-            series: [
-                {
-                    name: '점수', data: 100,
-                },
-            ],
-        };
-        const theme = {
-            series: {
-                colors: ['#a7af38'],
-                areaOpacity: 1,
-            },
-        };
-        const options = {
-            legend: { visible: false, },
-            exportMenu: { visible: false },
-            chart: { width: 280, height: 280 },
-            series: { radiusRange: { inner: '80%', outer: '100%' }, },
-            theme,
-        };
-        const chart = toastui.Chart.pieChart({ el, data, options });
-
-        //레이더 차트
-        /* const el = document.getElementById('chart-radar');
-        const data = {
-            categories: ['사실적 이해', '추론적 이해', '비판적 이해', '창의적 이해', '어휘력'],
-            series: [
-                {
-                    name: '결과',
-                    data: [50, 100, 60, 70, 60,],
-                },
-                {
-                    name: '평균',
-                    data: [80, 60, 70, 100, 70,],
-                },
-            ],
-        };
-        const options = {
-            theme: {
-                series: {
-                    colors: ['#489d9c', '#e9ebcd'],
-                    lineWidth: 1,
-                    areaOpacity: 0.4,
-                    dot: {
-                        radius: 3,
+        pieChartScore();
+        pieChartReaidngSpeed();
+        pieChartInfoProcTime();
+        function pieChartScore() {
+            const chart = toastui.Chart;
+            const el = document.getElementById('chart-area1');
+            const data = {
+                series: [
+                    {
+                        name: '점수', data: 80
                     },
-                }
-            },
-            legend: { visible: true, align: 'bottom'},
-            exportMenu: { visible: false },
-            chart: { width: 700, height: 500 },
-            series: { showDot: true, showArea: true },
-        };
-        const chart = toastui.Chart.radarChart({ el, data, options }); */
+                    {
+                        name: '점수', data: (100 - 80)
+                    }
+                ]
+            };
+            const theme = {
+                series: {
+                    colors: ['#a7af38', '#d3d79b'],
+                    areaOpacity: 1,
+                },
+            };
+            const options = {
+                legend: { visible: false, },
+                exportMenu: { visible: false },
+                chart: { width: 280, height: 280 },
+                series: { radiusRange: { inner: '80%', outer: '100%' }, },
+                theme
+            };
+            chart.pieChart({ el, data, options });
+        }
+        function pieChartReaidngSpeed() {
+            const chart = toastui.Chart;
+            const el = document.getElementById('chart-area2');
+            const data = {
+                series: [
+                    {
+                        name: '속도', data: 30
+                    },
+                    {
+                        name: '속도', data: (100 - 30)
+                    }
+                ]
+            };
+            const theme = {
+                series: {
+                    colors: ['#489d9c', '#a8d1cb'],
+                    areaOpacity: 1,
+                },
+            };
+            const options = {
+                legend: { visible: false, },
+                exportMenu: { visible: false },
+                chart: { width: 280, height: 280 },
+                series: { radiusRange: { inner: '80%', outer: '100%' }, },
+                theme
+            };
+            chart.pieChart({ el, data, options });
+        }
+        function pieChartInfoProcTime() {
+            const chart = toastui.Chart;
+            const userTimeSec=parseInt($('[name=userTimeSec]').val());
+            const el = document.getElementById('chart-area3');
+            const data = {
+                series: [
+                    {
+                        name: '시간', data: 30
+                    },
+                    {
+                        name: '시간', data: (100 - 30)
+                    }
+                ]
+            };
+            const theme = {
+                series: {
+                    colors: ['#a7af38', '#e9ebcd'],
+                    areaOpacity: 1,
+                },
+            };
+            const options = {
+                legend: { visible: false, },
+                exportMenu: { visible: false },
+                chart: { width: 280, height: 280 },
+                series: { radiusRange: { inner: '80%', outer: '100%' }, },
+                theme
+            };
+            chart.pieChart({ el, data, options });
+        }
     </script>
 </body>
 </html>

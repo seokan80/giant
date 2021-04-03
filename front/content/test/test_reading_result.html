@@ -1,0 +1,394 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>책 읽는 거인</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="/front/resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/front/resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="/front/resources/plugin/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="/front/resources/plugin/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="/front/resources/plugin/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="/front/resources/css/bootstrap.css">
+    <link rel="stylesheet" href="/front/resources/css/style.css">
+    <!-- jquery -->
+    <script src="/front/resources/plugin/jquery/jquery.min.js"></script>
+    <!-- jquery ui -->
+    <script src="/front/resources/plugin/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="/front/resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper -->
+    <script src="/front/resources/plugin/swiper/js/swiper.min.js"></script>
+
+    <!-- chartjs -->
+    <link rel="stylesheet" href="https://uicdn.toast.com/chart/latest/toastui-chart.min.css" />
+    <script src="https://uicdn.toast.com/chart/latest/toastui-chart.min.js"></script>
+</head>
+
+<body>
+
+    <div class="test-wrap">
+        <div class="test-header">
+            <div class="d-flex align-items-end">
+                <h1>독해 다지기</h1>
+                <span class="ml-4">결과 확인</span>
+            </div>
+        </div>
+        <div class="test-body">
+            <div class="test-result">
+                <div class="test-summary">
+                    <p class="test-desc"><b>[ooo]</b> 학생의 독해력 테스트 결과는 다음과 같습니다</p>
+                    <div class="chart-wrap has-item-4">
+                        <div class="chart">
+                            <div id="chart-area1"></div>
+                            <div class="legend">
+                                <div>
+                                    <p>점수</p>
+                                    <strong>100<i>점</i></strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart">
+                            <div id="chart-area2"></div>
+                            <div class="legend">
+                                <div>
+                                    <p>독해 속도</p>
+                                    <span>(분당 글 읽는 속도)</span>
+                                    <strong>1004<i>자</i></strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart">
+                            <div id="chart-area3"></div>
+                            <div class="legend">
+                                <div>
+                                    <p>평균 읽기 시간</p>
+                                    <strong>04<i>분</i>17<i>초</i></strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart">
+                            <div id="chart-area4"></div>
+                            <div class="legend">
+                                <div>
+                                    <p>정보처리 시간</p>
+                                    <strong>25<i>분</i>17<i>초</i></strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6">
+                    <h2 class="subtitle"> 독해 다지기 해설</h2>
+                </div>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th class="text-center">지문 글자수</th>
+                            <th class="text-center">지문 1회 읽기 소요 시간</th>
+                            <th class="text-center">지문 2회 읽기 소요 시간</th>
+                            <th class="text-center">총 문제</th>
+                            <th class="text-center">정답</th>
+                            <th class="text-center">오답</th>
+                            <th class="text-center">정답률</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">25,215자</td>
+                            <td class="text-center">5분 13초</td>
+                            <td class="text-center">3분 13초</td>
+                            <td class="text-center">10문항</td>
+                            <td class="text-center">7문항</td>
+                            <td class="text-center">3문항</td>
+                            <td class="text-center">70%</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- 해설 -->
+                <ol class="questions explanation">
+                    <!-- 기본 문제 -->
+                    <li>
+                        <div class="num">1</div>
+                        <div class="text">
+                            <div class="question"><strong>[사실적 이해] 이 글의 주인공은 누구인가요?</strong></div>
+                            <div class="choice">
+                                <div>
+                                    <label for="quiz1-1" class="number">
+                                        <input type="radio" id="quiz1-1" name="quiz1"><i>1</i><span>부추기다</span>
+                                    </label>
+                                    <div class="comment">
+                                        <p>토끼는 걱정이 많지만 작은 일에도 신경질을 낸다는 것을 글에서 찾아볼 수 없다</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="quiz1-2" class="number">
+                                        <input type="radio" id="quiz1-2" name="quiz1"><i>2</i><span>분노하다</span>
+                                    </label>
+                                    <div class="comment">
+                                        <p>해설이 들어가는 영역</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="quiz1-3" class="number">
+                                        <input type="radio" id="quiz1-3" name="quiz1"><i>3</i><span>추종하다</span>
+                                    </label>
+                                    <div class="comment">
+                                        <p>해설이 들어가는 영역</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="quiz1-4" class="number">
+                                        <input type="radio" id="quiz1-4" name="quiz1"><i>4</i><span>주장하다</span>
+                                    </label>
+                                    <div class="comment">
+                                        <p>해설이 들어가는 영역</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="quiz1-5" class="number">
+                                        <input type="radio" id="quiz1-5" name="quiz1"><i>5</i><span>제시하다</span>
+                                    </label>
+                                    <div class="comment">
+                                        <p>해설이 들어가는 영역</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="answer"><span>정답 :</span><strong>2</strong></div>
+                    </li>
+                    <!-- 문제에 표 및 기호가 있음 -->
+                    <li>
+                        <div class="num">2</div>
+                        <div class="text">
+                            <div class="question"><strong>[사실적 이해] 이 글의 시간을 순서대로 적었습니다. 다음 중 서로 위치가 바뀐 것을 고르세요</strong></div>
+                            <div class="type-in-order">
+                                <div class="item">ⓐ 블라블라</div>
+                                <div class="arr">↓</div>
+                                <div class="item">ⓑ 블라블라</div>
+                                <div class="arr">↓</div>
+                                <div class="item">ⓒ 블라블라</div>
+                                <div class="arr">↓</div>
+                                <div class="item">ⓓ 블라블라</div>
+                                <div class="arr">↓</div>
+                                <div class="item">ⓔ 블라블라</div>
+                            </div>
+                            <div class="choice inline"> <!-- 옆으로 나열되는 보기 inline 클래스 추가 -->
+                                <div>
+                                    <label for="quiz2-1" class="number">
+                                        <input type="radio" id="quiz2-1" name="quiz2"><i>1</i><span>펭귄</span>
+                                    </label>
+                                    <div class="comment">
+                                        <p>해설이 들어가는 영역</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="quiz2-2" class="number">
+                                        <input type="radio" id="quiz2-2" name="quiz2"><i>2</i><span>도롱뇽</span>
+                                    </label>
+                                    <div class="comment">
+                                        <p>해설이 들어가는 영역</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="quiz2-3" class="number">
+                                        <input type="radio" id="quiz2-3" name="quiz2"><i>3</i><span>상어</span>
+                                    </label>
+                                    <div class="comment">
+                                        <p>해설이 들어가는 영역</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="quiz2-4" class="number">
+                                        <input type="radio" id="quiz2-4" name="quiz2"><i>4</i><span>박쥐</span>
+                                    </label>
+                                    <div class="comment">
+                                        <p>해설이 들어가는 영역</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="quiz2-5" class="number">
+                                        <input type="radio" id="quiz2-5" name="quiz2"><i>5</i><span>도마뱀</span>
+                                    </label>
+                                    <div class="comment">
+                                        <p>해설이 들어가는 영역</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- 보기 영역 있음 -->
+                    <li>
+                        <div class="num">3</div>
+                        <div class="text">
+                            <div class="question"><strong>[추론적 이해] &lt;보기&gt;를 바탕으로 윗글을 감상한 내용으로 적절하지 <b class="text-underline">않은</b> 것을 고르세요.</strong></div>
+                            <div class="type-box">
+                                <strong class="d-block mb-1">&lt;보기&gt;</strong>
+                                고등학교는 올해부터 여름 교복으로 티셔츠와 반바지를 입고 있다. 기존 정장형 교복은 활동할 때 불편하다는 학생들의 의견이 많았기 때문이다. 몸이 편해지니 학생들은 다양한 활동에 적극으로 참여 하기 시작했고 공부에도 더 집중할 수 있어서 학습 효율이 올라갔다. 새 교복은 기존교복보다 가격이 저렴해서 학부모에게도 인기다.
+                            </div>
+                            <div class="choice">
+                                <div>
+                                    <label for="quiz3-1" class="number">
+                                        <input type="radio" id="quiz3-1" name="quiz3"><i>1</i><span>학부모들은 정장형 교복을 더 좋아한다.</span>
+                                    </label>
+                                </div>
+                                <div>
+                                    <label for="quiz3-2" class="number">
+                                        <input type="radio" id="quiz3-2" name="quiz3"><i>2</i><span>새 교복은 정장형 교복보다 가격이 비싸다.</span>
+                                    </label>
+                                </div>
+                                <div>
+                                    <label for="quiz3-3" class="number">
+                                        <input type="radio" id="quiz3-3" name="quiz3"><i>3</i><span>기존 교복에 비해 새 교복은 활동할 때 불편하다.</span>
+                                    </label>
+                                </div>
+                                <div>
+                                    <label for="quiz3-4" class="number">
+                                        <input type="radio" id="quiz3-4" name="quiz3"><i>4</i><span>학교는 학생들의 의견을 받아들여서 교복을 바꿨다. </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="test-footer">
+            <div class="text-center">
+                <button type="button" class="btn btn-success btn-xl" style="width:265px" onclick="window.print()"><i class="fas fa-print mr-2"></i>출력하기</button>
+                <button type="button" class="btn btn-success btn-xl ml-2" style="width:265px">학습완료</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ui 관련 -->
+    <script src="/front/resources/js/ui.js"></script>
+
+    <script>
+        pieChartScore();
+        pieChartReaidngSpeed();
+        pieChartAverageTime();
+        pieChartInfoProcTime();
+        function pieChartScore() {
+            const chart = toastui.Chart;
+            const el = document.getElementById('chart-area1');
+            const data = {
+                series: [
+                    {
+                        name: '점수', data: 80
+                    },
+                    {
+                        name: '점수', data: (100 - 80)
+                    }
+                ]
+            };
+            const theme = {
+                series: {
+                    colors: ['#a7af38', '#d3d79b'],
+                    areaOpacity: 1,
+                },
+            };
+            const options = {
+                legend: { visible: false, },
+                exportMenu: { visible: false },
+                chart: { width: 240, height: 240 },
+                series: { radiusRange: { inner: '80%', outer: '100%' }, },
+                theme
+            };
+            chart.pieChart({ el, data, options });
+        }
+        function pieChartReaidngSpeed() {
+            const chart = toastui.Chart;
+            const el = document.getElementById('chart-area2');
+            const data = {
+                series: [
+                    {
+                        name: '속도', data: 40
+                    },
+                    {
+                        name: '속도', data: (100 - 40)
+                    }
+                ]
+            };
+            const theme = {
+                series: {
+                    colors: ['#489d9c', '#a8d1cb'],
+                    areaOpacity: 1,
+                },
+            };
+            const options = {
+                legend: { visible: false, },
+                exportMenu: { visible: false },
+                chart: { width: 240, height: 240 },
+                series: { radiusRange: { inner: '80%', outer: '100%' }, },
+                theme
+            };
+            chart.pieChart({ el, data, options });
+        }
+        function pieChartAverageTime() {
+            const chart = toastui.Chart;
+            const userTimeSec=parseInt($('[name=userTimeSec]').val());
+            const el = document.getElementById('chart-area3');
+            const data = {
+                series: [
+                    {
+                        name: '시간', data: 30
+                    },
+                    {
+                        name: '시간', data: (100 - 30)
+                    }
+                ]
+            };
+            const theme = {
+                series: {
+                    colors: ['#a7af38', '#d3d79b'],
+                    areaOpacity: 1,
+                },
+            };
+            const options = {
+                legend: { visible: false, },
+                exportMenu: { visible: false },
+                chart: { width: 240, height: 240 },
+                series: { radiusRange: { inner: '80%', outer: '100%' }, },
+                theme
+            };
+            chart.pieChart({ el, data, options });
+        }
+        function pieChartInfoProcTime() {
+            const chart = toastui.Chart;
+            const userTimeSec=parseInt($('[name=userTimeSec]').val());
+            const el = document.getElementById('chart-area4');
+            const data = {
+                series: [
+                    {
+                        name: '시간', data: 30
+                    },
+                    {
+                        name: '시간', data: (100 - 30)
+                    }
+                ]
+            };
+            const theme = {
+                series: {
+                    colors: ['#489d9c', '#a8d1cb'],
+                    areaOpacity: 1,
+                },
+            };
+            const options = {
+                legend: { visible: false, },
+                exportMenu: { visible: false },
+                chart: { width: 240, height: 240 },
+                series: { radiusRange: { inner: '80%', outer: '100%' }, },
+                theme
+            };
+            chart.pieChart({ el, data, options });
+        }
+    </script>
+</body>
+</html>
+

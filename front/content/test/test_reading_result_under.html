@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>책 읽는 거인</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="/front/resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/front/resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="/front/resources/plugin/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="/front/resources/plugin/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="/front/resources/plugin/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="/front/resources/css/bootstrap.css">
+    <link rel="stylesheet" href="/front/resources/css/style.css">
+    <!-- jquery -->
+    <script src="/front/resources/plugin/jquery/jquery.min.js"></script>
+    <!-- jquery ui -->
+    <script src="/front/resources/plugin/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="/front/resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper -->
+    <script src="/front/resources/plugin/swiper/js/swiper.min.js"></script>
+
+    <!-- chartjs -->
+    <link rel="stylesheet" href="https://uicdn.toast.com/chart/latest/toastui-chart.min.css" />
+    <script src="https://uicdn.toast.com/chart/latest/toastui-chart.min.js"></script>
+</head>
+
+<body>
+
+    <div class="test-wrap">
+        <div class="test-header">
+            <div class="d-flex align-items-end">
+                <h1>독해 다지기</h1>
+                <span class="ml-4">결과 확인</span>
+            </div>
+        </div>
+        <div class="test-body">
+            <div class="test-result">
+                <div class="test-summary">
+                    <p class="test-desc"><b>[ooo]</b> 학생의 독해력 테스트 결과는 다음과 같습니다</p>
+                    <div class="chart-wrap has-item-4">
+                        <div class="chart">
+                            <div id="chart-area1"></div>
+                            <div class="legend">
+                                <div>
+                                    <p>점수</p>
+                                    <strong>100<i>점</i></strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart">
+                            <div id="chart-area2"></div>
+                            <div class="legend">
+                                <div>
+                                    <p>독해 속도</p>
+                                    <span>(분당 글 읽는 속도)</span>
+                                    <strong>1004<i>자</i></strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart">
+                            <div id="chart-area3"></div>
+                            <div class="legend">
+                                <div>
+                                    <p>평균 읽기 시간</p>
+                                    <strong>04<i>분</i>17<i>초</i></strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart">
+                            <div id="chart-area4"></div>
+                            <div class="legend">
+                                <div>
+                                    <p>정보처리 시간</p>
+                                    <strong>25<i>분</i>17<i>초</i></strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="re-try">
+                    <strong>[책거인]</strong> 학생의 점수는 <strong class="text-secondary">[25]</strong> 점으로 다시풀기가 진행됩니다.
+                </div>
+
+            </div>
+        </div>
+        <div class="test-footer">
+            <div class="text-center">
+                <a href="test_reading_start.html" class="btn btn-success btn-xl ml-2" style="width:265px">다시풀기</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ui 관련 -->
+    <script src="/front/resources/js/ui.js"></script>
+
+    <script>
+        pieChartScore();
+        pieChartReaidngSpeed();
+        pieChartAverageTime();
+        pieChartInfoProcTime();
+        function pieChartScore() {
+            const chart = toastui.Chart;
+            const el = document.getElementById('chart-area1');
+            const data = {
+                series: [
+                    {
+                        name: '점수', data: 80
+                    },
+                    {
+                        name: '점수', data: (100 - 80)
+                    }
+                ]
+            };
+            const theme = {
+                series: {
+                    colors: ['#a7af38', '#d3d79b'],
+                    areaOpacity: 1,
+                },
+            };
+            const options = {
+                legend: { visible: false, },
+                exportMenu: { visible: false },
+                chart: { width: 240, height: 240 },
+                series: { radiusRange: { inner: '80%', outer: '100%' }, },
+                theme
+            };
+            chart.pieChart({ el, data, options });
+        }
+        function pieChartReaidngSpeed() {
+            const chart = toastui.Chart;
+            const el = document.getElementById('chart-area2');
+            const data = {
+                series: [
+                    {
+                        name: '속도', data: 40
+                    },
+                    {
+                        name: '속도', data: (100 - 40)
+                    }
+                ]
+            };
+            const theme = {
+                series: {
+                    colors: ['#489d9c'],
+                    areaOpacity: 1,
+                },
+            };
+            const options = {
+                legend: { visible: false, },
+                exportMenu: { visible: false },
+                chart: { width: 240, height: 240 },
+                series: { radiusRange: { inner: '80%', outer: '100%' }, },
+                theme
+            };
+            chart.pieChart({ el, data, options });
+        }
+        function pieChartAverageTime() {
+            const chart = toastui.Chart;
+            const userTimeSec=parseInt($('[name=userTimeSec]').val());
+            const el = document.getElementById('chart-area3');
+            const data = {
+                series: [
+                    {
+                        name: '시간', data: 30
+                    },
+                    {
+                        name: '시간', data: (100 - 30)
+                    }
+                ]
+            };
+            const theme = {
+                series: {
+                    colors: ['#a7af38'],
+                    areaOpacity: 1,
+                },
+            };
+            const options = {
+                legend: { visible: false, },
+                exportMenu: { visible: false },
+                chart: { width: 240, height: 240 },
+                series: { radiusRange: { inner: '80%', outer: '100%' }, },
+                theme
+            };
+            chart.pieChart({ el, data, options });
+        }
+        function pieChartInfoProcTime() {
+            const chart = toastui.Chart;
+            const userTimeSec=parseInt($('[name=userTimeSec]').val());
+            const el = document.getElementById('chart-area4');
+            const data = {
+                series: [
+                    {
+                        name: '시간', data: 30
+                    },
+                    {
+                        name: '시간', data: (100 - 30)
+                    }
+                ]
+            };
+            const theme = {
+                series: {
+                    colors: ['#489d9c'],
+                    areaOpacity: 1,
+                },
+            };
+            const options = {
+                legend: { visible: false, },
+                exportMenu: { visible: false },
+                chart: { width: 240, height: 240 },
+                series: { radiusRange: { inner: '80%', outer: '100%' }, },
+                theme
+            };
+            chart.pieChart({ el, data, options });
+        }
+    </script>
+</body>
+</html>
+

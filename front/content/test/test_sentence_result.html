@@ -33,14 +33,14 @@
     <div class="test-wrap">
         <div class="test-header">
             <div class="d-flex align-items-end">
-                <h1>문장 독해 테스트</h1>
+                <h1>문해력 테스트</h1>
                 <span class="ml-4">결과 확인</span>
             </div>
         </div>
         <div class="test-body">
             <div class="test-result">
                 <div class="test-summary">
-                    <p class="test-desc"><b>[ooo]</b> 학생의 문장 독해 테스트 결과는 다음과 같습니다</p>
+                    <p class="test-desc"><b>[ooo]</b> 학생의 문해력 테스트 결과는 다음과 같습니다</p>
                     <div class="chart-wrap">
                         <div class="chart">
                             <div id="chart-area1"></div>
@@ -63,55 +63,72 @@
                     </div>
                 </div>
 
-                <h2 class="subtitle mt-6 mb-4">수준별 독해평가 내용</h2>
-                <table class="table table-bordered">
+                <h2 class="subtitle mt-6 mb-4">수준별 독해평가 결과</h2>
+
+                <div class="chart-group">
+                    <div class="item-pie">
+                        <div class="chart-pie">
+                            <div id="chart-pie"></div>
+                            <div class="legend">
+                                <strong>70<i>%</i></strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="chart-bar-title bg1">사실적 이해</div>
+                        <div class="chart-bar">
+                            <div id="chart-bar1"></div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="chart-bar-title bg2">추론적 이해</div>
+                        <div class="chart-bar">
+                            <div id="chart-bar2"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="subtitle mt-8 mb-4">수준별 독해평가 내용</h2>
+                <table class="table table-bordered table-result">
                     <thead>
                         <tr>
-                            <th class="text-center" colspan="2">구분</th>
-                            <th class="text-center">분석지표 기준</th>
+                            <th class="text-center" colspan="2">진단영역</th>
+                            <th class="text-center align-middle" rowspan="2">결과 해설</th>
+                        </tr>
+                        <tr>
+                            <th class="text-center">이해유형</th>
+                            <th class="text-center">세부영역</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="text-center" rowspan="3">사실적 이해</td>
-                            <td class="text-center">단어 및 문장 연결 이해</td>
-                            <td>문맥적 단서를 통해 단어나 문장의 의미 파악 하기</td>
+                            <td class="text-center" rowspan="3"><div class="chart-bar-title bg1">사실적 이해</div></td>
+                            <td class="text-center"><div class="chart-bar-subtitle bg1">어휘</div></td>
+                            <td>어휘 의미 파악 및 문맥을 고려한 어휘 이해하기</td>
                         </tr>
                         <tr>
-                            <td class="text-center">세부정보 파악</td>
-                            <td>주장과 의견, 중심문장과 부속 문장, 핵심어, 화제, 명확한 주체 등 명시적으로 진술 된 정보의 의미 파악하기</td>
+                            <td class="text-center"><div class="chart-bar-subtitle bg1">문장</div></td>
+                            <td>주장과 의견, 핵심어, 명확한 주체 등 명시적으로 진술된 정보를 문장내에서 파악하기 </td>
                         </tr>
                         <tr>
-                            <td class="text-center">중심내용 파악</td>
-                            <td>주요 내용을 연결하여 중심 생각을 파악하거나, 거시적인 차원에서 내용 요약하기</td>
+                            <td class="text-center"><div class="chart-bar-subtitle bg1">지문</div></td>
+                            <td>중심문장과 부속문장을 이해하며 판단하기</td>
                         </tr>
                         <tr>
-                            <td class="text-center" rowspan="3">추론적 이해</td>
-                            <td class="text-center">생략된 내용 파악</td>
-                            <td>텍스트의 문맥, 독자의 배경지식을 활용하여 생략된 정보를 추론하기</td>
+                            <td class="text-center" rowspan="3"><div class="chart-bar-title bg2">추론적 이해</div></td>
+                            <td class="text-center"><div class="chart-bar-subtitle bg2">어휘</div></td>
+                            <td>배경지식을 활용하여 어휘 정보를 추론하기</td>
                         </tr>
                         <tr>
-                            <td class="text-center">이어질 내용 파악</td>
-                            <td>텍스트의 문맥, 독자의 배경지식을 활용하여 이어질 내용을 예측하기</td>
+                            <td class="text-center"><div class="chart-bar-subtitle bg2">문장</div></td>
+                            <td>제시된 문장의 결론 도출 및 문맥을 고려한 의미 추론하기</td>
                         </tr>
                         <tr>
-                            <td class="text-center">글의 구조 파악</td>
-                            <td>비교-대조, 원인-결과, 문제-해결, 주장-논거 등 글의 수사적 상위 구조 파악하기</td>
+                            <td class="text-center"><div class="chart-bar-subtitle bg2">지문</div></td>
+                            <td>지문의 구조 및 특성을 파악, 주요내용을 연결하여 지문의 문맥을 파악하기</td>
                         </tr>
                     </tbody>
                 </table>
-
-                <h2 class="subtitle mt-6 mb-4">수준별 독해평가 결과</h2>
-
-                <div class="chart-bar">
-                    <div class="chart-bar-title bg1">사실적 이해</div>
-                    <div id="chart-bar1">
-
-                    </div>
-                    <div class="chart-bar-title bg2">추론적 이해</div>
-                    <div id="chart-bar2"></div>
-                </div>
-
             </div>
         </div>
         <div class="test-footer">
@@ -125,61 +142,168 @@
     <script src="/front/resources/js/ui.js"></script>
 
     <script>
-        //도넛 차트
-        /* const el = document.getElementById('chart-area1');
-        const data = {
-            categories: ['accuracy'],
-            series: [
-                {
-                    name: '점수', data: 100,
+        f1();
+        f2();
+        f3();
+        f4();
+        f5();
+        function f1() {
+            const chart = toastui.Chart;
+            const el = document.getElementById('chart-area1');
+            const data = {
+                series: [
+                    {
+                        name: '점수', data: 80
+                    },
+                    {
+                        name: '점수', data: (100 - 80)
+                    }
+                ]
+            };
+            const theme = {
+                series: {
+                    colors: ['#a7af38', '#e9ebcd'],
+                    areaOpacity: 1,
                 },
-            ],
-        };
-        const theme = {
-            series: {
-                colors: ['#a7af38'],
-                areaOpacity: 1,
-            },
-        };
-        const options = {
-            legend: { visible: false, },
-            exportMenu: { visible: false },
-            chart: { width: 280, height: 280 },
-            series: { radiusRange: { inner: '80%', outer: '100%' }, },
-            theme,
-        };
-        const chart = toastui.Chart.pieChart({ el, data, options }); */
+            };
+            const options = {
+                legend: { visible: false, },
+                exportMenu: { visible: false },
+                chart: { width: 280, height: 280 },
+                series: { radiusRange: { inner: '80%', outer: '100%' }, },
+                theme
+            };
+            chart.pieChart({ el, data, options });
+        }
+        function f2() {
+            const chart = toastui.Chart;
+            const el = document.getElementById('chart-area2');
+            const data = {
+                series: [
+                    {
+                        name: '점수', data: 80
+                    },
+                    {
+                        name: '점수', data: (100 - 80)
+                    }
+                ]
+            };
+            const theme = {
+                series: {
+                    colors: ['#489d9c', '#a8d1cb'],
+                    areaOpacity: 1,
+                },
+            };
+            const options = {
+                legend: { visible: false, },
+                exportMenu: { visible: false },
+                chart: { width: 280, height: 280 },
+                series: { radiusRange: { inner: '80%', outer: '100%' }, },
+                theme
+            };
+            chart.pieChart({ el, data, options });
+        }
+        function f3() {
+            const el = document.getElementById('chart-pie');
+            const data = {
+                categories: ['accuracy'],
+                series: [
+                    {
+                        name: '추론적 이해', data: 30,
+                    },
+                    {
+                        name: '사실적 이해', data: 40,
+                    },
+                    {
+                        name: '오답', data: 30,
+                    },
+                ],
+            };
+            const theme = {
+                series: {
+                    colors: ['#489d9c', '#a7af38', '#f1f1f1'],
+                    areaOpacity: 1,
+                },
+            };
+            const options = {
+                legend: { visible: true, align: 'top' },
+                exportMenu: { visible: false },
+                chart: { width: 350, height: 350 },
+                series: { radiusRange: { inner: '60%', outer: '100%' }, },
+                theme,
+            };
+            const chart = toastui.Chart.pieChart({ el, data, options });
+        }
+        function f4() {
+            const el = document.getElementById('chart-bar1');
+            const data = {
+                categories: ['어휘', '문장', '지문'],
+                series: [
+                    {
+                        name: '나의점수',
+                        data: [60, 80, 95],
+                    },
+                    {
+                        name: '평균점수',
+                        data: [100, 85, 90],
+                    },
+                    {
+                        name: '만점기준',
+                        data: [100, 90, 100],
+                    },
+                ],
+            };
+            const theme = {
+                series: {
+                    barWidth: 20,
+                    colors: ['#a7af38', '#d4d4d4', '#f1f1f1'],
+                    areaOpacity: 1,
+                },
+            };
+            const options = {
+                legend: { visible: true, align: 'bottom'},
+                exportMenu: { visible: false },
+                chart: { width: '100%', height: 400 },
+                theme,
+            };
 
-        //bar 차트
-        const el = document.getElementById('chart-bar1');
-        const data = {
-            categories: ['단어 및 문장 연결 이해', '세부정보 파악', '중심내용 파악'],
-            series: [
-                {
-                    name: '결과',
-                    data: [60, 80, 95],
+            const chart = toastui.Chart.columnChart({ el, data, options });
+        }
+        function f5() {
+            const el = document.getElementById('chart-bar2');
+            const data = {
+                categories: ['어휘', '문장', '지문'],
+                series: [
+                    {
+                        name: '나의점수',
+                        data: [60, 80, 95],
+                    },
+                    {
+                        name: '평균점수',
+                        data: [100, 85, 90],
+                    },
+                    {
+                        name: '만점기준',
+                        data: [100, 90, 100],
+                    },
+                ],
+            };
+            const theme = {
+                series: {
+                    barWidth: 20,
+                    colors: ['#489d9c', '#d4d4d4', '#f1f1f1'],
+                    areaOpacity: 1,
                 },
-                {
-                    name: '평균',
-                    data: [100, 85, 90],
-                },
-            ],
-        };
-        const theme = {
-            series: {
-                barWidth: 20,
-                colors: ['#d3d79b', '#f1f1f1'],
-                areaOpacity: 1,
-            },
-        };
-        const options = {
-            legend: { visible: true, align: 'bottom'},
-            exportMenu: { visible: false },
-            chart: { width: '100%', height: 400 },
-            theme,
-        };
+            };
+            const options = {
+                legend: { visible: true, align: 'bottom'},
+                exportMenu: { visible: false },
+                chart: { width: '100%', height: 400 },
+                theme,
+            };
 
-        const chart = toastui.Chart.barChart({ el, data, options });
+            const chart = toastui.Chart.columnChart({ el, data, options });
+        }
     </script>
 </body>
 </html>

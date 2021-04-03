@@ -92,7 +92,6 @@ html.open-gnb-dep2{
     html.open-mobile-search{
         body{overflow: hidden !important;}
         .mobile-header-group{transform: translate(0);transition: all .25s .03s ease-in-out;}
-        .mobile-menu{}
         .btn-hamburger {
             transform: rotate(45deg) translateY(13px);background-color: $white;
             &:before, &:after {background-color: $white;}
