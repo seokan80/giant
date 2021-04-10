@@ -178,7 +178,7 @@ html.open-gnb-dep2{
             > li{
                 display: block;
                 & + li:before{display: none;}
-                > a{font-size: 16px;padding: .5rem 1rem}
+                > a{font-size: 16px;padding: .3rem 1rem}
             }
             > li.active{
                 > a{color: #ffff29 !important;}

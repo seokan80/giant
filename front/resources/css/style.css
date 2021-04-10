@@ -332,7 +332,7 @@ html.has-dep2 #header::after, html.open-gnb-dep2 #header::after { background: #2
   .gnb .dep2 { position: static; text-align: left; display: block !important; padding-top: 8px; }
   .gnb .dep2 > li { display: block; }
   .gnb .dep2 > li + li:before { display: none; }
-  .gnb .dep2 > li > a { font-size: 16px; padding: .5rem 1rem; }
+  .gnb .dep2 > li > a { font-size: 16px; padding: .3rem 1rem; }
   .gnb .dep2 > li.active > a { color: #ffff29 !important; } }
 
 #container-block { padding-bottom: 330px; }
@@ -977,7 +977,7 @@ label.number input:checked + i { border-color: #333; background-color: #333; col
 
 .school-list > ul li { padding: 1rem; border-bottom: 1px solid #ddd; }
 
-.about-top { margin-top: -80px; background: url("../images/img-about-top.png") no-repeat 50% 50%; height: 910px; }
+.about-top { margin-top: -80px; display: none; background: url("../images/img-about-top.png") no-repeat 50% 50%; height: 910px; }
 
 @media (max-width: 1439px) { .about-top { height: 800px; background-size: cover; margin-bottom: -30px; } }
 
@@ -986,6 +986,16 @@ label.number input:checked + i { border-color: #333; background-color: #333; col
 @media (max-width: 991.98px) { .about-top { margin-top: -2rem; height: 500px; } }
 
 @media (max-width: 767.98px) { .about-top { height: 300px; margin-bottom: 0; } }
+
+.giant-is > div { padding: 77px 0; }
+
+.giant-is .giant-bg1 { background-color: #ddd; }
+
+.giant-is .giant-bg3 { background-color: #dae8e2; }
+
+.giant-is .giant-bg4 { background-color: #e9ebcd; }
+
+@media (max-width: 991.98px) { .giant-is > div { padding: 40px 1rem; } }
 
 .ceo h2 { font-family: 'Nanum Myeongjo'; font-size: 48px; font-weight: 700; line-height: 1; }
 

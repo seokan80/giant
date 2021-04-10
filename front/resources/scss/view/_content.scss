@@ -634,7 +634,7 @@ label.number{
 }
 
 .about-top{
-    margin-top: -80px;
+    margin-top: -80px;display: none;
     background: url('../images/img-about-top.png') no-repeat 50% 50%;height: 910px;
 }
 @media (max-width: 1439px){
@@ -648,6 +648,18 @@ label.number{
 }
 @include media-breakpoint-down(sm) {
     .about-top{height: 300px;margin-bottom: 0;}
+}
+
+.giant-is{
+    > div{padding: 77px 0;}
+    .giant-bg1{background-color: #ddd;}
+    .giant-bg3{background-color: #dae8e2;}
+    .giant-bg4{background-color: #e9ebcd;}
+}
+@include media-breakpoint-down(md) {
+    .giant-is{
+        > div{padding: 40px 1rem;}
+    }
 }
 
 .ceo{
