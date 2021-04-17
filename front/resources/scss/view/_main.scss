@@ -1,16 +1,16 @@
 .main-swiper{
     margin-top: -45px;margin-bottom: 100px;
     .item{
-        height:850px;background-repeat: no-repeat;background-position: 50% 0;background-size: cover;position: relative;transition: transform 8s;
+        height:850px;background-repeat: no-repeat;background-position: 50% 0;background-size: cover;position: relative;transition: transform 10s;
     }
     .text{
         font-family: 'Noto Sans KR';
-        background-color: rgba(0,0,0,0.5);color: #fff;text-align: center;display: flex;flex-direction: column;justify-content: center;align-items: center;height: 200px;position: absolute;bottom: 0;left: 0;width: 100%;
+        background-color: rgba(0,0,0,0.6);color: #fff;text-align: center;display: flex;flex-direction: column;justify-content: center;align-items: center;height: 200px;position: absolute;bottom: 0;left: 0;width: 100%;
         span{font-size: 36px;display: block;transition: all .5s ease-in-out .5s;opacity: 0;transform: translateY(40px);visibility: hidden;animation-play-state: paused;}
         strong{font-size: 52px;font-weight: 700;transition: all .5s ease-in-out .9s;opacity: 0;transform: translateY(40px);visibility: hidden;animation-play-state: paused;}
     }
     .on{
-        .item{transform: scale(1.1);}
+        .item{transform: scale(1.06);}
         .text{
             span,
             strong{visibility: visible;opacity: 1;transform: translateY(0);}
@@ -62,7 +62,7 @@
         .img-book2{opacity: 1;transform: translateX(0);}
     }
     &.line-banner{
-        min-height: 680px;background: url('../images/main-line-benner.png') no-repeat 50% 50%;color: #fff;margin: 3rem 0;
+        min-height: 680px;background: url('../images/main-line-banner.png') no-repeat 50% 50%;color: #fff;margin: 3rem 0;
         .inner{padding-left: 45%;}
         strong{display: block;font-weight: 700;font-size: 24px;letter-spacing: -0.6px;text-shadow: 0 4px 4px rgba(0, 0, 0, 0.47);margin-bottom: 2rem;}
         li{text-shadow: 0 4px 4px rgba(0, 0, 0, 0.47);font-size: 18px;}

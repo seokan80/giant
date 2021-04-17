@@ -503,13 +503,14 @@ label.number{
     & + .chart-group{margin-top: 2rem;}
 }
 
-.learning-progress{
+.mypage{
     h2{font-size: 20px;font-weight: 700;margin-bottom: 25px;}
     .top-area{
         border-bottom: 1px solid #a8d1cb;padding-bottom: .5rem;margin-bottom: 40px;
         .level{font-size: 1rem;color: #333;font-weight: 700;}
     }
 }
+
 .progress{
     border-radius: 10px;height: 10px;position: relative;overflow: visible;margin-bottom: 50px;background: #d8dbb2;
     .progress-bar{border-radius: 10px;}
@@ -726,11 +727,6 @@ label.number{
 
 .re-try{font-size: 24px;padding: 120px 0;text-align: center;}
 
-.profile{
-    display: inline-block;width: 50px;height: 50px;border-radius: 50%;border: 1px solid #e6ecf0;overflow: hidden;
-    img{max-width: 100%;}
-}
-.list-count{font-weight: 700;color: #333;font-size: 16px;margin-bottom: 10px;}
 .message-wrap{display: flex;background: #f1f1f1;height: 690px;}
 .message-list{
     flex: 0 0 250px;max-width:250px;background: #f1f1f1;
@@ -809,6 +805,139 @@ label.number{
         }
         .item{
             p{max-width:80%;padding: .75rem;}
+        }
+    }
+}
+
+.member-list{
+    border-top: 1px solid #333;margin-bottom: 1rem;
+    li{border-bottom: 1px solid #ddd;}
+    .item{display: flex;align-items: center;padding: 1rem;text-decoration: none;;font-size: 16px;}
+    .checkbox{margin-right: 20px;}
+    .profile{width: 50px;height: 50px;flex: 0 0 50px;}
+    .name{font-weight: 700;margin-left: 2rem;flex-basis: 0;flex-grow: 1;max-width: 100%;font-size: 17px;
+        span{display: inline-block;}
+        a:hover{text-decoration: underline;}
+    }
+    .shcool{width: 230px;text-align: center;margin-right: 30px;}
+    .grade{width: 100px;text-align: center;margin-right: 80px;}
+    .level{width: 70px;text-align: center;font-weight: 700;color: $secondary;font-size: 18px;}
+    @at-root{
+        .scroll-box{max-height: 260px;overflow-x: hidden;border-top: 1px solid #333;}
+        .scroll-box &{
+            border-top: 0;
+            .item{font-size: 14px;padding: .75rem;}
+            .profile{width: 30px;height: 30px;flex: 0 0 30px;}
+            .name{font-size: 14px;margin-left: 1rem;}
+            .shcool{width: 120px;margin-right: 10px;margin-left: 10px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+            .grade{width: 50px;margin-right: 10px;}
+            .level{width: 40px;margin-right: 10px;font-size: 14px;}
+        }
+    }
+}
+@include media-breakpoint-down(md) {
+    .member-list{
+        .item{font-size: 14px;padding: 1rem .5rem;}
+        .profile{display: none;}
+        .name{margin-left: 0;font-size: 14px;}
+        .shcool{width: 120px;margin-right: 10px;}
+        .grade{width: 50px;margin-right: 10px;}
+        .level{width: 40px;font-size: 14px;}
+        @at-root{
+            .scroll-box{max-height: 30vh;}
+            .scroll-box &{
+                .item{font-size: 13px;padding: .5rem 0;}
+                .name{font-size: 13px;margin-left: 0;}
+                .shcool{width: 98px;}
+                .grade{width: 40px;margin-right: 3px;}
+                .level{margin-right: 3px;font-size: 13px;}
+                .button .btn{padding-left: 4px;padding-right: 4px;}
+            }
+        }
+    }
+}
+
+.info-summery{
+    display: flex;justify-content: center;margin-bottom: 1rem;
+    li{
+        margin: 0 .5em;font-weight: 700;font-size: 17px;
+        &::before{content: '';display: inline-block;width: 4px;height: 4px;background: $primary;vertical-align: middle;margin-right: 6px;}
+    }
+}
+@include media-breakpoint-down(md) {
+    .info-summery{
+        li{font-size: 15px;}
+    }
+}
+
+.table-member{
+    font-size: 15px;
+}
+@include media-breakpoint-down(md) {
+    .table-member{
+        font-size: 13px;
+    }
+}
+
+.student-status{
+    strong{font-size: 16px;}
+}
+@include media-breakpoint-down(md) {
+    .student-status{
+        strong{font-size: 13px;}
+    }
+}
+
+.level-change{
+    padding: 1rem;margin-top: .5rem;position: relative;display: none;
+    background: #eee;
+    label{font-weight: 700;margin-bottom: 0;}
+    .close{position: absolute;right: 10px;top: 10px;opacity: 1;}
+    &.show{display: block;}
+}
+@include media-breakpoint-down(sm) {
+    .level-change{
+        padding-top: 2rem;
+        .close{top: 2px;}
+    }
+}
+
+.dashboard{
+    margin-bottom: 2rem;
+    .card{height: 100%;border-color: #d3d79b;}
+    .card-header{background: #d3d79b;font-weight: 700;border-color: #d3d79b;text-align: center;}
+    .card-body{text-align: center;display: flex;align-items: center;justify-content: center;font-weight: 700;line-height: 1;}
+    .count{font-size: 42px;}
+    .date{font-size: 20px;letter-spacing: -0.05em}
+    .price{font-size: 20px;}
+}
+@include media-breakpoint-down(sm) {
+    .dashboard{
+        .row{margin-left: -4px;margin-right: -4px;}
+        [class^=col]{padding-left: 4px;padding-right: 4px;}
+        .card-header,
+        .card-body{padding-left: .5rem;padding-right: .5rem;}
+        .count{font-size: 20px;}
+        .date{font-size: 13px;}
+        .price{font-size: 16px;}
+    }
+}
+
+.mypage{
+    .table{
+        font-size: 15px;
+        tbody{
+            td{font-size: 14px;}
+        }
+    }
+}
+@include media-breakpoint-down(sm) {
+    .mypage{
+        .table{
+            font-size: 13px;
+            tbody{
+                td{font-size: 13px;}
+            }
         }
     }
 }

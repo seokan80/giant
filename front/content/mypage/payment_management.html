@@ -107,35 +107,123 @@
                                 <a href="student_info.html" class="">학생 정보</a>
                                 <a href="teacher_info.html" class="">교사 정보</a>
                                 <a href="approval_management.html" class="">승인 관리</a>
-                                <a href="payment_management.html" class="">결제 관리</a>
+                                <a href="payment_management.html" class="active">결제 관리</a>
                                 <a href="" class="">학습결과</a>
                                 <a href="message.html" class="">쪽지함</a>
                             </div>
                         </div>
-
                         <div class="right">
-                            <div class="mypage-test">
-                                <div class="levelup">
-                                    <div class="bar">
-                                        <strong>level up!</strong>
-                                        <img src="/front/resources/images/img-test-bar.png" alt="">
-                                        <div class="marker1"></div>
-                                        <div class="marker2"></div>
-                                        <div class="marker3"></div>
-                                        <div class="marker4"></div>
+                            <div class="top-area">
+                                <div class="row justify-content-between align-items-center">
+                                    <div class="col-auto">
+                                        <h2 class="mb-0">결제 관리</h2>
+                                    </div>
+                                    <div class="col-auto">
                                     </div>
                                 </div>
-                                <p>
-                                    책 읽는 거인 프로그램을 시작하기 위해 독해 실력 진단평가가 필요합니다. <br>
-                                    아래의 레벨 테스트를 진행해 주세요. <br>
-                                    <strong>입학 테스트 결과를 통해 학습 레벨이 결정됩니다.</strong>
-                                </p>
-                                <div class="row row-10 justify-content-center mt-8">
-                                    <div class="col-auto"><a href="#none" class="btn btn-success btn-xl" id="btn-text-test">독해력 테스트</a></div>
-                                    <div class="col-auto"><a href="#none" class="btn btn-primary btn-xl" id="btn-sentence-test">문해력 테스트</a></div>
-                                    <div class="col-auto"><a href="#none" class="btn btn-success btn-xl" id="btn-reading-test">독해 다지기</a></div>
+                            </div>
+                            <div class="dashboard">
+                                <div class="row">
+                                    <div class="col-4 col-md-4">
+                                        <div class="card">
+                                            <div class="card-header">전월 학생수</div>
+                                            <div class="card-body">
+                                                <div class="count">50</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 col-md-4">
+                                        <div class="card">
+                                            <div class="card-header">최근 결제 일시</div>
+                                            <div class="card-body">
+                                                <div class="date">2021년 3월 1일</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 col-md-4">
+                                        <div class="card">
+                                            <div class="card-header">최근 결제 금액</div>
+                                            <div class="card-body">
+                                                <div class="price">1,000,000</div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+
+                            <div class="row justify-content-between align-items-center mb-2 mb-lg-3">
+                                <div class="col-auto">
+                                    <div class="list-count mb-0">총 10명</div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="search-form">
+                                        <div class="row row-8">
+                                            <div class="col">
+                                                <input type="text" class="form-control" placeholder="검색어 입력">
+                                            </div>
+                                            <div class="col-auto">
+                                                <button type="submit" class="btn btn-dark">검색</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="table-responsive">
+                                <table class="table table-hover table-nowrap">
+                                    <caption>결제 관리</caption>
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">번호</th>
+                                            <th class="text-center">서비스</th>
+                                            <th class="text-center">결제일시</th>
+                                            <th class="text-center">결제금액</th>
+                                            <th class="text-center">결제방법</th>
+                                            <th class="text-center">이용기간</th>
+                                            <th class="text-center">결제완료</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">1</td>
+                                            <td class="text-left">60명 미만</td>
+                                            <td class="text-center">2021-03-01 15:28:23</td>
+                                            <td class="text-center">1,000,000원</td>
+                                            <td class="text-center">카드</td>
+                                            <td class="text-center">2021-03-01 ~  2020-03-31</td>
+                                            <td class="text-center">
+                                                <button class="btn btn-sm btn-success">납부</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">1</td>
+                                            <td class="text-left">60명 미만</td>
+                                            <td class="text-center">2021-03-01 15:28:23</td>
+                                            <td class="text-center">1,000,000원</td>
+                                            <td class="text-center">휴대폰결제</td>
+                                            <td class="text-center">2021-03-01 ~  2020-03-31</td>
+                                            <td class="text-center">
+                                                <button class="btn btn-sm btn-primary">완료</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <nav class="text-center">
+                                <ul class="pagination">
+                                    <li class="page-item page-arrow disabled">
+                                        <a class="page-link" href="#"><span class="sr-only">이전</span><i class="fas fa-angle-left"></i></a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item active"><a class="page-link" href="#">2 <span class="sr-only">(current)</span></a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                    <li class="page-item page-arrow">
+                                        <a class="page-link" href="#"><span class="sr-only">다음</span><i class="fas fa-angle-right"></i></a>
+                                    </li>
+                                </ul>
+                            </nav>
                         </div>
                     </div>
 
@@ -162,23 +250,10 @@
         </div>
     </div>
 
-
     <!-- ui 관련 -->
     <script src="/front/resources/js/ui.js"></script>
 
     <script>
-        const btnSentence = document.getElementById('btn-sentence-test');
-        btnSentence.addEventListener('click', function(){
-            window.open('/front/content/test/test_sentence_start.html', 'popup1', 'width=1024, height=980, status=no, menubar=no, toolbar=no, resizable=no');
-        });
-        const btnText = document.getElementById('btn-text-test');
-        btnText.addEventListener('click', function(){
-            window.open('/front/content/test/test_text_start.html', 'popup2', 'width=1024, height=980, status=no, menubar=no, toolbar=no, resizable=no');
-        });
-        const btnReading = document.getElementById('btn-reading-test');
-        btnReading.addEventListener('click', function(){
-            window.open('/front/content/test/test_reading_start.html', 'popup3', 'width=1024, height=980, status=no, menubar=no, toolbar=no, resizable=no');
-        });
     </script>
 </body>
 </html>
