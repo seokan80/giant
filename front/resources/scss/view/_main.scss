@@ -1,16 +1,16 @@
 .main-swiper{
     margin-top: -45px;margin-bottom: 100px;
     .item{
-        height:850px;background-repeat: no-repeat;background-position: 50% 0;background-size: cover;position: relative;transition: transform 10s;
+        height:850px;background-repeat: no-repeat;background-position: 50% 0;position: relative;transition: transform 10s;
     }
     .text{
         font-family: 'Noto Sans KR';
-        background-color: rgba(0,0,0,0.6);color: #fff;text-align: center;display: flex;flex-direction: column;justify-content: center;align-items: center;height: 200px;position: absolute;bottom: 0;left: 0;width: 100%;
+        background-color: rgba(0,0,0,0.6);color: #fff;text-align: center;display: flex;flex-direction: column;justify-content: center;align-items: center;height: 170px;position: absolute;bottom: 0;left: 0;width: 100%;
         span{font-size: 36px;display: block;transition: all .5s ease-in-out .5s;opacity: 0;transform: translateY(40px);visibility: hidden;animation-play-state: paused;}
         strong{font-size: 52px;font-weight: 700;transition: all .5s ease-in-out .9s;opacity: 0;transform: translateY(40px);visibility: hidden;animation-play-state: paused;}
     }
     .on{
-        .item{transform: scale(1.06);}
+        //.item{transform: scale(1.06);}
         .text{
             span,
             strong{visibility: visible;opacity: 1;transform: translateY(0);}
@@ -18,19 +18,23 @@
     }
 
     .swiper-slide{position: relative;}
-    .swiper-pagination{bottom: 220px;}
+    .swiper-pagination{bottom: 180px;}
     .swiper-pagination-bullet{width: 10px;height: 10px;border-radius: 50px;transition: width .15s;opacity: .5;background: #fff;}
     .swiper-pagination-bullet-active{width: 29px;border-radius: 50px;background: $primary;opacity: .9;}
 }
-
+@include media-breakpoint-down(lg) {
+    .main-swiper{
+        .item{height: 600px;background-size: cover;}
+    }
+}
 @include media-breakpoint-down(md) {
     .main-swiper{
         margin-top: 0;margin-bottom: 0;
         .item{
-            height: calc(50vh - 60px);
+            height: calc(50vh - 80px);
         }
         .text{
-            height: 80px;
+            height: 65px;
             span{font-size: 14px;}
             strong{font-size: 18px}
         }
@@ -86,7 +90,7 @@
         .img-book1{position: absolute;left: 50%;top: 80px;margin-left: -830px;}
         .img-book2{position: absolute;right: 50%;top: 50%;margin-right: -850px;margin-top: -300px;}
         &.line-banner{
-            min-height: 0;background: url('../images/main-line-benner.png') no-repeat 100% 50%;margin: 0;background-size: cover;
+            min-height: 0;;margin: 0;background-size: cover;background-position: 16% 50%;
             .inner{padding-left:0;}
             strong{font-size: 15px;margin-bottom: 1rem;}
             li{font-size: 13px;}

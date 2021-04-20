@@ -382,7 +382,7 @@ label.number{
 }
 
 .test-start{
-    text-align: center;min-height: calc(100vh - 78px - 4rem);display: flex;align-items: center;justify-content: center;
+    text-align: center;min-height: calc(100vh - 78px - 4rem);display: flex;align-items: center;justify-content: center;margin: 0 -10px;background: #fff;
     .text{font-size: 24px;line-height: 2;font-weight: 700;letter-spacing: -0.6px;margin-bottom: 60px;}
     .marker{
         margin-bottom: .5rem;
@@ -392,10 +392,17 @@ label.number{
 	        animation: bounce-vertical .6s linear infinite alternate;
         }
         strong{display: block;color: $success;font-size: 18px;font-family: arial;}
+        &.no-animation{
+            span{animation: none;margin-bottom: 35px;}
+        }
     }
     .text-small{font-size: 14px;font-weight: 700;color: $secondary;margin-top: 40px;}
 }
-
+@include media-breakpoint-down(md) {
+    .test-start{
+        .text{font-size: 17px;}
+    }
+}
 .test-result{
     padding: 2rem;height: calc(100vh - 78px - 150px);overflow-x: hidden;
 }
