@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>책 읽는 거인 Admin</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="/admin/resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/admin/resources/images/favicon-128.png" sizes="128x128">
+
+    <link rel="stylesheet" href="/admin/resources/plugin/fontawesome-free/css/all.min.css">
+
+     <!-- TOAST UI -->
+    <link rel="stylesheet" href="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.css">
+    <link rel="stylesheet" href="https://uicdn.toast.com/grid/latest/tui-grid.css">
+    <link rel="stylesheet" href="https://uicdn.toast.com/tui.pagination/v3.4.0/tui-pagination.css">
+
+    <link rel="stylesheet" href="/admin/resources/css/bootstrap.css">
+    <link rel="stylesheet" href="/admin/resources/css/style.css">
+
+    <!-- jquery -->
+    <script src="/admin/resources/plugin/jquery/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="/admin/resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- TOAST UI -->
+    <script src="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.js"></script>
+    <script src="https://uicdn.toast.com/tui.code-snippet/v1.5.0/tui-code-snippet.js"></script>
+    <script src="https://uicdn.toast.com/tui.pagination/v3.3.0/tui-pagination.js"></script>
+    <script src="https://uicdn.toast.com/grid/latest/tui-grid.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header-block">
+            <div id="header">
+                <div class="container-fluid">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-auto">
+                            <h1><a href=""><img src="/admin/resources/images/logo-white.png" alt="책 읽는 거인"> 관리자</a></h1>
+                        </div>
+                        <div class="col-auto">
+                            <span class="name">홍길동님</span>
+                            <button type="button" class="btn btn-primary btn-sm">LOGOUT</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="container-block">
+            <div id="side">
+                <div class="container-fluid">
+                    <div id="gnb">
+                        <ul class="dep1">
+                            <li>
+                                <a href="../student/student_list.html" class="dep1-link"><span><i class="fas fa-user-graduate"></i>학생 관리</span></a>
+                            </li>
+                            <li>
+                                <a href="" class="dep1-link"><span><i class="fas fa-chalkboard-teacher"></i>교사 관리</span></a>
+                            </li>
+                            <li>
+                                <a href="" class="dep1-link"><span><i class="fas fa-flag"></i>센터 관리</span></a>
+                            </li>
+                            <li class="has-treeview active open">
+                                <a href="" class="dep1-link"><span><i class="fas fa-chalkboard"></i>학습 관리</span></a>
+                                <ul class="dep2">
+                                    <li><a href="../learning/learing_list.html" class="dep2-link"><span>학습 관리</span></a></li>
+                                    <li class="active"><a href="../learning/learing_card.html" class="dep2-link"><span>학습 목록</span></a></li>
+                                    <li><a href="../learning/learing_form.html" class="dep2-link"><span>학습 등록</span></a></li>
+                                    <li><a href="" class="dep2-link"><span>커리큘럼 관리</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="has-treeview">
+                                <a href="" class="dep1-link"><span><i class="fas fa-list"></i>게시판 관리</span></a>
+                                <ul class="dep2">
+                                    <li><a href="../board/notice_list.html" class="dep2-link"><span>공지사항</span></a></li>
+                                    <li><a href="" class="dep2-link"><span>FAQ</span></a></li>
+                                    <li><a href="" class="dep2-link"><span>1:1 문의</span></a></li>
+                                    <li><a href="" class="dep2-link"><span>약관</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="" class="dep1-link"><span><i class="fas fa-images"></i>메인 배너 관리</span></a>
+                            </li>
+                            <li>
+                                <a href="" class="dep1-link"><span><i class="fas fa-envelope-open"></i>쪽지 관리</span></a>
+                            </li>
+                            <li>
+                                <a href="" class="dep1-link"><span><i class="fas fa-money-check"></i>결제 관리</span></a>
+                            </li>
+                            <li>
+                                <a href="" class="dep1-link"><span><i class="fas fa-chart-pie"></i>통계</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="content">
+                <div class="container-fluid">
+
+                    <div class="top-area mb-5">
+                        <h2 class="title">학습관리</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">Home</li>
+                                <li class="breadcrumb-item" aria-current="page">학습관리</li>
+                            </ol>
+                        </nav>
+                    </div>
+
+                    <div class="learning-progress">
+                        <input type="hidden" name="entrTestLv" value="01">
+                        <div class="mb-5">
+                            <div class="row row-10">
+                                <div class="col">
+                                    <label for="entrTestLv">학생레벨</label>
+                                    <select name="entrTestLv" id="entrTestLv" class="custom-select" onchange="reload(this.value)">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10A</option>
+                                        <option value="11">10B</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <label for="entrTestLv">학습회차</label>
+                                    <button type="button" class="btn btn-success btn-block" onclick="addStep()">회차 추가</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progress-list">
+                            <div class="row row-20" id="progress-list">
+                                <div class="col-6 col-lg-3">
+                                    <div class="item">
+                                        <div class="item-header">
+                                            <div class="num">01 회차</div>
+                                        </div>
+                                        <div class="item-body">
+                                            <div class="group">
+                                                <button type="button" class="btn btn-block btn-success " onclick="addDtl('64', '01', '지정학습')">
+                                                    어휘력훈련</button>
+                                                <button type="button" class="btn btn-outline-gray btn-block" onclick="addDtl(0, '01', '지정학습')">추가</button>
+                                            </div>
+                                            <div class="group">
+                                                <div class="text">선택학습</div>
+                                                <button type="button" class="btn btn-outline-gray btn-block" onclick="addDtl(0, '01', '선택학습')">추가</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-lg-3">
+                                    <div class="item">
+                                        <div class="item-header">
+                                            <div class="num">02 회차</div>
+                                        </div>
+                                        <div class="item-body">
+                                            <div class="group">
+                                                <button type="button" class="btn btn-block btn-success " onclick="addDtl('65', '02', '지정학습')">
+                                                    어휘력훈련</button>
+                                                <button type="button" class="btn btn-outline-gray btn-block" onclick="addDtl(0, '02', '지정학습')">추가</button>
+                                            </div>
+                                            <div class="group">
+                                                <div class="text">선택학습</div>
+                                                <button type="button" class="btn btn-outline-gray btn-block" onclick="addDtl(0, '02', '선택학습')">추가</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-lg-3">
+                                    <div class="item">
+                                        <div class="item-header">
+                                            <div class="num">03 회차</div>
+                                        </div>
+                                        <div class="item-body">
+                                            <div class="group">
+                                                <button type="button" class="btn btn-block btn-success " onclick="addDtl('70', '03', '지정학습')">
+                                                    어휘력훈련</button>
+                                                <button type="button" class="btn btn-outline-gray btn-block" onclick="addDtl(0, '03', '지정학습')">추가</button>
+                                            </div>
+                                            <div class="group">
+                                                <div class="text">선택학습</div>
+                                                <button type="button" class="btn btn-outline-gray btn-block" onclick="addDtl(0, '03', '선택학습')">추가</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-lg-3">
+                                    <div class="item">
+                                        <div class="item-header">
+                                            <div class="num">04 회차</div>
+                                        </div>
+                                        <div class="item-body">
+                                            <div class="group">
+                                                <button type="button" class="btn btn-block btn-success " onclick="addDtl('66', '04', '지정학습')">
+                                                    어휘력훈련</button>
+                                                <button type="button" class="btn btn-outline-gray btn-block" onclick="addDtl(0, '04', '지정학습')">추가</button>
+                                            </div>
+                                            <div class="group">
+                                                <div class="text">선택학습</div>
+                                                <button type="button" class="btn btn-outline-gray btn-block" onclick="addDtl(0, '04', '선택학습')">추가</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-lg-3">
+                                    <div class="item">
+                                        <div class="item-header">
+                                            <div class="num">05 회차</div>
+                                        </div>
+                                        <div class="item-body">
+                                            <div class="group">
+                                                <button type="button" class="btn btn-block btn-success " onclick="addDtl('67', '05', '지정학습')">
+                                                    어휘력훈련</button>
+                                                <button type="button" class="btn btn-outline-gray btn-block" onclick="addDtl(0, '05', '지정학습')">추가</button>
+                                            </div>
+                                            <div class="group">
+                                                <div class="text">선택학습</div>
+                                                <button type="button" class="btn btn-outline-gray btn-block" onclick="addDtl(0, '05', '선택학습')">추가</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-lg-3">
+                                    <div class="item">
+                                        <div class="item-header">
+                                            <div class="num">06 회차</div>
+                                        </div>
+                                        <div class="item-body">
+                                            <div class="group">
+                                                <button type="button" class="btn btn-block btn-success " onclick="addDtl('68', '06', '지정학습')">
+                                                    어휘력훈련</button>
+                                                <button type="button" class="btn btn-outline-gray btn-block" onclick="addDtl(0, '06', '지정학습')">추가</button>
+                                            </div>
+                                            <div class="group">
+                                                <div class="text">선택학습</div>
+                                                <button type="button" class="btn btn-outline-gray btn-block" onclick="addDtl(0, '06', '선택학습')">추가</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-lg-3">
+                                    <div class="item">
+                                        <div class="item-header">
+                                            <div class="num">07 회차</div>
+                                        </div>
+                                        <div class="item-body">
+                                            <div class="group">
+                                                <button type="button" class="btn btn-block btn-success " onclick="addDtl('69', '07', '지정학습')">
+                                                    어휘력훈련</button>
+                                                <button type="button" class="btn btn-outline-gray btn-block" onclick="addDtl(0, '07', '지정학습')">추가</button>
+                                            </div>
+                                            <div class="group">
+                                                <div class="text">선택학습</div>
+                                                <button type="button" class="btn btn-outline-gray btn-block" onclick="addDtl(0, '07', '선택학습')">추가</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-lg-3">
+                                    <div class="item">
+                                        <div class="item-header">
+                                            <div class="num">08 회차</div>
+                                        </div>
+                                        <div class="item-body">
+                                            <div class="group">
+                                                <button type="button" class="btn btn-block btn-success " onclick="addDtl('281', '08', '지정학습')">
+                                                    어휘력훈련</button>
+                                                <button type="button" class="btn btn-outline-gray btn-block" onclick="addDtl(0, '08', '지정학습')">추가</button>
+                                            </div>
+                                            <div class="group">
+                                                <div class="text">선택학습</div>
+                                                <button type="button" class="btn btn-outline-gray btn-block" onclick="addDtl(0, '08', '선택학습')">추가</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ui 관련 -->
+    <script src="/admin/resources/js/ui.js"></script>
+
+
+    <script>
+
+    </script>
+</body>
+</html>

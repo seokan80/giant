@@ -53,7 +53,7 @@
                 <div class="container-fluid">
                     <div id="gnb">
                         <ul class="dep1">
-                            <li>
+                            <li class="active">
                                 <a href="../student/student_list.html" class="dep1-link"><span><i class="fas fa-user-graduate"></i>학생 관리</span></a>
                             </li>
                             <li>
@@ -62,10 +62,10 @@
                             <li>
                                 <a href="" class="dep1-link"><span><i class="fas fa-flag"></i>센터 관리</span></a>
                             </li>
-                            <li class="has-treeview active open">
+                            <li class="has-treeview">
                                 <a href="" class="dep1-link"><span><i class="fas fa-chalkboard"></i>학습 관리</span></a>
                                 <ul class="dep2">
-                                    <li class="active"><a href="../learning/learing_list.html" class="dep2-link"><span>학습 관리</span></a></li>
+                                    <li><a href="../learning/learing_list.html" class="dep2-link"><span>학습 관리</span></a></li>
                                     <li><a href="../learning/learing_card.html" class="dep2-link"><span>학습 목록</span></a></li>
                                     <li><a href="../learning/learing_form.html" class="dep2-link"><span>학습 등록</span></a></li>
                                     <li><a href="" class="dep2-link"><span>커리큘럼 관리</span></a></li>
@@ -100,11 +100,11 @@
                 <div class="container-fluid">
 
                     <div class="top-area mb-5">
-                        <h2 class="title">학습관리</h2>
+                        <h2 class="title">학생 목록</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">Home</li>
-                                <li class="breadcrumb-item" aria-current="page">학습관리</li>
+                                <li class="breadcrumb-item" aria-current="page">학생 관리</li>
                             </ol>
                         </nav>
                     </div>
@@ -115,16 +115,16 @@
                                 <div class="col-auto">
                                     <div class="row row-10 align-items-center">
                                         <div class="col-auto">
-                                            <div class="tui-datepicker-input tui-datetime-input tui-has-focus">
-                                                <input id="startpicker-input" type="text" aria-label="Date">
+                                            <div class="tui-datepicker-input-custom">
+                                                <input id="startpicker-input" type="text" class="form-control" aria-label="Date">
                                                 <span class="tui-ico-date"></span>
                                                 <div id="startpicker-container" style="margin-left: -1px;"></div>
                                             </div>
                                         </div>
                                         <div class="col-auto">~</div>
                                         <div class="col-auto">
-                                            <div class="tui-datepicker-input tui-datetime-input tui-has-focus">
-                                                <input id="endpicker-input" type="text" aria-label="Date">
+                                            <div class="tui-datepicker-input-custom">
+                                                <input id="endpicker-input" type="text" class="form-control" aria-label="Date">
                                                 <span class="tui-ico-date"></span>
                                                 <div id="endpicker-container" style="margin-left: -1px;"></div>
                                             </div>
@@ -135,12 +135,7 @@
                                     <div class="row row-10 align-items-center">
                                         <div class="col-auto">
                                             <select name="" id="" class="custom-select">
-                                                <option value="">카테고리</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-auto">
-                                            <select name="" id="" class="custom-select">
-                                                <option value="">분류</option>
+                                                <option value="">학교</option>
                                             </select>
                                         </div>
                                         <div class="col-auto">
@@ -150,8 +145,16 @@
                                         </div>
                                         <div class="col-auto">
                                             <select name="" id="" class="custom-select">
+                                                <option value=""> 승인여부</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-auto">
+                                            <select name="" id="" class="custom-select">
                                                 <option value="">상태</option>
                                             </select>
+                                        </div>
+                                        <div class="col-auto">
+                                            <input type="text" class="form-control">
                                         </div>
                                         <div class="col-auto">
                                             <button type="button" class="btn btn-dark" style="width:90px">검색</button>
@@ -162,14 +165,23 @@
                         </div>
                     </div>
 
-                    <div id="grid"></div>
-
-                    <div class="row align-items-center justify-content-between mt-3">
-                        <div class="col-auto">
-                            <a href="../learning/learing_form.html" class="btn btn-primary">학습 등록</a>
-                            <a href="" class="btn btn-primary ml-1">커리큘럼 관리</a>
+                    <div class="gird-top">
+                        <div class="row justify-content-between align-items-end mb-2">
+                            <div class="col-auto">
+                                total <strong id="rowCount">0</strong>
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-secondary">강제탈퇴</button>
+                                <button type="button" class="btn btn-secondary ml-1">휴원</button>
+                                <button type="button" class="btn btn-secondary ml-1">재원</button>
+                                <button type="button" class="btn btn-secondary ml-1">미승인</button>
+                                <button type="button" class="btn btn-secondary ml-1">승인</button>
+                                <button type="button" class="btn btn-secondary ml-1">자율학습</button>
+                                <button type="button" class="btn btn-dark ml-1">쪽지쓰기</button>
+                            </div>
                         </div>
                     </div>
+                    <div id="grid"></div>
 
                 </div>
             </div>
@@ -205,23 +217,60 @@
         //grid
         const gridData = [
             {
-                category: '입학테스트',
-                classification: '분류명',
-                level: '레벨',
-                round: '1',
-                title: '제목',
-                type: '직접 출제',
-                status: '노출',
-                date: '2020.12.08 12:23:45',
-            },{
-                category: '입학테스트',
-                classification: '분류명',
-                level: '레벨',
-                round: '1',
-                title: '제목',
-                type: '직접 출제',
-                status: '노출',
-                date: '2020.12.08 12:23:45',
+                id: 'abcd1234',
+                center: '센터명',
+                teacher: '홍길동',
+                name: '홍길동',
+                school: 'ㅇㅇㅇ학교',
+                grade: '직접 출제',
+                level: '노출',
+                phone: '010-0000-0000',
+                admission: '승인',
+                status: '정상',
+                self: '신청',
+                termination: '2020.12.08 12:23:45',
+            },
+            {
+                id: 'abcd1234',
+                center: '센터명',
+                teacher: '홍길동',
+                name: '홍길동',
+                school: 'ㅇㅇㅇ학교',
+                grade: '직접 출제',
+                level: '노출',
+                phone: '010-0000-0000',
+                admission: '승인',
+                status: '정상',
+                self: '신청',
+                termination: '2020.12.08 12:23:45',
+            },
+            {
+                id: 'abcd1234',
+                center: '센터명',
+                teacher: '홍길동',
+                name: '홍길동',
+                school: 'ㅇㅇㅇ학교',
+                grade: '직접 출제',
+                level: '노출',
+                phone: '010-0000-0000',
+                admission: '승인',
+                status: '정상',
+                self: '신청',
+                termination: '2020.12.08 12:23:45',
+            },
+            {
+                id: 'abcd1234',
+                center: '센터명',
+                teacher: '홍길동',
+                name: '홍길동',
+                school: 'ㅇㅇㅇ학교',
+                grade: '직접 출제',
+                level: '노출',
+                phone: '010-0000-0000',
+                admission: '승인',
+                status: '정상',
+                self: '신청',
+                termination: '2020.12.08 12:23:45',
             }
         ];
 
@@ -233,13 +282,33 @@
             rowHeaders: ['checkbox','rowNum'],
             columns: [
                 {
-                    header: '카테고리',
-                    name: 'category',
+                    header: 'ID',
+                    name: 'id',
                     align: 'center',
                 },
                 {
-                    header: '분류',
-                    name: 'classification',
+                    header: '학습센터',
+                    name: 'center',
+                    align: 'center',
+                },
+                {
+                    header: '교사',
+                    name: 'teacher',
+                    align: 'center',
+                },
+                {
+                    header: '학생',
+                    name: 'name',
+                    align: 'center',
+                },
+                {
+                    header: '학교',
+                    name: 'school',
+                    align: 'center',
+                },
+                {
+                    header: '학년',
+                    name: 'grade',
                     align: 'center',
                 },
                 {
@@ -248,17 +317,13 @@
                     align: 'center',
                 },
                 {
-                    header: '회차수',
-                    name: 'round',
+                    header: '보호자 휴대폰 번호',
+                    name: 'phone',
                     align: 'center',
                 },
                 {
-                    header: '제목',
-                    name: 'title'
-                },
-                {
-                    header: '출제 유형',
-                    name: 'type',
+                    header: '승인',
+                    name: 'admission',
                     align: 'center',
                 },
                 {
@@ -267,8 +332,13 @@
                     align: 'center',
                 },
                 {
-                    header: '등록일시',
-                    name: 'date',
+                    header: '자율학습',
+                    name: 'self',
+                    align: 'center',
+                },
+                {
+                    header: '서비스종료',
+                    name: 'termination',
                     align: 'center',
                 }
             ],
@@ -277,8 +347,20 @@
                 perPage: 5
             }
         });
-        grid.resetData(newData); // Call API of instance's public method
-        grid.applyTheme('striped');
+
+        grid.on('click', function(ev) {
+            if(ev.columnName == 'name'){
+                document.location.href = 'student_detail.html';
+            }
+        });
+        grid.on('mouseover', function(ev) {
+            if(ev.columnName == 'name'){
+                ev.nativeEvent.target.style.cursor = 'pointer';
+            }
+        });
+
+        let rowCount = grid.getRowCount();
+        document.querySelector('#rowCount').innerHTML = rowCount;
     </script>
 </body>
 </html>

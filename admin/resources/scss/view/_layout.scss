@@ -55,7 +55,7 @@ body{
             .dep2{display: block;background-color: #5a6361;}
         }
         > li.active{
-            > a{color: #fff;background-color: $primary;}
+            > a{color: #fff;background-color: $success;}
         }
     }
     .dep2{
@@ -64,7 +64,7 @@ body{
             > a{display: block;padding: .5rem 1rem .5rem 2.5rem;font-size: 13px;}
         }
         > li.active{
-            > a{color: $primary;}
+            > a{color: $success;}
         }
     }
 }

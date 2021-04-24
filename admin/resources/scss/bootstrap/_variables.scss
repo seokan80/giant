@@ -43,7 +43,7 @@ $orange:  #ff9b1a !default;
 $yellow:  #fcce4b !default;
 $green:   #28a745 !default;
 $teal:    #20c997 !default;
-$cyan:    #4ecdc4 !default;
+$cyan:    #489d9c !default;
 $gray:    #5f6a75 !default;
 $olive:    #aeaf19 !default;
 $brown:    #7a1b1d !default;
@@ -68,9 +68,9 @@ $colors: map-merge(
   $colors
 );
 
-$primary:       $cyan !default;
+$primary:       $olive !default;
 $secondary:     $gray !default;
-$success:       $blue !default;
+$success:       $cyan !default;
 $info:          $green !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
@@ -1108,7 +1108,7 @@ $spinner-border-width-sm: .2em !default;
 
 // Close
 
-$close-font-size:                   $font-size-base * 1.5 !default;
+$close-font-size:                   25px !default;
 $close-font-weight:                 $font-weight-bold !default;
 $close-color:                       $black !default;
 $close-text-shadow:                 0 1px 0 $white !default;

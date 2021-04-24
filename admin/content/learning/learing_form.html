@@ -14,6 +14,7 @@
      <!-- TOAST UI -->
     <link rel="stylesheet" href="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.css">
     <link rel="stylesheet" href="https://uicdn.toast.com/grid/latest/tui-grid.css">
+    <link rel="stylesheet" href="https://uicdn.toast.com/tui.pagination/v3.4.0/tui-pagination.css">
 
     <link rel="stylesheet" href="/admin/resources/css/bootstrap.css">
     <link rel="stylesheet" href="/admin/resources/css/style.css">
@@ -25,6 +26,8 @@
 
     <!-- TOAST UI -->
     <script src="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.js"></script>
+    <script src="https://uicdn.toast.com/tui.code-snippet/v1.5.0/tui-code-snippet.js"></script>
+    <script src="https://uicdn.toast.com/tui.pagination/v3.3.0/tui-pagination.js"></script>
     <script src="https://uicdn.toast.com/grid/latest/tui-grid.js"></script>
 </head>
 
@@ -39,7 +42,7 @@
                         </div>
                         <div class="col-auto">
                             <span class="name">홍길동님</span>
-                            <button type="button" class="btn btn-primary">LOGOUT</button>
+                            <button type="button" class="btn btn-primary btn-sm">LOGOUT</button>
                         </div>
                     </div>
                 </div>
@@ -51,7 +54,7 @@
                     <div id="gnb">
                         <ul class="dep1">
                             <li>
-                                <a href="" class="dep1-link"><span><i class="fas fa-user-graduate"></i>학생 관리</span></a>
+                                <a href="../student/student_list.html" class="dep1-link"><span><i class="fas fa-user-graduate"></i>학생 관리</span></a>
                             </li>
                             <li>
                                 <a href="" class="dep1-link"><span><i class="fas fa-chalkboard-teacher"></i>교사 관리</span></a>
@@ -63,6 +66,7 @@
                                 <a href="" class="dep1-link"><span><i class="fas fa-chalkboard"></i>학습 관리</span></a>
                                 <ul class="dep2">
                                     <li><a href="../learning/learing_list.html" class="dep2-link"><span>학습 관리</span></a></li>
+                                    <li><a href="../learning/learing_card.html" class="dep2-link"><span>학습 목록</span></a></li>
                                     <li class="active"><a href="../learning/learing_form.html" class="dep2-link"><span>학습 등록</span></a></li>
                                     <li><a href="" class="dep2-link"><span>커리큘럼 관리</span></a></li>
                                 </ul>
@@ -70,7 +74,7 @@
                             <li class="has-treeview">
                                 <a href="" class="dep1-link"><span><i class="fas fa-list"></i>게시판 관리</span></a>
                                 <ul class="dep2">
-                                    <li><a href="" class="dep2-link"><span>공지사항</span></a></li>
+                                    <li><a href="../board/notice_list.html" class="dep2-link"><span>공지사항</span></a></li>
                                     <li><a href="" class="dep2-link"><span>FAQ</span></a></li>
                                     <li><a href="" class="dep2-link"><span>1:1 문의</span></a></li>
                                     <li><a href="" class="dep2-link"><span>약관</span></a></li>
@@ -95,7 +99,7 @@
             <div id="content">
                 <div class="container-fluid">
 
-                    <div class="top-area mb-4">
+                    <div class="top-area mb-5">
                         <h2 class="title">학습관리</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">

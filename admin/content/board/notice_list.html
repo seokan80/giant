@@ -62,19 +62,19 @@
                             <li>
                                 <a href="" class="dep1-link"><span><i class="fas fa-flag"></i>센터 관리</span></a>
                             </li>
-                            <li class="has-treeview active open">
+                            <li class="has-treeview">
                                 <a href="" class="dep1-link"><span><i class="fas fa-chalkboard"></i>학습 관리</span></a>
                                 <ul class="dep2">
-                                    <li class="active"><a href="../learning/learing_list.html" class="dep2-link"><span>학습 관리</span></a></li>
+                                    <li><a href="../learning/learing_list.html" class="dep2-link"><span>학습 관리</span></a></li>
                                     <li><a href="../learning/learing_card.html" class="dep2-link"><span>학습 목록</span></a></li>
                                     <li><a href="../learning/learing_form.html" class="dep2-link"><span>학습 등록</span></a></li>
                                     <li><a href="" class="dep2-link"><span>커리큘럼 관리</span></a></li>
                                 </ul>
                             </li>
-                            <li class="has-treeview">
+                            <li class="has-treeview active open">
                                 <a href="" class="dep1-link"><span><i class="fas fa-list"></i>게시판 관리</span></a>
                                 <ul class="dep2">
-                                    <li><a href="../board/notice_list.html" class="dep2-link"><span>공지사항</span></a></li>
+                                    <li class="active"><a href="../board/notice_list.html" class="dep2-link"><span>공지사항</span></a></li>
                                     <li><a href="" class="dep2-link"><span>FAQ</span></a></li>
                                     <li><a href="" class="dep2-link"><span>1:1 문의</span></a></li>
                                     <li><a href="" class="dep2-link"><span>약관</span></a></li>
@@ -100,11 +100,12 @@
                 <div class="container-fluid">
 
                     <div class="top-area mb-5">
-                        <h2 class="title">학습관리</h2>
+                        <h2 class="title">공지사항</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">Home</li>
-                                <li class="breadcrumb-item" aria-current="page">학습관리</li>
+                                <li class="breadcrumb-item">게시판 관리</li>
+                                <li class="breadcrumb-item" aria-current="page">공지사항</li>
                             </ol>
                         </nav>
                     </div>
@@ -113,45 +114,12 @@
                         <div class="card-body">
                             <div class="row align-items-center justify-content-between">
                                 <div class="col-auto">
-                                    <div class="row row-10 align-items-center">
-                                        <div class="col-auto">
-                                            <div class="tui-datepicker-input tui-datetime-input tui-has-focus">
-                                                <input id="startpicker-input" type="text" aria-label="Date">
-                                                <span class="tui-ico-date"></span>
-                                                <div id="startpicker-container" style="margin-left: -1px;"></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-auto">~</div>
-                                        <div class="col-auto">
-                                            <div class="tui-datepicker-input tui-datetime-input tui-has-focus">
-                                                <input id="endpicker-input" type="text" aria-label="Date">
-                                                <span class="tui-ico-date"></span>
-                                                <div id="endpicker-container" style="margin-left: -1px;"></div>
-                                            </div>
-                                        </div>
-                                    </div>
+
                                 </div>
                                 <div class="col-auto">
                                     <div class="row row-10 align-items-center">
                                         <div class="col-auto">
-                                            <select name="" id="" class="custom-select">
-                                                <option value="">카테고리</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-auto">
-                                            <select name="" id="" class="custom-select">
-                                                <option value="">분류</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-auto">
-                                            <select name="" id="" class="custom-select">
-                                                <option value="">레벨</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-auto">
-                                            <select name="" id="" class="custom-select">
-                                                <option value="">상태</option>
-                                            </select>
+                                            <input type="text" class="form-control">
                                         </div>
                                         <div class="col-auto">
                                             <button type="button" class="btn btn-dark" style="width:90px">검색</button>
@@ -162,15 +130,25 @@
                         </div>
                     </div>
 
-                    <div id="grid"></div>
-
-                    <div class="row align-items-center justify-content-between mt-3">
-                        <div class="col-auto">
-                            <a href="../learning/learing_form.html" class="btn btn-primary">학습 등록</a>
-                            <a href="" class="btn btn-primary ml-1">커리큘럼 관리</a>
+                    <div class="gird-top">
+                        <div class="row justify-content-between align-items-end mb-2">
+                            <div class="col-auto">
+                                total <strong id="rowCount">0</strong>
+                            </div>
                         </div>
                     </div>
-
+                    <div id="grid"></div>
+                    <div class="grid-bottom">
+                        <div class="row justify-content-between align-items-end">
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-primary" style="min-width:90px">삭제</button>
+                                <button type="button" class="btn btn-primary ml-1" style="min-width:90px">수정</button>
+                            </div>
+                            <div class="col-auto">
+                                <a href="notice_form.html" class="btn btn-primary ml-1" style="min-width:90px">글쓰기</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -180,49 +158,29 @@
     <!-- ui 관련 -->
     <script src="/admin/resources/js/ui.js"></script>
 
-
     <script>
-        //datepicker
-        const DatePicker = tui.DatePicker;
-        var today = new Date();
-        var picker = tui.DatePicker.createRangePicker({
-            language: 'ko',
-            startpicker: {
-                date: today,
-                input: '#startpicker-input',
-                container: '#startpicker-container'
-            },
-            endpicker: {
-                date: today,
-                input: '#endpicker-input',
-                container: '#endpicker-container'
-            },
-            selectableRanges: [
-                [today, new Date(today.getFullYear() + 1, today.getMonth(), today.getDate())]
-            ]
-        });
-
         //grid
         const gridData = [
             {
-                category: '입학테스트',
-                classification: '분류명',
-                level: '레벨',
-                round: '1',
-                title: '제목',
-                type: '직접 출제',
-                status: '노출',
-                date: '2020.12.08 12:23:45',
-            },{
-                category: '입학테스트',
-                classification: '분류명',
-                level: '레벨',
-                round: '1',
-                title: '제목',
-                type: '직접 출제',
-                status: '노출',
-                date: '2020.12.08 12:23:45',
-            }
+                title: '4월 공지',
+                date: '2020.12.08  12:23:45',
+            },
+            {
+                title: '오픈 기념 이벤트',
+                date: '2020.12.08  12:23:45',
+            },
+            {
+                title: '4월 공지',
+                date: '2020.12.08  12:23:45',
+            },
+            {
+                title: '4월 공지',
+                date: '2020.12.08  12:23:45',
+            },
+            {
+                title: '4월 공지',
+                date: '2020.12.08  12:23:45',
+            },
         ];
 
         const grid = new tui.Grid({
@@ -233,52 +191,34 @@
             rowHeaders: ['checkbox','rowNum'],
             columns: [
                 {
-                    header: '카테고리',
-                    name: 'category',
-                    align: 'center',
-                },
-                {
-                    header: '분류',
-                    name: 'classification',
-                    align: 'center',
-                },
-                {
-                    header: '레벨',
-                    name: 'level',
-                    align: 'center',
-                },
-                {
-                    header: '회차수',
-                    name: 'round',
-                    align: 'center',
-                },
-                {
                     header: '제목',
-                    name: 'title'
-                },
-                {
-                    header: '출제 유형',
-                    name: 'type',
-                    align: 'center',
-                },
-                {
-                    header: '상태',
-                    name: 'status',
-                    align: 'center',
+                    name: 'title',
                 },
                 {
                     header: '등록일시',
                     name: 'date',
                     align: 'center',
-                }
+                },
             ],
             pageOptions: {
                 useClient: true,
                 perPage: 5
             }
         });
-        grid.resetData(newData); // Call API of instance's public method
-        grid.applyTheme('striped');
+
+        grid.on('click', function(ev) {
+            if(ev.columnName == 'title'){
+                document.location.href = 'notice_student.html';
+            }
+        });
+        grid.on('mouseover', function(ev) {
+            if(ev.columnName == 'title'){
+                ev.nativeEvent.target.style.cursor = 'pointer';
+            }
+        });
+
+        let rowCount = grid.getRowCount();
+        document.querySelector('#rowCount').innerHTML = rowCount;
     </script>
 </body>
 </html>

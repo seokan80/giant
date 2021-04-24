@@ -25,3 +25,30 @@
 }
 
 .table-title{font-size: 18px;font-weight: 700;}
+
+.tui-datepicker-input-custom{
+    position: relative;width: 130px;
+    .tui-ico-date{position: absolute;right: .75rem;top: 50%;transform: translateY(-50%);}
+}
+.tui-datepicker{z-index: 99;}
+
+
+.tui-pagination .tui-is-selected,
+.tui-pagination strong {
+    background: $success;border-color:$success;
+}
+.tui-pagination .tui-is-selected:hover {
+    background-color: $success;
+}
+.tui-pagination .tui-first-child.tui-is-selected {
+    border-left: 1px solid $success;
+}
+.tui-pagination .tui-last-child.tui-is-selected {
+    border-right: 1px solid $success;
+}
+
+.modal-title{font-size: 20px;}
+.modal-header.bg-success{
+    .modal-title{color: #fff;}
+    .close{color: #fff;opacity: 1;}
+}

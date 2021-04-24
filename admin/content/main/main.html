@@ -8,19 +8,29 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="icon" href="/admin/resources/images/favicon-32.png" sizes="32x32">
     <link rel="icon" href="/admin/resources/images/favicon-128.png" sizes="128x128">
-    <link rel="stylesheet" href="/fradminont/resources/plugin/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="/admin/resources/plugin/swiper/css/swiper.min.css">
+
+    <link rel="stylesheet" href="/admin/resources/plugin/fontawesome-free/css/all.min.css">
+
+     <!-- TOAST UI -->
+    <link rel="stylesheet" href="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.css">
+    <link rel="stylesheet" href="https://uicdn.toast.com/grid/latest/tui-grid.css">
+    <link rel="stylesheet" href="https://uicdn.toast.com/tui.pagination/v3.4.0/tui-pagination.css">
+
     <link rel="stylesheet" href="/admin/resources/css/bootstrap.css">
     <link rel="stylesheet" href="/admin/resources/css/style.css">
-    <link rel="stylesheet" href="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.css">
 
     <!-- jquery -->
     <script src="/admin/resources/plugin/jquery/jquery.min.js"></script>
     <!-- bootstrap -->
     <script src="/admin/resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- TOAST UI : DatePicker -->
+
+    <!-- TOAST UI -->
     <script src="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.js"></script>
+    <script src="https://uicdn.toast.com/tui.code-snippet/v1.5.0/tui-code-snippet.js"></script>
+    <script src="https://uicdn.toast.com/tui.pagination/v3.3.0/tui-pagination.js"></script>
+    <script src="https://uicdn.toast.com/grid/latest/tui-grid.js"></script>
 </head>
+
 
 <body>
     <div id="wrap">
@@ -32,12 +42,6 @@
 
             </div>
             <div id="content">
-                <div class="tui-datepicker-input tui-datetime-input tui-has-focus">
-                    <input type="text" id="tui-date-picker-target" aria-label="Date-Time">
-                    <span class="tui-ico-date"></span>
-                </div>
-
-                <div id="tui-date-picker-container" style="margin-top: -1px;"></div>
             </div>
         </div>
     </div>
@@ -46,19 +50,8 @@
     <!-- ui 관련 -->
     <script src="/admin/resources/js/ui.js"></script>
 
-
     <script>
-        var DatePicker = tui.DatePicker;
 
-        var container = document.getElementById('tui-date-picker-container');
-        var target = document.getElementById('tui-date-picker-target');
-
-        var datepicker = new DatePicker(container, {
-            input: {
-                element: target,
-                format: 'yyyy-MM-dd'
-            }
-        });
     </script>
 </body>
 </html>

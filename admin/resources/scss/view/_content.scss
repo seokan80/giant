@@ -8,16 +8,44 @@
 
 .login-page,
 .register-page {
-    align-items: center;background: $gray-200;display: flex;height: 100vh;justify-content: center;
+    align-items: center;background: #c5dcdd;display: flex;height: 100vh;justify-content: center;
+    background: url('../images/bg-login.jpg') no-repeat 50% 50%;background-size: cover;
+    &::before{content: '';position: fixed;left: 0;top: 0;bottom: 0;right: 0;background-color: rgba(0,0,0,0.5);}
 }
 
 .login-box,
 .register-box {
-    width: 500px;border-radius: 20px;overflow: hidden;
+    width: 500px;border-radius: 20px;overflow: hidden;position: relative;
     .card{border: 0;}
 }
 
 .login-card-body,
 .register-card-body {
     background: $white;border: 0;color: #666;padding: 50px;
+}
+
+.progress-list{
+    .row-20{
+        margin: -10px;
+        [class^=col]{padding: 10px;}
+    }
+    .item{
+        overflow: hidden;
+        &.disabled{
+            .item-header{opacity: .5;}
+            .item-body{border-color: #dbdbdb;}
+        }
+    }
+    .item-header{
+        background-color: $success;padding: .5rem 0;text-align: center;border-radius: 5px 5px 0 0;position: relative;
+        &::after{content: '';width: 0;height: 0;border-style: solid;border-width: 8px 8px 0 8px;border-color: $success transparent transparent transparent;position: absolute;left: 50%;bottom: -7px;transform: translateX(-50%);}
+    }
+    .item-body{border: 1px solid $success;border-top: 0;border-radius: 0 0 5px 5px;padding-top: 10px;background-color: #f9f8f8;}
+    .group{padding: 20px 15px;}
+    .group + .group{
+        border-top: 1px dashed #dbdbdb;
+    }
+    .num{font-size: 16px;font-family: 'Play';color: #fff;font-weight: 700;}
+    .text{font-size: 14px;text-align: center;color: #444;margin-bottom: 20px;}
+    .btn{font-size: 13px;}
 }

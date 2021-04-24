@@ -26,6 +26,26 @@
 
 .table-title { font-size: 18px; font-weight: 700; }
 
+.tui-datepicker-input-custom { position: relative; width: 130px; }
+
+.tui-datepicker-input-custom .tui-ico-date { position: absolute; right: .75rem; top: 50%; transform: translateY(-50%); }
+
+.tui-datepicker { z-index: 99; }
+
+.tui-pagination .tui-is-selected, .tui-pagination strong { background: #489d9c; border-color: #489d9c; }
+
+.tui-pagination .tui-is-selected:hover { background-color: #489d9c; }
+
+.tui-pagination .tui-first-child.tui-is-selected { border-left: 1px solid #489d9c; }
+
+.tui-pagination .tui-last-child.tui-is-selected { border-right: 1px solid #489d9c; }
+
+.modal-title { font-size: 20px; }
+
+.modal-header.bg-success .modal-title { color: #fff; }
+
+.modal-header.bg-success .close { color: #fff; opacity: 1; }
+
 body { min-width: 1200px; }
 
 #header-block { background-color: #22242a; }
@@ -70,27 +90,55 @@ body { min-width: 1200px; }
 
 #gnb .dep1 > li.open .dep2 { display: block; background-color: #5a6361; }
 
-#gnb .dep1 > li.active > a { color: #fff; background-color: #4ecdc4; }
+#gnb .dep1 > li.active > a { color: #fff; background-color: #489d9c; }
 
 #gnb .dep2 { padding: .25rem 0; display: none; }
 
 #gnb .dep2 > li > a { display: block; padding: .5rem 1rem .5rem 2.5rem; font-size: 13px; }
 
-#gnb .dep2 > li.active > a { color: #4ecdc4; }
+#gnb .dep2 > li.active > a { color: #489d9c; }
 
 .top-area { display: flex; justify-content: space-between; align-items: flex-end; }
 
 .top-area .title { margin-bottom: 0; font-weight: 700; }
 
-.login-logo, .register-logo { font-size: 2.1rem; font-weight: 300; padding: 1rem; text-align: center; background: #4ecdc4; }
+.login-logo, .register-logo { font-size: 2.1rem; font-weight: 300; padding: 1rem; text-align: center; background: #aeaf19; }
 
 .login-logo a, .register-logo a { color: #495057; }
 
-.login-page, .register-page { align-items: center; background: #e9ecef; display: flex; height: 100vh; justify-content: center; }
+.login-page, .register-page { align-items: center; background: #c5dcdd; display: flex; height: 100vh; justify-content: center; background: url("../images/bg-login.jpg") no-repeat 50% 50%; background-size: cover; }
 
-.login-box, .register-box { width: 500px; border-radius: 20px; overflow: hidden; }
+.login-page::before, .register-page::before { content: ''; position: fixed; left: 0; top: 0; bottom: 0; right: 0; background-color: rgba(0, 0, 0, 0.5); }
+
+.login-box, .register-box { width: 500px; border-radius: 20px; overflow: hidden; position: relative; }
 
 .login-box .card, .register-box .card { border: 0; }
 
 .login-card-body, .register-card-body { background: #fff; border: 0; color: #666; padding: 50px; }
+
+.progress-list .row-20 { margin: -10px; }
+
+.progress-list .row-20 [class^=col] { padding: 10px; }
+
+.progress-list .item { overflow: hidden; }
+
+.progress-list .item.disabled .item-header { opacity: .5; }
+
+.progress-list .item.disabled .item-body { border-color: #dbdbdb; }
+
+.progress-list .item-header { background-color: #489d9c; padding: .5rem 0; text-align: center; border-radius: 5px 5px 0 0; position: relative; }
+
+.progress-list .item-header::after { content: ''; width: 0; height: 0; border-style: solid; border-width: 8px 8px 0 8px; border-color: #489d9c transparent transparent transparent; position: absolute; left: 50%; bottom: -7px; transform: translateX(-50%); }
+
+.progress-list .item-body { border: 1px solid #489d9c; border-top: 0; border-radius: 0 0 5px 5px; padding-top: 10px; background-color: #f9f8f8; }
+
+.progress-list .group { padding: 20px 15px; }
+
+.progress-list .group + .group { border-top: 1px dashed #dbdbdb; }
+
+.progress-list .num { font-size: 16px; font-family: 'Play'; color: #fff; font-weight: 700; }
+
+.progress-list .text { font-size: 14px; text-align: center; color: #444; margin-bottom: 20px; }
+
+.progress-list .btn { font-size: 13px; }
 /*# sourceMappingURL=style.css.map */
