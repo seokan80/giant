@@ -21,6 +21,9 @@
     <script src="/front/resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Swiper -->
     <script src="/front/resources/plugin/swiper/js/swiper.min.js"></script>
+    <!-- TOAST UI -->
+    <link rel="stylesheet" href="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.css">
+    <script src="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.js"></script>
 </head>
 
 <body>
@@ -105,8 +108,8 @@
                             <div class="btns">
                                 <a href="myinfo.html" class="">내 정보</a>
                                 <a href="student_info.html" class="">학생 정보</a>
-                                <a href="teacher_info.html" class="active">교사 정보</a>
-                                <a href="approval_management_student.html" class="">승인 관리</a>
+                                <a href="teacher_info.html" class="">교사 정보</a>
+                                <a href="approval_management_student.html" class="active">승인 관리</a>
                                 <a href="payment_management.html" class="">결제 관리</a>
                                 <a href="" class="">학습결과</a>
                                 <a href="message.html" class="">쪽지함</a>
@@ -116,52 +119,148 @@
                             <div class="top-area">
                                 <div class="row justify-content-between align-items-center">
                                     <div class="col-auto">
-                                        <h2 class="mb-0">교사 정보</h2>
+                                        <h2 class="mb-0">승인 관리 <small class="ml-2">학생</small></h2>
                                     </div>
                                     <div class="col-auto">
+                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                            <a href="approval_management_student.html" class="btn btn-success w-80px active">학생</a>
+                                            <a href="approval_management_teacher.html" class="btn btn-success w-80px">교사</a>
+                                          </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="dashboard">
+                                <div class="row">
+                                    <div class="col-4 col-md-4">
+                                        <div class="card">
+                                            <div class="card-header">총 승인 학생</div>
+                                            <div class="card-body">
+                                                <div class="count">54</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 col-md-4">
+                                        <div class="card">
+                                            <div class="card-header">신규 승인 요청</div>
+                                            <div class="card-body">
+                                                <div class="count">6</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 col-md-4">
+                                        <div class="card">
+                                            <div class="card-header">주간 승인 완료</div>
+                                            <div class="card-body">
+                                                <div class="count">11</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="row justify-content-between align-items-center mb-2 mb-lg-3">
-                                <div class="col-auto order-2 order-md-1 mt-2 mt-md-0">
+                                <div class="col-auto">
                                     <div class="list-count mb-0">총 10명</div>
                                 </div>
-                                <div class="col-auto order-1 order-md-2">
+                                <div class="col-auto">
                                     <div class="search-form">
                                         <div class="row row-8">
-                                            <div class="col-4 col-sm-auto">
+                                            <div class="col-auto">
+                                                <div class="tui-datepicker-input-custom">
+                                                    <input id="startpicker-input" type="text" aria-label="Date" class="form-control">
+                                                    <span class="tui-ico-date"></span>
+                                                    <div id="startpicker-container" style="margin-left: -1px;"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="tui-datepicker-input-custom">
+                                                    <input id="endpicker-input" type="text" aria-label="Date" class="form-control">
+                                                    <span class="tui-ico-date"></span>
+                                                    <div id="endpicker-container" style="margin-left: -1px;"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto">
                                                 <select name="" id="" class="custom-select">
-                                                    <option value="">학교</option>
+                                                    <option value="">승인여부</option>
                                                 </select>
                                             </div>
-                                            <div class="col-4 col-sm-auto">
-                                                <select name="" id="" class="custom-select">
-                                                    <option value="">학년</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-4 col-sm-auto">
-                                                <select name="" id="" class="custom-select">
-                                                    <option value="">레벨</option>
-                                                </select>
-                                            </div>
-                                            <div class="col col-sm-auto mt-2 mt-sm-0">
+                                            <div class="col">
                                                 <input type="text" class="form-control" placeholder="검색어 입력">
                                             </div>
-                                            <div class="col-auto mt-2 mt-sm-0">
+                                            <div class="col-auto">
                                                 <button type="submit" class="btn btn-dark">검색</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="row justify-content-between align-items-center mb-2 mb-lg-3">
+                                <div class="col-auto">
+                                    <div class="custom-control custom-checkbox">
+                                        <input class="custom-control-input" type="checkbox" id="chkAll">
+                                        <label for="chkAll" class="custom-control-label">전체 선택</label>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="custom-control custom-switch custom-control-inline">
+                                        <input type="checkbox" class="custom-control-input" id="auto">
+                                        <label class="custom-control-label" for="auto">자동승인</label>
+                                    </div>
+                                    <button type="button"" class="btn btn-success">강제탈퇴</button>
+                                    <button type="button"" class="btn btn-success ml-1">휴원</button>
+                                    <button type="button"" class="btn btn-success ml-1">재원</button>
+                                    <button type="button"" class="btn btn-success ml-1">미승인</button>
+                                    <button type="button"" class="btn btn-success ml-1">승인</button>
+                                </div>
+                            </div>
                             <ul class="member-list">
                                 <li>
                                     <div class="item">
-                                        <div class="profile"><img src="../../resources/images/profile.png" alt="책거인"></div>
-                                        <div class="name"><a href="#modal-teacher" data-toggle="modal">책거인 교사</a></div>
+                                        <div class="checkbox">
+                                            <div class="custom-control custom-checkbox">
+                                                <input class="custom-control-input" type="checkbox" id="chkList1">
+                                                <label for="chkList1" class="custom-control-label"></label>
+                                            </div>
+                                        </div>
+                                        <div class="profile"><img src="../../resources/images/profile.png" alt="홍길동"></div>
+                                        <div class="name"><a href="#modal-student" data-toggle="modal">홍길동</a></div>
+                                        <div class="shcool">거인초등학교</div>
+                                        <div class="grade">5학년</div>
+                                        <div class="level">미승인</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item">
+                                        <div class="checkbox">
+                                            <div class="custom-control custom-checkbox">
+                                                <input class="custom-control-input" type="checkbox" id="chkList1">
+                                                <label for="chkList1" class="custom-control-label"></label>
+                                            </div>
+                                        </div>
+                                        <div class="profile"><img src="../../resources/images/profile.png" alt="홍길동"></div>
+                                        <div class="name"><a href="#modal-student" data-toggle="modal">홍길동</a></div>
+                                        <div class="shcool">거인초등학교</div>
+                                        <div class="grade">5학년</div>
+                                        <div class="level">미승인</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item">
+                                        <div class="checkbox">
+                                            <div class="custom-control custom-checkbox">
+                                                <input class="custom-control-input" type="checkbox" id="chkList1">
+                                                <label for="chkList1" class="custom-control-label"></label>
+                                            </div>
+                                        </div>
+                                        <div class="profile"><img src="../../resources/images/profile.png" alt="홍길동"></div>
+                                        <div class="name"><a href="#modal-student" data-toggle="modal">홍길동</a></div>
+                                        <div class="shcool">거인초등학교</div>
+                                        <div class="grade">5학년</div>
+                                        <div class="level">미승인</div>
                                     </div>
                                 </li>
                             </ul>
+
                             <nav class="text-center">
                                 <ul class="pagination">
                                     <li class="page-item page-arrow disabled">
@@ -203,20 +302,25 @@
         </div>
     </div>
 
-    <!-- modal : 교사 상세-->
-    <div class="modal modal-member-detail" id="modal-teacher" tabindex="-1" aria-modal="true">
+    <!-- modal : 학생 상세 -->
+    <div class="modal modal-member-detail" id="modal-student" tabindex="-1" aria-modal="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header bg-success">
-                    <h5 class="modal-title">교사 상세</h5>
+                    <h5 class="modal-title">학생 상세</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
                 <div class="modal-body">
+                    <ul class="info-summery">
+                        <li>거인초등학교</li>
+                        <li>5학년</li>
+                        <li>L5</li>
+                    </ul>
                     <table class="table table-member">
                         <colgroup>
-                            <col style="width:90px">
+                            <col style="width:120px">
                             <col>
                         </colgroup>
                         <tbody>
@@ -225,91 +329,36 @@
                                 <td>책거인</td>
                             </tr>
                             <tr>
-                                <th>휴대폰</th>
+                                <th>보호자 휴대폰</th>
                                 <td>010-1234-1234</td>
                             </tr>
                             <tr>
-                                <th>이메일</th>
+                                <th>보호자 이름</th>
+                                <td>책거인</td>
+                            </tr>
+                            <tr>
+                                <th>보호자 이메일</th>
                                 <td>abc@email.com</td>
                             </tr>
                             <tr>
-                                <th>주소</th>
-                                <td>서울시 서초구 서초동</td>
+                                <th>학생 휴대폰</th>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <th>학생 이메일</th>
+                                <td>-</td>
                             </tr>
                         </tbody>
                     </table>
-                    <div class="student-status">
-                        <div class="row justify-content-between align-items-center mb-2">
-                            <div class="col-auto">
-                                담당 학생 <b>6</b>명
-                            </div>
-                            <div class="col-auto">
-                                <button type="button" class="btn btn-success btn-sm">학생 추가</button>
-                            </div>
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-primary">강제탈퇴</button>
+                            <button type="button" class="btn btn-primary ml-1">휴원</button>
+                            <button type="button" class="btn btn-primary ml-1">재원</button>
                         </div>
-                        <div class="scroll-box">
-                            <ul class="member-list">
-                                <li>
-                                    <div class="item">
-                                        <div class="profile"><img src="../../resources/images/profile.png" alt="홍길동"></div>
-                                        <div class="name">홍길동</div>
-                                        <div class="shcool">거인초등학교</div>
-                                        <div class="grade">5학년</div>
-                                        <div class="level">L5</div>
-                                        <div class="button"><button type="button" class="btn btn-primary btn-sm">교사 변경</button></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="item">
-                                        <div class="profile"><img src="../../resources/images/profile.png" alt="홍길동"></div>
-                                        <div class="name">홍길동</div>
-                                        <div class="shcool">거인초등학교</div>
-                                        <div class="grade">5학년</div>
-                                        <div class="level">L5</div>
-                                        <div class="button"><button type="button" class="btn btn-primary btn-sm">교사 변경</button></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="item">
-                                        <div class="profile"><img src="../../resources/images/profile.png" alt="홍길동"></div>
-                                        <div class="name">홍길동</div>
-                                        <div class="shcool">거인초등학교</div>
-                                        <div class="grade">5학년</div>
-                                        <div class="level">L5</div>
-                                        <div class="button"><button type="button" class="btn btn-primary btn-sm">교사 변경</button></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="item">
-                                        <div class="profile"><img src="../../resources/images/profile.png" alt="홍길동"></div>
-                                        <div class="name">홍길동</div>
-                                        <div class="shcool">거인초등학교</div>
-                                        <div class="grade">5학년</div>
-                                        <div class="level">L5</div>
-                                        <div class="button"><button type="button" class="btn btn-primary btn-sm">교사 변경</button></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="item">
-                                        <div class="profile"><img src="../../resources/images/profile.png" alt="홍길동"></div>
-                                        <div class="name">홍길동</div>
-                                        <div class="shcool">거인초등학교</div>
-                                        <div class="grade">5학년</div>
-                                        <div class="level">L5</div>
-                                        <div class="button"><button type="button" class="btn btn-primary btn-sm">교사 변경</button></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="item">
-                                        <div class="profile"><img src="../../resources/images/profile.png" alt="홍길동"></div>
-                                        <div class="name">홍길동</div>
-                                        <div class="shcool">거인초등학교</div>
-                                        <div class="grade">5학년</div>
-                                        <div class="level">L5</div>
-                                        <div class="button"><button type="button" class="btn btn-primary btn-sm">교사 변경</button></div>
-                                    </div>
-                                </li>
-                            </ul>
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-secondary">미승인</button>
+                            <button type="button" class="btn btn-secondary ml-1">승인</button>
                         </div>
                     </div>
                 </div>
@@ -321,6 +370,23 @@
     <script src="/front/resources/js/ui.js"></script>
 
     <script>
+        var today = new Date();
+        var picker = tui.DatePicker.createRangePicker({
+            language: 'ko',
+            startpicker: {
+                date: today,
+                input: '#startpicker-input',
+                container: '#startpicker-container',
+            },
+            endpicker: {
+                date: today,
+                input: '#endpicker-input',
+                container: '#endpicker-container'
+            },
+            selectableRanges: [
+                [today, new Date(today.getFullYear() + 1, today.getMonth(), today.getDate())]
+            ]
+        });
     </script>
 </body>
 </html>

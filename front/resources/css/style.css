@@ -131,6 +131,8 @@
   .icon-play { width: 18px; height: 12px; }
   .icon-pause { width: 18px; height: 12px; } }
 
+.w-80px { width: 80px; }
+
 i.new { display: inline-block; background: #cb1c1c; width: 13px; height: 13px; border-radius: 2px; color: #fff; text-align: center; line-height: 13px; font-weight: 700; font-size: 10px; font-family: 'Play'; }
 
 [data-event=datepicker] { background: url("../images/icon-calendar.png") no-repeat right 1rem top 50%; padding-right: 52px; max-width: 170px; }
@@ -142,6 +144,10 @@ i.new { display: inline-block; background: #cb1c1c; width: 13px; height: 13px; b
 .title { font-size: 28px; font-weight: 700; color: #333; }
 
 @media (max-width: 991.98px) { .title { font-size: 20px; } }
+
+.title-util { font-size: 32px; font-weight: 700; color: #333; margin-bottom: 4rem; }
+
+@media (max-width: 991.98px) { .title-util { font-size: 20px; margin-bottom: 2rem; } }
 
 @media (max-width: 991.98px) { .btn-xl { padding: .8rem 1.5rem; } }
 
@@ -1015,6 +1021,8 @@ label.number input:checked + i { border-color: #333; background-color: #333; col
 
 @media (max-width: 767.98px) { .about-top { height: 300px; margin-bottom: 0; } }
 
+.giant-is { margin-top: -77px; }
+
 .giant-is > div { padding: 77px 0; }
 
 .giant-is .giant-bg1 { background-color: #ddd; }
@@ -1023,7 +1031,8 @@ label.number input:checked + i { border-color: #333; background-color: #333; col
 
 .giant-is .giant-bg4 { background-color: #e9ebcd; }
 
-@media (max-width: 991.98px) { .giant-is > div { padding: 40px 1rem; } }
+@media (max-width: 991.98px) { .giant-is { margin-top: -40px; }
+  .giant-is > div { padding: 40px 1rem; } }
 
 .ceo h2 { font-family: 'Nanum Myeongjo'; font-size: 48px; font-weight: 700; line-height: 1; }
 
@@ -1265,6 +1274,19 @@ label.number input:checked + i { border-color: #333; background-color: #333; col
 
 @media (max-width: 767.98px) { .mypage .table { font-size: 13px; }
   .mypage .table tbody td { font-size: 13px; } }
+
+.terms ul { line-height: 1.8; font-size: 16px; }
+
+.terms h3 { font-size: 18px; font-weight: 700; margin: 3rem 0 2rem; }
+
+.terms strong { display: block; font-size: 16px; font-weight: 700; margin: 2rem 0 1rem; }
+
+.terms div { color: #555; line-height: 1.7; word-break: keep-all; }
+
+@media (max-width: 991.98px) { .terms ul { line-height: 1.8; font-size: 14px; }
+  .terms h3 { font-size: 15px; font-weight: 700; margin: 2rem 0 1.5rem; }
+  .terms strong { display: block; font-size: 14px; font-weight: 700; margin: 1.5rem 0 .75rem; }
+  .terms div { color: #555; line-height: 1.7; font-size: 13px; } }
 
 .main-swiper { margin-top: -45px; margin-bottom: 100px; }
 

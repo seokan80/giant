@@ -660,6 +660,7 @@ label.number{
 }
 
 .giant-is{
+    margin-top: -77px;
     > div{padding: 77px 0;}
     .giant-bg1{background-color: #ddd;}
     .giant-bg3{background-color: #dae8e2;}
@@ -667,6 +668,7 @@ label.number{
 }
 @include media-breakpoint-down(md) {
     .giant-is{
+        margin-top: -40px;
         > div{padding: 40px 1rem;}
     }
 }
@@ -946,5 +948,20 @@ label.number{
                 td{font-size: 13px;}
             }
         }
+    }
+}
+
+.terms{
+    ul{line-height: 1.8;font-size: 16px;}
+    h3{font-size: 18px;font-weight: 700;margin: 3rem 0 2rem;}
+    strong{display: block;font-size: 16px;font-weight: 700;margin: 2rem 0 1rem;}
+    div{color: #555;line-height: 1.7;word-break: keep-all;}
+}
+@include media-breakpoint-down(md) {
+    .terms{
+        ul{line-height: 1.8;font-size: 14px;}
+        h3{font-size: 15px;font-weight: 700;margin: 2rem 0 1.5rem;}
+        strong{display: block;font-size: 14px;font-weight: 700;margin: 1.5rem 0 .75rem;}
+        div{color: #555;line-height: 1.7;font-size: 13px;}
     }
 }

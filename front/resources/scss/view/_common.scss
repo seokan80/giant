@@ -23,6 +23,8 @@
     .icon-pause{width: 18px;height: 12px;}
 }
 
+.w-80px{width: 80px;}
+
 i.new{display: inline-block;background: #cb1c1c;width: 13px;height: 13px;border-radius: 2px;color: #fff;text-align: center;line-height: 13px;font-weight: 700;font-size: 10px;font-family: 'Play';}
 
 [data-event=datepicker]{
@@ -39,6 +41,11 @@ i.new{display: inline-block;background: #cb1c1c;width: 13px;height: 13px;border-
 .title{font-size: 28px;font-weight: 700;color: #333;}
 @include media-breakpoint-down(md) {
     .title{font-size: 20px;}
+}
+
+.title-util{font-size: 32px;font-weight: 700;color: #333;margin-bottom: 4rem;}
+@include media-breakpoint-down(md) {
+    .title-util{font-size: 20px;margin-bottom: 2rem;}
 }
 
 @include media-breakpoint-down(md) {
