@@ -376,11 +376,6 @@ label.number{
     }
 }
 
-@media print{
-    .test-result{height: auto !important;}
-    .test-footer{display: none;}
-}
-
 .test-start{
     text-align: center;min-height: calc(100vh - 78px - 4rem);display: flex;align-items: center;justify-content: center;margin: 0 -10px;background: #fff;
     .text{font-size: 24px;line-height: 2;font-weight: 700;letter-spacing: -0.6px;margin-bottom: 60px;}
@@ -1015,3 +1010,19 @@ label.number{
     }
 }
 
+
+@media print{
+    .test-result{height: auto !important;padding: 1rem 0;}
+    .test-body{border: 0;}
+    .test-footer{
+        border: 0;height: auto;position: static;
+        *{display: none;}
+    }
+    *{ color-adjust: exact;  -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .table{
+        .bg1{background: #e9ebcd !important;color-adjust: exact;  -webkit-print-color-adjust: exact; print-color-adjust: exact;}
+        .bg2{background: #d7ece9 !important;color-adjust: exact;  -webkit-print-color-adjust: exact; print-color-adjust: exact;}
+        .bg3{background: #f1f1f1 !important;color-adjust: exact;  -webkit-print-color-adjust: exact; print-color-adjust: exact;}
+    }
+    .table > thead th{background: #f7f7f7 !important;color-adjust: exact;  -webkit-print-color-adjust: exact; print-color-adjust: exact;}
+}

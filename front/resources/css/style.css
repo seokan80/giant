@@ -784,9 +784,6 @@ label.number input:checked + i { border-color: #333; background-color: #333; col
 
 @media (max-width: 991.98px) { .test-header h1 { font-size: 28px; } }
 
-@media print { .test-result { height: auto !important; }
-  .test-footer { display: none; } }
-
 .test-start { text-align: center; min-height: calc(100vh - 78px - 4rem); display: flex; align-items: center; justify-content: center; margin: 0 -10px; background: #fff; }
 
 .test-start .text { font-size: 24px; line-height: 2; font-weight: 700; letter-spacing: -0.6px; margin-bottom: 60px; }
@@ -1341,6 +1338,16 @@ label.number input:checked + i { border-color: #333; background-color: #333; col
   .terms h3 { font-size: 15px; font-weight: 700; margin: 2rem 0 1.5rem; }
   .terms strong { display: block; font-size: 14px; font-weight: 700; margin: 1.5rem 0 .75rem; }
   .terms div { color: #555; line-height: 1.7; font-size: 13px; } }
+
+@media print { .test-result { height: auto !important; padding: 1rem 0; }
+  .test-body { border: 0; }
+  .test-footer { border: 0; height: auto; position: static; }
+  .test-footer * { display: none; }
+  * { color-adjust: exact; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .table .bg1 { background: #e9ebcd !important; color-adjust: exact; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .table .bg2 { background: #d7ece9 !important; color-adjust: exact; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .table .bg3 { background: #f1f1f1 !important; color-adjust: exact; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .table > thead th { background: #f7f7f7 !important; color-adjust: exact; -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
 
 .main-swiper { margin-top: -45px; margin-bottom: 100px; }
 
