@@ -53,10 +53,10 @@
                 <div class="container-fluid">
                     <div id="gnb">
                         <ul class="dep1">
-                            <li class="active">
+                            <li>
                                 <a href="../student/student_list.html" class="dep1-link"><span><i class="fas fa-user-graduate"></i>학생 관리</span></a>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a href="../teacher/teacher_list.html" class="dep1-link"><span><i class="fas fa-chalkboard-teacher"></i>교사 관리</span></a>
                             </li>
                             <li>
@@ -100,11 +100,11 @@
                 <div class="container-fluid">
 
                     <div class="top-area mb-5">
-                        <h2 class="title">학생 목록</h2>
+                        <h2 class="title">교사 목록</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">Home</li>
-                                <li class="breadcrumb-item" aria-current="page">학생 관리</li>
+                                <li class="breadcrumb-item" aria-current="page">교사 관리</li>
                             </ol>
                         </nav>
                     </div>
@@ -135,17 +135,7 @@
                                     <div class="row row-10 align-items-center">
                                         <div class="col-auto">
                                             <select name="" id="" class="custom-select">
-                                                <option value="">학교</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-auto">
-                                            <select name="" id="" class="custom-select">
-                                                <option value="">레벨</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-auto">
-                                            <select name="" id="" class="custom-select">
-                                                <option value=""> 승인여부</option>
+                                                <option value="">승인여부</option>
                                             </select>
                                         </div>
                                         <div class="col-auto">
@@ -219,59 +209,47 @@
             {
                 id: 'abcd1234',
                 center: '센터명',
-                teacher: '홍길동',
                 name: '홍길동',
-                school: 'ㅇㅇㅇ학교',
-                grade: '직접 출제',
-                level: '노출',
                 phone: '010-0000-0000',
+                students: '5',
                 admission: '승인',
                 status: '정상',
-                self: '신청',
+                latest: '2020.12.08 12:23:45',
                 termination: '2020.12.08 12:23:45',
             },
             {
                 id: 'abcd1234',
                 center: '센터명',
-                teacher: '홍길동',
                 name: '홍길동',
-                school: 'ㅇㅇㅇ학교',
-                grade: '직접 출제',
-                level: '노출',
                 phone: '010-0000-0000',
+                students: '5',
                 admission: '승인',
                 status: '정상',
-                self: '신청',
+                latest: '2020.12.08 12:23:45',
                 termination: '2020.12.08 12:23:45',
             },
             {
                 id: 'abcd1234',
                 center: '센터명',
-                teacher: '홍길동',
                 name: '홍길동',
-                school: 'ㅇㅇㅇ학교',
-                grade: '직접 출제',
-                level: '노출',
                 phone: '010-0000-0000',
+                students: '5',
                 admission: '승인',
                 status: '정상',
-                self: '신청',
+                latest: '2020.12.08 12:23:45',
                 termination: '2020.12.08 12:23:45',
             },
             {
                 id: 'abcd1234',
                 center: '센터명',
-                teacher: '홍길동',
                 name: '홍길동',
-                school: 'ㅇㅇㅇ학교',
-                grade: '직접 출제',
-                level: '노출',
                 phone: '010-0000-0000',
+                students: '5',
                 admission: '승인',
                 status: '정상',
-                self: '신청',
+                latest: '2020.12.08 12:23:45',
                 termination: '2020.12.08 12:23:45',
-            }
+            },
         ];
 
         const grid = new tui.Grid({
@@ -293,32 +271,18 @@
                 },
                 {
                     header: '교사',
-                    name: 'teacher',
-                    align: 'center',
-                },
-                {
-                    header: '학생',
                     name: 'name',
                     align: 'center',
                 },
                 {
-                    header: '학교',
-                    name: 'school',
-                    align: 'center',
-                },
-                {
-                    header: '학년',
-                    name: 'grade',
-                    align: 'center',
-                },
-                {
-                    header: '레벨',
-                    name: 'level',
-                    align: 'center',
-                },
-                {
-                    header: '보호자 휴대폰 번호',
+                    header: '휴대폰 번호',
                     name: 'phone',
+                    align: 'center',
+                },
+
+                {
+                    header: '담당 학생 수',
+                    name: 'students',
                     align: 'center',
                 },
                 {
@@ -332,8 +296,8 @@
                     align: 'center',
                 },
                 {
-                    header: '자율학습',
-                    name: 'self',
+                    header: '최종로그인',
+                    name: 'latest',
                     align: 'center',
                 },
                 {
@@ -350,7 +314,7 @@
 
         grid.on('click', function(ev) {
             if(ev.columnName == 'name'){
-                document.location.href = 'student_detail.html';
+                document.location.href = 'teacher_detail.html';
             }
         });
         grid.on('mouseover', function(ev) {

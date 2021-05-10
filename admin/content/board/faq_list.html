@@ -74,8 +74,8 @@
                             <li class="has-treeview active open">
                                 <a href="" class="dep1-link"><span><i class="fas fa-list"></i>게시판 관리</span></a>
                                 <ul class="dep2">
-                                    <li class="active"><a href="../board/notice_list.html" class="dep2-link"><span>공지사항</span></a></li>
-                                    <li><a href="../board/faq_list.html" class="dep2-link"><span>FAQ</span></a></li>
+                                    <li><a href="../board/notice_list.html" class="dep2-link"><span>공지사항</span></a></li>
+                                    <li class="active"><a href="../board/faq_list.html" class="dep2-link"><span>FAQ</span></a></li>
                                     <li><a href="../board/qna_list.html" class="dep2-link"><span>1:1 문의</span></a></li>
                                     <li><a href="../board/terms_list.html" class="dep2-link"><span>약관</span></a></li>
                                 </ul>
@@ -100,58 +100,118 @@
                 <div class="container-fluid">
 
                     <div class="top-area mb-5">
-                        <h2 class="title">공지사항</h2>
+                        <h2 class="title">FAQ</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">Home</li>
                                 <li class="breadcrumb-item">게시판 관리</li>
-                                <li class="breadcrumb-item" aria-current="page">공지사항</li>
+                                <li class="breadcrumb-item" aria-current="page">FAQ</li>
                             </ol>
                         </nav>
                     </div>
 
-                    <table class="table table-bordered">
-                        <colgroup>
-                            <col style="width:200px">
-                            <col>
-                        </colgroup>
-                        <tbody>
-                            <tr>
-                                <th class="text-center">제목</th>
-                                <td>4월 공지</td>
-                            </tr>
-                            <tr>
-                                <th class="text-center">등록일</th>
-                                <td>2020.07.07 12:05:50</td>
-                            </tr>
-                            <tr>
-                                <th class="text-center">내용</th>
-                                <td>
-                                    내용 에디터
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="card bg-light mb-3">
+                        <div class="card-body">
+                            <div class="row align-items-center justify-content-between">
+                                <div class="col-auto">
 
-                    <div class="row align-items-center justify-content-between mt-3">
-                        <div class="col-auto">
-                            <button type="button" class="btn btn-primary" style="min-width:90px">삭제</button>
-                            <button type="button" class="btn btn-primary ml-1" style="min-width:90px">수정</button>
-                        </div>
-                        <div class="col-auto">
-                            <a href="notice_list.html" class="btn btn-primary ml-1" style="min-width:90px">목록</a>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-dark" style="width:90px">검색</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
+                    <div class="gird-top">
+                        <div class="row justify-content-between align-items-end mb-2">
+                            <div class="col-auto">
+                                total <strong id="rowCount">0</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="grid"></div>
+                    <div class="grid-bottom">
+                        <div class="row justify-content-between align-items-end">
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-primary" style="min-width:90px">삭제</button>
+                                <button type="button" class="btn btn-primary ml-1" style="min-width:90px">수정</button>
+                            </div>
+                            <div class="col-auto">
+                                <a href="faq_form.html" class="btn btn-primary ml-1" style="min-width:90px">글쓰기</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+
     <!-- ui 관련 -->
     <script src="/admin/resources/js/ui.js"></script>
 
     <script>
+        //grid
+        const gridData = [
+            {
+                title: '질문',
+                date: '2020.12.08  12:23:45',
+            },
+            {
+                title: '질문',
+                date: '2020.12.08  12:23:45',
+            },
+            {
+                title: '질문',
+                date: '2020.12.08  12:23:45',
+            },
+        ];
+
+        const grid = new tui.Grid({
+            el: document.getElementById('grid'),
+            data: gridData,
+            scrollX: false,
+            scrollY: false,
+            rowHeaders: ['checkbox','rowNum'],
+            columns: [
+                {
+                    header: '질문',
+                    name: 'title',
+                },
+                {
+                    header: '등록일시',
+                    name: 'date',
+                    align: 'center',
+                    width: 250,
+                },
+            ],
+            pageOptions: {
+                useClient: true,
+                perPage: 5
+            }
+        });
+
+        grid.on('click', function(ev) {
+            if(ev.columnName == 'title'){
+                document.location.href = 'faq_detail.html';
+            }
+        });
+        grid.on('mouseover', function(ev) {
+            if(ev.columnName == 'title'){
+                ev.nativeEvent.target.style.cursor = 'pointer';
+            }
+        });
+
+        let rowCount = grid.getRowCount();
+        document.querySelector('#rowCount').innerHTML = rowCount;
     </script>
 </body>
 </html>

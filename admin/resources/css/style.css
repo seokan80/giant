@@ -96,7 +96,7 @@ body { min-width: 1200px; }
 
 #gnb .dep2 > li > a { display: block; padding: .5rem 1rem .5rem 2.5rem; font-size: 13px; }
 
-#gnb .dep2 > li.active > a { color: #489d9c; }
+#gnb .dep2 > li.active > a { color: #77d2d1; font-weight: 700; }
 
 .top-area { display: flex; justify-content: space-between; align-items: flex-end; }
 

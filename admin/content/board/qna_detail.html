@@ -74,9 +74,9 @@
                             <li class="has-treeview active open">
                                 <a href="" class="dep1-link"><span><i class="fas fa-list"></i>게시판 관리</span></a>
                                 <ul class="dep2">
-                                    <li class="active"><a href="../board/notice_list.html" class="dep2-link"><span>공지사항</span></a></li>
+                                    <li><a href="../board/notice_list.html" class="dep2-link"><span>공지사항</span></a></li>
                                     <li><a href="../board/faq_list.html" class="dep2-link"><span>FAQ</span></a></li>
-                                    <li><a href="../board/qna_list.html" class="dep2-link"><span>1:1 문의</span></a></li>
+                                    <li class="active"><a href="../board/qna_list.html" class="dep2-link"><span>1:1 문의</span></a></li>
                                     <li><a href="../board/terms_list.html" class="dep2-link"><span>약관</span></a></li>
                                 </ul>
                             </li>
@@ -100,12 +100,12 @@
                 <div class="container-fluid">
 
                     <div class="top-area mb-5">
-                        <h2 class="title">공지사항</h2>
+                        <h2 class="title">1:1 문의</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">Home</li>
                                 <li class="breadcrumb-item">게시판 관리</li>
-                                <li class="breadcrumb-item" aria-current="page">공지사항</li>
+                                <li class="breadcrumb-item" aria-current="page">1:1 문의</li>
                             </ol>
                         </nav>
                     </div>
@@ -117,15 +117,33 @@
                         </colgroup>
                         <tbody>
                             <tr>
-                                <th class="text-center">제목</th>
-                                <td>4월 공지</td>
+                                <th class="text-center">이름</th>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">연락처</th>
+                                <td>010-1234-1234</td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">이메일</th>
+                                <td>abc@email.com</td>
                             </tr>
                             <tr>
                                 <th class="text-center">등록일</th>
                                 <td>2020.07.07 12:05:50</td>
                             </tr>
                             <tr>
+                                <th class="text-center">제목</th>
+                                <td>문의드립니다</td>
+                            </tr>
+                            <tr>
                                 <th class="text-center">내용</th>
+                                <td>
+                                    내용 에디터
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">답변</th>
                                 <td>
                                     내용 에디터
                                 </td>
@@ -136,10 +154,11 @@
                     <div class="row align-items-center justify-content-between mt-3">
                         <div class="col-auto">
                             <button type="button" class="btn btn-primary" style="min-width:90px">삭제</button>
-                            <button type="button" class="btn btn-primary ml-1" style="min-width:90px">수정</button>
+                            <button type="button" class="btn btn-primary ml-1" style="min-width:90px" onclick="location.href = 'qna_form.html'">수정</button>
+                            <button type="button" class="btn btn-primary ml-1" style="min-width:90px" onclick="location.href = 'qna_form.html'">답변하기</button>
                         </div>
                         <div class="col-auto">
-                            <a href="notice_list.html" class="btn btn-primary ml-1" style="min-width:90px">목록</a>
+                            <a href="faq_list.html" class="btn btn-primary ml-1" style="min-width:90px">목록</a>
                         </div>
                     </div>
 
