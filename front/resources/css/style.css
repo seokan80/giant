@@ -161,6 +161,10 @@ i.new { display: inline-block; background: #cb1c1c; width: 13px; height: 13px; b
 
 .subtitle::before { content: ''; width: 5px; height: 20px; background: #333; position: absolute; left: 0; top: 4px; }
 
+.subtitle-sm { position: relative; padding-left: 12px; font-size: 16px; font-weight: 700; color: #333; margin-bottom: 1.5rem; }
+
+.subtitle-sm::before { content: ''; width: 6px; height: 14px; background: #6cc5af; position: absolute; left: 0; top: 3px; }
+
 .border-bottom-dark { border-bottom: 1px solid #333; }
 
 textarea.form-control { padding-top: .75rem; padding-bottom: .75rem; }
@@ -255,6 +259,30 @@ textarea.form-control { padding-top: .75rem; padding-bottom: .75rem; }
 .custom-select[multiple] option { padding: .5rem; cursor: pointer; }
 
 .custom-select[multiple] option:hover { background-color: #f7f8f9; }
+
+.tabbed { border-bottom: 1px solid #d4d4d4; overflow: hidden; transition: border 250ms ease; }
+
+.tabbed ul { overflow: hidden; float: left; padding-left: 36px; list-style-type: none; }
+
+.tabbed li { display: block; float: left; padding: 10px 40px 8px; background-color: #a8d1cb; margin-right: 46px; z-index: 2; position: relative; cursor: pointer; color: #fff; transition: all 250ms ease; }
+
+.tabbed li::before, .tabbed li::after { display: block; content: " "; position: absolute; top: 0; height: 100%; width: 44px; background-color: #a8d1cb; transition: all 250ms ease; }
+
+.tabbed li::before { right: -24px; transform: skew(30deg, 0deg); }
+
+.tabbed li::after { left: -24px; transform: skew(-30deg, 0deg); }
+
+.tabbed li a { font-size: 16px; font-weight: 700; text-decoration: none; }
+
+.tabbed li.active { z-index: 3; }
+
+.tabbed li.active, .tabbed li.active:before, .tabbed li.active:after { background-color: #489d9c; color: #fff; }
+
+.tabbed.round ul li { border-radius: 8px 8px 0 0; }
+
+.tabbed.round ul li::before { border-radius: 0 8px 0 0; }
+
+.tabbed.round ul li::after { border-radius: 8px 0 0 0; }
 
 html, body { width: 100%; height: 100%; }
 
@@ -904,37 +932,21 @@ label.number input:checked + i { border-color: #333; background-color: #333; col
 
 .mypage .top-area .level { font-size: 1rem; color: #333; font-weight: 700; }
 
-.progress { border-radius: 10px; height: 10px; position: relative; overflow: visible; margin-bottom: 50px; background: #d8dbb2; }
+.progress-wrap { height: 22px; background: #d8dbb2; display: flex; align-items: center; border-radius: 10px; padding: 0 13px; margin-bottom: 40px; position: relative; margin-top: 70px; }
 
-.progress .progress-bar { border-radius: 10px; }
+.progress-wrap .desc { text-align: right; font-size: 12px; color: #333; font-weight: 700; position: absolute; right: 0; top: 26px; }
 
-.progress .point { display: block; border-radius: 50%; width: 18px; height: 18px; position: absolute; top: -4px; border-radius: 50%; margin-left: -9px; }
+.progress { border-radius: 10px; height: 12px; position: relative; overflow: visible; background: #d8dbb2; width: 100%; }
+
+.progress .progress-bar { border-radius: 10px; position: relative; min-width: 0.01%; }
+
+.progress .point { display: block; border-radius: 50%; width: 18px; height: 18px; position: absolute; top: -4px; right: -9px; border-radius: 50%; margin-left: -9px; background-color: #aeaf19; }
+
+.progress .point::after { content: ''; display: block; width: 30px; height: 14.5px; background: url("../images/icon-leaf.svg") no-repeat 50% 50%; background-size: contain; position: absolute; left: 50%; top: -17px; transform: translateX(-50%); }
 
 .progress .point i { display: block; width: 9px; height: 9px; background-color: #fff; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border-radius: 50%; }
 
-.progress .point:nth-of-type(1) { left: 0; }
-
-.progress .point:nth-of-type(2) { left: 14.2857%; }
-
-.progress .point:nth-of-type(3) { left: 28.5714%; }
-
-.progress .point:nth-of-type(4) { left: 42.8571%; }
-
-.progress .point:nth-of-type(5) { left: 57.1428%; }
-
-.progress .point:nth-of-type(6) { left: 71.4258%; }
-
-.progress .point:nth-of-type(7) { left: 85.7142%; }
-
-.progress .point:nth-of-type(8) { left: 100%; }
-
-.progress .point:not(.active):nth-of-type(1) i { opacity: 0; }
-
-.progress .point:not(.active):last-of-type i { opacity: 0; }
-
-.progress .point.active { background-color: #aeaf19; }
-
-.progress .point.active::after { content: ''; display: block; width: 30px; height: 14.5px; background: url("../images/icon-leaf.svg") no-repeat 50% 50%; background-size: contain; position: absolute; left: 50%; top: -17px; transform: translateX(-50%); }
+.progress .point a { display: inline-block; background: #489d9c; position: absolute; left: -5px; top: -50px; padding: 6px 10px; font-size: 12px; border-radius: 10px; text-decoration: none; font-weight: 700; }
 
 .progress.level10 { margin-bottom: 80px; }
 
@@ -1348,6 +1360,80 @@ label.number input:checked + i { border-color: #333; background-color: #333; col
   .table .bg2 { background: #d7ece9 !important; color-adjust: exact; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .table .bg3 { background: #f1f1f1 !important; color-adjust: exact; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .table > thead th { background: #f7f7f7 !important; color-adjust: exact; -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
+
+.mypage-tabs .nav-tabs .nav-link { font-size: 16px; background: #a8d1cb; color: #fff; font-weight: 700; flex: 0 0 auto; width: 215px; }
+
+.mypage-tabs .nav-tabs .nav-link.active, .mypage-tabs .nav-tabs .nav-item.show .nav-link { background: #489d9c; border-color: #489d9c; color: #fff; }
+
+.comment-area { background: #f5f5f5; padding: 20px; margin-top: 3rem; }
+
+.comment-area .tit { font-size: 16px; margin-bottom: 10px; font-weight: 700; }
+
+.comment-area .btn { height: 100%; width: 90px; }
+
+.comment-list { margin-top: 5px; }
+
+.comment-list .table { border: 1px solid #d4d4d4; }
+
+.mypass .icon-pass1 { background-image: url("../images/icon-ionic-md-laptop.svg"); width: 42px; height: 31.5px; }
+
+.mypass .icon-pass2 { background-image: url("../images/icon-feather-bell.svg"); width: 31.2px; height: 34.7px; }
+
+.mypass .icon-pass3 { background-image: url("../images/icon-feather-credit-card.svg"); width: 33.4px; height: 24.3px; }
+
+.mypass ul { display: flex; margin: 0 -5px; }
+
+.mypass li { flex: 1 0 33.33333%; text-align: center; padding: 0 5px; }
+
+.mypass li > div { border-radius: 10px; box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16); border: solid 1px #d4d4d4; width: 100%; padding: 1.5rem 0; display: flex; height: 162px; flex-direction: column; }
+
+.mypass .icon { height: 35px; display: flex; align-items: center; justify-content: center; }
+
+.mypass p { font-size: 12px; margin: 10px 0 8px; }
+
+.mypass strong { font-size: 16px; line-height: 1.5; }
+
+.table-title { font-size: 16px; font-weight: 700; }
+
+.table-title span { font-size: 12px; margin-left: 5px; }
+
+.pass-type { padding: 0 2px; }
+
+.pass-type li { display: flex; align-items: center; padding: 8px 0; }
+
+.pass-type li strong { width: 70px; }
+
+.payment-info { border-top: 1px solid #707070; padding: 10px 0 0; margin-top: 2rem; }
+
+.payment-info li { display: flex; justify-content: flex-end; align-items: center; padding: 5px 10px; }
+
+.payment-info li span { display: inline-block; }
+
+.payment-info li em { display: inline-block; width: 150px; text-align: right; }
+
+.payment-info li strong { display: inline-block; width: 150px; text-align: right; font-size: 18px; font-weight: 700; }
+
+.payment-info li i { font-size: 14px; }
+
+.payment-info li.sum { background: #f1f1f1; padding: 15px 10px; border-top: 1px solid #707070; margin-top: 10px; }
+
+.payment-info li.sum span { font-weight: 700; }
+
+.payment-method input[type=radio] { position: fixed; left: -99999px; top: -9999px; }
+
+.payment-method ul { display: flex; margin: 0 -5px; }
+
+.payment-method li { flex: 1; text-align: center; padding: 0 5px; }
+
+.payment-method label { position: relative; border: 2px solid #ddd; border-radius: 5px; padding: 1.5rem 0; width: 100%; cursor: pointer; transition: all .2s; font-size: 15px; overflow: hidden; }
+
+.payment-method input[type=radio]:checked + label { border-color: #000; font-weight: 700; }
+
+.payment-agree { margin-top: 1rem; }
+
+.payment-result .ok { font-size: 24px; font-weight: 700; color: #7a1b1d; text-align: center; margin-bottom: 60px; margin-top: 100px; }
+
+.payment-result .table { width: 740px; margin: 0 auto; }
 
 .main-swiper { margin-top: -45px; margin-bottom: 100px; }
 

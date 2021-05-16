@@ -102,13 +102,15 @@
                                 <dt><i class="fas fa-user-graduate"><span class="sr-only">학년</span></i></dt>
                                 <dd>n학년</dd>
                             </dl>
-                            <div class="btns">
+                             <div class="btns">
+                                <a href="mypage_after.html" class="">학습진도</a>
                                 <a href="myinfo.html" class="">내 정보</a>
                                 <a href="student_info.html" class="">학생 정보</a>
                                 <a href="teacher_info.html" class="">교사 정보</a>
                                 <a href="approval_management_student.html" class="">승인 관리</a>
-                                <a href="payment_management.html" class="active">결제 관리</a>
-                                <a href="" class="">학습결과</a>
+                                <a href="mypayment.html" class="active">결제 내역</a>
+                                <a href="payment_management_center.html">결제 관리</a>
+                                <a href="learning_result.html" class="">학습결과</a>
                                 <a href="message_list.html" class="">쪽지함</a>
                             </div>
                         </div>
@@ -116,95 +118,54 @@
                             <div class="top-area">
                                 <div class="row justify-content-between align-items-center">
                                     <div class="col-auto">
-                                        <h2 class="mb-0">결제 관리</h2>
+                                        <h2 class="mb-0">결제 내역</h2>
                                     </div>
                                     <div class="col-auto">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="dashboard">
-                                <div class="row">
-                                    <div class="col-4 col-md-4">
-                                        <div class="card">
-                                            <div class="card-header">전월 학생수</div>
-                                            <div class="card-body">
-                                                <div class="count">50</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-4 col-md-4">
-                                        <div class="card">
-                                            <div class="card-header">최근 결제 일시</div>
-                                            <div class="card-body">
-                                                <div class="date">2021년 3월 1일</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-4 col-md-4">
-                                        <div class="card">
-                                            <div class="card-header">최근 결제 금액</div>
-                                            <div class="card-body">
-                                                <div class="price">1,000,000</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row justify-content-between align-items-center mb-2 mb-lg-3">
-                                <div class="col-auto">
-                                    <div class="list-count mb-0">총 10명</div>
-                                </div>
-                                <div class="col-auto">
-                                    <div class="search-form">
-                                        <div class="row row-8">
-                                            <div class="col">
-                                                <input type="text" class="form-control" placeholder="검색어 입력">
-                                            </div>
-                                            <div class="col-auto">
-                                                <button type="submit" class="btn btn-dark">검색</button>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="table-responsive">
                                 <table class="table table-hover table-nowrap">
-                                    <caption>결제 관리</caption>
+                                    <caption>결제 내역</caption>
                                     <thead>
                                         <tr>
-                                            <th class="text-center">번호</th>
-                                            <th class="text-center">서비스</th>
-                                            <th class="text-center">결제일시</th>
+                                            <th class="text-center">구매내역</th>
                                             <th class="text-center">결제금액</th>
-                                            <th class="text-center">결제방법</th>
                                             <th class="text-center">이용기간</th>
-                                            <th class="text-center">결제완료</th>
+                                            <th class="text-center">결제일시</th>
+                                            <th class="text-center">결제방법</th>
+                                            <th class="text-center">결제현황</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td class="text-center">1</td>
-                                            <td class="text-left">60명 미만</td>
-                                            <td class="text-center">2021-03-01 15:28:23</td>
+                                            <td class="text-center">기본형 8회 + 맞춤학습</td>
                                             <td class="text-center">1,000,000원</td>
-                                            <td class="text-center">카드</td>
-                                            <td class="text-center">2021-03-01 ~  2020-03-31</td>
+                                            <td class="text-center">2020-12-01 ~ 2020-12-31</td>
+                                            <td class="text-center">2020-10-01 15:28:23</td>
+                                            <td class="text-center">신한카드 1234</td>
                                             <td class="text-center">
-                                                <button class="btn btn-sm btn-success">납부</button>
+                                                <button class="btn btn-sm btn-gray">취소하기</button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="text-center">1</td>
-                                            <td class="text-left">60명 미만</td>
-                                            <td class="text-center">2021-03-01 15:28:23</td>
+                                            <td class="text-center">기본형 8회 + 맞춤학습</td>
                                             <td class="text-center">1,000,000원</td>
-                                            <td class="text-center">휴대폰결제</td>
-                                            <td class="text-center">2021-03-01 ~  2020-03-31</td>
+                                            <td class="text-center">2020-12-01 ~ 2020-12-31</td>
+                                            <td class="text-center">2020-10-01 15:28:23</td>
+                                            <td class="text-center">휴대폰 결제</td>
                                             <td class="text-center">
-                                                <button class="btn btn-sm btn-primary">완료</button>
+                                                <button class="btn btn-sm btn-gray" data-toggle="modal" data-target="#modal-refund">환불요청</button>
                                             </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">기본형 8회</td>
+                                            <td class="text-center">88,000원</td>
+                                            <td class="text-center">2020-12-01 ~ 2020-12-31</td>
+                                            <td class="text-center">2020-10-01 15:28:23</td>
+                                            <td class="text-center">휴대폰 결제</td>
+                                            <td class="text-center">결제완료</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -245,6 +206,38 @@
                         팩스 : 02-553-3482  문의전화 : 1688-3482  주소 : (우:06197) 서울특별시 강남구 역삼로 423 7층 (대치동, 화남빌딩)
                     </div>
                     <p class="copyright">Copyright ⓒ All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal : 환불요청 -->
+    <div class="modal modal-member-detail" id="modal-refund" tabindex="-1" aria-modal="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content">
+                <div class="modal-header bg-success">
+                    <h5 class="modal-title">환불요청</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center mb-3">환불 받으실 계좌정보를 입력해주세요.</p>
+                    <div class="form-group mb-2">
+                        <select name="" id="" class="custom-select">
+                            <option value="">선택</option>
+                        </select>
+                    </div>
+                    <div class="form-group mb-2">
+                        <input type="text" class="form-control" placeholder="계좌번호">
+                    </div>
+                    <div class="form-group mb-2">
+                        <input type="text" class="form-control" placeholder="예금주">
+                    </div>
+                    <div class="text-center mt-4">
+                        <button type="button" class="btn btn-success">취소</button>
+                        <button type="button" class="btn btn-success ml-1">확인</button>
+                    </div>
                 </div>
             </div>
         </div>

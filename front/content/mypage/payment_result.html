@@ -21,6 +21,11 @@
     <script src="/front/resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Swiper -->
     <script src="/front/resources/plugin/swiper/js/swiper.min.js"></script>
+    <!-- TOAST UI -->
+    <link rel="stylesheet" href="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.css">
+    <script src="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.js"></script>
+    <link rel="stylesheet" href="https://uicdn.toast.com/chart/latest/toastui-chart.min.css" />
+    <script src="https://uicdn.toast.com/chart/latest/toastui-chart.min.js"></script>
 </head>
 
 <body>
@@ -108,118 +113,51 @@
                                 <a href="student_info.html" class="">학생 정보</a>
                                 <a href="teacher_info.html" class="">교사 정보</a>
                                 <a href="approval_management_student.html" class="">승인 관리</a>
-                                <a href="payment.html" class="">이용권 구매</a>
+                                <a href="payment.html" class="active">이용권 구매</a>
                                 <a href="payment_management.html" class="">결제 관리</a>
                                 <a href="learning_result.html" class="">학습결과</a>
-                                <a href="message_list.html" class="active">쪽지함</a>
+                                <a href="message_list.html" class="">쪽지함</a>
                             </div>
                         </div>
                         <div class="right">
-                            <div class="top-area mb-2">
-                                <div class="row align-items-end justify-content-between">
-                                    <div class="col-auto">
-                                        <h2 class="mb-0">쪽지함</h2>
-                                    </div>
-                                    <div class="col-auto mt-3 mt-sm-0">
-                                        <div class="row row-10 flex-nowrap flex-md-wrap">
-                                            <div class="col-auto">
-                                                <select name="" id="" class="custom-select">
-                                                    <option value="">받은쪽지</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-auto">
-                                                <select name="" id="" class="custom-select">
-                                                    <option value="">내용</option>
-                                                </select>
-                                            </div>
-                                            <div class="col col-sm-auto">
-                                                <input type="text" class="form-control">
-                                            </div>
-                                            <div class="col-auto">
-                                                <button type="button" class="btn btn-dark">검색</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="talk-inbox">
-                                <div class="text-right mb-2">
-                                    <button type="button" class="btn btn-success">삭제</button>
-                                    <button type="button" class="btn btn-success">답장</button>
-                                    <button type="button" class="btn btn-success">쪽지 쓰기</button>
-                                </div>
-                                <div class="message-wrap">
-                                    <div class="message-list">
-                                        <div class="link">
-                                            <ul>
-                                                <li class="active">
-                                                    <a href="javascript:;">
-                                                        받은쪽지함
-                                                        <span class="unread">11</span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">
-                                                        보낸쪽지함
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="message-content">
-                                        <div class="message-body">
-                                            <div class="table-responsive">
-                                                <table class="table table-hover">
-                                                    <caption>쪽지함</caption>
-                                                    <thead>
-                                                        <tr>
-                                                            <th class="text-center">
-                                                                <div class="checkbox">
-                                                                    <div class="custom-control custom-checkbox">
-                                                                        <input class="custom-control-input" type="checkbox" id="chkList0">
-                                                                        <label for="chkList0" class="custom-control-label"></label>
-                                                                    </div>
-                                                                </div>
-                                                            </th>
-                                                            <th class="text-center">보낸사람</th>
-                                                            <th class="text-center">내용</th>
-                                                            <th class="text-center">날짜</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="text-center">
-                                                                <div class="checkbox">
-                                                                    <div class="custom-control custom-checkbox">
-                                                                        <input class="custom-control-input" type="checkbox" id="chkList1">
-                                                                        <label for="chkList1" class="custom-control-label"></label>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                            <td class="text-center">대치점</td>
-                                                            <td class="text-left"><a href="message_detail.html">메타스콜레에 오신걸 환영합니다. 공지사항에..</a></td>
-                                                            <td class="text-center">2021.02.01</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                            <nav class="text-center">
-                                                <ul class="pagination">
-                                                    <li class="page-item page-arrow disabled">
-                                                        <a class="page-link" href="#"><span class="sr-only">이전</span><i class="fas fa-angle-left"></i></a>
-                                                    </li>
-                                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                                    <li class="page-item active"><a class="page-link" href="#">2 <span class="sr-only">(current)</span></a></li>
-                                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
-                                                    <li class="page-item page-arrow">
-                                                        <a class="page-link" href="#"><span class="sr-only">다음</span><i class="fas fa-angle-right"></i></a>
-                                                    </li>
-                                                </ul>
-                                            </nav>
-                                        </div>
-                                    </div>
+                            <div class="payment-result">
+                                <p class="ok">서비스 결제가 완료되었습니다.</p>
+                                <table class="table table-bordered">
+                                    <colgroup>
+                                        <col style="width: 180px">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th class="text-center bg-light">주문번호</th>
+                                            <td>20201017123456</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-center bg-light">상품명</th>
+                                            <td>기본형 16회, 맞춤 학습</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-center bg-light">결제일</th>
+                                            <td>2020.12.01 12:24:32 </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-center bg-light">이용기간</th>
+                                            <td>2020.12.01 ~ 2020.12.31</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-center bg-light">결제방법</th>
+                                            <td>신용카드(일반)_KB국민 1234</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-center bg-light">결제금액</th>
+                                            <td>176,000원</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="text-center mt-7">
+                                    <a href="payment_management.html" class="btn btn-success btn-lg">결제 내역</a>
+                                    <a href="#" class="btn btn-success btn-lg ml-2">학습 하기</a>
                                 </div>
                             </div>
                         </div>
@@ -247,7 +185,6 @@
             </div>
         </div>
     </div>
-
 
     <!-- ui 관련 -->
     <script src="/front/resources/js/ui.js"></script>

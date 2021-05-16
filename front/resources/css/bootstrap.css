@@ -1823,7 +1823,7 @@ a.close.disabled { pointer-events: none; }
 
 .modal-backdrop.fade { opacity: 0; }
 
-.modal-backdrop.show { opacity: 0.5; }
+.modal-backdrop.show { opacity: 0.6; }
 
 .modal-header { display: flex; align-items: flex-start; justify-content: space-between; padding: 1rem 1.5rem; border-bottom: 0 solid #dee2e6; border-top-left-radius: 0; border-top-right-radius: 0; }
 

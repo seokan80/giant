@@ -21,9 +21,6 @@
     <script src="/front/resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Swiper -->
     <script src="/front/resources/plugin/swiper/js/swiper.min.js"></script>
-    <!-- TOAST UI -->
-    <link rel="stylesheet" href="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.css">
-    <script src="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.js"></script>
 </head>
 
 <body>
@@ -110,9 +107,9 @@
                                 <a href="myinfo.html" class="">내 정보</a>
                                 <a href="student_info.html" class="">학생 정보</a>
                                 <a href="teacher_info.html" class="">교사 정보</a>
-                                <a href="approval_management_student.html" class="active">승인 관리</a>
-                                <a href="payment.html" class="">이용권 구매</a>
-                                <a href="payment_management.html" class="">결제 관리</a>
+                                <a href="approval_management_student.html" class="">승인 관리</a>
+                                <a href="mypayment.html">결제 내역</a>
+                                <a href="payment_management_center.html" class="active">결제 관리</a>
                                 <a href="learning_result.html" class="">학습결과</a>
                                 <a href="message_list.html" class="">쪽지함</a>
                             </div>
@@ -121,13 +118,9 @@
                             <div class="top-area">
                                 <div class="row justify-content-between align-items-center">
                                     <div class="col-auto">
-                                        <h2 class="mb-0">승인 관리 <small class="ml-2">학생</small></h2>
+                                        <h2 class="mb-0">결제 관리</h2>
                                     </div>
                                     <div class="col-auto">
-                                        <div class="btn-group" role="group" aria-label="Basic example">
-                                            <a href="approval_management_student.html" class="btn btn-success w-80px active">학생</a>
-                                            <a href="approval_management_teacher.html" class="btn btn-success w-80px">교사</a>
-                                          </div>
                                     </div>
                                 </div>
                             </div>
@@ -135,25 +128,25 @@
                                 <div class="row">
                                     <div class="col-4 col-md-4">
                                         <div class="card">
-                                            <div class="card-header">총 승인 학생</div>
+                                            <div class="card-header">전월 학생수</div>
                                             <div class="card-body">
-                                                <div class="count">54</div>
+                                                <div class="count">50</div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-4 col-md-4">
                                         <div class="card">
-                                            <div class="card-header">신규 승인 요청</div>
+                                            <div class="card-header">최근 결제 일시</div>
                                             <div class="card-body">
-                                                <div class="count">6</div>
+                                                <div class="date">2021년 3월 1일</div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-4 col-md-4">
                                         <div class="card">
-                                            <div class="card-header">주간 승인 완료</div>
+                                            <div class="card-header">최근 결제 금액</div>
                                             <div class="card-body">
-                                                <div class="count">11</div>
+                                                <div class="price">1,000,000</div>
                                             </div>
                                         </div>
                                     </div>
@@ -167,25 +160,6 @@
                                 <div class="col-auto">
                                     <div class="search-form">
                                         <div class="row row-8">
-                                            <div class="col-auto">
-                                                <div class="tui-datepicker-input-custom">
-                                                    <input id="startpicker-input" type="text" aria-label="Date" class="form-control">
-                                                    <span class="tui-ico-date"></span>
-                                                    <div id="startpicker-container" style="margin-left: -1px;"></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <div class="tui-datepicker-input-custom">
-                                                    <input id="endpicker-input" type="text" aria-label="Date" class="form-control">
-                                                    <span class="tui-ico-date"></span>
-                                                    <div id="endpicker-container" style="margin-left: -1px;"></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <select name="" id="" class="custom-select">
-                                                    <option value="">승인여부</option>
-                                                </select>
-                                            </div>
                                             <div class="col">
                                                 <input type="text" class="form-control" placeholder="검색어 입력">
                                             </div>
@@ -196,73 +170,47 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row justify-content-between align-items-center mb-2 mb-lg-3">
-                                <div class="col-auto">
-                                    <div class="custom-control custom-checkbox">
-                                        <input class="custom-control-input" type="checkbox" id="chkAll">
-                                        <label for="chkAll" class="custom-control-label">전체 선택</label>
-                                    </div>
-                                </div>
-                                <div class="col-auto">
-                                    <div class="custom-control custom-switch custom-control-inline">
-                                        <input type="checkbox" class="custom-control-input" id="auto">
-                                        <label class="custom-control-label" for="auto">자동승인</label>
-                                    </div>
-                                    <button type="button" class="btn btn-success">강제탈퇴</button>
-                                    <button type="button" class="btn btn-success ml-1">휴원</button>
-                                    <button type="button" class="btn btn-success ml-1">재원</button>
-                                    <button type="button" class="btn btn-success ml-1">미승인</button>
-                                    <button type="button" class="btn btn-success ml-1">승인</button>
-                                </div>
-                            </div>
-                            <ul class="member-list">
-                                <li>
-                                    <div class="item">
-                                        <div class="checkbox">
-                                            <div class="custom-control custom-checkbox">
-                                                <input class="custom-control-input" type="checkbox" id="chkList1">
-                                                <label for="chkList1" class="custom-control-label"></label>
-                                            </div>
-                                        </div>
-                                        <div class="profile"><img src="../../resources/images/profile.png" alt="홍길동"></div>
-                                        <div class="name"><a href="#modal-student" data-toggle="modal">홍길동</a></div>
-                                        <div class="shcool">거인초등학교</div>
-                                        <div class="grade">5학년</div>
-                                        <div class="level">미승인</div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="item">
-                                        <div class="checkbox">
-                                            <div class="custom-control custom-checkbox">
-                                                <input class="custom-control-input" type="checkbox" id="chkList1">
-                                                <label for="chkList1" class="custom-control-label"></label>
-                                            </div>
-                                        </div>
-                                        <div class="profile"><img src="../../resources/images/profile.png" alt="홍길동"></div>
-                                        <div class="name"><a href="#modal-student" data-toggle="modal">홍길동</a></div>
-                                        <div class="shcool">거인초등학교</div>
-                                        <div class="grade">5학년</div>
-                                        <div class="level">미승인</div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="item">
-                                        <div class="checkbox">
-                                            <div class="custom-control custom-checkbox">
-                                                <input class="custom-control-input" type="checkbox" id="chkList1">
-                                                <label for="chkList1" class="custom-control-label"></label>
-                                            </div>
-                                        </div>
-                                        <div class="profile"><img src="../../resources/images/profile.png" alt="홍길동"></div>
-                                        <div class="name"><a href="#modal-student" data-toggle="modal">홍길동</a></div>
-                                        <div class="shcool">거인초등학교</div>
-                                        <div class="grade">5학년</div>
-                                        <div class="level">미승인</div>
-                                    </div>
-                                </li>
-                            </ul>
 
+                            <div class="table-responsive">
+                                <table class="table table-hover table-nowrap">
+                                    <caption>결제 관리</caption>
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">번호</th>
+                                            <th class="text-center">서비스</th>
+                                            <th class="text-center">결제일시</th>
+                                            <th class="text-center">결제금액</th>
+                                            <th class="text-center">결제방법</th>
+                                            <th class="text-center">이용기간</th>
+                                            <th class="text-center">결제완료</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">1</td>
+                                            <td class="text-left">60명 미만</td>
+                                            <td class="text-center">2021-03-01 15:28:23</td>
+                                            <td class="text-center">1,000,000원</td>
+                                            <td class="text-center">카드</td>
+                                            <td class="text-center">2021-03-01 ~  2020-03-31</td>
+                                            <td class="text-center">
+                                                <button class="btn btn-sm btn-success">납부</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">1</td>
+                                            <td class="text-left">60명 미만</td>
+                                            <td class="text-center">2021-03-01 15:28:23</td>
+                                            <td class="text-center">1,000,000원</td>
+                                            <td class="text-center">휴대폰결제</td>
+                                            <td class="text-center">2021-03-01 ~  2020-03-31</td>
+                                            <td class="text-center">
+                                                <button class="btn btn-sm btn-primary">완료</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                             <nav class="text-center">
                                 <ul class="pagination">
                                     <li class="page-item page-arrow disabled">
@@ -304,91 +252,10 @@
         </div>
     </div>
 
-    <!-- modal : 학생 상세 -->
-    <div class="modal modal-member-detail" id="modal-student" tabindex="-1" aria-modal="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header bg-success">
-                    <h5 class="modal-title">학생 상세</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <ul class="info-summery">
-                        <li>거인초등학교</li>
-                        <li>5학년</li>
-                        <li>L5</li>
-                    </ul>
-                    <table class="table table-member">
-                        <colgroup>
-                            <col style="width:120px">
-                            <col>
-                        </colgroup>
-                        <tbody>
-                            <tr>
-                                <th>이름</th>
-                                <td>책거인</td>
-                            </tr>
-                            <tr>
-                                <th>보호자 휴대폰</th>
-                                <td>010-1234-1234</td>
-                            </tr>
-                            <tr>
-                                <th>보호자 이름</th>
-                                <td>책거인</td>
-                            </tr>
-                            <tr>
-                                <th>보호자 이메일</th>
-                                <td>abc@email.com</td>
-                            </tr>
-                            <tr>
-                                <th>학생 휴대폰</th>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <th>학생 이메일</th>
-                                <td>-</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="row align-items-center justify-content-between">
-                        <div class="col-auto">
-                            <button type="button" class="btn btn-primary">강제탈퇴</button>
-                            <button type="button" class="btn btn-primary ml-1">휴원</button>
-                            <button type="button" class="btn btn-primary ml-1">재원</button>
-                        </div>
-                        <div class="col-auto">
-                            <button type="button" class="btn btn-secondary">미승인</button>
-                            <button type="button" class="btn btn-secondary ml-1">승인</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- ui 관련 -->
     <script src="/front/resources/js/ui.js"></script>
 
     <script>
-        var today = new Date();
-        var picker = tui.DatePicker.createRangePicker({
-            language: 'ko',
-            startpicker: {
-                date: today,
-                input: '#startpicker-input',
-                container: '#startpicker-container',
-            },
-            endpicker: {
-                date: today,
-                input: '#endpicker-input',
-                container: '#endpicker-container'
-            },
-            selectableRanges: [
-                [today, new Date(today.getFullYear() + 1, today.getMonth(), today.getDate())]
-            ]
-        });
     </script>
 </body>
 </html>

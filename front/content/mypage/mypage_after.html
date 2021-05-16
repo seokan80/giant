@@ -103,12 +103,14 @@
                                 <dd>n학년</dd>
                             </dl>
                             <div class="btns">
+                                <a href="mypage_after.html" class="active">학습진도</a>
                                 <a href="myinfo.html" class="">내 정보</a>
                                 <a href="student_info.html" class="">학생 정보</a>
                                 <a href="teacher_info.html" class="">교사 정보</a>
                                 <a href="approval_management_student.html" class="">승인 관리</a>
+                                <a href="payment.html" class="">이용권 구매</a>
                                 <a href="payment_management.html" class="">결제 관리</a>
-                                <a href="" class="">학습결과</a>
+                                <a href="learning_result.html" class="">학습결과</a>
                                 <a href="message_list.html" class="">쪽지함</a>
                             </div>
                         </div>
@@ -120,26 +122,27 @@
                                             <h2 class="mb-0">학습진도</h2>
                                         </div>
                                         <div class="col-auto">
-                                            <div class="level">Level.10B</div>
+                                            <select name="" id="" class="custom-select">
+                                                <option value="">Level 5</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="progress">
-                                    <!--  14.2857%
-                                        28.5714%
-                                        42.8571%
-                                        57.1428%
-                                        71.4258%
-                                        85.7142% -->
-                                    <div class="progress-bar bg-primary" role="progressbar" style="width:0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                    <span class="point active"><i></i></span>
-                                    <span class="point"><i></i></span>
-                                    <span class="point"><i></i></span>
-                                    <span class="point"><i></i></span>
-                                    <span class="point"><i></i></span>
-                                    <span class="point"><i></i></span>
-                                    <span class="point"><i></i></span>
-                                    <span class="point"><i></i></span>
+                                <div class="progress-wrap">
+                                    <div class="progress">
+                                        <div class="progress-bar bg-primary" role="progressbar" style="width:60%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                            <span class="point"><i></i><a href="">31회 학습하기</a></span>
+                                        </div>
+                                    </div>
+                                    <p class="desc">30회 완료 / 50회 남음</p>
+                                </div>
+                                <div class="mb-5">
+                                    <div class="tabbed round">
+                                        <ul>
+                                            <li class="active"><a href="#none">정규학습</a></li>
+                                            <li><a href="#none">맞춤학습</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <div class="progress-list">
                                     <div class="row row-20">
