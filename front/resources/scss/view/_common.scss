@@ -17,6 +17,8 @@
 .icon-arrow-right-sm{background-image: url('../images/icon-arrow-right-sm.svg');width: 3px;height: 5px;}
 .icon-select-right{background-image: url('../images/icon-select-right.svg');width: 18px;height: 18px;vertical-align: middle;}
 .icon-select-left{background-image: url('../images/icon-select-left.svg');width: 18px;height: 18px;vertical-align: middle;}
+.icon-info{background-image: url('../images/icon-info.svg');width: 41px;height: 41px;vertical-align: middle;}
+.icon-book{background-image: url('../images/icon-book.svg');width: 56px;height: 40px;vertical-align: middle;}
 @include media-breakpoint-down(md) {
     .icon-new{width: 22px;height: 22px;font-size: 13px;line-height: 23px;}
     .icon-refrash{width: 18px;height: 18px;}

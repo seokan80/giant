@@ -21,6 +21,11 @@
     <script src="/front/resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Swiper -->
     <script src="/front/resources/plugin/swiper/js/swiper.min.js"></script>
+    <!-- TOAST UI -->
+    <link rel="stylesheet" href="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.css">
+    <script src="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.js"></script>
+    <link rel="stylesheet" href="https://uicdn.toast.com/chart/latest/toastui-chart.min.css" />
+    <script src="https://uicdn.toast.com/chart/latest/toastui-chart.min.js"></script>
 </head>
 
 <body>
@@ -36,7 +41,7 @@
                                     <ul>
                                         <li><a href="/front/content/login/login.html">로그인</a></li>
                                         <li><a href="/front/content/join/agree.html">회원가입</a></li>
-                                        <li><a href="/front/content/mypage/mypage_before.html">홍길동님</a></li>
+                                        <li class="active"><a href="/front/content/mypage/mypage_before.html">홍길동님</a></li>
                                         <li><a href="/front/content/login/login.html">로그아웃</a></li>
                                     </ul>
                                 </div>
@@ -80,15 +85,160 @@
         </div>
         <div id="container-block">
             <div id="container">
-                <div id="content">
+                <div class="container">
 
-                    <div class="container">
-                        <!-- 실 컨텐츠 -->
+                    <!-- 실 컨텐츠 -->
+                    <div class="mypage">
+                        <div class="side">
+                            <div class="user">
+                                <div class="profile-wrap">
+                                    <div class="profile"> <!-- 이미지 있을때 .has-img 추가 -->
+                                        <!-- <img src="/front/resources/images/@portrait.png" alt=""> -->
+                                        <a href="javascript:;" class="btn-upload"><i class="icon-camera"><span class="sr-only">사진등록</span></i></a>
+                                    </div>
+                                </div>
+                                <div class="name">홍길동</div>
+                            </div>
+                            <dl class="info">
+                                <dt><i class="fas fa-flag"><span class="sr-only">센터</span></i></dt>
+                                <dd>센터명</dd>
+                                <dt><i class="fas fa-school"><span class="sr-only">학교</span></i></dt>
+                                <dd>학교명</dd>
+                                <dt><i class="fas fa-user-graduate"><span class="sr-only">학년</span></i></dt>
+                                <dd>n학년</dd>
+                            </dl>
+                             <div class="btns">
+                                <a href="mypage_after.html" class="">학습진도</a>
+                                <a href="myinfo.html" class="active">내 정보</a>
+                                <a href="student_info.html" class="">학생 정보</a>
+                                <a href="teacher_info.html" class="">교사 정보</a>
+                                <a href="approval_management_student.html" class="">승인 관리</a>
+                                <a href="payment.html" class="">이용권 구매</a>
+                                <a href="payment_management.html" class="">결제 관리</a>
+                                <a href="learning_result.html" class="">학습결과</a>
+                                <a href="message_list.html" class="">쪽지함</a>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="top-area">
+                                <div class="row justify-content-between align-items-center">
+                                    <div class="col-auto">
+                                        <h2 class="mb-0">내 정보</h2>
+                                    </div>
+                                    <div class="col-auto"></div>
+                                </div>
+                            </div>
 
+                            <div class="myinfo-wrap">
+                                <div class="myinfo-title">
+                                    <i class="icon-info"></i>
+                                    <h3>회원정보</h3>
+                                </div>
+                                <div class="myinfo">
+                                    <div class="row align-items-center">
+                                        <div class="col-4 col-md-auto">
+                                            <label>이름</label>
+                                        </div>
+                                        <div class="col-8 col-md">
+                                            <div>오라라</div>
+                                        </div>
+                                        <div class="col-4 col-md-auto">
+                                            <label>휴대폰</label>
+                                        </div>
+                                        <div class="col-8 col-md">
+                                            <div>000-0000-0000</div>
+                                        </div>
+                                    </div>
+                                    <div class="row align-items-center">
+                                        <div class="col-4 col-md-auto">
+                                            <label>보호자 성명</label>
+                                        </div>
+                                        <div class="col-8 col-md">
+                                            <div>라라맘</div>
+                                        </div>
+                                        <div class="col-4 col-md-auto">
+                                            <label>보호자 휴대폰</label>
+                                        </div>
+                                        <div class="col-8 col-md">
+                                            <div>000-0000-0000</div>
+                                        </div>
+                                    </div>
+                                    <div class="row align-items-center">
+                                        <div class="col-4 col-md-auto">
+                                            <label>학교</label>
+                                        </div>
+                                        <div class="col-8 col-md">
+                                            <div>라라초등학교</div>
+                                        </div>
+                                        <div class="col-4 col-md-auto">
+                                            <label>학년</label>
+                                        </div>
+                                        <div class="col-8 col-md">
+                                            <div>5학년</div>
+                                        </div>
+                                    </div>
+                                    <div class="row align-items-center">
+                                        <div class="col-4 col-md-auto">
+                                            <label>센터명</label>
+                                        </div>
+                                        <div class="col-8 col-md">
+                                            <div>대치센터</div>
+                                        </div>
+                                        <div class="col-4 col-md-auto">
+                                            <label>담당 교사</label>
+                                        </div>
+                                        <div class="col-8 col-md">
+                                            <div>오수진 교사</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center mt-3">
+                                    <a href="" class="btn btn-dark btn-lg">회원정보 수정</a>
+                                </div>
 
-
-                        <!-- //실 컨텐츠 -->
+                                <div class="myinfo-title">
+                                    <i class="icon-book"></i>
+                                    <h3>학습 정보</h3>
+                                </div>
+                                <table class="table">
+                                    <caption>공지사항</caption>
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">구분</th>
+                                            <th class="text-center">레벨</th>
+                                            <th class="text-center">신청 학습</th>
+                                            <th class="text-center">완료 학습</th>
+                                            <th class="text-center">남은 학습</th>
+                                            <th class="text-center">학습 종료일</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">정규학습</td>
+                                            <td class="text-center">3</td>
+                                            <td class="text-center">24</td>
+                                            <td class="text-center">12</td>
+                                            <td class="text-center">12</td>
+                                            <td class="text-center">21.06.05</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">맞춤학습</td>
+                                            <td class="text-center">3</td>
+                                            <td class="text-center">24</td>
+                                            <td class="text-center">12</td>
+                                            <td class="text-center">12</td>
+                                            <td class="text-center">21.06.05</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="text-center mt-3">
+                                    <a href="" class="btn btn-dark btn-lg">학습기간 연장</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <!-- //실 컨텐츠 -->
+
                 </div>
             </div>
         </div>
@@ -110,14 +260,10 @@
         </div>
     </div>
 
-
     <!-- ui 관련 -->
     <script src="/front/resources/js/ui.js"></script>
 
     <script>
-        $(document).ready(function(){
-
-        });
     </script>
 </body>
 </html>

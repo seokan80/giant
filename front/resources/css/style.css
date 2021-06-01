@@ -129,6 +129,10 @@
 
 .icon-select-left { background-image: url("../images/icon-select-left.svg"); width: 18px; height: 18px; vertical-align: middle; }
 
+.icon-info { background-image: url("../images/icon-info.svg"); width: 41px; height: 41px; vertical-align: middle; }
+
+.icon-book { background-image: url("../images/icon-book.svg"); width: 56px; height: 40px; vertical-align: middle; }
+
 @media (max-width: 991.98px) { .icon-new { width: 22px; height: 22px; font-size: 13px; line-height: 23px; }
   .icon-refrash { width: 18px; height: 18px; }
   .icon-file { width: 14.5px; height: 15px; }
@@ -1434,6 +1438,28 @@ label.number input:checked + i { border-color: #333; background-color: #333; col
 .payment-result .ok { font-size: 24px; font-weight: 700; color: #7a1b1d; text-align: center; margin-bottom: 60px; margin-top: 100px; }
 
 .payment-result .table { width: 740px; margin: 0 auto; }
+
+.myinfo-title { text-align: center; margin-bottom: 2rem; }
+
+.myinfo-title h3 { font-weight: 700; font-size: 20px; margin-top: 1rem; }
+
+.myinfo-wrap { width: 667px; margin: 0 auto; }
+
+.myinfo-wrap .text-center + .myinfo-title { margin-top: 90px; }
+
+.myinfo { font-size: 14px; border-top: 1px solid #d4d4d4; border-bottom: 1px solid #d4d4d4; padding: 2rem 0; }
+
+.myinfo label { background: #f1f1f1; width: 142px; font-size: 16px; text-align: center; font-weight: 700; display: inline-block; padding: 6px; margin: 0; }
+
+.myinfo .row + .row { margin-top: 10px; }
+
+@media (max-width: 991.98px) { .myinfo-title { margin-bottom: 1rem; }
+  .myinfo-title h3 { font-size: 16px; margin-top: 1rem; }
+  .myinfo-wrap { width: auto; }
+  .myinfo { font-size: 14px; padding: 1rem 0; }
+  .myinfo label { width: 100%; font-size: 14px; }
+  .myinfo .row + .row { margin-top: 0; }
+  .myinfo [class^=col] { margin-bottom: 5px; } }
 
 .main-swiper { margin-top: -45px; margin-bottom: 100px; }
 
