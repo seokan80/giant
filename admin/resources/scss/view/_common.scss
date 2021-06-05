@@ -1,4 +1,8 @@
 [class^=icon-]{display: inline-block;background-size: contain;background-repeat: no-repeat;background-position: 0 0;font-style: normal;font-size: 0;line-height: 1;}
+.icon-select-right{background-image: url('../images/icon-select-right.svg');width: 18px;height: 18px;vertical-align: middle;}
+.icon-select-left{background-image: url('../images/icon-select-left.svg');width: 18px;height: 18px;vertical-align: middle;}
+
+.font-size-16px{font-size: 16px;}
 
 .tui-datepicker-input{height: 35px;}
 .tui-datepicker-input.tui-has-focus{border-color: #ddd;}
@@ -23,6 +27,8 @@
     input[type=checkbox]{vertical-align: middle;}
     input[type=checkbox] + span{vertical-align: middle;margin-left: 5px;}
 }
+
+.table-fixed{table-layout: fixed;}
 
 .table-title{font-size: 18px;font-weight: 700;}
 

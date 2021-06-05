@@ -56,7 +56,7 @@
                             <li>
                                 <a href="../student/student_list.html" class="dep1-link"><span><i class="fas fa-user-graduate"></i>학생 관리</span></a>
                             </li>
-                            <li class="active">
+                            <li>
                                 <a href="../teacher/teacher_list.html" class="dep1-link"><span><i class="fas fa-chalkboard-teacher"></i>교사 관리</span></a>
                             </li>
                             <li>
@@ -80,11 +80,11 @@
                                     <li><a href="../board/terms_list.html" class="dep2-link"><span>약관</span></a></li>
                                 </ul>
                             </li>
-                            <li class="has-treeview">
+                            <li class="has-treeview active open">
                                 <a href="" class="dep1-link"><span><i class="fas fa-paint-brush"></i>디자인 관리</span></a>
                                 <ul class="dep2">
                                     <li><a href="../design/main_banner_list.html" class="dep2-link"><span>메인 배너</span></a></li>
-                                    <li><a href="../design/popup_banner_list.html" class="dep2-link"><span>팝업 배너</span></a></li>
+                                    <li class="active"><a href="../design/popup_banner_list.html" class="dep2-link"><span>팝업 배너</span></a></li>
                                 </ul>
                             </li>
                             <li class="has-treeview">
@@ -120,136 +120,180 @@
                 <div class="container-fluid">
 
                     <div class="top-area mb-5">
-                        <h2 class="title">교사 상세</h2>
+                        <h2 class="title">팝업 배너</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">Home</li>
-                                <li class="breadcrumb-item" aria-current="page">교사 관리</li>
+                                <li class="breadcrumb-item">디자인 관리</li>
+                                <li class="breadcrumb-item" aria-current="page">팝업 배너</li>
                             </ol>
                         </nav>
                     </div>
 
-                    <div class="row justify-content-between align-items-center">
-                        <div class="col-auto">
-                            <h3 class="table-title mt-4 mb-3">기본 정보</h3>
-                        </div>
-                        <div class="col-auto">
-                            <button type="button" class="btn btn-dark" style="min-width:90px">쪽지쓰기</button>
-                        </div>
-                    </div>
                     <table class="table table-bordered table-fixed">
                         <colgroup>
-                            <col style="width:200px">
-                            <col>
                             <col style="width:200px">
                             <col>
                         </colgroup>
                         <tbody>
                             <tr>
-                                <th class="text-center">ID</th>
-                                <td colspan="3">ID</td>
-                            </tr>
-                            <tr>
-                                <th class="text-center">교사</th>
-                                <td colspan="3">이름   (남)</td>
-                            </tr>
-                            <tr>
-                                <th class="text-center">학습센터</th>
-                                <td colspan="3">학습센터명</td>
-                            </tr>
-                            <tr>
-                                <th class="text-center">휴대폰</th>
-                                <td colspan="3">010-1234-1234</td>
-                            </tr>
-                            <tr>
-                                <th class="text-center">이메일</th>
-                                <td colspan="3">abc@email.com</td>
-                            </tr>
-                            <tr>
-                                <th class="text-center">주소</th>
-                                <td colspan="3">01234  주소명  상세주소명</td>
-                            </tr>
-                            <tr>
-                                <th class="text-center">수신 동의</th>
-                                <td colspan="3">
-                                    <span class="d-inline-flex align-items-center">
-                                        <input type="radio" id="email" name="receiveAgree" checked>
-                                        <label for="email" class="ml-1 mb-0">이메일</label>
-                                    </span>
-                                    <span class="d-inline-flex align-items-center ml-3">
-                                        <input type="radio" id="sms" name="receiveAgree">
-                                        <label for="sms" class="ml-1 mb-0">SMS</label>
-                                    </span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="text-center">상태</th>
-                                <td colspan="3">
-                                    <select name="" id="" class="custom-select w-auto">
-                                        <option value="">정상</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="text-center">가입일시</th>
-                                <td>2020.12.16 12:05:50</td>
-                                <th class="text-center">최종 접속일</th>
-                                <td>2020.12.16 12:05:50</td>
-                            </tr>
-                            <tr>
-                                <th class="text-center">서비스 시작일</th>
-                                <td>2021.01.06</td>
-                                <th class="text-center">서비스 종료일</th>
-                                <td>2021.01.06</td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <h3 class="table-title mt-4 mb-3">활동 정보</h3>
-                    <table class="table table-bordered table-fixed">
-                        <colgroup>
-                            <col style="width:200px">
-                            <col>
-                            <col style="width:200px">
-                            <col>
-                        </colgroup>
-                        <tbody>
-                            <tr>
-                                <th class="text-center">담당 학생 수</th>
+                                <th class="text-center">진행 여부</th>
                                 <td>
-                                    <div class="row justify-content-between">
+                                    <label class="form-radio">
+                                        <input type="radio" id="noticeType1" name="noticeType"><span>진행</span>
+                                    </label>
+                                    <label class="form-radio ml-3">
+                                        <input type="radio" id="noticeType2" name="noticeType" checked><span>종료</span>
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">기간설정</th>
+                                <td>
+                                    <div class="row row-10 align-items-center">
                                         <div class="col-auto">
-                                            6명
+                                            <div class="tui-datepicker-input tui-datetime-input tui-has-focus">
+                                                <input id="startpicker-input" type="text" aria-label="Date">
+                                                <span class="tui-ico-date"></span>
+                                                <div id="startpicker-container" style="margin-left: -1px;"></div>
+                                            </div>
                                         </div>
+                                        <div class="col-auto">~</div>
                                         <div class="col-auto">
-                                            <button type="button" class="btn btn-sm btn-secondary align-middle">학생 추가</button>
+                                            <div class="tui-datepicker-input tui-datetime-input tui-has-focus">
+                                                <input id="endpicker-input" type="text" aria-label="Date">
+                                                <span class="tui-ico-date"></span>
+                                                <div id="endpicker-container" style="margin-left: -1px;"></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </td>
                             </tr>
+                            <tr>
+                                <th class="text-center">팝업 표시 위치</th>
+                                <td>
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            화면 위로부터
+                                        </div>
+                                        <div class="col-auto">
+                                            <input type="text" class="form-control text-right" style="width:100px" value="300">
+                                        </div>
+                                        <div class="col-auto">
+                                            픽셀, 왼쪽부터
+                                        </div>
+                                        <div class="col-auto">
+                                            <input type="text" class="form-control text-right" style="width:100px" value="300">
+                                        </div>
+                                        <div class="col-auto">
+                                            픽셀에 노출
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">팝업크기</th>
+                                <td>
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            가로
+                                        </div>
+                                        <div class="col-auto">
+                                            <input type="text" class="form-control text-right" style="width:100px" value="300">
+                                        </div>
+                                        <div class="col-auto">
+                                            픽셀,  세로
+                                        </div>
+                                        <div class="col-auto">
+                                            <input type="text" class="form-control text-right" style="width:100px" value="300">
+                                        </div>
+                                        <div class="col-auto">
+                                            픽셀에 노출
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">배너 이미지 </th>
+                                <td>
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <input type="file" class="form-control" style="width:auto">
+                                        </div>
+                                        <div class="col-auto">
+                                            <span>abc.png</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <a href="" class="align-middle font-size-16px"><i class="far fa-times-circle"></i></a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">웹페이지</th>
+                                <td>
+                                    <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <input type="file" class="form-control" style="width:auto">
+                                        </div>
+                                        <div class="col-auto">
+                                            <span>abc.html</span>
+                                        </div>
+                                        <div class="col-auto">
+                                            <a href="" class="align-middle font-size-16px"><i class="far fa-times-circle"></i></a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">연결 URL</th>
+                                <td>
+                                    <input type="text" class="form-control" value="www.abc.com/abc/abc">
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
 
-                    <div class="row align-items-center justify-content-between mt-3">
-                        <div class="col-auto">
-                            <button type="button" class="btn btn-success" style="min-width:90px">수정</button>
-                            <button type="button" class="btn btn-success ml-1" style="min-width:90px">학생승인권한부여</button>
-                            <button type="button" class="btn btn-success ml-1" style="min-width:90px">교사승인권한부여</button>
-                        </div>
-                        <div class="col-auto">
-                            <a href="teacher_list.html" class="btn btn-success ml-1" style="min-width:90px">목록</a>
+                    <div class="grid-bottom">
+                        <div class="row justify-content-between align-items-end">
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-success" style="min-width:90px">미리보기</button>
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-success" style="min-width:90px">저장</button>
+                                <button type="button" class="btn btn-success ml-1" style="min-width:90px">취소</button>
+                            </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
 
+
     <!-- ui 관련 -->
     <script src="/admin/resources/js/ui.js"></script>
 
     <script>
+        //datepicker
+        const DatePicker = tui.DatePicker;
+        var today = new Date();
+        var picker = tui.DatePicker.createRangePicker({
+            language: 'ko',
+            startpicker: {
+                date: today,
+                input: '#startpicker-input',
+                container: '#startpicker-container'
+            },
+            endpicker: {
+                date: today,
+                input: '#endpicker-input',
+                container: '#endpicker-container'
+            },
+            selectableRanges: [
+                [today, new Date(today.getFullYear() + 1, today.getMonth(), today.getDate())]
+            ]
+        });
     </script>
 </body>
 </html>

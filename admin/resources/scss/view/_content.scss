@@ -49,3 +49,23 @@
     .text{font-size: 14px;text-align: center;color: #444;margin-bottom: 20px;}
     .btn{font-size: 13px;}
 }
+
+
+.address-book{
+    .custom-select{border-radius: 0;}
+    .btn-outline-success{
+        border-radius: 0;position: relative;z-index: 1;
+        &:hover{
+            .icon-select-left{background-image: url('../images/icon-select-left-active.svg');}
+            .icon-select-right{background-image: url('../images/icon-select-right-active.svg');}
+        }
+    }
+    .btn + .select-list{margin-top: -1px;}
+    .select-list + .btn{margin-top: -1px;}
+    .select-list{
+        border: 1px solid #d4d4d4;height: 300px;overflow-x: hidden;
+        a{display: block;padding: .5rem 1rem;text-decoration: none;}
+        a:hover,
+        a:focus{background: #eee;}
+    }
+}

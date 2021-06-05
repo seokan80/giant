@@ -80,14 +80,34 @@
                                     <li><a href="../board/terms_list.html" class="dep2-link"><span>약관</span></a></li>
                                 </ul>
                             </li>
-                            <li>
-                                <a href="" class="dep1-link"><span><i class="fas fa-images"></i>메인 배너 관리</span></a>
+                            <li class="has-treeview">
+                                <a href="" class="dep1-link"><span><i class="fas fa-paint-brush"></i>디자인 관리</span></a>
+                                <ul class="dep2">
+                                    <li><a href="../design/main_banner_list.html" class="dep2-link"><span>메인 배너</span></a></li>
+                                    <li><a href="../design/popup_banner_list.html" class="dep2-link"><span>팝업 배너</span></a></li>
+                                </ul>
                             </li>
-                            <li>
+                            <li class="has-treeview">
                                 <a href="" class="dep1-link"><span><i class="fas fa-envelope-open"></i>쪽지 관리</span></a>
+                                <ul class="dep2">
+                                    <li><a href="../message/receive_list.html" class="dep2-link"><span>받은쪽지함</span></a></li>
+                                    <li><a href="../message/send_list.html" class="dep2-link"><span>보낸쪽지함</span></a></li>
+                                </ul>
                             </li>
-                            <li>
+                            <li class="has-treeview">
                                 <a href="" class="dep1-link"><span><i class="fas fa-money-check"></i>결제 관리</span></a>
+                                <ul class="dep2">
+                                    <li><a href="../payment/sales_list.html" class="dep2-link"><span>매출 관리</span></a></li>
+                                    <li><a href="../payment/cancel_list.html" class="dep2-link"><span>취소 관리</span></a></li>
+                                    <li><a href="../payment/settle_list.html" class="dep2-link"><span>정산 관리</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="has-treeview">
+                                <a href="" class="dep1-link"><span><i class="fas fa-heart"></i>상품 관리</span></a>
+                                <ul class="dep2">
+                                    <li><a href="../item/item_student.html" class="dep2-link"><span>학생 상품</span></a></li>
+                                    <li><a href="../item/item_center.html" class="dep2-link"><span>센터 상품</span></a></li>
+                                </ul>
                             </li>
                             <li>
                                 <a href="" class="dep1-link"><span><i class="fas fa-chart-pie"></i>통계</span></a>
@@ -219,59 +239,55 @@
             {
                 id: 'abcd1234',
                 center: '센터명',
-                teacher: '홍길동',
+                company: '106-17-12345',
                 name: '홍길동',
-                school: 'ㅇㅇㅇ학교',
-                grade: '직접 출제',
-                level: '노출',
-                phone: '010-0000-0000',
-                admission: '승인',
-                status: '정상',
-                self: '신청',
+                school: 'ㅇㅇㅇㅇ학교',
+                grade: '3학년',
+                level: 'Lv.2',
+                regular: '8회',
+                custom: '-',
+                status: '기본학습',
                 termination: '2020.12.08 12:23:45',
             },
             {
                 id: 'abcd1234',
                 center: '센터명',
-                teacher: '홍길동',
+                company: '106-17-12345',
                 name: '홍길동',
-                school: 'ㅇㅇㅇ학교',
-                grade: '직접 출제',
-                level: '노출',
-                phone: '010-0000-0000',
-                admission: '승인',
-                status: '정상',
-                self: '신청',
+                school: 'ㅇㅇㅇㅇ학교',
+                grade: '3학년',
+                level: 'Lv.2',
+                regular: '8회',
+                custom: '-',
+                status: '기본학습',
                 termination: '2020.12.08 12:23:45',
             },
             {
                 id: 'abcd1234',
                 center: '센터명',
-                teacher: '홍길동',
+                company: '106-17-12345',
                 name: '홍길동',
-                school: 'ㅇㅇㅇ학교',
-                grade: '직접 출제',
-                level: '노출',
-                phone: '010-0000-0000',
-                admission: '승인',
-                status: '정상',
-                self: '신청',
+                school: 'ㅇㅇㅇㅇ학교',
+                grade: '3학년',
+                level: 'Lv.2',
+                regular: '8회',
+                custom: '-',
+                status: '기본학습',
                 termination: '2020.12.08 12:23:45',
             },
             {
                 id: 'abcd1234',
                 center: '센터명',
-                teacher: '홍길동',
+                company: '106-17-12345',
                 name: '홍길동',
-                school: 'ㅇㅇㅇ학교',
-                grade: '직접 출제',
-                level: '노출',
-                phone: '010-0000-0000',
-                admission: '승인',
-                status: '정상',
-                self: '신청',
+                school: 'ㅇㅇㅇㅇ학교',
+                grade: '3학년',
+                level: 'Lv.2',
+                regular: '8회',
+                custom: '-',
+                status: '기본학습',
                 termination: '2020.12.08 12:23:45',
-            }
+            },
         ];
 
         const grid = new tui.Grid({
@@ -292,8 +308,8 @@
                     align: 'center',
                 },
                 {
-                    header: '교사',
-                    name: 'teacher',
+                    header: '사업자등록번호',
+                    name: 'company',
                     align: 'center',
                 },
                 {
@@ -317,23 +333,18 @@
                     align: 'center',
                 },
                 {
-                    header: '보호자 휴대폰 번호',
-                    name: 'phone',
+                    header: '정규학습',
+                    name: 'regular',
                     align: 'center',
                 },
                 {
-                    header: '승인',
-                    name: 'admission',
+                    header: '맞춤학습',
+                    name: 'custom',
                     align: 'center',
                 },
                 {
                     header: '상태',
                     name: 'status',
-                    align: 'center',
-                },
-                {
-                    header: '자율학습',
-                    name: 'self',
                     align: 'center',
                 },
                 {

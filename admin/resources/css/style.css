@@ -2,6 +2,12 @@
 /* 컨텐츠 css */
 [class^=icon-] { display: inline-block; background-size: contain; background-repeat: no-repeat; background-position: 0 0; font-style: normal; font-size: 0; line-height: 1; }
 
+.icon-select-right { background-image: url("../images/icon-select-right.svg"); width: 18px; height: 18px; vertical-align: middle; }
+
+.icon-select-left { background-image: url("../images/icon-select-left.svg"); width: 18px; height: 18px; vertical-align: middle; }
+
+.font-size-16px { font-size: 16px; }
+
 .tui-datepicker-input { height: 35px; }
 
 .tui-datepicker-input.tui-has-focus { border-color: #ddd; }
@@ -24,6 +30,8 @@
 
 .form-checkbox input[type=checkbox] + span { vertical-align: middle; margin-left: 5px; }
 
+.table-fixed { table-layout: fixed; }
+
 .table-title { font-size: 18px; font-weight: 700; }
 
 .tui-datepicker-input-custom { position: relative; width: 130px; }
@@ -32,13 +40,13 @@
 
 .tui-datepicker { z-index: 99; }
 
-.tui-pagination .tui-is-selected, .tui-pagination strong { background: #489d9c; border-color: #489d9c; }
+.tui-pagination .tui-is-selected, .tui-pagination strong { background: #4ecdc4; border-color: #4ecdc4; }
 
-.tui-pagination .tui-is-selected:hover { background-color: #489d9c; }
+.tui-pagination .tui-is-selected:hover { background-color: #4ecdc4; }
 
-.tui-pagination .tui-first-child.tui-is-selected { border-left: 1px solid #489d9c; }
+.tui-pagination .tui-first-child.tui-is-selected { border-left: 1px solid #4ecdc4; }
 
-.tui-pagination .tui-last-child.tui-is-selected { border-right: 1px solid #489d9c; }
+.tui-pagination .tui-last-child.tui-is-selected { border-right: 1px solid #4ecdc4; }
 
 .modal-title { font-size: 20px; }
 
@@ -90,7 +98,7 @@ body { min-width: 1200px; }
 
 #gnb .dep1 > li.open .dep2 { display: block; background-color: #5a6361; }
 
-#gnb .dep1 > li.active > a { color: #fff; background-color: #489d9c; }
+#gnb .dep1 > li.active > a { color: #fff; background-color: #4ecdc4; }
 
 #gnb .dep2 { padding: .25rem 0; display: none; }
 
@@ -102,7 +110,7 @@ body { min-width: 1200px; }
 
 .top-area .title { margin-bottom: 0; font-weight: 700; }
 
-.login-logo, .register-logo { font-size: 2.1rem; font-weight: 300; padding: 1rem; text-align: center; background: #489d9c; }
+.login-logo, .register-logo { font-size: 2.1rem; font-weight: 300; padding: 1rem; text-align: center; background: #4ecdc4; }
 
 .login-logo a, .register-logo a { color: #495057; }
 
@@ -126,11 +134,11 @@ body { min-width: 1200px; }
 
 .progress-list .item.disabled .item-body { border-color: #dbdbdb; }
 
-.progress-list .item-header { background-color: #489d9c; padding: .5rem 0; text-align: center; border-radius: 5px 5px 0 0; position: relative; }
+.progress-list .item-header { background-color: #4ecdc4; padding: .5rem 0; text-align: center; border-radius: 5px 5px 0 0; position: relative; }
 
-.progress-list .item-header::after { content: ''; width: 0; height: 0; border-style: solid; border-width: 8px 8px 0 8px; border-color: #489d9c transparent transparent transparent; position: absolute; left: 50%; bottom: -7px; transform: translateX(-50%); }
+.progress-list .item-header::after { content: ''; width: 0; height: 0; border-style: solid; border-width: 8px 8px 0 8px; border-color: #4ecdc4 transparent transparent transparent; position: absolute; left: 50%; bottom: -7px; transform: translateX(-50%); }
 
-.progress-list .item-body { border: 1px solid #489d9c; border-top: 0; border-radius: 0 0 5px 5px; padding-top: 10px; background-color: #f9f8f8; }
+.progress-list .item-body { border: 1px solid #4ecdc4; border-top: 0; border-radius: 0 0 5px 5px; padding-top: 10px; background-color: #f9f8f8; }
 
 .progress-list .group { padding: 20px 15px; }
 
@@ -141,4 +149,22 @@ body { min-width: 1200px; }
 .progress-list .text { font-size: 14px; text-align: center; color: #444; margin-bottom: 20px; }
 
 .progress-list .btn { font-size: 13px; }
+
+.address-book .custom-select { border-radius: 0; }
+
+.address-book .btn-outline-success { border-radius: 0; position: relative; z-index: 1; }
+
+.address-book .btn-outline-success:hover .icon-select-left { background-image: url("../images/icon-select-left-active.svg"); }
+
+.address-book .btn-outline-success:hover .icon-select-right { background-image: url("../images/icon-select-right-active.svg"); }
+
+.address-book .btn + .select-list { margin-top: -1px; }
+
+.address-book .select-list + .btn { margin-top: -1px; }
+
+.address-book .select-list { border: 1px solid #d4d4d4; height: 300px; overflow-x: hidden; }
+
+.address-book .select-list a { display: block; padding: .5rem 1rem; text-decoration: none; }
+
+.address-book .select-list a:hover, .address-book .select-list a:focus { background: #eee; }
 /*# sourceMappingURL=style.css.map */

@@ -71,20 +71,20 @@
                                     <li><a href="" class="dep2-link"><span>커리큘럼 관리</span></a></li>
                                 </ul>
                             </li>
-                            <li class="has-treeview active open">
+                            <li class="has-treeview">
                                 <a href="" class="dep1-link"><span><i class="fas fa-list"></i>게시판 관리</span></a>
                                 <ul class="dep2">
                                     <li><a href="../board/notice_list.html" class="dep2-link"><span>공지사항</span></a></li>
                                     <li><a href="../board/faq_list.html" class="dep2-link"><span>FAQ</span></a></li>
-                                    <li class="active"><a href="../board/qna_list.html" class="dep2-link"><span>1:1 문의</span></a></li>
+                                    <li><a href="../board/qna_list.html" class="dep2-link"><span>1:1 문의</span></a></li>
                                     <li><a href="../board/terms_list.html" class="dep2-link"><span>약관</span></a></li>
                                 </ul>
                             </li>
-                            <li class="has-treeview">
+                            <li class="has-treeview active open">
                                 <a href="" class="dep1-link"><span><i class="fas fa-paint-brush"></i>디자인 관리</span></a>
                                 <ul class="dep2">
                                     <li><a href="../design/main_banner_list.html" class="dep2-link"><span>메인 배너</span></a></li>
-                                    <li><a href="../design/popup_banner_list.html" class="dep2-link"><span>팝업 배너</span></a></li>
+                                    <li class="active"><a href="../design/popup_banner_list.html" class="dep2-link"><span>팝업 배너</span></a></li>
                                 </ul>
                             </li>
                             <li class="has-treeview">
@@ -120,12 +120,12 @@
                 <div class="container-fluid">
 
                     <div class="top-area mb-5">
-                        <h2 class="title">1:1 문의</h2>
+                        <h2 class="title">팝업 배너</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">Home</li>
-                                <li class="breadcrumb-item">게시판 관리</li>
-                                <li class="breadcrumb-item" aria-current="page">1:1 문의</li>
+                                <li class="breadcrumb-item">디자인 관리</li>
+                                <li class="breadcrumb-item" aria-current="page">팝업 배너</li>
                             </ol>
                         </nav>
                     </div>
@@ -161,7 +161,11 @@
                     <div class="grid-bottom">
                         <div class="row justify-content-between align-items-end">
                             <div class="col-auto">
+                                <button type="button" class="btn btn-success" style="min-width:90px">삭제</button>
                                 <button type="button" class="btn btn-success ml-1" style="min-width:90px">수정</button>
+                            </div>
+                            <div class="col-auto">
+                                <a href="popup_banner_form.html" class="btn btn-success ml-1" style="min-width:90px">팝업등록</a>
                             </div>
                         </div>
                     </div>
@@ -178,12 +182,16 @@
         //grid
         const gridData = [
             {
-                name: '홍길동',
-                phone: '010-1234-1234',
-                email: 'abc@email.com',
-                title: '문의드립니다문의드립니다 문의드립니다.',
+                title: '신규회원 5000원 적립금',
+                status: '진행중',
+                period: '2021-02-19 09:00 ~ 2021-02-26 23:59',
                 date: '2020.12.08  12:23:45',
-                answer: 'N',
+            },
+            {
+                title: '신규회원 5000원 적립금',
+                status: '종료',
+                period: '2021-02-19 09:00 ~ 2021-02-26 23:59',
+                date: '2020.12.08  12:23:45',
             },
         ];
 
@@ -195,38 +203,27 @@
             rowHeaders: ['checkbox','rowNum'],
             columns: [
                 {
-                    header: '이름',
-                    name: 'name',
-                    align: 'center',
-                    width: 150,
-                },
-                {
-                    header: '연락처',
-                    name: 'phone',
-                    align: 'center',
-                    width: 150,
-                },
-                {
-                    header: '이메일',
-                    name: 'email',
-                    align: 'center',
-                    width: 200,
-                },
-                {
                     header: '제목',
                     name: 'title',
+                    align: 'center',
+                },
+                {
+                    header: '상태',
+                    name: 'status',
+                    align: 'center',
+                    width: 160,
+                },
+                {
+                    header: '기간',
+                    name: 'period',
+                    align: 'center',
+                    width: 260,
                 },
                 {
                     header: '등록일시',
                     name: 'date',
                     align: 'center',
                     width: 160,
-                },
-                {
-                    header: '답변상태',
-                    name: 'answer',
-                    align: 'center',
-                    width: 120,
                 },
             ],
             pageOptions: {
@@ -237,7 +234,7 @@
 
         grid.on('click', function(ev) {
             if(ev.columnName == 'title'){
-                document.location.href = 'qna_detail.html';
+                document.location.href = 'popup_banner_detail.html';
             }
         });
         grid.on('mouseover', function(ev) {

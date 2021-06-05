@@ -71,12 +71,12 @@
                                     <li><a href="" class="dep2-link"><span>커리큘럼 관리</span></a></li>
                                 </ul>
                             </li>
-                            <li class="has-treeview active open">
+                            <li class="has-treeview">
                                 <a href="" class="dep1-link"><span><i class="fas fa-list"></i>게시판 관리</span></a>
                                 <ul class="dep2">
                                     <li><a href="../board/notice_list.html" class="dep2-link"><span>공지사항</span></a></li>
                                     <li><a href="../board/faq_list.html" class="dep2-link"><span>FAQ</span></a></li>
-                                    <li class="active"><a href="../board/qna_list.html" class="dep2-link"><span>1:1 문의</span></a></li>
+                                    <li><a href="../board/qna_list.html" class="dep2-link"><span>1:1 문의</span></a></li>
                                     <li><a href="../board/terms_list.html" class="dep2-link"><span>약관</span></a></li>
                                 </ul>
                             </li>
@@ -87,11 +87,11 @@
                                     <li><a href="../design/popup_banner_list.html" class="dep2-link"><span>팝업 배너</span></a></li>
                                 </ul>
                             </li>
-                            <li class="has-treeview">
+                            <li class="has-treeview active open">
                                 <a href="" class="dep1-link"><span><i class="fas fa-envelope-open"></i>쪽지 관리</span></a>
                                 <ul class="dep2">
                                     <li><a href="../message/receive_list.html" class="dep2-link"><span>받은쪽지함</span></a></li>
-                                    <li><a href="../message/send_list.html" class="dep2-link"><span>보낸쪽지함</span></a></li>
+                                    <li class="active"><a href="../message/send_list.html" class="dep2-link"><span>보낸쪽지함</span></a></li>
                                 </ul>
                             </li>
                             <li class="has-treeview">
@@ -120,12 +120,12 @@
                 <div class="container-fluid">
 
                     <div class="top-area mb-5">
-                        <h2 class="title">1:1 문의</h2>
+                        <h2 class="title">보낸쪽지함</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">Home</li>
-                                <li class="breadcrumb-item">게시판 관리</li>
-                                <li class="breadcrumb-item" aria-current="page">1:1 문의</li>
+                                <li class="breadcrumb-item">쪽지 관리</li>
+                                <li class="breadcrumb-item" aria-current="page">보낸쪽지함</li>
                             </ol>
                         </nav>
                     </div>
@@ -138,6 +138,12 @@
                                 </div>
                                 <div class="col-auto">
                                     <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <select name="" id="" class="custom-select">
+                                                <option value="">내용</option>
+                                                <option value="">이름</option>
+                                            </select>
+                                        </div>
                                         <div class="col-auto">
                                             <input type="text" class="form-control">
                                         </div>
@@ -161,7 +167,9 @@
                     <div class="grid-bottom">
                         <div class="row justify-content-between align-items-end">
                             <div class="col-auto">
-                                <button type="button" class="btn btn-success ml-1" style="min-width:90px">수정</button>
+                            </div>
+                            <div class="col-auto">
+                                <a href="message_form.html" class="btn btn-success ml-1" style="min-width:90px">쪽지 쓰기</a>
                             </div>
                         </div>
                     </div>
@@ -178,12 +186,19 @@
         //grid
         const gridData = [
             {
-                name: '홍길동',
-                phone: '010-1234-1234',
-                email: 'abc@email.com',
-                title: '문의드립니다문의드립니다 문의드립니다.',
+                recipient: '홍길동',
+                content: '메타스콜레에 오신걸 환영합니다. 공지사항에..',
                 date: '2020.12.08  12:23:45',
-                answer: 'N',
+            },
+            {
+                recipient: '홍길동',
+                content: '메타스콜레에 오신걸 환영합니다. 공지사항에..',
+                date: '2020.12.08  12:23:45',
+            },
+            {
+                recipient: '홍길동',
+                content: '메타스콜레에 오신걸 환영합니다. 공지사항에..',
+                date: '2020.12.08  12:23:45',
             },
         ];
 
@@ -195,54 +210,25 @@
             rowHeaders: ['checkbox','rowNum'],
             columns: [
                 {
-                    header: '이름',
-                    name: 'name',
+                    header: '받는사람',
+                    name: 'recipient',
                     align: 'center',
-                    width: 150,
+                    width: 250,
                 },
                 {
-                    header: '연락처',
-                    name: 'phone',
-                    align: 'center',
-                    width: 150,
+                    header: '내용',
+                    name: 'content',
                 },
                 {
-                    header: '이메일',
-                    name: 'email',
-                    align: 'center',
-                    width: 200,
-                },
-                {
-                    header: '제목',
-                    name: 'title',
-                },
-                {
-                    header: '등록일시',
+                    header: '날짜',
                     name: 'date',
                     align: 'center',
-                    width: 160,
-                },
-                {
-                    header: '답변상태',
-                    name: 'answer',
-                    align: 'center',
-                    width: 120,
+                    width: 250,
                 },
             ],
             pageOptions: {
                 useClient: true,
                 perPage: 5
-            }
-        });
-
-        grid.on('click', function(ev) {
-            if(ev.columnName == 'title'){
-                document.location.href = 'qna_detail.html';
-            }
-        });
-        grid.on('mouseover', function(ev) {
-            if(ev.columnName == 'title'){
-                ev.nativeEvent.target.style.cursor = 'pointer';
             }
         });
 
