@@ -59,7 +59,7 @@
                             <li>
                                 <a href="../teacher/teacher_list.html" class="dep1-link"><span><i class="fas fa-chalkboard-teacher"></i>교사 관리</span></a>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a href="../center/center_list.html" class="dep1-link"><span><i class="fas fa-flag"></i>센터 관리</span></a>
                             </li>
                             <li class="has-treeview">
@@ -71,13 +71,13 @@
                                     <li><a href="" class="dep2-link"><span>커리큘럼 관리</span></a></li>
                                 </ul>
                             </li>
-                            <li class="has-treeview active open">
+                            <li class="has-treeview">
                                 <a href="" class="dep1-link"><span><i class="fas fa-list"></i>게시판 관리</span></a>
                                 <ul class="dep2">
                                     <li><a href="../board/notice_list.html" class="dep2-link"><span>공지사항</span></a></li>
                                     <li><a href="../board/faq_list.html" class="dep2-link"><span>FAQ</span></a></li>
                                     <li><a href="../board/qna_list.html" class="dep2-link"><span>1:1 문의</span></a></li>
-                                    <li class="active"><a href="../board/terms_list.html" class="dep2-link"><span>약관</span></a></li>
+                                    <li><a href="../board/terms_list.html" class="dep2-link"><span>약관</span></a></li>
                                 </ul>
                             </li>
                             <li class="has-treeview">
@@ -120,119 +120,153 @@
                 <div class="container-fluid">
 
                     <div class="top-area mb-5">
-                        <h2 class="title">약관</h2>
+                        <h2 class="title">학생 상세</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">Home</li>
-                                <li class="breadcrumb-item">게시판 관리</li>
-                                <li class="breadcrumb-item" aria-current="page">약관</li>
+                                <li class="breadcrumb-item" aria-current="page">학생 관리</li>
                             </ol>
                         </nav>
                     </div>
 
-                    <div class="card bg-light mb-3">
-                        <div class="card-body">
-                            <div class="row align-items-center justify-content-between">
-                                <div class="col-auto">
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-auto">
+                            <h3 class="table-title mt-4 mb-3">기본 정보</h3>
+                        </div>
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-dark" style="min-width:90px">쪽지쓰기</button>
+                        </div>
+                    </div>
+                    <table class="table table-bordered table-fixed">
+                        <colgroup>
+                            <col style="width:200px">
+                            <col>
+                            <col style="width:200px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th class="text-center">ID</th>
+                                <td colspan="3">ID</td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">학생</th>
+                                <td colspan="3">이름   (남)</td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">학습센터</th>
+                                <td>학습센터명</td>
+                                <th class="text-center">사업자등록번호</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">휴대폰</th>
+                                <td colspan="3">010-1234-1234</td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">센터 전화</th>
+                                <td colspan="3">02-1234-1234</td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">이메일</th>
+                                <td colspan="3">abc@email.com</td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">센터 주소</th>
+                                <td colspan="3">01234  주소명  상세주소명</td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">수신 동의</th>
+                                <td colspan="3">
+                                    <span class="d-inline-flex align-items-center">
+                                        <input type="radio" id="email" name="receiveAgree" checked>
+                                        <label for="email" class="ml-1 mb-0">이메일</label>
+                                    </span>
+                                    <span class="d-inline-flex align-items-center ml-3">
+                                        <input type="radio" id="sms" name="receiveAgree">
+                                        <label for="sms" class="ml-1 mb-0">SMS</label>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">상태</th>
+                                <td colspan="3">
+                                    <select name="" id="" class="custom-select w-auto">
+                                        <option value="">정상</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">가입일시</th>
+                                <td>2020.12.16 12:05:50</td>
+                                <th class="text-center">최종 접속일</th>
+                                <td>2020.12.16 12:05:50</td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">바우처 시작일</th>
+                                <td>2021.01.06</td>
+                                <th class="text-center">바우처 종료일</th>
+                                <td>2021.01.06</td>
+                            </tr>
 
-                                </div>
-                                <div class="col-auto">
-                                    <div class="row row-10 align-items-center">
-                                        <div class="col-auto">
-                                            <input type="text" class="form-control">
-                                        </div>
-                                        <div class="col-auto">
-                                            <button type="button" class="btn btn-dark" style="width:90px">검색</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
+                        </tbody>
+                    </table>
+
+                    <h3 class="table-title mt-4 mb-3">활동 정보</h3>
+                    <table class="table table-bordered table-fixed">
+                        <colgroup>
+                            <col style="width:200px">
+                            <col>
+                            <col style="width:200px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th class="text-center">학생</th>
+                                <td>50명</td>
+                                <th class="text-center">학생 결제금액 (당월/누적)</th>
+                                <td>1,000,000 / 20,000,000</td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">학생</th>
+                                <td>50명</td>
+                                <th class="text-center">학생 취소금액 (당월/누적)</th>
+                                <td>1,000,000 / 20,000,000</td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">바우처 이용</th>
+                                <td>50명</td>
+                                <th class="text-center">합계 결제금액 (당월/누적)</th>
+                                <td>1,000,000 / 20,000,000</td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">문자 수 (당월/누적)</th>
+                                <td>100건/400건</td>
+                                <th class="text-center">정산금액(당월/누적)</th>
+                                <td>1,000,000 / 20,000,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="row align-items-center justify-content-between mt-3">
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-success ml-1" style="min-width:90px">수정</button>
+                        </div>
+                        <div class="col-auto">
+                            <a href="center_list.html" class="btn btn-success ml-1" style="min-width:90px">목록</a>
                         </div>
                     </div>
 
-                    <div class="gird-top">
-                        <div class="row justify-content-between align-items-end mb-2">
-                            <div class="col-auto">
-                                total <strong id="rowCount">0</strong>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="grid"></div>
-                    <div class="grid-bottom">
-                        <div class="row justify-content-between align-items-end">
-                            <div class="col-auto">
-                                <button type="button" class="btn btn-success" style="min-width:90px">삭제</button>
-                                <button type="button" class="btn btn-success ml-1" style="min-width:90px">수정</button>
-                            </div>
-                            <div class="col-auto">
-                                <a href="terms_form.html" class="btn btn-success ml-1" style="min-width:90px">글쓰기</a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-
     <!-- ui 관련 -->
     <script src="/admin/resources/js/ui.js"></script>
 
     <script>
-        //grid
-        const gridData = [
-            {
-                title: '서비스 이용약관',
-                date: '2020.12.08  12:23:45',
-            },
-            {
-                title: '개인정보 취급방침',
-                date: '2020.12.08  12:23:45',
-            },
-            {
-                title: '안내사항',
-                date: '2020.12.08  12:23:45',
-            },
-        ];
-
-        const grid = new tui.Grid({
-            el: document.getElementById('grid'),
-            data: gridData,
-            scrollX: false,
-            scrollY: false,
-            rowHeaders: ['checkbox','rowNum'],
-            columns: [
-                {
-                    header: '구분',
-                    name: 'title',
-                    align: 'center',
-                },
-                {
-                    header: '등록일시',
-                    name: 'date',
-                    align: 'center',
-                    width: 250,
-                },
-            ],
-            pageOptions: {
-                useClient: true,
-                perPage: 5
-            }
-        });
-
-        grid.on('click', function(ev) {
-            if(ev.columnName == 'title'){
-                document.location.href = 'terms_detail.html';
-            }
-        });
-        grid.on('mouseover', function(ev) {
-            if(ev.columnName == 'title'){
-                ev.nativeEvent.target.style.cursor = 'pointer';
-            }
-        });
-
-        let rowCount = grid.getRowCount();
-        document.querySelector('#rowCount').innerHTML = rowCount;
     </script>
 </body>
 </html>

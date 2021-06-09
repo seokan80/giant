@@ -42,7 +42,7 @@
                         </div>
                         <div class="col-auto">
                             <span class="name">홍길동님</span>
-                            <button type="button" class="btn btn-primary btn-sm">LOGOUT</button>
+                            <button type="button" class="btn btn-success btn-sm">LOGOUT</button>
                         </div>
                     </div>
                 </div>
@@ -259,10 +259,10 @@
                 regular: '4회',
                 custom: '3회',
                 sum: '1,088,000',
-                date1: '2020.12.08 12:23:45',
-                date2: '2020.12.08 12:23:45',
-                test1: '0020-1208-122345',
-                test2: '11,000',
+                date: '2020.12.08 \n\ 12:23:45',
+                period: '2020.12.08 \n\ 12:23:45',
+                account: '0020-1208-122345',
+                refund: '11,000',
             },
             {
                 number: '2020101712345',
@@ -275,42 +275,10 @@
                 regular: '4회',
                 custom: '3회',
                 sum: '1,088,000',
-                date1: '2020.12.08 12:23:45',
-                date2: '2020.12.08 12:23:45',
-                test1: '0020-1208-122345',
-                test2: '11,000',
-            },
-            {
-                number: '2020101712345',
-                centerName: 'ㅇㅇㅇ센터',
-                company: '106-17-12345',
-                name: '홍길동',
-                item: '8회 + 맞춤학습',
-                normal: '144,000',
-                option: '1,000,000',
-                regular: '4회',
-                custom: '3회',
-                sum: '1,088,000',
-                date1: '2020.12.08 12:23:45',
-                date2: '2020.12.08 12:23:45',
-                test1: '0020-1208-122345',
-                test2: '50,000',
-            },
-            {
-                number: '2020101712345',
-                centerName: 'ㅇㅇㅇ센터',
-                company: '106-17-12345',
-                name: '홍길동',
-                item: '8회 + 맞춤학습',
-                normal: '144,000',
-                option: '1,000,000',
-                regular: '4회',
-                custom: '3회',
-                sum: '1,088,000',
-                date1: '2020.12.08 12:23:45',
-                date2: '2020.12.08 12:23:45',
-                test1: '0020-1208-122345',
-                test2: '11,000',
+                date: '2020.12.08 \n\ 12:23:45',
+                period: '2020.12.08 \n\ 12:23:45',
+                account: '0020-1208-122345',
+                refund: '11,000',
             },
         ];
 
@@ -373,22 +341,24 @@
                 },
                 {
                     header: '취소요청일시',
-                    name: 'date1',
+                    name: 'date',
+                    align: 'center',
+                    whiteSpace: 'pre',
+                },
+                {
+                    header: '이용기간',
+                    name: 'period',
+                    align: 'center',
+                    whiteSpace: 'pre',
+                },
+                {
+                    header: '환불계좌',
+                    name: 'account',
                     align: 'center',
                 },
                 {
-                    header: '취소요청일시',
-                    name: 'date2',
-                    align: 'center',
-                },
-                {
-                    header: '취소요청일시',
-                    name: 'test1',
-                    align: 'center',
-                },
-                {
-                    header: '취소요청일시',
-                    name: 'test2',
+                    header: '환불금액',
+                    name: 'refund',
                     align: 'center',
                     editor: {
                         type: CustomTextEditor,

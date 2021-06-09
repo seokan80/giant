@@ -59,7 +59,7 @@
                             <li>
                                 <a href="../teacher/teacher_list.html" class="dep1-link"><span><i class="fas fa-chalkboard-teacher"></i>교사 관리</span></a>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a href="../center/center_list.html" class="dep1-link"><span><i class="fas fa-flag"></i>센터 관리</span></a>
                             </li>
                             <li class="has-treeview">
@@ -71,13 +71,13 @@
                                     <li><a href="" class="dep2-link"><span>커리큘럼 관리</span></a></li>
                                 </ul>
                             </li>
-                            <li class="has-treeview active open">
+                            <li class="has-treeview">
                                 <a href="" class="dep1-link"><span><i class="fas fa-list"></i>게시판 관리</span></a>
                                 <ul class="dep2">
                                     <li><a href="../board/notice_list.html" class="dep2-link"><span>공지사항</span></a></li>
                                     <li><a href="../board/faq_list.html" class="dep2-link"><span>FAQ</span></a></li>
                                     <li><a href="../board/qna_list.html" class="dep2-link"><span>1:1 문의</span></a></li>
-                                    <li class="active"><a href="../board/terms_list.html" class="dep2-link"><span>약관</span></a></li>
+                                    <li><a href="../board/terms_list.html" class="dep2-link"><span>약관</span></a></li>
                                 </ul>
                             </li>
                             <li class="has-treeview">
@@ -120,12 +120,11 @@
                 <div class="container-fluid">
 
                     <div class="top-area mb-5">
-                        <h2 class="title">약관</h2>
+                        <h2 class="title">센터 목록</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">Home</li>
-                                <li class="breadcrumb-item">게시판 관리</li>
-                                <li class="breadcrumb-item" aria-current="page">약관</li>
+                                <li class="breadcrumb-item" aria-current="page">센터 관리</li>
                             </ol>
                         </nav>
                     </div>
@@ -134,10 +133,19 @@
                         <div class="card-body">
                             <div class="row align-items-center justify-content-between">
                                 <div class="col-auto">
-
                                 </div>
                                 <div class="col-auto">
                                     <div class="row row-10 align-items-center">
+                                        <div class="col-auto">
+                                            <select name="" id="" class="custom-select">
+                                                <option value="">전체</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-auto">
+                                            <select name="" id="" class="custom-select">
+                                                <option value="">이름</option>
+                                            </select>
+                                        </div>
                                         <div class="col-auto">
                                             <input type="text" class="form-control">
                                         </div>
@@ -155,20 +163,27 @@
                             <div class="col-auto">
                                 total <strong id="rowCount">0</strong>
                             </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-secondary">탈퇴</button>
+                                <button type="button" class="btn btn-secondary ml-1">정상</button>
+                                <button type="button" class="btn btn-secondary ml-1">승인</button>
+                                <button type="button" class="btn btn-dark ml-1">바우처</button>
+                                <button type="button" class="btn btn-dark ml-1">쪽지쓰기</button>
+                            </div>
                         </div>
                     </div>
                     <div id="grid"></div>
                     <div class="grid-bottom">
                         <div class="row justify-content-between align-items-end">
                             <div class="col-auto">
-                                <button type="button" class="btn btn-success" style="min-width:90px">삭제</button>
-                                <button type="button" class="btn btn-success ml-1" style="min-width:90px">수정</button>
                             </div>
                             <div class="col-auto">
-                                <a href="terms_form.html" class="btn btn-success ml-1" style="min-width:90px">글쓰기</a>
+                                <button type="button" class="btn btn-dark" style="min-width:90px">선택 다운로드</button>
+                                <button type="button" class="btn btn-dark ml-1" style="min-width:90px">전체 다운로드</button>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -178,20 +193,24 @@
     <!-- ui 관련 -->
     <script src="/admin/resources/js/ui.js"></script>
 
+
     <script>
         //grid
         const gridData = [
             {
-                title: '서비스 이용약관',
-                date: '2020.12.08  12:23:45',
-            },
-            {
-                title: '개인정보 취급방침',
-                date: '2020.12.08  12:23:45',
-            },
-            {
-                title: '안내사항',
-                date: '2020.12.08  12:23:45',
+                id: 'abcd1234',
+                center: '센터명',
+                company: '106-17-12345',
+                name: '홍길동',
+                school: 'ㅇㅇㅇㅇ학교',
+                phone: '010-1234-1234',
+                stuendts: '351',
+                teacher: '15',
+                status: '정상',
+                use: '해당없음',
+                start: '2021.03.05',
+                termination: '2021.05.05',
+                date: '2020.12.08 \n\ 12:23:45',
             },
         ];
 
@@ -203,16 +222,66 @@
             rowHeaders: ['checkbox','rowNum'],
             columns: [
                 {
-                    header: '구분',
-                    name: 'title',
+                    header: 'ID',
+                    name: 'id',
                     align: 'center',
                 },
                 {
-                    header: '등록일시',
+                    header: '학습센터',
+                    name: 'center',
+                    align: 'center',
+                },
+                {
+                    header: '사업자등록번호',
+                    name: 'company',
+                    align: 'center',
+                },
+                {
+                    header: '센터장',
+                    name: 'name',
+                    align: 'center',
+                },
+                {
+                    header: '휴대폰번호',
+                    name: 'phone',
+                    align: 'center',
+                },
+                {
+                    header: '학생수',
+                    name: 'students',
+                    align: 'center',
+                },
+                {
+                    header: '교사수',
+                    name: 'teacher',
+                    align: 'center',
+                },
+                {
+                    header: '상태',
+                    name: 'status',
+                    align: 'center',
+                },
+                {
+                    header: '사용현황',
+                    name: 'use',
+                    align: 'center',
+                },
+                {
+                    header: '서비스시작',
+                    name: 'start',
+                    align: 'center',
+                },
+                {
+                    header: '서비스종료',
+                    name: 'termination',
+                    align: 'center',
+                },
+                {
+                    header: '가입일시',
                     name: 'date',
                     align: 'center',
-                    width: 250,
-                },
+                    whiteSpace: 'pre',
+                }
             ],
             pageOptions: {
                 useClient: true,
@@ -221,12 +290,12 @@
         });
 
         grid.on('click', function(ev) {
-            if(ev.columnName == 'title'){
-                document.location.href = 'terms_detail.html';
+            if(ev.columnName == 'center'){
+                document.location.href = 'center_detail.html';
             }
         });
         grid.on('mouseover', function(ev) {
-            if(ev.columnName == 'title'){
+            if(ev.columnName == 'center'){
                 ev.nativeEvent.target.style.cursor = 'pointer';
             }
         });
