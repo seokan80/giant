@@ -167,4 +167,6 @@ body { min-width: 1200px; }
 .address-book .select-list a { display: block; padding: .5rem 1rem; text-decoration: none; }
 
 .address-book .select-list a:hover, .address-book .select-list a:focus { background: #eee; }
+
+.btn-option-del { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); font-size: 21px; }
 /*# sourceMappingURL=style.css.map */

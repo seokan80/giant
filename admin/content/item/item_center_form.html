@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>책 읽는 거인 Admin</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="/admin/resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/admin/resources/images/favicon-128.png" sizes="128x128">
+
+    <link rel="stylesheet" href="/admin/resources/plugin/fontawesome-free/css/all.min.css">
+
+     <!-- TOAST UI -->
+    <link rel="stylesheet" href="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.css">
+    <link rel="stylesheet" href="https://uicdn.toast.com/grid/latest/tui-grid.css">
+    <link rel="stylesheet" href="https://uicdn.toast.com/tui.pagination/v3.4.0/tui-pagination.css">
+
+    <link rel="stylesheet" href="/admin/resources/css/bootstrap.css">
+    <link rel="stylesheet" href="/admin/resources/css/style.css">
+
+    <!-- jquery -->
+    <script src="/admin/resources/plugin/jquery/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="/admin/resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- TOAST UI -->
+    <script src="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.js"></script>
+    <script src="https://uicdn.toast.com/tui.code-snippet/v1.5.0/tui-code-snippet.js"></script>
+    <script src="https://uicdn.toast.com/tui.pagination/v3.3.0/tui-pagination.js"></script>
+    <script src="https://uicdn.toast.com/grid/latest/tui-grid.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header-block">
+            <div id="header">
+                <div class="container-fluid">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-auto">
+                            <h1><a href=""><img src="/admin/resources/images/logo-white.png" alt="책 읽는 거인"> 관리자</a></h1>
+                        </div>
+                        <div class="col-auto">
+                            <span class="name">홍길동님</span>
+                            <button type="button" class="btn btn-success btn-sm">LOGOUT</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="container-block">
+            <div id="side">
+                <div class="container-fluid">
+                    <div id="gnb">
+                        <ul class="dep1">
+                            <li>
+                                <a href="../student/student_list.html" class="dep1-link"><span><i class="fas fa-user-graduate"></i>학생 관리</span></a>
+                            </li>
+                            <li>
+                                <a href="../teacher/teacher_list.html" class="dep1-link"><span><i class="fas fa-chalkboard-teacher"></i>교사 관리</span></a>
+                            </li>
+                            <li>
+                                <a href="../center/center_list.html" class="dep1-link"><span><i class="fas fa-flag"></i>센터 관리</span></a>
+                            </li>
+                            <li class="has-treeview">
+                                <a href="" class="dep1-link"><span><i class="fas fa-chalkboard"></i>학습 관리</span></a>
+                                <ul class="dep2">
+                                    <li><a href="../learning/learing_list.html" class="dep2-link"><span>학습 관리</span></a></li>
+                                    <li><a href="../learning/learing_card.html" class="dep2-link"><span>학습 목록</span></a></li>
+                                    <li><a href="../learning/learing_form.html" class="dep2-link"><span>학습 등록</span></a></li>
+                                    <li><a href="" class="dep2-link"><span>커리큘럼 관리</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="has-treeview">
+                                <a href="" class="dep1-link"><span><i class="fas fa-list"></i>게시판 관리</span></a>
+                                <ul class="dep2">
+                                    <li><a href="../board/notice_list.html" class="dep2-link"><span>공지사항</span></a></li>
+                                    <li><a href="../board/faq_list.html" class="dep2-link"><span>FAQ</span></a></li>
+                                    <li><a href="../board/qna_list.html" class="dep2-link"><span>1:1 문의</span></a></li>
+                                    <li><a href="../board/terms_list.html" class="dep2-link"><span>약관</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="has-treeview">
+                                <a href="" class="dep1-link"><span><i class="fas fa-paint-brush"></i>디자인 관리</span></a>
+                                <ul class="dep2">
+                                    <li class="active"><a href="../design/main_banner_list.html" class="dep2-link"><span>메인 배너</span></a></li>
+                                    <li><a href="../design/popup_banner_list.html" class="dep2-link"><span>팝업 배너</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="has-treeview">
+                                <a href="" class="dep1-link"><span><i class="fas fa-envelope-open"></i>쪽지 관리</span></a>
+                                <ul class="dep2">
+                                    <li><a href="../message/receive_list.html" class="dep2-link"><span>받은쪽지함</span></a></li>
+                                    <li><a href="../message/send_list.html" class="dep2-link"><span>보낸쪽지함</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="has-treeview">
+                                <a href="" class="dep1-link"><span><i class="fas fa-money-check"></i>결제 관리</span></a>
+                                <ul class="dep2">
+                                    <li><a href="../payment/sales_list.html" class="dep2-link"><span>매출 관리</span></a></li>
+                                    <li><a href="../payment/cancel_list.html" class="dep2-link"><span>취소 관리</span></a></li>
+                                    <li><a href="../payment/settle_list.html" class="dep2-link"><span>정산 관리</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="has-treeview active open">
+                                <a href="" class="dep1-link"><span><i class="fas fa-heart"></i>상품 관리</span></a>
+                                <ul class="dep2">
+                                    <li><a href="../item/item_student.html" class="dep2-link"><span>학생 상품</span></a></li>
+                                    <li class="active"><a href="../item/item_center.html" class="dep2-link"><span>센터 상품</span></a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="" class="dep1-link"><span><i class="fas fa-chart-pie"></i>통계</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="content">
+                <div class="container-fluid">
+
+                    <div class="top-area mb-5">
+                        <h2 class="title">센터 상품</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">Home</li>
+                                <li class="breadcrumb-item">상품 관리</li>
+                                <li class="breadcrumb-item" aria-current="page">센터 상품</li>
+                            </ol>
+                        </nav>
+                    </div>
+
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-auto">
+                            <h3 class="table-title mt-4 mb-3">기본 정보</h3>
+                        </div>
+                        <div class="col-auto">
+                        </div>
+                    </div>
+
+                    <table class="table table-bordered table-fixed">
+                        <thead>
+                            <tr>
+                                <th class="text-center">상품 분류</th>
+                                <td>
+                                    <select name="" id="" class="custom-select">
+                                        <option value="">필수</option>
+                                        <option value="">선택</option>
+                                    </select>
+                                </td>
+                                <th class="text-center">상품명</th>
+                                <td colspan="2">
+                                    <input type="text" class="form-control">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="text-center">옵션</th>
+                                <th class="text-center">기간</th>
+                                <th class="text-center">기준가격</th>
+                                <th class="text-center">노출가격</th>
+                                <th class="text-center">할인율</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th class="text-center position-relative">
+                                    옵션 1
+                                    <a href="javascript:;" class="btn-option-del"><i class="fas fa-minus-square"></i></a>
+                                </th>
+                                <td>
+                                    <select name="" id="" class="custom-select">
+                                        <option value="">1개월</option>
+                                        <option value="">3개월</option>
+                                        <option value="">6개월</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control text-right">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control text-right">
+                                </td>
+                                <td class="text-center">
+                                    할인률 자동 계산
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="grid-bottom">
+                        <div class="row justify-content-between align-items-end">
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-success" style="min-width:90px">옵션추가</button>
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-success" style="min-width:90px">등록하기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ui 관련 -->
+    <script src="/admin/resources/js/ui.js"></script>
+
+    <script>
+    </script>
+</body>
+</html>

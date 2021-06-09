@@ -524,7 +524,7 @@ mark, .mark { padding: 0.2em; background-color: #fcf8e3; }
 
 .table th { background-color: #f5f5f5; }
 
-.table thead th { vertical-align: bottom; border-bottom: 1px solid #333; }
+.table thead th { border-bottom: 1px solid #333; }
 
 .table > thead th { background: #f7f7f7; }
 
@@ -706,7 +706,7 @@ textarea.form-control { height: auto; }
 
 .form-check-input { position: absolute; margin-top: 0.3rem; margin-left: -1.25rem; }
 
-.form-check-input:disabled ~ .form-check-label { color: #666666; }
+.form-check-input:disabled ~ .form-check-label { color: #999; }
 
 .form-check-label { margin-bottom: 0; }
 
@@ -3193,7 +3193,7 @@ a.text-darkgray:hover, a.text-darkgray:focus { color: #2f2f2f !important; }
 
 .text-body { color: #212529 !important; }
 
-.text-muted { color: #666666 !important; }
+.text-muted { color: #999 !important; }
 
 .text-black-50 { color: rgba(0, 0, 0, 0.5) !important; }
 
