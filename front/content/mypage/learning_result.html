@@ -117,6 +117,7 @@
                                 <a href="payment_management.html" class="">결제 관리</a>
                                 <a href="learning_result.html" class="active">학습결과</a>
                                 <a href="message_list.html" class="">쪽지함</a>
+                                <a href="sms.html" class="">문자전송</a>
                             </div>
                         </div>
                         <div class="right">
@@ -165,8 +166,8 @@
                             <div class="mb-5">
                                 <div class="tabbed round">
                                     <ul>
-                                        <li class="active"><a href="#none">정규학습</a></li>
-                                        <li><a href="#none">맞춤학습</a></li>
+                                        <li class="active"><a href="learning_result.html">정규학습</a></li>
+                                        <li><a href="learning_result_custom.html">맞춤학습</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -178,14 +179,16 @@
                             <div id="chart-area2"></div>
 
                             <div class="comment-area">
-                                <h3 class="tit">선생님 코멘트</h3>
-                                <div class="row row-10">
-                                    <div class="col">
-                                        <textarea name="" id="" cols="" rows="3" class="form-control"></textarea>
+                                <div class="row justify-content-between align-items-center mb-2">
+                                    <div class="col-auto">
+                                        <h3 class="tit">선생님 코멘트</h3>
                                     </div>
                                     <div class="col-auto">
-                                        <button class="btn btn-dark">확인</button>
+                                        <button class="btn btn-gray">등록</button>
                                     </div>
+                                </div>
+                                <div>
+                                    <textarea name="" id="" cols="" rows="3" class="form-control"></textarea>
                                 </div>
                             </div>
                             <div class="comment-list">
@@ -312,6 +315,11 @@
                     align: 'bottom',
                 },
                 series: { stack: { type: 'normal' } },
+                theme: {
+                    series: {
+                        colors: ['#a3cc79', '#de90d9', '#e99c6e', '#a6abd4', '#9dcdf6', '#fbd35d', '#ee6581']
+                    }
+                }
             };
 
             const chart = toastui.Chart.columnChart({ el, data, options });
@@ -346,6 +354,11 @@
                 legend: {
                     align: 'bottom',
                 },
+                theme: {
+                    series: {
+                        colors: ['#9dcdf6', '#a3cc79', '#ba8b90']
+                    }
+                }
             };
 
             const chart = toastui.Chart.columnLineChart({ el, data, options });

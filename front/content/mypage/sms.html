@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>책 읽는 거인</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="/front/resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/front/resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="/front/resources/plugin/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="/front/resources/plugin/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="/front/resources/plugin/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="/front/resources/css/bootstrap.css">
+    <link rel="stylesheet" href="/front/resources/css/style.css">
+    <!-- jquery -->
+    <script src="/front/resources/plugin/jquery/jquery.min.js"></script>
+    <!-- jquery ui -->
+    <script src="/front/resources/plugin/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="/front/resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper -->
+    <script src="/front/resources/plugin/swiper/js/swiper.min.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header-block">
+            <div id="header">
+                <div class="container">
+                    <div class="header-wrap">
+                        <h1 class="logo"><a href="/front/content/main/main.html"><span class="sr-only">책 읽는 거인</span></a></h1>
+                        <div class="mobile-header-group">
+                            <div class="h-set">
+                                <div class="h-menu">
+                                    <ul>
+                                        <li><a href="/front/content/login/login.html">로그인</a></li>
+                                        <li><a href="/front/content/join/agree.html">회원가입</a></li>
+                                        <li class="active"><a href="/front/content/mypage/mypage_before.html">홍길동님</a></li>
+                                        <li><a href="/front/content/login/login.html">로그아웃</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="gnb">
+                                <ul class="dep1">
+                                    <li>
+                                        <a href="/front/content/company/about.html"><span>회사소개</span></a>
+                                        <ul class="dep2">
+                                            <li><a href="/front/content/company/about.html"><span>회사소개</span></a></li>
+                                            <li><a href="/front/content/company/history.html"><span>연혁</span></a></li>
+                                            <li><a href="/front/content/company/flow.html"><span>학습 FLOW</span></a></li>
+                                            <li><a href="/front/content/company/location.html"><span>오시는 길</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="/front/content/giant/giant1.html"><span>책읽는 거인</span></a>
+                                        <ul class="dep2">
+                                            <li><a href="/front/content/giant/giant1.html"><span>몰입독서법</span></a></li>
+                                            <li><a href="/front/content/giant/giant2.html"><span>사유독평</span></a></li>
+                                            <li><a href="/front/content/giant/giant3.html"><span>독해력훈련</span></a></li>
+                                            <li><a href="/front/content/giant/giant4.html"><span>어휘력훈련</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/front/content/customer/notice.html"><span>고객센터</span></a>
+                                        <ul class="dep2">
+                                            <li><a href="/front/content/customer/notice.html"><span>공지사항</span></a></li>
+                                            <li><a href="/front/content/customer/faq.html"><span>FAQ</span></a></li>
+                                            <li><a href="/front/content/customer/qna.html"><span>1:1 문의</span></a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mobile-menu d-lg-none">
+                            <a role="button" data-id="btn-hamburger"><i class="btn-hamburger"><span class="sr-only">메뉴</span></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="container-block">
+            <div id="container">
+                <div class="container">
+
+                    <!-- 실 컨텐츠 -->
+                    <div class="mypage">
+                        <div class="side">
+                            <div class="user">
+                                <div class="profile-wrap">
+                                    <div class="profile"> <!-- 이미지 있을때 .has-img 추가 -->
+                                        <!-- <img src="/front/resources/images/@portrait.png" alt=""> -->
+                                        <a href="javascript:;" class="btn-upload"><i class="icon-camera"><span class="sr-only">사진등록</span></i></a>
+                                    </div>
+                                </div>
+                                <div class="name">홍길동</div>
+                            </div>
+                            <dl class="info">
+                                <dt><i class="fas fa-flag"><span class="sr-only">센터</span></i></dt>
+                                <dd>센터명</dd>
+                                <dt><i class="fas fa-school"><span class="sr-only">학교</span></i></dt>
+                                <dd>학교명</dd>
+                                <dt><i class="fas fa-user-graduate"><span class="sr-only">학년</span></i></dt>
+                                <dd>n학년</dd>
+                            </dl>
+                             <div class="btns">
+                                <a href="mypage_after.html" class="">학습진도</a>
+                                <a href="myinfo.html" class="">내 정보</a>
+                                <a href="student_info.html" class="">학생 정보</a>
+                                <a href="teacher_info.html" class="">교사 정보</a>
+                                <a href="approval_management_student.html" class="">승인 관리</a>
+                                <a href="payment.html" class="">이용권 구매</a>
+                                <a href="payment_management.html" class="">결제 관리</a>
+                                <a href="learning_result.html" class="">학습결과</a>
+                                <a href="message_list.html" class="">쪽지함</a>
+                                <a href="sms.html" class="active">문자전송</a>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="top-area">
+                                <div class="row justify-content-between align-items-center">
+                                    <div class="col-auto">
+                                        <h2 class="mb-0">문자전송</h2>
+                                    </div>
+                                    <div class="col-auto">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-between align-items-center mb-2 mb-lg-3">
+                                <div class="col-auto order-2 order-md-1 mt-2 mt-md-0">
+                                    <div class="list-count mb-0"></div>
+                                </div>
+                                <div class="col-auto order-1 order-md-2">
+                                    <div class="search-form">
+                                        <div class="row row-8">
+                                            <div class="col-4 col-sm-auto">
+                                                <select name="" id="" class="custom-select">
+                                                    <option value="">학교</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-4 col-sm-auto">
+                                                <select name="" id="" class="custom-select">
+                                                    <option value="">학년</option>
+                                                </select>
+                                            </div>
+                                            <div class="col col-sm-auto mt-2 mt-sm-0">
+                                                <input type="text" class="form-control" placeholder="검색어 입력">
+                                            </div>
+                                            <div class="col-auto mt-2 mt-sm-0">
+                                                <button type="submit" class="btn btn-dark">검색</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sms-top mt-4">
+                                <div class="row row-15">
+                                    <div class="col">
+                                        <h3 class="subtitle-sm mb-3">학생 목록</h3>
+                                        <div class="table-header-fixed">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="text-center">
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input class="custom-control-input" type="checkbox" id="chkList1">
+                                                                <label for="chkList1" class="custom-control-label"></label>
+                                                            </div>
+                                                        </th>
+                                                        <th class="text-center">No</th>
+                                                        <th class="text-center">학생</th>
+                                                        <th class="text-center">아이디</th>
+                                                        <th class="text-center">학부모 핸드폰</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input class="custom-control-input" type="checkbox" id="chkList1">
+                                                                <label for="chkList1" class="custom-control-label"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-center">1</td>
+                                                        <td class="text-center">홍길동</td>
+                                                        <td class="text-center">idididididid</td>
+                                                        <td class="text-center">010-1234-1234</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input class="custom-control-input" type="checkbox" id="chkList1">
+                                                                <label for="chkList1" class="custom-control-label"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-center">1</td>
+                                                        <td class="text-center">홍길동</td>
+                                                        <td class="text-center">idididididid</td>
+                                                        <td class="text-center">010-1234-1234</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input class="custom-control-input" type="checkbox" id="chkList1">
+                                                                <label for="chkList1" class="custom-control-label"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-center">1</td>
+                                                        <td class="text-center">홍길동</td>
+                                                        <td class="text-center">idididididid</td>
+                                                        <td class="text-center">010-1234-1234</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input class="custom-control-input" type="checkbox" id="chkList1">
+                                                                <label for="chkList1" class="custom-control-label"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-center">1</td>
+                                                        <td class="text-center">홍길동</td>
+                                                        <td class="text-center">idididididid</td>
+                                                        <td class="text-center">010-1234-1234</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input class="custom-control-input" type="checkbox" id="chkList1">
+                                                                <label for="chkList1" class="custom-control-label"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-center">1</td>
+                                                        <td class="text-center">홍길동</td>
+                                                        <td class="text-center">idididididid</td>
+                                                        <td class="text-center">010-1234-1234</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input class="custom-control-input" type="checkbox" id="chkList1">
+                                                                <label for="chkList1" class="custom-control-label"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-center">1</td>
+                                                        <td class="text-center">홍길동</td>
+                                                        <td class="text-center">idididididid</td>
+                                                        <td class="text-center">010-1234-1234</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            <div class="custom-control custom-checkbox">
+                                                                <input class="custom-control-input" type="checkbox" id="chkList1">
+                                                                <label for="chkList1" class="custom-control-label"></label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="text-center">1</td>
+                                                        <td class="text-center">홍길동</td>
+                                                        <td class="text-center">idididididid</td>
+                                                        <td class="text-center">010-1234-1234</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="sms-arrow">
+                                            <a href=""><i class="icon-select-right"></i></a>
+                                            <a href=""><i class="icon-select-left"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <h3 class="subtitle-sm mb-3">받는사람</h3>
+                                        <div class="table-header-fixed">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th>
+                                                            <div class="row justify-content-between align-items-center">
+                                                                <div class="col-auto">
+                                                                    받는사람
+                                                                </div>
+                                                                <div class="col-auto">
+                                                                    0명
+                                                                </div>
+                                                            </div>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>010-1233-1234</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <h3 class="subtitle-sm mb-3">SMS/LMS</h3>
+                                        <div class="sms">
+                                            <div class="byte"><span>4</span>byte</div>
+                                            <div class="input">
+                                                <textarea name="" id="" cols="" rows="" class="form-control"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center mt-7">
+                                    <button type="button" class="btn btn-success">발송</button>
+                                </div>
+                            </div>
+
+                            <h3 class="subtitle-sm mb-3 mt-6">최근 발송 내역</h3>
+                            <table class="table table-bordered table-fixed">
+                                <colgroup>
+                                    <col style="width:50px">
+                                    <col style="width:140px">
+                                    <col style="width:80px">
+                                    <col>
+                                    <col style="width:70px">
+                                    <col style="width:90px">
+                                    <col style="width:70px">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">No</th>
+                                        <th class="text-center">발송일시</th>
+                                        <th class="text-center">받는사람</th>
+                                        <th class="text-center">내용</th>
+                                        <th class="text-center">Byte</th>
+                                        <th class="text-center">구분</th>
+                                        <th class="text-center">관리</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center">10</td>
+                                        <td class="text-center">2021-03-01 12:23</td>
+                                        <td class="text-center">27명</td>
+                                        <td class="text-left text-truncate">[문자발송] 이번 주 프로그램을 ...</td>
+                                        <td class="text-center">50byte</td>
+                                        <td class="text-center">발송완료</td>
+                                        <td class="text-center">
+                                            <button type="button" class="btn btn-gray btn-sm" data-toggle="modal" data-target="#modal-sms-detail">상세</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <nav class="text-center">
+                                <ul class="pagination">
+                                    <li class="page-item page-arrow disabled">
+                                        <a class="page-link" href="#"><span class="sr-only">이전</span><i class="fas fa-angle-left"></i></a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item active"><a class="page-link" href="#">2 <span class="sr-only">(current)</span></a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                    <li class="page-item page-arrow">
+                                        <a class="page-link" href="#"><span class="sr-only">다음</span><i class="fas fa-angle-right"></i></a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <!-- //실 컨텐츠 -->
+
+                </div>
+            </div>
+        </div>
+        <div id="footer-block">
+            <div id="footer">
+                <div class="container">
+                    <ul class="f-menu">
+                        <li><a href="/front/content/company/about.html">회사소개</a></li>
+                        <li><a href="/front/content/util/terms.html">이용약관</a></li>
+                        <li><a href="/front/content/util/privacy.html"><strong>개인정보취급방침</strong></a></li>
+                    </ul>
+                    <div class="f-info">
+                        회사명 : 주식회사 메타스콜레   대표이사 : 정해영   사업자등록번호 : 856-88-01642   이메일 : metas@metaschole.co.kr <br>
+                        팩스 : 02-553-3482  문의전화 : 1688-3482  주소 : (우:06197) 서울특별시 강남구 역삼로 423 7층 (대치동, 화남빌딩)
+                    </div>
+                    <p class="copyright">Copyright ⓒ All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- modal : 상세 -->
+   <div class="modal" id="modal-sms-detail" tabindex="-1" aria-modal="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content">
+            <div class="modal-header bg-success">
+                <h5 class="modal-title">상세</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table font-size-14px">
+                    <thead>
+                        <tr>
+                            <th class="text-center">연변?</th>
+                            <th class="text-center">연락처</th>
+                            <th class="text-center">결과</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">1</td>
+                            <td class="text-center">000-0000-0000</td>
+                            <td class="text-center">알림톡</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">1</td>
+                            <td class="text-center">000-0000-0000</td>
+                            <td class="text-center">알림톡</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">1</td>
+                            <td class="text-center">000-0000-0000</td>
+                            <td class="text-center">알림톡</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">1</td>
+                            <td class="text-center">000-0000-0000</td>
+                            <td class="text-center">알림톡</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">1</td>
+                            <td class="text-center">000-0000-0000</td>
+                            <td class="text-center">알림톡</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="text-center mt-4">
+                    <button type="button" class="btn btn-success">수정</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- ui 관련 -->
+    <script src="/front/resources/js/ui.js"></script>
+
+    <script>
+    </script>
+</body>
+</html>

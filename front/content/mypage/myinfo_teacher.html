@@ -126,115 +126,143 @@
                                     <div class="col-auto">
                                         <h2 class="mb-0">내 정보</h2>
                                     </div>
-                                    <div class="col-auto"></div>
+                                    <div class="col-auto">
+                                        <p class="text-danger">※ 별표는 필수 기재 사항입니다.</p>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="myinfo-wrap">
-                                <div class="myinfo-title">
-                                    <i class="icon-info"></i>
-                                    <h3>회원정보</h3>
+                            <div class="form border-0 p-0">
+                                <div class="inner">
+                                    <div class="form-group row row-10">
+                                        <label for="" class="col-sm-3 col-form-label"><i class="text-danger">*</i>학습 센터 정보</label>
+                                        <div class="col">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control border-right-0" placeholder="학습 센터 선택">
+                                                <div class="input-group-append">
+                                                    <a href="" class="input-group-text bg-white"><i class="icon-search"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row row-10 align-items-center">
+                                        <label for="" class="col-sm-3 col-form-label"><i class="text-danger">*</i>이름</label>
+                                        <div class="col col-sm-4">
+                                            <input type="text" class="form-control" placeholder="이름 (변경불가)">
+                                        </div>
+                                        <div class="col-auto">
+                                            <div class="custom-control custom-radio custom-control-inline ml-sm-3">
+                                                <input class="custom-control-input" type="radio" name="gender" id="male">
+                                                <label for="male" class="custom-control-label">남</label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input class="custom-control-input" type="radio" name="gender" id="female">
+                                                <label for="female" class="custom-control-label">여</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row row-10">
+                                        <label for="" class="col-sm-3 col-form-label"><i class="text-danger">*</i>아이디</label>
+                                        <div class="col">
+                                            <input type="text" class="form-control" placeholder="아이디">
+                                        </div>
+                                        <div class="col-auto">
+                                            <button class="btn btn-dark">중복확인</button>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row row-10">
+                                        <label for="" class="col-sm-3 col-form-label"><i class="text-danger">*</i>비밀번호</label>
+                                        <div class="col">
+                                            <input type="password" class="form-control" placeholder="비밀번호">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row row-10">
+                                        <label for="" class="col-sm-3 col-form-label"><i class="text-danger">*</i>비밀번호 확인</label>
+                                        <div class="col">
+                                            <input type="password" class="form-control" placeholder="비밀번호 확인">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row row-10">
+                                        <label for="" class="col-sm-3 col-form-label"><i class="text-danger">*</i>휴대폰</label>
+                                        <div class="col">
+                                            <div class="row row-10 align-items-center">
+                                                <div class="col">
+                                                    <input type="tel" class="form-control">
+                                                </div>
+                                                <div class="col-auto">-</div>
+                                                <div class="col">
+                                                    <input type="tel" class="form-control">
+                                                </div>
+                                                <div class="col-auto">-</div>
+                                                <div class="col">
+                                                    <input type="tel" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row row-10">
+                                        <label for="" class="col-sm-3 col-form-label">이메일</label>
+                                        <div class="col">
+                                            <div class="row row-10 align-items-center">
+                                                <div class="col">
+                                                    <input type="email" class="form-control">
+                                                </div>
+                                                <div class="col-auto">@</div>
+                                                <div class="col">
+                                                    <input type="email" class="form-control">
+                                                </div>
+                                                <div class="col-auto">
+                                                    <select name="" id="" class="custom-select">
+                                                        <option value="">직접입력</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row row-10">
+                                        <label for="" class="col-sm-3 col-form-label">주소</label>
+                                        <div class="col">
+                                            <div class="row row-10">
+                                                <div class="col-auto">
+                                                    <button class="btn btn-dark">우편번호 찾기</button>
+                                                </div>
+                                                <div class="col">
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row row-10 mt-2">
+                                                <div class="col">
+                                                    <input type="text" class="form-control" placeholder="주소명">
+                                                </div>
+                                                <div class="col">
+                                                    <input type="text" class="form-control" placeholder="상세주소">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row row-10 align-items-center mb-0">
+                                        <label for="" class="col-sm-3 col-form-label">이메일 수신동의</label>
+                                        <div class="col">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input class="custom-control-input" type="checkbox" id="emailAgree">
+                                                <label for="emailAgree" class="custom-control-label">이메일 수신을 동의합니다.</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row row-10 align-items-center">
+                                        <label for="" class="col-sm-3 col-form-label">SMS 수신동의</label>
+                                        <div class="col">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input class="custom-control-input" type="checkbox" id="smsAgree">
+                                                <label for="smsAgree" class="custom-control-label">SMS 수신을 동의합니다.</label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="myinfo">
-                                    <div class="row align-items-center">
-                                        <div class="col-4 col-md-auto">
-                                            <label>이름</label>
-                                        </div>
-                                        <div class="col-8 col-md">
-                                            <div>오라라</div>
-                                        </div>
-                                        <div class="col-4 col-md-auto">
-                                            <label>휴대폰</label>
-                                        </div>
-                                        <div class="col-8 col-md">
-                                            <div>000-0000-0000</div>
-                                        </div>
-                                    </div>
-                                    <div class="row align-items-center">
-                                        <div class="col-4 col-md-auto">
-                                            <label>보호자 성명</label>
-                                        </div>
-                                        <div class="col-8 col-md">
-                                            <div>라라맘</div>
-                                        </div>
-                                        <div class="col-4 col-md-auto">
-                                            <label>보호자 휴대폰</label>
-                                        </div>
-                                        <div class="col-8 col-md">
-                                            <div>000-0000-0000</div>
-                                        </div>
-                                    </div>
-                                    <div class="row align-items-center">
-                                        <div class="col-4 col-md-auto">
-                                            <label>학교</label>
-                                        </div>
-                                        <div class="col-8 col-md">
-                                            <div>라라초등학교</div>
-                                        </div>
-                                        <div class="col-4 col-md-auto">
-                                            <label>학년</label>
-                                        </div>
-                                        <div class="col-8 col-md">
-                                            <div>5학년</div>
-                                        </div>
-                                    </div>
-                                    <div class="row align-items-center">
-                                        <div class="col-4 col-md-auto">
-                                            <label>센터명</label>
-                                        </div>
-                                        <div class="col-8 col-md">
-                                            <div>대치센터</div>
-                                        </div>
-                                        <div class="col-4 col-md-auto">
-                                            <label>담당 교사</label>
-                                        </div>
-                                        <div class="col-8 col-md">
-                                            <div>오수진 교사</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="text-center mt-3">
-                                    <a href="myinfo_form.html" class="btn btn-dark btn-lg">회원정보 수정</a>
-                                </div>
+                            </div>
 
-                                <div class="myinfo-title">
-                                    <i class="icon-book"></i>
-                                    <h3>학습 정보</h3>
-                                </div>
-                                <table class="table">
-                                    <caption>공지사항</caption>
-                                    <thead>
-                                        <tr>
-                                            <th class="text-center">구분</th>
-                                            <th class="text-center">레벨</th>
-                                            <th class="text-center">신청 학습</th>
-                                            <th class="text-center">완료 학습</th>
-                                            <th class="text-center">남은 학습</th>
-                                            <th class="text-center">학습 종료일</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="text-center">정규학습</td>
-                                            <td class="text-center">3</td>
-                                            <td class="text-center">24</td>
-                                            <td class="text-center">12</td>
-                                            <td class="text-center">12</td>
-                                            <td class="text-center">21.06.05</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center">맞춤학습</td>
-                                            <td class="text-center">3</td>
-                                            <td class="text-center">24</td>
-                                            <td class="text-center">12</td>
-                                            <td class="text-center">12</td>
-                                            <td class="text-center">21.06.05</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div class="text-center mt-3">
-                                    <a href="" class="btn btn-dark btn-lg">학습기간 연장</a>
-                                </div>
+                            <div class="text-center mt-5">
+                                <a href="" class="btn btn-success btn-lg">회원정보 수정</a>
                             </div>
                         </div>
                     </div>

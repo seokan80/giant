@@ -21,6 +21,11 @@
     <script src="/front/resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Swiper -->
     <script src="/front/resources/plugin/swiper/js/swiper.min.js"></script>
+    <!-- TOAST UI -->
+    <link rel="stylesheet" href="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.css">
+    <script src="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.js"></script>
+    <link rel="stylesheet" href="https://uicdn.toast.com/chart/latest/toastui-chart.min.css" />
+    <script src="https://uicdn.toast.com/chart/latest/toastui-chart.min.js"></script>
 </head>
 
 <body>
@@ -105,12 +110,12 @@
                              <div class="btns">
                                 <a href="mypage_after.html" class="">학습진도</a>
                                 <a href="myinfo.html" class="">내 정보</a>
-                                <a href="student_info.html" class="active">학생 정보</a>
+                                <a href="student_info.html" class="">학생 정보</a>
                                 <a href="teacher_info.html" class="">교사 정보</a>
                                 <a href="approval_management_student.html" class="">승인 관리</a>
                                 <a href="payment.html" class="">이용권 구매</a>
                                 <a href="payment_management.html" class="">결제 관리</a>
-                                <a href="learning_result.html" class="">학습결과</a>
+                                <a href="learning_result.html" class="active">학습결과</a>
                                 <a href="message_list.html" class="">쪽지함</a>
                                 <a href="sms.html" class="">문자전송</a>
                             </div>
@@ -119,65 +124,118 @@
                             <div class="top-area">
                                 <div class="row justify-content-between align-items-center">
                                     <div class="col-auto">
-                                        <h2 class="mb-0">학생 정보</h2>
+                                        <h2 class="mb-0">학습결과</h2>
                                     </div>
                                     <div class="col-auto">
                                     </div>
                                 </div>
                             </div>
+
                             <div class="row justify-content-between align-items-center mb-2 mb-lg-3">
                                 <div class="col-auto">
-                                    <div class="list-count mb-0">맞춤학습 지정</div>
                                 </div>
                                 <div class="col-auto">
-                                    <div class="list-count mb-0">오수진 학생 /  Lv5</div>
+                                    <div class="search-form">
+                                        <div class="row row-8 align-items-center">
+                                            <div class="col-auto pr-3">
+                                                <select name="" id="" class="custom-select">
+                                                    <option value="">레벨</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-auto">
+                                                <select name="" id="" class="custom-select">
+                                                    <option value="">1회</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-auto">
+                                                ~
+                                            </div>
+                                            <div class="col-auto">
+                                                <select name="" id="" class="custom-select">
+                                                    <option value="">현재회차</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-auto">
+                                                <button type="submit" class="btn btn-dark">조회하기</button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="progress-list">
-                                <div class="row row-20">
-                                    <div class="col-6 col-lg-3">
-                                        <div class="item">
-                                            <div class="item-header">
-                                                <div class="num">01</div>
-                                            </div>
-                                            <div class="item-body">
-                                                <div class="group">
-                                                    <button type="button" class="btn btn-success btn-block" disabled="">교과서 독해 3-10</button>
-                                                    <button type="button" class="btn btn-success btn-block" disabled="">비문학 독해 4-12</button>
-                                                    <button type="button" class="btn btn-success btn-block" disabled="">독해 다지기 2-8</button>
-                                                    <button type="button" class="btn btn-success btn-block" disabled="">어휘력 훈련 3-7</button>
-                                                </div>
-                                            </div>
-                                        </div>
+
+                            <div class="mb-5">
+                                <div class="tabbed round">
+                                    <ul>
+                                        <li><a href="learning_result.html">정규학습</a></li>
+                                        <li class="active"><a href="learning_result_custom.html">맞춤학습</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h3 class="subtitle-sm mt-8">맞춤학습</h3>
+                            <div id="chart-area1"></div>
+
+                            <div class="comment-area">
+                                <div class="row justify-content-between align-items-center mb-2">
+                                    <div class="col-auto">
+                                        <h3 class="tit">선생님 코멘트</h3>
                                     </div>
-                                    <div class="col-6 col-lg-3">
-                                        <div class="item">
-                                            <div class="item-header">
-                                                <div class="num">02</div>
-                                            </div>
-                                            <div class="item-body">
-                                                <div class="group">
-                                                    <button type="button" class="btn btn-success btn-block" disabled="">교과서 독해 3-10</button>
-                                                    <button type="button" class="btn btn-success btn-block" disabled="">비문학 독해 4-12</button>
-                                                    <button type="button" class="btn btn-success btn-block" disabled="">독해 다지기 2-8</button>
-                                                    <button type="button" class="btn btn-success btn-block" disabled="">어휘력 훈련 3-7</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-6 col-lg-3">
-                                        <div class="item">
-                                            <div class="item-header">
-                                                <div class="num">03</div>
-                                            </div>
-                                            <div class="item-body">
-                                                <div class="group">
-                                                    <button type="button" class="btn btn-success btn-block" data-toggle="modal" data-target="#modal-custom">등록하기</button>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="col-auto">
+                                        <button class="btn btn-gray">등록</button>
                                     </div>
                                 </div>
+                                <div>
+                                    <textarea name="" id="" cols="" rows="3" class="form-control"></textarea>
+                                </div>
+                            </div>
+                            <div class="comment-list">
+                                <table class="table">
+                                    <colgroup>
+                                        <col>
+                                        <col style="width:120px">
+                                        <col>
+                                        <col>
+                                        <col style="width:140px">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">33</td>
+                                            <td>LEVEL.3-11회</td>
+                                            <td>친창합니다.</td>
+                                            <td class="text-center">오수진</td>
+                                            <td class="text-center">21.04.13 [11:43]</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">33</td>
+                                            <td>LEVEL.3-11회</td>
+                                            <td>항상 성실함으로 좋은 모습 보여주는.....</td>
+                                            <td class="text-center">오수진</td>
+                                            <td class="text-center">21.04.13 [11:43]</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">33</td>
+                                            <td>LEVEL.3-11회</td>
+                                            <td>친창합니다.</td>
+                                            <td class="text-center">오수진</td>
+                                            <td class="text-center">21.04.13 [11:43]</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <nav class="text-center">
+                                    <ul class="pagination">
+                                        <li class="page-item page-arrow disabled">
+                                            <a class="page-link" href="#"><span class="sr-only">이전</span><i class="fas fa-angle-left"></i></a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item active"><a class="page-link" href="#">2 <span class="sr-only">(current)</span></a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                        <li class="page-item page-arrow">
+                                            <a class="page-link" href="#"><span class="sr-only">다음</span><i class="fas fa-angle-right"></i></a>
+                                        </li>
+                                    </ul>
+                                </nav>
                             </div>
                         </div>
                     </div>
@@ -205,105 +263,51 @@
         </div>
     </div>
 
-    <!-- modal : 등록하기 -->
-    <div class="modal" id="modal-custom" tabindex="-1" aria-modal="true">
-        <div class="modal-dialog modal-dialog-centered modal-sm">
-            <div class="modal-content">
-                <div class="modal-header bg-success">
-                    <h5 class="modal-title">등록하기</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group row row-10 align-items-center">
-                        <div class="col-auto">
-                            <label for="" class="font-weight-bold mb-0" style="width:68px">교과서독해</label>
-                        </div>
-                        <div class="col">
-                            <div class="row row-10">
-                                <div class="col">
-                                    <select name="" id="" class="custom-select">
-                                        <option value="">Level 3</option>
-                                    </select>
-                                </div>
-                                <div class="col-auto">
-                                    <select name="" id="" class="custom-select">
-                                        <option value="">10회</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group row row-10 align-items-center">
-                        <div class="col-auto">
-                            <label for="" class="font-weight-bold mb-0" style="width:68px">비문학독해</label>
-                        </div>
-                        <div class="col">
-                            <div class="row row-10">
-                                <div class="col">
-                                    <select name="" id="" class="custom-select">
-                                        <option value="">Level 3</option>
-                                    </select>
-                                </div>
-                                <div class="col-auto">
-                                    <select name="" id="" class="custom-select">
-                                        <option value="">10회</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group row row-10 align-items-center">
-                        <div class="col-auto">
-                            <label for="" class="font-weight-bold mb-0" style="width:68px">독해다지기</label>
-                        </div>
-                        <div class="col">
-                            <div class="row row-10">
-                                <div class="col">
-                                    <select name="" id="" class="custom-select">
-                                        <option value="">Level 3</option>
-                                    </select>
-                                </div>
-                                <div class="col-auto">
-                                    <select name="" id="" class="custom-select">
-                                        <option value="">10회</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group row row-10 align-items-center">
-                        <div class="col-auto">
-                            <label for="" class="font-weight-bold mb-0" style="width:68px">어휘력훈련</label>
-                        </div>
-                        <div class="col">
-                            <div class="row row-10">
-                                <div class="col">
-                                    <select name="" id="" class="custom-select">
-                                        <option value="">Level 3</option>
-                                    </select>
-                                </div>
-                                <div class="col-auto">
-                                    <select name="" id="" class="custom-select">
-                                        <option value="">10회</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-center mt-4">
-                        <button type="button" class="btn btn-success">등록</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- ui 관련 -->
     <script src="/front/resources/js/ui.js"></script>
 
     <script>
+        columnLineChart();
+
+        function columnLineChart(){
+            const el = document.getElementById('chart-area1');
+            const data = {
+                categories: ['1회', '2회', '3회', '4회', '5회', '6회', '7회'],
+                series: {
+                    column: [
+                        {
+                            name: '독해다지기',
+                            data: [11.3, 17.0, 21.0, 24.4, 25.2, 20.4, 13.9],
+                            color: '#000'
+                        },
+                        {
+                            name: '비문학독해',
+                            data: [9.9, 16.0, 21.2, 24.2, 23.2, 19.4, 13.3],
+                        },
+                    ],
+                    line: [
+                        {
+                            name: '읽기속도(독해)',
+                            data: [14, 16.1, 17.8, 19.7, 30.5, 16.5, 12.3],
+                        },
+                    ],
+                },
+            };
+            const options = {
+                chart: { width: '100%', height: 300 },
+                exportMenu: { visible: false },
+                legend: {
+                    align: 'bottom',
+                },
+                theme: {
+                    series: {
+                        colors: ['#a6abd4', '#e99c6e', '#ba8b90']
+                    }
+                }
+            };
+
+            const chart = toastui.Chart.columnLineChart({ el, data, options });
+        }
     </script>
 </body>
 </html>

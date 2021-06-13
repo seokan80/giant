@@ -21,6 +21,11 @@
     <script src="/front/resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Swiper -->
     <script src="/front/resources/plugin/swiper/js/swiper.min.js"></script>
+    <!-- TOAST UI -->
+    <link rel="stylesheet" href="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.css">
+    <script src="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.js"></script>
+    <link rel="stylesheet" href="https://uicdn.toast.com/chart/latest/toastui-chart.min.css" />
+    <script src="https://uicdn.toast.com/chart/latest/toastui-chart.min.js"></script>
 </head>
 
 <body>
@@ -103,8 +108,8 @@
                                 <dd>n학년</dd>
                             </dl>
                              <div class="btns">
-                                <a href="mypage_after.html" class="active">학습진도</a>
-                                <a href="myinfo.html" class="">내 정보</a>
+                                <a href="mypage_after.html" class="">학습진도</a>
+                                <a href="myinfo.html" class="active">내 정보</a>
                                 <a href="student_info.html" class="">학생 정보</a>
                                 <a href="teacher_info.html" class="">교사 정보</a>
                                 <a href="approval_management_student.html" class="">승인 관리</a>
@@ -115,33 +120,127 @@
                                 <a href="sms.html" class="">문자전송</a>
                             </div>
                         </div>
-
                         <div class="right">
-                            <div class="mypage-test">
-                                <div class="levelup">
-                                    <div class="bar">
-                                        <strong>level up!</strong>
-                                        <img src="/front/resources/images/img-test-bar.png" alt="">
-                                        <div class="marker1"></div>
-                                        <div class="marker2"></div>
-                                        <div class="marker3"></div>
-                                        <div class="marker4"></div>
+                            <div class="top-area">
+                                <div class="row justify-content-between align-items-center">
+                                    <div class="col-auto">
+                                        <h2 class="mb-0">내 정보</h2>
+                                    </div>
+                                    <div class="col-auto"></div>
+                                </div>
+                            </div>
+
+                            <h3 class="table-title mb-5">매출 관리 <span>(접속월 1일~접속일)</span></h3>
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <div class="card">
+                                        <div class="card-header text-center bg-success text-white border-bottom-0">결제 금액</div>
+                                        <div class="card-body text-center">
+                                            <div class="price">
+                                                <strong class="font-size-26px">1,200,000</strong>
+                                                <i>원</i>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <p>
-                                    책 읽는 거인 프로그램을 시작하기 위해 독해 실력 진단평가가 필요합니다. <br>
-                                    아래의 레벨 테스트를 진행해 주세요. <br>
-                                    <strong>입학 테스트 결과를 통해 학습 레벨이 결정됩니다.</strong>
-                                </p>
-                                <div class="row row-10 justify-content-center mt-8">
-                                    <div class="col-auto"><a href="#none" class="btn btn-success btn-xl" id="btn-text-test">독해력 테스트</a></div>
-                                    <div class="col-auto"><a href="#none" class="btn btn-primary btn-xl" id="btn-sentence-test">문해력 테스트</a></div>
-                                    <div class="col-auto"><a href="#none" class="btn btn-success btn-xl" id="btn-reading-test">독해 다지기</a></div>
+                                <div class="col-12 col-md-4">
+                                    <div class="card">
+                                        <div class="card-header text-center bg-success text-white border-bottom-0">취소 금액</div>
+                                        <div class="card-body text-center">
+                                            <div class="price">
+                                                <strong class="font-size-26px">1,200,000</strong>
+                                                <i>원</i>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="card">
+                                        <div class="card-header text-center bg-success text-white border-bottom-0">당월 정산 금액</div>
+                                        <div class="card-body text-center">
+                                            <div class="price">
+                                                <strong class="font-size-26px">1,200,000</strong>
+                                                <i>원</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="table-title mt-6 mb-5">학생 관리 <span>(접속월 1일~접속일)</span></h3>
+                            <div class="row">
+                                <div class="col-12 col-md-4">
+                                    <div class="card">
+                                        <div class="card-header text-center bg-primary text-white border-bottom-0">결제 금액</div>
+                                        <div class="card-body text-center">
+                                            <div class="price">
+                                                <strong class="font-size-26px">1,200,000</strong>
+                                                <i>원</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="card">
+                                        <div class="card-header text-center bg-primary text-white border-bottom-0">취소 금액</div>
+                                        <div class="card-body text-center">
+                                            <div class="price">
+                                                <strong class="font-size-26px">1,200,000</strong>
+                                                <i>원</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <div class="card">
+                                        <div class="card-header text-center bg-primary text-white border-bottom-0">당월 정산 금액</div>
+                                        <div class="card-body text-center">
+                                            <div class="price">
+                                                <strong class="font-size-26px">1,200,000</strong>
+                                                <i>원</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="table-title mt-6 mb-5">CS 관리 <span>(접속월 1일~접속일)</span></h3>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="small-box">
+                                        <div class="inner">
+                                            <h3>쪽지함</h3>
+                                            <p>
+                                                <strong>10</strong>
+                                                <i>건</i>
+                                            </p>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fas fa-inbox"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="small-box">
+                                        <div class="inner">
+                                            <h3>문자발송건수</h3>
+                                            <p>
+                                                <strong>10</strong>
+                                                <i>건</i>
+                                            </p>
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center mt-5">
+                                <a href="myinfo_center_form.html" class="btn btn-success btn-lg">회원정보 수정</a>
                             </div>
                         </div>
                     </div>
-
                     <!-- //실 컨텐츠 -->
 
                 </div>
@@ -165,23 +264,10 @@
         </div>
     </div>
 
-
     <!-- ui 관련 -->
     <script src="/front/resources/js/ui.js"></script>
 
     <script>
-        const btnSentence = document.getElementById('btn-sentence-test');
-        btnSentence.addEventListener('click', function(){
-            window.open('/front/content/test/test_sentence_start.html', 'popup1', 'width=1024, height=980, status=no, menubar=no, toolbar=no, resizable=no');
-        });
-        const btnText = document.getElementById('btn-text-test');
-        btnText.addEventListener('click', function(){
-            window.open('/front/content/test/test_text_start.html', 'popup2', 'width=1024, height=980, status=no, menubar=no, toolbar=no, resizable=no');
-        });
-        const btnReading = document.getElementById('btn-reading-test');
-        btnReading.addEventListener('click', function(){
-            window.open('/front/content/test/test_reading_start.html', 'popup3', 'width=1024, height=980, status=no, menubar=no, toolbar=no, resizable=no');
-        });
     </script>
 </body>
 </html>
