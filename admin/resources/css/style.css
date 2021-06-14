@@ -54,6 +54,36 @@
 
 .modal-header.bg-success .close { color: #fff; opacity: 1; }
 
+.small-box { border-radius: 2px; background: #a8d1cb; display: block; margin-bottom: 20px; position: relative; display: flex; align-items: center; }
+
+.small-box.statistics-color1 { background: #4ecdc4; }
+
+.small-box.statistics-color2 { background: #43b4e9; }
+
+.small-box.statistics-color3 { background: #de6a96; }
+
+.small-box > .inner { padding: 20px; }
+
+.small-box h3 { color: #fff; font-size: 14px; margin-bottom: 2rem; }
+
+.small-box p { color: #fff; margin: 5px 0; }
+
+.small-box p label { font-size: 24px; margin-bottom: 0; font-weight: 700; margin-right: 10px; }
+
+.small-box p strong { font-size: 26px; }
+
+.small-box h3, .small-box p { z-index: 5; }
+
+.small-box .icon { color: rgba(255, 255, 255, 0.2); z-index: 0; }
+
+.small-box .icon > i { font-size: 90px; position: absolute; right: 20px; top: 15px; transition: transform .2s linear; }
+
+.small-box .icon > i.fa, .small-box .icon > i.fas, .small-box .icon > i.far, .small-box .icon > i.fab, .small-box .icon > i.fal, .small-box .icon > i.fad, .small-box .icon > i.ion { font-size: 70px; top: 50%; margin-top: -35px; }
+
+.small-box:hover { text-decoration: none; }
+
+.small-box:hover .icon > i, .small-box:hover .icon > i.fa, .small-box:hover .icon > i.fas, .small-box:hover .icon > i.far, .small-box:hover .icon > i.fab, .small-box:hover .icon > i.fal, .small-box:hover .icon > i.fad, .small-box:hover .icon > i.ion { transform: scale(1.1); }
+
 body { min-width: 1200px; }
 
 #header-block { background-color: #22242a; }

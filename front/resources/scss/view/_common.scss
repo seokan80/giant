@@ -251,53 +251,53 @@ textarea.form-control{padding-top: .75rem;padding-bottom: .75rem;}
 }
 
 .small-box {
-    @include border-radius($border-radius);background: #a8d1cb;
-    display: block;margin-bottom: 20px;position: relative;
+    @include border-radius($border-radius);
+    background: #a8d1cb;display: block;margin-bottom: 20px;position: relative;
+
     > .inner {padding: 20px;}
     h3 {color: #fff;font-size: 14px;}
     p {
         color: #fff;
-      strong{font-size: 26px;}
-      i{}
+        strong{font-size: 26px;}
     }
 
     h3,
     p {
-      z-index: 5;
+        z-index: 5;
     }
 
     .icon {
-      color: rgba($white, .2);z-index: 0;
-      > i {
-        font-size: 90px;position: absolute;right: 20px;top: 15px;transition: transform .2s linear;
-        &.fa,
-        &.fas,
-        &.far,
-        &.fab,
-        &.fal,
-        &.fad,
-        &.ion {
-          font-size: 70px;
-          top: 20px;
+        color: rgba($white, .2);z-index: 0;
+        > i {
+            font-size: 90px;position: absolute;right: 20px;top: 15px;transition: transform .2s linear;
+            &.fa,
+            &.fas,
+            &.far,
+            &.fab,
+            &.fal,
+            &.fad,
+            &.ion {
+                font-size: 70px;
+                top: 20px;
+            }
         }
-      }
     }
     &:hover {
-      text-decoration: none;
-      .icon {
-        > i {
-          &,
-          &.fa,
-          &.fas,
-          &.far,
-          &.fab,
-          &.fal,
-          &.fad,
-          &.ion {
-            transform: scale(1.1);
-          }
+        text-decoration: none;
+        .icon {
+            > i {
+                &,
+                &.fa,
+                &.fas,
+                &.far,
+                &.fab,
+                &.fal,
+                &.fad,
+                &.ion {
+                transform: scale(1.1);
+                }
+            }
         }
-      }
     }
-  }
+}
 
