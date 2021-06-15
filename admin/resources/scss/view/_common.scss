@@ -60,11 +60,12 @@
 }
 
 .small-box {
-    @include border-radius($border-radius);
-    background: #a8d1cb;display: block;margin-bottom: 20px;position: relative;display: flex;align-items: center;
+    border-radius: 10px;background: #a8d1cb;display: block;position: relative;display: flex;align-items: center;
     &.statistics-color1{background: $success;}
     &.statistics-color2{background: #43b4e9;}
     &.statistics-color3{background: #de6a96;}
+    &.statistics-color4{background: #f97267;}
+    &.statistics-color5{background: #4ecd70;}
     > .inner {padding: 20px;}
     h3 {color: #fff;font-size: 14px;margin-bottom: 2rem;}
     p {

@@ -54,13 +54,17 @@
 
 .modal-header.bg-success .close { color: #fff; opacity: 1; }
 
-.small-box { border-radius: 2px; background: #a8d1cb; display: block; margin-bottom: 20px; position: relative; display: flex; align-items: center; }
+.small-box { border-radius: 10px; background: #a8d1cb; display: block; position: relative; display: flex; align-items: center; }
 
 .small-box.statistics-color1 { background: #4ecdc4; }
 
 .small-box.statistics-color2 { background: #43b4e9; }
 
 .small-box.statistics-color3 { background: #de6a96; }
+
+.small-box.statistics-color4 { background: #f97267; }
+
+.small-box.statistics-color5 { background: #4ecd70; }
 
 .small-box > .inner { padding: 20px; }
 
@@ -199,4 +203,10 @@ body { min-width: 1200px; }
 .address-book .select-list a:hover, .address-book .select-list a:focus { background: #eee; }
 
 .btn-option-del { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); font-size: 21px; }
+
+.dashboard .small-box h3 { margin-bottom: .75rem; }
+
+.dashboard .small-box p { margin: 0; }
+
+.dashboard .small-box .icon i { font-size: 60px; margin-top: -30px; }
 /*# sourceMappingURL=style.css.map */
