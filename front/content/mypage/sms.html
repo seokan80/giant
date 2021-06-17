@@ -109,7 +109,7 @@
                                 <a href="teacher_info.html" class="">교사 정보</a>
                                 <a href="approval_management_student.html" class="">승인 관리</a>
                                 <a href="payment.html" class="">이용권 구매</a>
-                                <a href="payment_management.html" class="">결제 관리</a>
+                                <a href="payment_management_center.html" class="">결제 관리</a>
                                 <a href="learning_result.html" class="">학습결과</a>
                                 <a href="message_list.html" class="">쪽지함</a>
                                 <a href="sms.html" class="active">문자전송</a>
@@ -132,20 +132,20 @@
                                 <div class="col-auto order-1 order-md-2">
                                     <div class="search-form">
                                         <div class="row row-8">
-                                            <div class="col-4 col-sm-auto">
+                                            <div class="col-auto">
                                                 <select name="" id="" class="custom-select">
                                                     <option value="">학교</option>
                                                 </select>
                                             </div>
-                                            <div class="col-4 col-sm-auto">
+                                            <div class="col-auto">
                                                 <select name="" id="" class="custom-select">
                                                     <option value="">학년</option>
                                                 </select>
                                             </div>
-                                            <div class="col col-sm-auto mt-2 mt-sm-0">
+                                            <div class="col col-sm-aut">
                                                 <input type="text" class="form-control" placeholder="검색어 입력">
                                             </div>
-                                            <div class="col-auto mt-2 mt-sm-0">
+                                            <div class="col-auto">
                                                 <button type="submit" class="btn btn-dark">검색</button>
                                             </div>
                                         </div>
@@ -154,7 +154,7 @@
                             </div>
                             <div class="sms-top mt-4">
                                 <div class="row row-15">
-                                    <div class="col">
+                                    <div class="col-12 col-md">
                                         <h3 class="subtitle-sm mb-3">학생 목록</h3>
                                         <div class="table-header-fixed">
                                             <table class="table table-bordered">
@@ -261,13 +261,13 @@
                                             </table>
                                         </div>
                                     </div>
-                                    <div class="col-auto">
+                                    <div class="col-12 col-md-auto">
                                         <div class="sms-arrow">
                                             <a href=""><i class="icon-select-right"></i></a>
                                             <a href=""><i class="icon-select-left"></i></a>
                                         </div>
                                     </div>
-                                    <div class="col-auto">
+                                    <div class="col-12 col-md-auto">
                                         <h3 class="subtitle-sm mb-3">받는사람</h3>
                                         <div class="table-header-fixed">
                                             <table class="table table-bordered">
@@ -293,7 +293,7 @@
                                             </table>
                                         </div>
                                     </div>
-                                    <div class="col-auto">
+                                    <div class="col-12 col-md-auto">
                                         <h3 class="subtitle-sm mb-3">SMS/LMS</h3>
                                         <div class="sms">
                                             <div class="byte"><span>4</span>byte</div>
@@ -309,41 +309,43 @@
                             </div>
 
                             <h3 class="subtitle-sm mb-3 mt-6">최근 발송 내역</h3>
-                            <table class="table table-bordered table-fixed">
-                                <colgroup>
-                                    <col style="width:50px">
-                                    <col style="width:140px">
-                                    <col style="width:80px">
-                                    <col>
-                                    <col style="width:70px">
-                                    <col style="width:90px">
-                                    <col style="width:70px">
-                                </colgroup>
-                                <thead>
-                                    <tr>
-                                        <th class="text-center">No</th>
-                                        <th class="text-center">발송일시</th>
-                                        <th class="text-center">받는사람</th>
-                                        <th class="text-center">내용</th>
-                                        <th class="text-center">Byte</th>
-                                        <th class="text-center">구분</th>
-                                        <th class="text-center">관리</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="text-center">10</td>
-                                        <td class="text-center">2021-03-01 12:23</td>
-                                        <td class="text-center">27명</td>
-                                        <td class="text-left text-truncate">[문자발송] 이번 주 프로그램을 ...</td>
-                                        <td class="text-center">50byte</td>
-                                        <td class="text-center">발송완료</td>
-                                        <td class="text-center">
-                                            <button type="button" class="btn btn-gray btn-sm" data-toggle="modal" data-target="#modal-sms-detail">상세</button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-fixed table-nowrap">
+                                    <colgroup>
+                                        <col style="width:50px">
+                                        <col style="width:140px">
+                                        <col style="width:80px">
+                                        <col style="width:300px">
+                                        <col style="width:70px">
+                                        <col style="width:90px">
+                                        <col style="width:70px">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">No</th>
+                                            <th class="text-center">발송일시</th>
+                                            <th class="text-center">받는사람</th>
+                                            <th class="text-center">내용</th>
+                                            <th class="text-center">Byte</th>
+                                            <th class="text-center">구분</th>
+                                            <th class="text-center">관리</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">10</td>
+                                            <td class="text-center">2021-03-01 12:23</td>
+                                            <td class="text-center">27명</td>
+                                            <td class="text-left text-truncate">[문자발송] 이번 주 프로그램을 ...</td>
+                                            <td class="text-center">50byte</td>
+                                            <td class="text-center">발송완료</td>
+                                            <td class="text-center">
+                                                <button type="button" class="btn btn-gray btn-sm" data-toggle="modal" data-target="#modal-sms-detail">상세</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
 
                             <nav class="text-center">
                                 <ul class="pagination">

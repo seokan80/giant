@@ -112,7 +112,7 @@
                                 <a href="teacher_info.html" class="">교사 정보</a>
                                 <a href="approval_management_student.html" class="active">승인 관리</a>
                                 <a href="payment.html" class="">이용권 구매</a>
-                                <a href="payment_management.html" class="">결제 관리</a>
+                                <a href="payment_management_center.html" class="">결제 관리</a>
                                 <a href="learning_result.html" class="">학습결과</a>
                                 <a href="message_list.html" class="">쪽지함</a>
                                 <a href="sms.html" class="">문자전송</a>
@@ -125,138 +125,78 @@
                                         <h2 class="mb-0">승인 관리 <small class="ml-2">교사</small></h2>
                                     </div>
                                     <div class="col-auto">
-                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                        <div class="btn-group" role="group">
                                             <a href="approval_management_student.html" class="btn btn-success w-80px">학생</a>
                                             <a href="approval_management_teacher.html" class="btn btn-success w-80px active">교사</a>
                                           </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="dashboard">
-                                <div class="row">
-                                    <div class="col-4 col-md-4">
-                                        <div class="card">
-                                            <div class="card-header">총 승인 교사</div>
-                                            <div class="card-body">
-                                                <div class="count">54</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-4 col-md-4">
-                                        <div class="card">
-                                            <div class="card-header">신규 승인 요청</div>
-                                            <div class="card-body">
-                                                <div class="count">6</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-4 col-md-4">
-                                        <div class="card">
-                                            <div class="card-header">주간 승인 완료</div>
-                                            <div class="card-body">
-                                                <div class="count">11</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="row justify-content-between align-items-center mb-2 mb-lg-3">
-                                <div class="col-auto">
-                                    <div class="list-count mb-0">총 10명</div>
-                                </div>
-                                <div class="col-auto">
-                                    <div class="search-form">
-                                        <div class="row row-8">
-                                            <div class="col-auto">
-                                                <div class="tui-datepicker-input-custom">
-                                                    <input id="startpicker-input" type="text" aria-label="Date" class="form-control">
-                                                    <span class="tui-ico-date"></span>
-                                                    <div id="startpicker-container" style="margin-left: -1px;"></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <div class="tui-datepicker-input-custom">
-                                                    <input id="endpicker-input" type="text" aria-label="Date" class="form-control">
-                                                    <span class="tui-ico-date"></span>
-                                                    <div id="endpicker-container" style="margin-left: -1px;"></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <select name="" id="" class="custom-select">
-                                                    <option value="">승인여부</option>
-                                                </select>
-                                            </div>
-                                            <div class="col">
-                                                <input type="text" class="form-control" placeholder="검색어 입력">
-                                            </div>
-                                            <div class="col-auto">
-                                                <button type="submit" class="btn btn-dark">검색</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row justify-content-between align-items-center mb-2 mb-lg-3">
-                                <div class="col-auto">
-                                    <div class="custom-control custom-checkbox">
-                                        <input class="custom-control-input" type="checkbox" id="chkAll">
-                                        <label for="chkAll" class="custom-control-label">전체 선택</label>
-                                    </div>
-                                </div>
+                            <div class="row row-8 align-items-center justify-content-end mb-2 mb-lg-3">
                                 <div class="col-auto">
                                     <div class="custom-control custom-switch custom-control-inline">
                                         <input type="checkbox" class="custom-control-input" id="auto">
                                         <label class="custom-control-label" for="auto">자동승인</label>
                                     </div>
-                                    <button type="button" class="btn btn-success">강제탈퇴</button>
-                                    <button type="button" class="btn btn-success ml-1">휴원</button>
-                                    <button type="button" class="btn btn-success ml-1">재원</button>
-                                    <button type="button" class="btn btn-success ml-1">미승인</button>
-                                    <button type="button" class="btn btn-success ml-1">승인</button>
+                                </div>
+                                <div class="col-auto">
+                                    <select name="" id="" class="custom-select">
+                                        <option value="">이름</option>
+                                        <option value="">학교</option>
+                                        <option value="">학년</option>
+                                        <option value="">레벨</option>
+                                        <option value="">상태</option>
+                                    </select>
+                                </div>
+                                <div class="col-auto">
+                                    <input type="text" class="form-control" placeholder="검색어 입력">
+                                </div>
+                                <div class="col-auto">
+                                    <button type="submit" class="btn btn-dark">검색</button>
+                                </div>
+                                <div class="col-auto">
+                                    <button type="submit" class="btn btn-success">승인</button>
                                 </div>
                             </div>
-                            <ul class="member-list">
-                                <li>
-                                    <div class="item">
-                                        <div class="checkbox">
-                                            <div class="custom-control custom-checkbox">
-                                                <input class="custom-control-input" type="checkbox" id="chkList2">
-                                                <label for="chkList2" class="custom-control-label"></label>
-                                            </div>
-                                        </div>
-                                        <div class="profile"><img src="../../resources/images/profile.png" alt="책거인 교사"></div>
-                                        <div class="name"><a href="#modal-teacher" data-toggle="modal">책거인 교사</a></div>
-                                        <div class="level">미승인</div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="item">
-                                        <div class="checkbox">
-                                            <div class="custom-control custom-checkbox">
-                                                <input class="custom-control-input" type="checkbox" id="chkList2">
-                                                <label for="chkList2" class="custom-control-label"></label>
-                                            </div>
-                                        </div>
-                                        <div class="profile"><img src="../../resources/images/profile.png" alt="책거인 교사"></div>
-                                        <div class="name"><a href="#modal-teacher" data-toggle="modal">책거인 교사</a></div>
-                                        <div class="level">미승인</div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="item">
-                                        <div class="checkbox">
-                                            <div class="custom-control custom-checkbox">
-                                                <input class="custom-control-input" type="checkbox" id="chkList2">
-                                                <label for="chkList2" class="custom-control-label"></label>
-                                            </div>
-                                        </div>
-                                        <div class="profile"><img src="../../resources/images/profile.png" alt="책거인 교사"></div>
-                                        <div class="name"><a href="#modal-teacher" data-toggle="modal">책거인 교사</a></div>
-                                        <div class="level">미승인</div>
-                                    </div>
-                                </li>
-                            </ul>
+
+                            <div class="table-responsive mt-3">
+                                <table class="table table-hover table-nowrap">
+                                    <caption>승인 관리</caption>
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input class="custom-control-input" type="checkbox" id="chkAll">
+                                                    <label for="chkAll" class="custom-control-label"></label>
+                                                </div>
+                                            </th>
+                                            <th class="text-center">No</th>
+                                            <th class="text-center">ID</th>
+                                            <th class="text-center">교사</th>
+                                            <th class="text-center">연락처</th>
+                                            <th class="text-center">승인</th>
+                                            <th class="text-center">가입일</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input class="custom-control-input" type="checkbox" id="chkList1">
+                                                    <label for="chkList1" class="custom-control-label"></label>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">10</td>
+                                            <td class="text-center">idididididididi</td>
+                                            <td class="text-center">홍길동</td>
+                                            <td class="text-center">010-1234-1234</td>
+                                            <td class="text-center">미승인</td>
+                                            <td class="text-center">21.04.13 11:43</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
 
                             <nav class="text-center">
                                 <ul class="pagination">
@@ -294,80 +234,6 @@
                         팩스 : 02-553-3482  문의전화 : 1688-3482  주소 : (우:06197) 서울특별시 강남구 역삼로 423 7층 (대치동, 화남빌딩)
                     </div>
                     <p class="copyright">Copyright ⓒ All rights reserved.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- modal : 교사 상세 -->
-    <div class="modal modal-member-detail" id="modal-teacher" tabindex="-1" aria-modal="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header bg-success">
-                    <h5 class="modal-title">교사 상세</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <table class="table table-member">
-                        <tbody>
-                            <tr>
-                                <th>이름</th>
-                                <td>책거인</td>
-                            </tr>
-                            <tr>
-                                <th>휴대폰</th>
-                                <td>010-1234-1234</td>
-                            </tr>
-                            <tr>
-                                <th>이메일</th>
-                                <td>abc@email.com</td>
-                            </tr>
-                            <tr>
-                                <th>주소</th>
-                                <td>서울시 서초구 서초동</td>
-                            </tr>
-                            <tr>
-                                <th>학생 승인 권한 부여</th>
-                                <td>
-                                    <div class="custom-control custom-switch">
-                                        <input type="checkbox" class="custom-control-input" id="role1">
-                                        <label class="custom-control-label" for="role1"></label>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>교사 승인 권한</th>
-                                <td>
-                                    <div class="custom-control custom-switch">
-                                        <input type="checkbox" class="custom-control-input" id="role2">
-                                        <label class="custom-control-label" for="role2"></label>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>문자 전송 권한</th>
-                                <td>
-                                    <div class="custom-control custom-switch">
-                                        <input type="checkbox" class="custom-control-input" id="role3">
-                                        <label class="custom-control-label" for="role3"></label>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="row align-items-center justify-content-between">
-                        <div class="col-auto">
-                            <button type="button" class="btn btn-primary">강제탈퇴</button>
-                            <button type="button" class="btn btn-primary ml-1">휴원</button>
-                            <button type="button" class="btn btn-primary ml-1">재원</button>
-                        </div>
-                        <div class="col-auto">
-                            <button type="button" class="btn btn-secondary">미승인</button>
-                            <button type="button" class="btn btn-secondary ml-1">승인</button>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
