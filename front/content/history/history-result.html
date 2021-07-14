@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+  <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+  <link rel="stylesheet" href="../../resources/plugin/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="../../resources/plugin/jquery-ui/jquery-ui.min.css">
+  <link rel="stylesheet" href="../../resources/plugin/swiper/css/swiper.min.css">
+  <link rel="stylesheet" href="../../resources/css/bootstrap.css">
+  <link rel="stylesheet" href="../../resources/css/style.css">
+  <link rel="stylesheet" href="../../resources/css/rd.css">
+  <!-- jquery -->
+  <script src="../../resources/plugin/jquery/jquery.min.js"></script>
+  <!-- jquery ui -->
+  <script src="../../resources/plugin/jquery-ui/jquery-ui.min.js"></script>
+  <!-- bootstrap -->
+  <script src="../../resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Swiper -->
+  <script src="../../resources/plugin/swiper/js/swiper.min.js"></script>
+</head>
+<body>
+<div id="wrap">
+  <div id="header-block">
+    <div id="header" class="header-rd">
+      <div class="container">
+        <div class="header-wrap">
+          <h1 class="logo logo-rd"><a href="/front/content/main/main.html" class="rd"><span class="sr-only">사유독평</span></a></h1>
+          <div class="mobile-header-group">
+            <div class="h-set">
+              <div class="h-menu">
+                000센터 학생명
+              </div>
+            </div>
+            <div class="gnb">
+              <ul class="dep1">
+                <li>
+                  <a href="/front/content/reading/reading.html"><span>지정 독서</span></a>
+                  <ul class="dep2">
+                    <li><a href="/front/content/reading/reading.html"><span>문학 독서</span></a></li>
+                    <li><a href="/front/content/reading/reading.html"><span>비문학 독서</span></a></li>
+                    <li><a href="/front/content/reading/reading.html"><span>고전 독서</span></a></li>
+                    <li><a href="/front/content/reading/reading.html"><span>진로 독서</span></a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="/front/content/writing/writing-prep.html"><span>글쓰기</span></a>
+                  <ul class="dep2">
+                    <li><a href="/front/content/writing/writing-prep.html"><span>PREP 쓰기</span></a></li>
+                    <li><a href="/front/content/writing/writing-report.html"><span>감상문 쓰기</span></a></li>
+                    <li><a href="/front/content/writing/writing-review.html"><span>서평 쓰기</span></a></li>
+                    <li><a href="/front/content/writing/writing-free.html"><span>자유 독서 쓰기</span></a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="/front/content/history/history-list.html"><span>독서 이력</span></a>
+                  <ul class="dep2">
+                    <li><a href="/front/content/history/history-list.html"><span>내 글 관리</span></a></li>
+                    <li><a href="/front/content/history/history-result.html"><span>학습 결과</span></a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="/front/content/customer/notice.html"><span>학습 진도</span></a>
+                  <ul class="dep2">
+                    <li><a href="/front/content/customer/notice.html"><span>공지사항</span></a></li>
+                    <li><a href="/front/content/customer/faq.html"><span>FAQ</span></a></li>
+                    <li><a href="/front/content/customer/qna.html"><span>1:1 문의</span></a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="mobile-menu d-lg-none">
+            <a role="button" data-id="btn-hamburger"><i class="btn-hamburger"><span class="sr-only">메뉴</span></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="container-block">
+    <div id="container">
+      <div class="container">
+
+<div class="rd-content-header">
+  <h2>학습 결과</h2>
+</div>
+
+<div class="rd-content">
+
+  <div class="d-flex justify-content-between mb-4">
+    <div class="col-auto">
+      <select class="form-control">
+        <option>전체</option>
+      </select>
+    </div>
+    <div class="col-auto">
+      <div class="input-group">
+        <input class="form-control border-right-0" type="text" placeholder="도서제목">
+        <div class="input-group-append">
+          <button class="btn btn-outline-search-icon border-left-0" type="button">
+            <img src="../../resources/images/rd/icon-search.png" width="15" height="15" alt="검색">
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rd-history-result-items">
+
+    <div class="rd-history-result-item active">
+      <div class="header">
+        <div class="category">
+          문학도서
+        </div>
+        <div class="subject">
+          제목
+        </div>
+        <div class="date">
+          21.04.13 [11:43]
+        </div>
+      </div>
+      <div class="body">
+        <h3 class="body-title">결과</h3>
+        <div class="result-bar-chart">
+          <div class="result-bar-chart-row">
+            <div class="result-bar-chart-header sensitive">
+              감성적 지능
+            </div>
+            <div class="result-bar-chart-body">
+              <div class="bar bar1" style="width: 50%;"></div>
+              <div class="bar bar2" style="width: 70%;"></div>
+              <div class="bar bar3" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="result-bar-chart-row">
+            <div class="result-bar-chart-header analytic">
+              분석적 지능
+            </div>
+            <div class="result-bar-chart-body">
+              <div class="bar bar1" style="width: 50%;"></div>
+              <div class="bar bar2" style="width: 70%;"></div>
+              <div class="bar bar3" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="g-wrap">
+            <div class="g g0">0</div>
+            <div class="g g1">10</div>
+            <div class="g g2">20</div>
+            <div class="g g3">30</div>
+            <div class="g g4">40</div>
+            <div class="g g5">50</div>
+            <div class="g g6">60</div>
+            <div class="g g7">70</div>
+            <div class="g g8">80</div>
+            <div class="g g9">90</div>
+            <div class="g g10">100</div>
+          </div>
+          <div class="result-bar-chart-legend">
+            <div class="item">
+              <div class="i i1"></div>
+              1차
+            </div>
+            <div class="item">
+              <div class="i i2"></div>
+              2차
+            </div>
+            <div class="item">
+              <div class="i i3"></div>
+              3차
+            </div>
+          </div>
+        </div>
+
+        <h3 class="body-title">상세</h3>
+        <table class="result-answer-table">
+          <thead>
+            <tr>
+              <th colspan="2" style="width: 110px;">구분</th>
+              <th>문항1</th>
+              <th>문항2</th>
+              <th>문항3</th>
+              <th>문항4</th>
+              <th>문항5</th>
+              <th>문항6</th>
+              <th>문항7</th>
+              <th>문항8</th>
+              <th>문항9</th>
+              <th>문항10</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="sensitive-tit">
+              <th rowspan="4" class="tit">감성적 지능</th>
+              <th>진단영역</th>
+              <th>사실적 이해</th>
+              <th>사실적 이해</th>
+              <th>추론적 이해</th>
+              <th>사실적 이해</th>
+              <th>사실적 이해</th>
+              <th>추론적 이해</th>
+              <th>사실적 이해</th>
+              <th>사실적 이해</th>
+              <th>사실적 이해</th>
+              <th>사실적 이해</th>
+            </tr>
+            <tr class="sensitive-row">
+              <th class="tit-step1">1차</th>
+              <td>정답</td>
+              <td>정답</td>
+              <td>정답</td>
+              <td class="text-danger">오답</td>
+              <td>정답</td>
+              <td>정답</td>
+              <td>정답</td>
+              <td class="text-danger">오답</td>
+              <td>정답</td>
+              <td>정답</td>
+            </tr>
+            <tr class="sensitive-row">
+              <th class="tit-step2">2차</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="sensitive-row">
+              <th class="tit-step3">3차</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="analytic-tit">
+              <th rowspan="4" class="tit">분석적 지능</th>
+              <th>진단영역</th>
+              <th>사실적 이해</th>
+              <th>사실적 이해</th>
+              <th>추론적 이해</th>
+              <th>사실적 이해</th>
+              <th>사실적 이해</th>
+              <th>추론적 이해</th>
+              <th>사실적 이해</th>
+              <th>사실적 이해</th>
+              <th>사실적 이해</th>
+              <th>사실적 이해</th>
+            </tr>
+            <tr class="analytic-row">
+              <th class="tit-step1">1차</th>
+              <td>정답</td>
+              <td>정답</td>
+              <td>정답</td>
+              <td class="text-danger">오답</td>
+              <td>정답</td>
+              <td>정답</td>
+              <td>정답</td>
+              <td class="text-danger">오답</td>
+              <td>정답</td>
+              <td>정답</td>
+            </tr>
+            <tr class="analytic-row">
+              <th class="tit-step2">2차</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr class="analytic-row">
+              <th class="tit-step3">3차</th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="rd-history-result-item active">
+      <div class="header">
+        <div class="category">
+          문학도서
+        </div>
+        <div class="subject">
+          제목
+        </div>
+        <div class="date">
+          21.04.13 [11:43]
+        </div>
+      </div>
+      <div class="body">
+        <h3 class="body-title">결과</h3>
+        <div class="result-bar-chart result-bar-chart-alone">
+          <div class="result-bar-chart-row">
+            <div class="result-bar-chart-header analytic">
+              요약 활동
+            </div>
+            <div class="result-bar-chart-body">
+              <div class="bar bar2" style="width: 70%;"></div>
+            </div>
+          </div>
+          <div class="g-wrap">
+            <div class="g g0">0</div>
+            <div class="g g1">10</div>
+            <div class="g g2">20</div>
+            <div class="g g3">30</div>
+            <div class="g g4">40</div>
+            <div class="g g5">50</div>
+            <div class="g g6">60</div>
+            <div class="g g7">70</div>
+            <div class="g g8">80</div>
+            <div class="g g9">90</div>
+            <div class="g g10">100</div>
+          </div>
+          <div class="result-bar-chart-legend">
+            <div class="item">
+              <div class="i i2"></div>
+              백분율
+            </div>
+          </div>
+        </div>
+        <div class="result-summary-items">
+          <div class="result-summary-item">
+            <div class="result-summary-item-header">
+              구분
+            </div>
+            <div class="result-summary-item-body">
+              요약활동
+            </div>
+          </div>
+          <div class="result-summary-item">
+            <div class="result-summary-item-header">
+              총 문항 개수
+            </div>
+            <div class="result-summary-item-body">
+              120
+            </div>
+          </div>
+          <div class="result-summary-item">
+            <div class="result-summary-item-header">
+              정답 개수
+            </div>
+            <div class="result-summary-item-body">
+              96
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rd-history-result-item">
+      <div class="header">
+        <div class="category">
+          문학도서
+        </div>
+        <div class="subject">
+          제목
+        </div>
+        <div class="date">
+          21.04.13 [11:43]
+        </div>
+      </div>
+      <div class="body">
+        asdfasdfadsf
+      </div>
+    </div>
+
+  </div>
+
+  <nav class="text-center">
+    <ul class="pagination">
+      <li class="page-item page-arrow disabled">
+        <a class="page-link" href="#"><span class="sr-only">이전</span><i class="fas fa-angle-left"></i></a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item active"><a class="page-link" href="#">2 <span class="sr-only">(current)</span></a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">4</a></li>
+      <li class="page-item"><a class="page-link" href="#">5</a></li>
+      <li class="page-item page-arrow">
+        <a class="page-link" href="#"><span class="sr-only">다음</span><i class="fas fa-angle-right"></i></a>
+      </li>
+    </ul>
+  </nav>
+
+
+</div>
+
+<script>
+  $('.rd-history-result-item .header').click(function() {
+    if ($(this).parent().hasClass('active')) {
+      $('.rd-history-result-item').removeClass('active');
+    } else {
+      $('.rd-history-result-item').removeClass('active');
+      $(this).parent().addClass('active');
+    }
+  });
+</script>
+
+      </div>
+    </div>
+  </div>
+  <div id="footer-block">
+    <div id="footer">
+      <div class="container">
+        <ul class="f-menu">
+          <li><a href="/front/content/company/about.html">회사소개</a></li>
+          <li><a href="/front/content/util/terms.html">이용약관</a></li>
+          <li><a href="/front/content/util/privacy.html"><strong>개인정보취급방침</strong></a></li>
+        </ul>
+        <div class="f-info">
+          회사명 : 주식회사 메타스콜레   대표이사 : 정해영   사업자등록번호 : 856-88-01642   이메일 : metas@metaschole.co.kr <br>
+          팩스 : 02-553-3482  문의전화 : 1688-3482  주소 : (우:06197) 서울특별시 강남구 역삼로 423 7층 (대치동, 화남빌딩)
+        </div>
+        <p class="copyright">Copyright ⓒ All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ui 관련 -->
+<script src="../../resources/js/ui.js"></script>
+
+<script>
+</script>
+</body>
+</html>

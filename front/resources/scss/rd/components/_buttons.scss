@@ -1,0 +1,19 @@
+.btn-rd-primary { color: #fff; background-color: #614d40; border-color: #614d40; }
+
+.btn-rd-primary:hover { color: #fff; background-color: #423126; border-color: #423126; }
+
+.btn-rd-primary:focus, .btn-rd-primary.focus { box-shadow: 0 0 0 0.2rem rgba(186, 187, 60, 0.5); }
+
+.btn-rd-primary.disabled, .btn-rd-primary:disabled { color: #fff; background-color: #614d40; border-color: #614d40; }
+
+.btn-rd-primary:not(:disabled):not(.disabled):active, .btn-rd-primary:not(:disabled):not(.disabled).active, .show > .btn-rd-primary.dropdown-toggle { color: #fff; background-color: #423126; border-color: #423126; }
+
+.btn-rd-primary:not(:disabled):not(.disabled):active:focus, .btn-rd-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-rd-primary.dropdown-toggle:focus { box-shadow: 0 0 0 0.2rem rgba(187, 79, 60, 0.5); }
+
+.i-question-circle {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url('../images/rd/icon-question-circle.png') no-repeat;
+  background-size: 100% auto;
+}

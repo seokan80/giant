@@ -1,0 +1,13 @@
+$rd-primary-color: #614d40;
+$rd-primary-hover-color: #42342a;
+
+@import "./layouts/header";
+@import "./layouts/footer";
+@import "./layouts/content";
+
+@import "./components/buttons";
+
+@import "./views/reading";
+@import "./views/test";
+@import "./views/thesis";
+@import "./views/history";

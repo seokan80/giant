@@ -1,0 +1,44 @@
+.rd-content-header {
+  display: flex;
+  align-items: center;
+  padding: 15px 0 5px 0;
+  border-bottom: 2px solid #614d40;
+
+  h2 {
+    flex: 1;
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+  }
+}
+
+.btn-outline-search-icon {
+  border-color: #ced4da;
+}
+
+.rd-content {
+  width: 1020px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.rd-content-helpbox {
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  font-size: 14px;
+  line-height: 30px;
+  background-color: #e9ebcd;
+  text-align: center;
+
+  .prt {
+    display: inline-block;
+    text-align: center;
+    width: 14px;
+    height: 14px;
+    line-height: 1;
+    color: #fff;
+    background-color: #f39800;
+    border-radius: 50%;
+  }
+}

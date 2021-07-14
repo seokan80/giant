@@ -1,0 +1,219 @@
+.writing-warning-box {
+  margin-bottom: 15px;
+  padding: 2px 10px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  color: #fff;
+  background-color: #f39800;
+}
+
+.writing-example-box {
+  position: relative;
+  margin-top: 20px;
+  padding: 20px 34px;
+  border: 5px solid transparent;
+  border-radius: 26px;
+
+  &.writing-example-box-success {
+    border-color: #489e9d;
+
+    .writing-example-box-header {
+      h3 {
+        background-color: #489d9d;
+      }
+    }
+    .example-prep-item {
+      h4 {
+        color: #2c7a79;
+      }
+    }
+  }
+
+  &.writing-example-box-danger {
+    border-color: #8d3c5c;
+
+    .writing-example-box-header {
+      h3 {
+        background-color: #8d3c5c;
+      }
+    }
+    .example-prep-item {
+      h4 {
+        color: #8d3c5c;
+      }
+    }
+  }
+
+  .writing-example-box-header {
+    display: flex;
+    justify-content: center;
+    margin-top: -40px;
+    margin-bottom: 20px;
+
+    h3 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 300px;
+      height: 40px;
+      padding: 0 20px;
+      border-radius: 20px;
+      font-size: 18px;
+      margin: 0;
+      line-height: 1;
+      color: #fff;
+      font-weight: bold;
+    }
+  }
+  .example-prep-item {
+    line-height: 20px;
+
+    h4 {
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+}
+
+.writing-review-guide-header {
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: #f39800;
+}
+
+.writing-review-guide-title {
+  display: flex;
+  justify-content: center;
+
+  h2 {
+    margin: 0;
+    padding: 0 50px 10px 50px;
+    font-size: 26px;
+    font-weight: bold;
+    border-bottom: 4px solid #707070;;
+  }
+}
+
+.writing-review-guide-title-circle {
+  display: flex;
+  padding-left: 10px;
+  margin-bottom: 10px;;
+
+  h3 {
+    position: relative;
+    border-bottom: 2px solid transparent;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0 0 3px 22px;
+
+    i {
+      position: absolute;
+      left: -10px;
+      bottom: -2px;
+      width: 23px;
+      height: 23px;
+      line-height: 23px;
+      text-align: center;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 50%;
+    }
+
+    &.c1 {
+      color: #a7af38;
+      border-color: #a7af38;
+
+      i {
+        background-color: #a7af38;
+      }
+    }
+    &.c2 {
+      color: #479c9c;
+      border-color: #479c9c;
+
+      i {
+        background-color: #479c9c;
+      }
+    }
+    &.c3 {
+      color: #df7f66;
+      border-color: #df7f66;
+
+      i {
+        background-color: #df7f66;
+      }
+    }
+    &.c4 {
+      color: #8d3c5c;
+      border-color: #8d3c5c;
+
+      i {
+        background-color: #8d3c5c;
+      }
+    }
+  }
+}
+
+.write-review-list-style-decimal {
+  list-style: decimal;
+  padding-left: 16px;
+}
+
+.writing-review-guide-gray-box {
+  padding: 20px;
+  background-color: #f1f1f1;
+
+  h3 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
+.writing-review-list-style-disc {
+  list-style: disc;
+  padding-left: 16px;
+}
+
+.thesis-forms-no-data {
+  padding: 45px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 30px;
+  color: #333;
+  border: 1px solid #eceaea;
+}
+
+.thesis-forms {
+  margin-bottom: 20px;
+
+  h3 {
+    font-size: 18px;
+
+    &.pop-section-bg {
+      background-color: #f1f1f1;
+    }
+    &::before {
+      content: "►";
+      color: #489d9c;
+      margin-right: 5px;
+    }
+  }
+  h4 {
+    font-size: 14px;
+
+    &::before {
+      content: "►";
+      color: #489d9c;
+      margin-right: 5px;
+    }
+  }
+  .col-form-label {
+    font-size: 18px;
+  }
+}
