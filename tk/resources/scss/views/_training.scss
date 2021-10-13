@@ -1,0 +1,121 @@
+.training-progress-bar {
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  height: 16px;
+  background-color: #ececec;
+  border-radius: 10px;
+
+  .active-bar {
+    position: relative;
+    height: 100%;
+    background-color: $primary;
+    border-radius: 10px;
+  }
+  .active-bar-text {
+    position: absolute;
+    top: -36px;
+    right: -72px;
+    width: 150px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #979797;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 2px;
+      left: 50%;
+      margin-left: -4px;
+      border-top: 8px solid #979797;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+    }
+  }
+  .total {
+    position: absolute;
+    top: -22px;
+    right: 0;
+    color: $primary;
+  }
+}
+
+.training-step {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.training-step-item {
+  width: 23.5%;
+  margin-bottom: 20px;
+  border-radius: 1rem;
+
+  &.active {
+    border: 1px solid #7c99bf;
+
+    .header {
+      background-color: #7c99bf;
+
+      &::before {
+        border-top-color: #7c99bf;
+      }
+    }
+    .body {
+      background-color: #e8edf1;
+    }
+  }
+
+  .header {
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #d8d8d8;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      margin-left: -8px;
+      border-top: 8px solid #d8d8d8;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+    }
+  }
+  .body {
+    padding: 25px;
+    background-color: #ececec;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+
+    .link-item {
+      display: flex;
+      min-height: 45px;
+      margin-bottom: 12px;
+      padding: 0.5rem 1rem;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0.5rem;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: #bab7b7;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:hover,
+      &.active {
+        background-color: $dark;
+      }
+    }
+  }
+}

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="../../resources/css/styles.css">
+</head>
+<body>
+<div class="ly-toolbar">
+  <div class="container">
+    <div class="logo">
+      <img src="../../resources/images/logo.png" alt="태권책거인">
+    </div>
+    <div class="logos">
+      <a href="#" class="item">
+        <img src="../../resources/images/logo-kukkiwon.png" alt="국기원">
+      </a>
+      <a href="#" class="item">
+        <img src="../../resources/images/logo-world-ctu.png" alt="">
+      </a>
+      <a href="#" class="item">
+        <img src="../../resources/images/logo-world-sc.png" alt="">
+      </a>
+    </div>
+  </div>
+</div>
+<div class="ly-navbar">
+  <div class="container">
+    <button type="button" class="nav-toggle-button"></button>
+    <div class="ly-navbar-nav">
+      <button type="button" class="nav-close-button"></button>
+      <ul>
+        <li>
+          <a href="../main/main.html#about">
+            회사소개
+          </a>
+        </li>
+        <li>
+          <a href="../main/main.html#program">
+            프로그램 소개
+          </a>
+        </li>
+        <li>
+          <a href="../main/main.html#experience">
+            체험학습
+          </a>
+        </li>
+        <li>
+          <a href="../main/main.html#support">
+            고객지원
+          </a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a href="#" class="text-white">
+            로그인
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            회원가입
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="links">
+      <div class="item">
+        <a href="#">
+          로그인
+        </a>
+      </div>
+      <div class="item">
+        <a href="#">
+          회원가입
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+<button type="submit" class="btn btn-dark btn-lg" data-bs-toggle="modal" data-bs-target="#myinfoEditModal">
+  회원 정보 수정
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myinfoEditModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">내정보</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <div class="text-danger mb-3 bg-light text-center p-1">
+          <small>* 별표는 필수 기재 사항입니다.</small>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">
+            <span class="text-danger">*</span>
+            태권도장 정보
+          </label>
+          <input type="text" class="form-control" disabled>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">
+            <span class="text-danger">*</span>
+            이름
+          </label>
+          <div class="row g-3 align-items-center">
+            <div class="col-auto flex-fill">
+              <input type="text" class="form-control" disabled value="홍길동">
+            </div>
+            <div class="col-auto">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1">남</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <label class="form-check-label" for="inlineRadio2">여</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">
+            <span class="text-danger">*</span>
+            아이디
+          </label>
+          <input type="text" class="form-control" disabled>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">
+            <span class="text-danger">*</span>
+            비밀번호
+          </label>
+          <div>
+            <button type="button" class="btn btn-dark">
+              비밀번호 변경
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">
+            <span class="text-danger">*</span>
+            사업자등록번호
+          </label>
+          <div class="row g-3 align-items-center">
+            <div class="col-auto flex-fill">
+              <input type="text" class="form-control" disabled value="32132123131">
+            </div>
+            <div class="col-auto">
+              <button type="button" class="btn btn-dark">
+                중복확인
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">
+            <span class="text-danger">*</span>
+            정산계좌정보
+          </label>
+          <div class="row g-3 align-items-center">
+            <div class="col-auto">
+              <input type="text" class="form-control" placeholder="은행">
+            </div>
+            <div class="col-auto flex-fill">
+              <input type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">
+            도장 전화
+          </label>
+          <div class="row g-3 align-items-center">
+            <div class="col-3">
+              <select class="form-select">
+                <option>선택</option>
+              </select>
+            </div>
+            <div class="col-auto">-</div>
+            <div class="col-3">
+              <input type="text" class="form-control">
+            </div>
+            <div class="col-auto">-</div>
+            <div class="col-3">
+              <input type="text" class="form-control">
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">
+            <span class="text-danger">*</span>
+            휴대폰
+          </label>
+          <div class="row g-3 align-items-center">
+            <div class="col-2">
+              <input type="text" class="form-control">
+            </div>
+            <div class="col-auto">-</div>
+            <div class="col-2">
+              <input type="text" class="form-control">
+            </div>
+            <div class="col-auto">-</div>
+            <div class="col-2">
+              <input type="text" class="form-control">
+            </div>
+            <div class="col-auto">
+              <button type="button" class="btn btn-dark">
+                휴대폰 인증
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">
+            인증번호 확인
+          </label>
+          <div class="row g-3 align-items-center">
+            <div class="col-7">
+              <input type="text" class="form-control">
+            </div>
+            <div class="col-auto">
+              <button type="button" class="btn btn-dark">
+                인증번호 확인
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">
+            이메일
+          </label>
+          <div class="row gx-2 align-items-center">
+            <div class="col col-lg-auto">
+              <input type="email" class="form-control">
+            </div>
+            <div class="col-auto">@</div>
+            <div class="col">
+              <input type="email" class="form-control">
+            </div>
+            <div class="col col-lg-auto">
+              <select name="" id="" class="form-select">
+                <option value="">직접입력</option>
+                <option value="">naver.com</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">
+            <span class="text-danger">*</span>
+            태권도 도장 주소
+          </label>
+          <div class="row g-3 align-items-center mb-3">
+            <div class="col-auto">
+              <button type="button" class="btn btn-dark">
+                우편번호 찾기
+              </button>
+            </div>
+            <div class="col-auto flex-fill">
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="row g-3 align-items-center">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="주소명">
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="상세주소">
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">
+            <span class="text-danger">*</span>
+            사업자등록증 파일 첨부
+          </label>
+          <div class="row g-3 align-items-center">
+            <div class="col-auto flex-fill">
+              <input type="text" class="form-control">
+            </div>
+            <div class="col-auto">
+              <button type="button" class="btn btn-dark">
+                파일첨부
+              </button>
+            </div>
+          </div>
+          <div class="mt-2">
+            <a href="#" class="text-muted"><small>첨부 파일 다운로드</small></a>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center mb-3">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">이메일 수신을 동의합니다.</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+            <label class="form-check-label" for="inlineCheckbox2">SMS 수신을 동의합니다.</label>
+          </div>
+        </div>
+
+        <div class="text-danger text-center">
+          <small>
+            ※수신 동의를 하지 않아도 학습 완료 알림은 발송됩니다.<br>
+            ※담당자의 승인이 완료된 후 수업을 진행할 수 있습니다.
+          </small>
+        </div>
+
+      </div>
+      <div class="modal-footer justify-content-center">
+        <div class="d-grid gap-2 col-8 mx-auto">
+          <button type="button" class="btn btn-primary btn-lg text-white">회원 정보 수정</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ly-footer">
+  <div class="container">
+    <div class="logo">
+      <img src="../../resources/images/logo-footer.png" alt="태권책거인">
+    </div>
+    <div class="body">
+      회사명: 주식회사 메타스콜레 | 대표이사: 정해영<br>
+      사업자등록번호: 856-88-01642 | 통신판매업신고: 제 2021-서울강남-04621 호<br>
+      주소: 서울특별시 강남구 역삼로 423, 7층 (대치동, 화남빌딩) | 이메일: metas@metaschole.co.kr<br>
+      고객센터 운영시간 10:00 ~ 19:00 (점심시간: 13:00~14:00, | 주말, 공휴일 휴무) 대표번호: 1688-3482Copyright ⓒ All rights reserved.
+    </div>
+  </div>
+</div>
+<div class="ly-footer-menu">
+  <div class="container">
+    <a href="#">
+      이용약관
+    </a>
+    <a href="#">
+      <strong>개인정보처리방침</strong>
+    </a>
+  </div>
+</div>
+
+<script src="../../resources/js/vendor/jquery.min.js"></script>
+<script src="../../resources/js/vendor/bootstrap.bundle.min.js"></script>
+<script src="../../resources/js/ui.js"></script>
+<script>
+  var myModal = new bootstrap.Modal(document.getElementById('myinfoEditModal'))
+  myModal.show();
+</script>
+</body>
+</html>

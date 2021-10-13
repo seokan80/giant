@@ -1,0 +1,141 @@
+.mypage-user-summary {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 1rem 0;
+  border: 6px solid #d8d8d8;
+
+  .centername {
+    padding: 0 2rem 0 4rem;
+    color: #333;
+
+    strong {
+      font-size: 20px;
+    }
+  }
+  .level {
+    flex: 1;
+    padding: 0 2rem 0 4rem;
+    color: #333;
+
+    .username {
+      margin-bottom: 0.7rem;
+    }
+    .levelname {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+  .badges {
+    display: flex;
+    align-items: center;
+    padding-right: 1rem;
+
+    .badge-item {
+      min-width: 140px;
+      padding: 0 1rem;
+      border-left: 1px solid #e2e1e1;
+
+      &:first-child {
+        border: 0;
+      }
+    }
+    .badge-item-icon {
+      width: 47px;
+      height: 47px;
+      background-color: #64b690;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+    .badge-item-name {
+      margin-top: 0.3rem;
+      text-align: center;
+      color: #333;
+    }
+  }
+}
+
+.mypage-activity-point {
+  .point {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    width: 153px;
+    height: 153px;
+    border: 10px solid transparent;
+    border-radius: 50%;
+    font-size: 16px;
+    line-height: 1.1;
+    margin-right: 30px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      border-left: 12px solid transparent;
+      border-top: 12px solid transparent;
+      border-bottom: 12px solid transparent;
+      transform: rotate(42deg);
+    }
+
+    &.point-1 {
+      border-color: #f3ccc9;
+
+      &::before {
+        border-left-color: #f3ccc9;
+      }
+    }
+    &.point-2 {
+      border-color: #f8edcb;
+
+      &::before {
+        border-left-color: #f8edcb;
+      }
+    }
+    .point-text {
+      margin-top: 5px;
+
+      strong {
+        font-size: 48px;
+      }
+    }
+  }
+  .bar {
+    display: flex;
+    align-items: flex-end;
+    width: 164px;
+    height: 184px;
+
+    .bar-active {
+      width: 100%;
+    }
+    &.bar-1 {
+      .bar-active {
+        background-color: #f58a82;
+      }
+    }
+    &.bar-2 {
+      .bar-active {
+        background-color: #f1d885;
+      }
+    }
+  }
+  .ranking {
+    height: 50px;
+    line-height: 50px;
+    margin-top: 2px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #32b27f;
+    border-radius: 10px;
+
+    span {
+      margin: 0 10px;
+    }
+  }
+}

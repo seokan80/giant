@@ -1,0 +1,42 @@
+.tabs {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #d8d8d8;
+
+  .item {
+    position: relative;
+    width: 25%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #bab7b7;
+
+    &.active {
+      background-color: $dark;
+    }
+  }
+  .tooltip-visible {
+    position: absolute;
+    top: -20px;
+    left: 75%;
+    padding: 0.7rem 1rem;
+    background-color: #3258b2;
+    font-size: 16px;
+    line-height: 1;
+    border-radius: 0.4rem;
+    white-space: nowrap;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 10px;
+      bottom: -12px;
+      width: 20px;
+      height: 12px;
+      background: url('../images/bg-tooltip-visible.png') no-repeat;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.ly-aside {
+  width: 160px;
+  margin-right: 40px;
+}
+
+.ly-aside-nav-item-link {
+  display: block;
+  margin: 15px 0;
+  padding: 13px 0;
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+
+  &.active {
+    background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='%23000000'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z'/%3E%3C/svg%3E");
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 20px auto;
+  }
+}

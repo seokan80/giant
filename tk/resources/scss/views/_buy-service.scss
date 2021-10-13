@@ -1,0 +1,61 @@
+.buy-service-cards {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.buy-service-card {
+  width: 32%;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 10px 20px 10px;
+
+  h5 {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  .text {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+
+    small {
+      font-weight: normal;
+    }
+  }
+}
+
+.buy-service-title {
+  font-size: 16px;
+  font-weight: bold;
+
+  span {
+    font-weight: normal;
+  }
+}
+
+.buy-service-table {
+  tbody {
+    border-top: 2px solid #333 !important;
+
+    th,
+    td {
+      vertical-align: middle;
+      background-color: #f6f4f4;
+    }
+  }
+}
+
+.buy-service-content-table {
+  border: 0 !important;
+
+  tbody,
+  * {
+    border: 0 !important;
+  }
+}
+
+.buy-service-total-table {
+  strong {
+    font-size: 20px;
+  }
+}

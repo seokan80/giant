@@ -1,0 +1,19 @@
+.ly-toolbar {
+  padding: 8px 0;
+  border-bottom: 1px solid #d8d8d8;
+
+  .container {
+    position: relative;
+    text-align: center;
+  }
+  .logos {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    .item {
+      margin-left: 40px;
+      text-decoration: none;
+    }
+  }
+}

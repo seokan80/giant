@@ -1,0 +1,79 @@
+.ly-navbar {
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid #d8d8d8;
+  background-color: #fff;
+  z-index: 9;
+
+  .container {
+    position: relative;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 9;
+  }
+  .nav-toggle-button {
+    width: 40px;
+    height: 40px;
+    border: 0;
+    background: transparent;
+    background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='%23000000'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .links {
+    display: flex;
+    align-items: center;
+
+    .item {
+      font-size: 12px;
+      color: #000;
+
+      &:not(:first-child)::before {
+        content: "|";
+        margin: 0 20px;
+        color: #d8d8d8;
+      }
+    }
+  }
+}
+
+.ly-navbar-nav {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 290px;
+  background-color: #232750;
+  z-index: 9;
+
+
+  .nav-close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    background: transparent;
+    background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.426' height='13.422'%3E%3Cpath data-name='Icon ionic-ios-close' d='m19.589 18 4.8-4.8a1.124 1.124 0 0 0-1.589-1.584l-4.8 4.8-4.8-4.8a1.124 1.124 0 1 0-1.584 1.584l4.8 4.8-4.8 4.8a1.124 1.124 0 0 0 1.584 1.584l4.8-4.8 4.8 4.8a1.124 1.124 0 1 0 1.584-1.584z' transform='translate(-11.285 -11.289)' style='fill:%23979797'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  ul {
+    padding: 45px;
+    list-style: none;
+    border-bottom: 1px solid #33365d;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+    a {
+      display: block;
+      padding: 5px 0;
+      font-size: 16px;
+      color: #bab7b7;
+    }
+  }
+}

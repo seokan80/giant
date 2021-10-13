@@ -1,0 +1,63 @@
+$primary:       #f19410;
+$secondary:     #6a6c81;
+$success:       #4ecdc4;
+$info:          #3258b2;
+$warning:       #ffd45e;
+$danger:        #dc3545;
+$light:         #e1e1e1;
+$white:         #ffffff;
+$gray:          #6d6e74;
+$dark:          #232750;
+
+$form-check-input-checked-bg-color:       $success;
+$form-check-input-checked-border-color:   $success;
+
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+@import "./fonts";
+
+@import "./layouts/toolbar";
+@import "./layouts/navbar";
+@import "./layouts/footer";
+@import "./layouts/container";
+@import "./layouts/content";
+@import "./layouts/aside";
+
+@import "./components/tables";
+@import "./components/tabs";
+@import "./components/pagination";
+@import "./components/forms";
+@import "./components/modal";
+
+@import "./views/main";
+@import "./views/mypage";
+@import "./views/memo";
+@import "./views/sms";
+@import "./views/training";
+@import "./views/buy-service";
+@import "./views/gym-dashboard";
+
+body {
+  font-family: 'NanumGothic', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+img {
+  max-width: 100%;
+}
+
+.btn-lg {
+  padding: 0.875rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.container {
+  width: 1280px !important;
+  max-width: 1280px !important;
+}

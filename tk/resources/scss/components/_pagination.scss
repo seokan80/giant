@@ -1,0 +1,31 @@
+.pagination {
+  .page-link {
+    margin: 0 5px;
+    padding: 0.1rem 0.5rem;
+    border: 0;
+    font-size: 14px;
+    color: #000;
+  }
+  .page-link-prev,
+  .page-link-next {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #bab7b7;
+    border-radius: 0 !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 16px auto;
+  }
+  .page-link-prev {
+    background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='%23000000'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z'/%3E%3C/svg%3E");
+  }
+  .page-link-next {
+    background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='%23000000'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z'/%3E%3C/svg%3E");
+  }
+}
+.page-item.active .page-link {
+  background: transparent;
+  border-color: transparent;
+  color: #000;
+  font-weight: bold;
+}

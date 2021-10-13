@@ -1,0 +1,35 @@
+.table-fixed {
+  table-layout: fixed;
+}
+
+.table {
+  thead {
+    --bs-table-bg: #f6f4f4;
+  }
+  th {
+    height: 50px;
+    font-size: 16px;
+    font-weight: normal;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom-width: 2px;
+  }
+
+  tbody {
+    border-top: 2px solid #e1e1e1 !important;
+
+    th {
+      --bs-table-bg: #f6f4f4;
+    }
+    td {
+      height: 50px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-bottom-width: 2px;
+    }
+  }
+  .table-secondary {
+    --bs-table-bg: #979797;
+    color: #fff;
+  }
+}
