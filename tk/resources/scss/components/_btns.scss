@@ -1,0 +1,15 @@
+.btn-print {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-image: url('../images/icons/icon-material-print.svg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+  }
+}

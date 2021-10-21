@@ -46,3 +46,88 @@
   margin-top: 20px;
   padding: 10px 0 0 195px;
 }
+
+.memo-write-address-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0 20px;
+  margin-bottom: 7px;
+  background-color: #f1f1f1;
+  border-bottom: 2px solid #e1e1e1;
+}
+
+.memo-write-textarea {
+  position: relative;
+
+  textarea {
+    width: 100%;
+    height: 400px;
+    border: 1px solid #d4d4d4;
+    padding: 16px;
+    outline: 0;
+  }
+  .count {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #bab7b7;
+  }
+}
+
+.memo-select-all-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: #fff;
+  background: $dark;
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  height: 43px;
+
+  &::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath data-name='Icon ionic-ios-arrow-dropright-circle' d='M3.375 11.375a8 8 0 1 0 8-8 8 8 0 0 0-8 8zm9.4 0L9.629 8.256a.742.742 0 1 1 1.05-1.05l3.669 3.681a.742.742 0 0 1 .023 1.023l-3.615 3.627a.741.741 0 1 1-1.05-1.046z' transform='translate(-3.375 -3.375)' style='fill:%23fff'/%3E%3C/svg%3E%0A");
+  }
+  &.reverse {
+    &::after {
+      display: none;
+    }
+    &::before {
+      content: "";
+      width: 16px;
+      height: 16px;
+      margin-right: 10px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath data-name='Icon ionic-ios-arrow-dropright-circle' d='M19.375 11.375a8 8 0 1 1-8-8 8 8 0 0 1 8 8zm-9.4 0 3.15-3.119a.742.742 0 1 0-1.05-1.05L8.4 10.887a.742.742 0 0 0-.023 1.023l3.615 3.627a.741.741 0 1 0 1.05-1.046z' transform='translate(-3.375 -3.375)' style='fill:%23fff'/%3E%3C/svg%3E%0A");
+    }
+  }
+}
+
+.memo-address-list {
+  width: 100%;
+  height: 340px;
+  overflow: auto;
+  border: 1px solid #bab7b7;
+
+  .item {
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    border: 0;
+    background: transparent;
+
+    &:hover {
+      background-color: #ececec;
+    }
+  }
+}

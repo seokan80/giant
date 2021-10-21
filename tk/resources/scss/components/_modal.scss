@@ -9,6 +9,12 @@
   }
 }
 
+@media (min-width: 992px) {
+  .modal-lg, .modal-xl {
+    max-width: 860px;
+  }
+}
+
 
 .modal-body-alert {
   padding: 1.5rem;
@@ -51,6 +57,16 @@
   margin-bottom: 20px;
   padding-bottom: 10px;
   border-bottom: 1px solid #bab7b7;
+}
+
+.modal-signup-result-title {
+  text-align: center;
+  padding-top: 30px;
+  margin-bottom: 40px;
+  font-size: 50px;
+  color: #3258b2;
+  font-family: Jalnan, sans-serif;
+  font-weight: bold;
 }
 
 .modal-find-id-pw-tabs {
@@ -178,5 +194,75 @@
     padding: 10px;
     font-size: 16px;
     color: #646464;
+  }
+}
+
+.modal-student-detail-info {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #d8d8d8;
+
+  .item {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+    font-weight: bold;
+    color: #333;
+
+    &::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      margin-right: 3px;
+      background-color: #f19410;
+    }
+  }
+}
+
+.modal-student-detail-item {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #d8d8d8;
+  color: #333;
+
+  .title {
+    width: 100px;
+    font-weight: bold;
+  }
+}
+
+.modal-student-detail-box {
+  padding: 10px;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.modal-student-detail-title {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+
+  &::before {
+    content: "";
+    width: 4px;
+    height: 14px;
+    margin-right: 5px;
+    background-color: #3258b2;
+  }
+  span {
+    font-weight: normal;
+  }
+}
+
+.modal-refund-std-table {
+  th,
+  td {
+    font-size: 14px;
   }
 }

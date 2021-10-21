@@ -23,6 +23,7 @@ $form-check-input-checked-border-color:   $success;
 @import "./layouts/content";
 @import "./layouts/aside";
 
+@import "./components/btns";
 @import "./components/tables";
 @import "./components/tabs";
 @import "./components/pagination";
@@ -36,6 +37,7 @@ $form-check-input-checked-border-color:   $success;
 @import "./views/training";
 @import "./views/buy-service";
 @import "./views/gym-dashboard";
+@import "./views/level-test";
 
 body {
   font-family: 'NanumGothic', sans-serif;

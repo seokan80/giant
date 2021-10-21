@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="../../resources/css/styles.css">
+</head>
+<body>
+<div class="test-wrap">
+  <div class="test-header">
+    <div class="d-flex align-items-end flex-fill">
+      <h1>몰입독서법</h1>
+      <span class="ms-4">결과 확인</span>
+    </div>
+  </div>
+  <div class="test-body">
+    <div class="level-test-result scroll-body">
+
+      <div class="mb-5">
+        <strong>[ 책거인 ]</strong> 학생의 독해 다지기 결과는 다음과 같습니다.
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="level-test-result-title mb-3">
+            <h3>집중력 훈련</h3>
+          </div>
+          <div class="chart-wrap has-item-4 mb-4">
+            <div class="chart">
+              <div id="chart-area1"></div>
+              <div class="legend">
+                <div>
+                  <p>성공</p>
+                  <strong>1/1</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <table class="table level-test-result-table text-center">
+            <thead>
+              <tr>
+                <th>1차</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>성공</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+        <div class="col">
+          <div class="level-test-result-title mb-3">
+            <h3>넓게보기 훈련</h3>
+          </div>
+          <div class="chart-wrap has-item-4 mb-4">
+            <div class="chart">
+              <div id="chart-area2"></div>
+              <div class="legend">
+                <div>
+                  <p>성공</p>
+                  <strong>0/9</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <table class="table level-test-result-table text-center">
+            <thead>
+              <tr>
+                <th>1차</th>
+                <th>2차</th>
+                <th>3차</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1/3문항</td>
+                <td>0/3문항</td>
+                <td>2/3문항</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+  <div class="test-footer">
+    <div class="text-center">
+      <a href="#" class="btn btn-dark btn-lg btn-print" style="width: 265px;">출력하기</a>
+    </div>
+  </div>
+</div>
+
+<!-- chartjs -->
+<link rel="stylesheet" href="https://uicdn.toast.com/chart/latest/toastui-chart.min.css" />
+<script src="https://uicdn.toast.com/chart/latest/toastui-chart.min.js"></script>
+<script>
+  pieChart1();
+  pieChart2();
+
+  function pieChart1() {
+      const chart = toastui.Chart;
+      const el = document.getElementById('chart-area1');
+      const data = {
+          series: [
+              {
+                  name: '점수', data: 80
+              },
+              {
+                  name: '점수', data: (100 - 80)
+              }
+          ]
+      };
+      const theme = {
+          series: {
+              colors: ['#f19410', '#f3ce9b'],
+              areaOpacity: 1,
+          },
+      };
+      const options = {
+          legend: { visible: false, },
+          exportMenu: { visible: false },
+          chart: { width: 240, height: 240 },
+          series: { radiusRange: { inner: '80%', outer: '100%' }, },
+          theme
+      };
+      chart.pieChart({ el, data, options });
+  }
+  function pieChart2() {
+      const chart = toastui.Chart;
+      const el = document.getElementById('chart-area2');
+      const data = {
+          series: [
+              {
+                  name: '속도', data: 40
+              },
+              {
+                  name: '속도', data: (100 - 40)
+              }
+          ]
+      };
+      const theme = {
+          series: {
+              colors: ['#232750', '#aeb0c9'],
+              areaOpacity: 1,
+          },
+      };
+      const options = {
+          legend: { visible: false, },
+          exportMenu: { visible: false },
+          chart: { width: 240, height: 240 },
+          series: { radiusRange: { inner: '80%', outer: '100%' }, },
+          theme
+      };
+      chart.pieChart({ el, data, options });
+  }
+</script>
+</body>
+</html>

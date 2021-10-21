@@ -139,3 +139,83 @@
     }
   }
 }
+
+.mypage-chart-legends {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px 30px;
+  background-color: #f1f5f6;
+
+  .item {
+    width: 14%;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 5px 0;
+
+    i {
+      width: 8px;
+      height: 8px;
+      margin-right: 8px;
+    }
+  }
+
+  .chart-color-1 {
+    background-color: #e56785;
+  }
+  .chart-color-2 {
+    background-color: #e899a2;
+  }
+  .chart-color-3 {
+    background-color: #f9b730;
+  }
+  .chart-color-4 {
+    background-color: #e9de4c;
+  }
+  .chart-color-5 {
+    background-color: #9ecfb1;
+  }
+  .chart-color-6 {
+    background-color: #9fd2d6;
+  }
+  .chart-color-7 {
+    background-color: #68b1cf;
+  }
+  .chart-color-8 {
+    background-color: #65be88;
+  }
+  .chart-color-9 {
+    background-color: #1d5693;
+  }
+  .chart-color-10 {
+    background-color: #50438d;
+  }
+  .chart-color-11 {
+    background-color: #b7a9c9;
+  }
+  .chart-color-12 {
+    background-color: #00a9ff;
+  }
+  .chart-color-13 {
+    background-color: #ffb83f;
+  }
+  .chart-color-14 {
+    background-color: #ff5a46;
+  }
+  .chart-color-15 {
+    background-color: #01bd9f;
+  }
+  .chart-color-16 {
+    background-color: #785fff;
+  }
+}
+
+.mypage-text-link-sm {
+  font-size: 14px;
+  color: #979797;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

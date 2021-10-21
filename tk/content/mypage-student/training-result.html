@@ -96,12 +96,12 @@
       </a>
     </div>
     <div class="ly-aside-nav-item">
-      <a href="training-progress.html" class="ly-aside-nav-item-link active">
+      <a href="training-progress.html" class="ly-aside-nav-item-link">
         훈련 진도
       </a>
     </div>
     <div class="ly-aside-nav-item">
-      <a href="training-result.html" class="ly-aside-nav-item-link">
+      <a href="training-result.html" class="ly-aside-nav-item-link active">
         훈련 결과
       </a>
     </div>
@@ -182,146 +182,103 @@
       </div>
 
       <div class="tabs">
-        <a href="training-progress.html" class="item active">
+        <a href="#" class="item active">
           독해력 훈련
         </a>
-        <a href="training-progress-tk.html" class="item">
+        <a href="#" class="item">
           태권도 학습
-          <div class="tooltip-visible">
-            학습이 남아있어요. [2회]
-          </div>
         </a>
       </div>
 
-      <div class="training-step">
-        <div class="training-step-item">
-          <div class="header">
-            01
-          </div>
-          <div class="body">
-            <a href="#" class="link-item">
-              몰입 독서법
-            </a>
-            <a href="#" class="link-item">
-              독해 다지기
-            </a>
-            <a href="#" class="link-item">
-              어휘력 훈련
-            </a>
-          </div>
+      <h2 class="ly-content-title border-0">
+        몰입독서법
+      </h2>
+      <div class="mb-4">
+        <canvas id="readingChart" height="100"></canvas>
+      </div>
+      <div class="mypage-chart-legends mb-5">
+        <div class="item">
+          <i class="chart-color-1"></i>
+          집중력훈련
         </div>
-        <div class="training-step-item active">
-          <div class="header">
-            02
-          </div>
-          <div class="body">
-            <a href="#" class="link-item active">
-              몰입 독서법
-            </a>
-            <a href="#" class="link-item">
-              독해 다지기
-            </a>
-            <a href="#" class="link-item">
-              어휘력 훈련
-            </a>
-          </div>
+        <div class="item">
+          <i class="chart-color-2"></i>
+          기억력훈련
         </div>
-        <div class="training-step-item">
-          <div class="header">
-            03
-          </div>
-          <div class="body">
-            <a href="#" class="link-item">
-              몰입 독서법
-            </a>
-            <a href="#" class="link-item">
-              독해 다지기
-            </a>
-            <a href="#" class="link-item">
-              어휘력 훈련
-            </a>
-          </div>
+        <div class="item">
+          <i class="chart-color-3"></i>
+          넓게보기
         </div>
-        <div class="training-step-item">
-          <div class="header">
-            04
-          </div>
-          <div class="body">
-            <a href="#" class="link-item">
-              몰입 독서법
-            </a>
-            <a href="#" class="link-item">
-              독해 다지기
-            </a>
-            <a href="#" class="link-item">
-              어휘력 훈련
-            </a>
-          </div>
+        <div class="item">
+          <i class="chart-color-4"></i>
+          단문적용
         </div>
-        <div class="training-step-item">
-          <div class="header">
-            05
-          </div>
-          <div class="body">
-            <a href="#" class="link-item">
-              몰입 독서법
-            </a>
-            <a href="#" class="link-item">
-              독해 다지기
-            </a>
-            <a href="#" class="link-item">
-              어휘력 훈련
-            </a>
-          </div>
+        <div class="item">
+          <i class="chart-color-5"></i>
+          지문적용
         </div>
-        <div class="training-step-item">
-          <div class="header">
-            06
-          </div>
-          <div class="body">
-            <a href="#" class="link-item">
-              몰입 독서법
-            </a>
-            <a href="#" class="link-item">
-              독해 다지기
-            </a>
-            <a href="#" class="link-item">
-              어휘력 훈련
-            </a>
-          </div>
+        <div class="item">
+          <i class="chart-color-6"></i>
+          박학다식
         </div>
-        <div class="training-step-item">
-          <div class="header">
-            07
-          </div>
-          <div class="body">
-            <a href="#" class="link-item">
-              몰입 독서법
-            </a>
-            <a href="#" class="link-item">
-              독해 다지기
-            </a>
-            <a href="#" class="link-item">
-              어휘력 훈련
-            </a>
-          </div>
+        <div class="item">
+          <i class="chart-color-7"></i>
+          어휘력테스트
         </div>
-        <div class="training-step-item">
-          <div class="header">
-            08
-          </div>
-          <div class="body">
-            <a href="#" class="link-item">
-              몰입 독서법
-            </a>
-            <a href="#" class="link-item">
-              독해 다지기
-            </a>
-            <a href="#" class="link-item">
-              어휘력 훈련
-            </a>
-          </div>
+        <div class="item">
+          <i class="chart-color-8"></i>
+          요약문테스트
         </div>
+        <div class="item">
+          <i class="chart-color-9"></i>
+          독해평가테스트
+        </div>
+        <div class="item">
+          <i class="chart-color-10"></i>
+          도서테스트
+        </div>
+        <div class="item">
+          <i class="chart-color-11"></i>
+          어휘력훈련
+        </div>
+      </div>
+
+      <h2 class="ly-content-title border-0">
+        독해력 훈련
+      </h2>
+      <div class="mb-4">
+        <canvas id="trainingChart" height="100"></canvas>
+      </div>
+      <div class="mypage-chart-legends mb-5">
+        <div class="item">
+          <i class="chart-color-12"></i>
+          문학(분석적지능)
+        </div>
+        <div class="item">
+          <i class="chart-color-13"></i>
+          문학(감성적지능)
+        </div>
+        <div class="item">
+          <i class="chart-color-14"></i>
+          교과서독해
+        </div>
+        <div class="item">
+          <i class="chart-color-15"></i>
+          비문학독해
+        </div>
+        <div class="item">
+          <i class="chart-color-16"></i>
+          읽기속도
+        </div>
+      </div>
+
+
+      <h2 class="ly-content-title border-0 mb-1">
+        선생님 코멘트
+      </h2>
+
+      <div class="border p-3">
+        선생님 코멘트 내용 입니다.
       </div>
 
     </div>
@@ -354,5 +311,152 @@
 <script src="../../resources/js/vendor/jquery.min.js"></script>
 <script src="../../resources/js/vendor/bootstrap.bundle.min.js"></script>
 <script src="../../resources/js/ui.js"></script>
+<script src="../../resources/js/vendor/chart.min.js"></script>
+<script>
+  var readingCtx = document.getElementById('readingChart').getContext('2d');
+  var readingChart = new Chart(readingCtx, {
+    type: 'bar',
+    data: {
+      labels: ['1회', '2회', '3회', '4회', '5회', '6회', '7회', '8회', '9회', '10회', '11회', '12회'],
+      datasets: [
+        {
+          label: 'Dataset 1',
+          data: [1,2,3,-4,5,6,7,8,9,1,-2,3],
+          backgroundColor: [
+            '#e56785',
+            '#e899a2',
+            '#f9b730',
+            '#e9de4c',
+            '#9ecfb1',
+            '#9fd2d6',
+            '#68b1cf',
+            '#65be88',
+            '#1d5693',
+            '#50438d',
+            '#b7a9c9',
+            '#00a9ff',
+          ],
+        },
+        {
+          label: 'Dataset 2',
+          data: [2,3,4,5,6,7,8,9,1,2,3,4],
+          backgroundColor: [
+            '#9ecfb1',
+            '#9fd2d6',
+            '#68b1cf',
+            '#65be88',
+            '#1d5693',
+            '#50438d',
+            '#b7a9c9',
+            '#00a9ff',
+            '#e56785',
+            '#e899a2',
+            '#f9b730',
+            '#e9de4c',
+          ],
+        },
+      ]
+    },
+    options: {
+      plugins: {
+        legend: {
+          display: false
+        }
+      },
+      scales: {
+          x: {
+            stacked: true
+          },
+          y: {
+            stacked: true,
+            beginAtZero: true
+          }
+      }
+    }
+  });
+
+  var trainingCtx = document.getElementById('trainingChart').getContext('2d');
+  var trainingChart = new Chart(trainingCtx, {
+    type: 'bar',
+    data: {
+      labels: ['1회', '2회', '3회', '4회', '5회', '6회', '7회', '8회', '9회', '10회', '11회', '12회'],
+      datasets: [
+      {
+          label: '읽기속도',
+          yAxisId: 'B',
+          data: [1,2,3,4,5,6,7,8,8,1,2,3],
+          borderColor: '#785fff',
+          backgroundColor: '#785fff',
+          type: 'line',
+          order: 0
+        },
+        {
+          label: 'Dataset 1',
+          yAxisID: 'A',
+          data: [1,2,3,4,5,6,7,8,9,1,2,3],
+          backgroundColor: [
+            '#00a9ff',
+            '#ffb83f',
+            '#ff5a46',
+            '#01bd9f',
+            '#785fff',
+            '#00a9ff',
+            '#ffb83f',
+            '#ff5a46',
+            '#01bd9f',
+            '#785fff',
+            '#00a9ff',
+            '#ffb83f'
+          ],
+          order: 1
+        },
+        {
+          label: 'Dataset 2',
+          yAxisID: 'A',
+          data: [2,3,4,5,6,7,8,9,1,2,3,4],
+          backgroundColor: [
+            '#ff5a46',
+            '#01bd9f',
+            '#785fff',
+            '#00a9ff',
+            '#ffb83f',
+            '#ff5a46',
+            '#01bd9f',
+            '#785fff',
+            '#00a9ff',
+            '#ffb83f',
+            '#00a9ff',
+            '#ffb83f'
+          ],
+          order: 1
+        },
+      ]
+    },
+    options: {
+      plugins: {
+        legend: {
+          display: false
+        }
+      },
+      scales: {
+        A: {
+            type: 'linear',
+            position: 'left',
+        },
+        B: {
+            grid: {
+              display: false
+            },
+            type: 'linear',
+            position: 'right',
+            ticks: {
+              max: 10,
+              min: 0
+            }
+        }
+      }
+    }
+  });
+</script>
 </body>
 </html>

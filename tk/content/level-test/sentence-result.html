@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="../../resources/css/styles.css">
+</head>
+<body>
+<div class="test-wrap">
+  <div class="test-header">
+    <div class="d-flex align-items-end flex-fill">
+      <h1>문해력 테스트</h1>
+      <span class="ms-4">결과확인</span>
+    </div>
+  </div>
+  <div class="test-body">
+    <div class="level-test-result">
+      <div class="level-test-result-title mb-5">
+        <h3>문해력 검사 결과</h3>
+        <div class="text">
+          <strong>[ 책거인 ]</strong> 학생의 문해력 테스트 결과는 다음과 같습니다.
+        </div>
+      </div>
+
+      <div class="chart-wrap has-item-4 mb-5">
+        <div class="chart">
+            <div id="chart-area1"></div>
+            <div class="legend">
+                <div>
+                    <p>독해 정확도</p>
+                    <strong>100<i>점</i></strong>
+                </div>
+            </div>
+        </div>
+        <div class="chart">
+            <div id="chart-area2"></div>
+            <div class="legend">
+                <div>
+                  <p>정보처리 시간</p>
+                  <strong>25<i>분</i>17<i>초</i></strong>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="level-test-result-title">
+        <h3>수준별 독해 평가 결과</h3>
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <div class="position-relative">
+          <div id="chart-area3"></div>
+          <div class="position-absolute top-50 start-50 translate-middle">
+            <strong class="fs-1">70</strong>%
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col d-flex flex-column align-items-center">
+          <div class="level-test-result-chart-title t-1">
+            사실적 이해
+          </div>
+          <div id="chart-area4"></div>
+        </div>
+        <div class="col d-flex flex-column align-items-center">
+          <div class="level-test-result-chart-title t-2">
+            추론적 이해
+          </div>
+          <div id="chart-area5"></div>
+        </div>
+      </div>
+
+      <div class="level-test-result-page-break"></div>
+
+      <div class="level-test-result-title mb-3">
+        <h3>수준별 독해 평가 내용</h3>
+      </div>
+
+      <table class="table level-test-result-table">
+        <colgroup>
+          <col style="width: 17%;">
+          <col style="width: 12%;">
+          <col>
+        </colgroup>
+        <thead class="text-center">
+          <tr>
+            <th colspan="2">진단영역</th>
+            <th rowspan="2"></th>
+          </tr>
+          <tr>
+            <th>이해유형</th>
+            <th>세부영역</th>
+          </tr>
+        </thead>
+        <tbody class="text-center">
+          <tr>
+            <td rowspan="3" class="bg-3 fs-4 fw-bold">사실적이해</td>
+            <td class="bg-3">어휘</td>
+            <td class="text-start">어휘 의미 파악 및 문맥을 고려한 어휘 이해하기</td>
+          </tr>
+          <tr>
+            <td class="bg-3">문장</td>
+            <td class="text-start">어휘 의미 파악 및 문맥을 고려한 어휘 이해하기</td>
+          </tr>
+          <tr>
+            <td class="bg-3">지문</td>
+            <td class="text-start">어휘 의미 파악 및 문맥을 고려한 어휘 이해하기</td>
+          </tr>
+          <tr>
+            <td rowspan="3" class="bg-4 fs-4 fw-bold">추론적이해</td>
+            <td class="bg-4">어휘</td>
+            <td class="text-start">어휘 의미 파악 및 문맥을 고려한 어휘 이해하기</td>
+          </tr>
+          <tr>
+            <td class="bg-4">문장</td>
+            <td class="text-start">어휘 의미 파악 및 문맥을 고려한 어휘 이해하기</td>
+          </tr>
+          <tr>
+            <td class="bg-4">지문</td>
+            <td class="text-start">어휘 의미 파악 및 문맥을 고려한 어휘 이해하기</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+  <div class="level-test-result-footer">
+    <img src="../../resources/images/logo.png" alt="태권책거인">
+  </div>
+</div>
+
+<!-- chartjs -->
+<link rel="stylesheet" href="https://uicdn.toast.com/chart/latest/toastui-chart.min.css" />
+<script src="https://uicdn.toast.com/chart/latest/toastui-chart.min.js"></script>
+<script>
+  pieChartScore();
+  pieChartReaidngSpeed();
+  chart3();
+  chart4();
+  chart5();
+
+  function pieChartScore() {
+      const chart = toastui.Chart;
+      const el = document.getElementById('chart-area1');
+      const data = {
+          series: [
+              {
+                  name: '점수', data: 80
+              },
+              {
+                  name: '점수', data: (100 - 80)
+              }
+          ]
+      };
+      const theme = {
+          series: {
+              colors: ['#f19410', '#f3ce9b'],
+              areaOpacity: 1,
+          },
+      };
+      const options = {
+          legend: { visible: false, },
+          exportMenu: { visible: false },
+          chart: { width: 240, height: 240 },
+          series: { radiusRange: { inner: '80%', outer: '100%' }, },
+          theme
+      };
+      chart.pieChart({ el, data, options });
+  }
+  function pieChartReaidngSpeed() {
+      const chart = toastui.Chart;
+      const el = document.getElementById('chart-area2');
+      const data = {
+          series: [
+              {
+                  name: '속도', data: 40
+              },
+              {
+                  name: '속도', data: (100 - 40)
+              }
+          ]
+      };
+      const theme = {
+          series: {
+              colors: ['#232750', '#aeb0c9'],
+              areaOpacity: 1,
+          },
+      };
+      const options = {
+          legend: { visible: false, },
+          exportMenu: { visible: false },
+          chart: { width: 240, height: 240 },
+          series: { radiusRange: { inner: '80%', outer: '100%' }, },
+          theme
+      };
+      chart.pieChart({ el, data, options });
+  }
+
+  function chart3() {
+    const chart = toastui.Chart;
+      const el = document.getElementById('chart-area3');
+      const data = {
+          series: [
+              {
+                  name: '추론적 이해', data: 30
+              },
+              {
+                  name: '사실적 이해', data: 40
+              },
+              {
+                  name: '오답', data: 30
+              }
+          ]
+      };
+      const theme = {
+        series: {
+          colors: ['#232750', '#f19410', '#d1d1d1'],
+          areaOpacity: 1,
+        },
+      };
+      const options = {
+        legend: {
+          align: 'top'
+        },
+        exportMenu: { visible: false },
+        chart: { width: 400, height: 400 },
+        series: {
+          radiusRange: { inner: '50%', outer: '100%' },
+          dataLabels: {
+            visible: true,
+            pieSeriesName: {
+              visible: true,
+            }
+          }
+        },
+        theme
+      };
+      chart.pieChart({ el, data, options });
+  }
+
+  function chart4() {
+    const el = document.getElementById('chart-area4');
+    const data = {
+      categories: ['어휘', '문장', '지문'],
+      series: [
+        {
+          name: '평균점수',
+          data: [5000, 3000, 5000],
+        },
+        {
+          name: '나의점수',
+          data: [8000, 4000, 7000],
+        },
+      ],
+    };
+    const options = {
+      chart: { width: 420, height: 330 },
+      legend: {
+        align: 'bottom'
+      },
+      exportMenu: { visible: false },
+      theme: {
+        series: {
+          colors: ['#d4d4d4', '#f19410'],
+        },
+      }
+    };
+
+    const chart = toastui.Chart.columnChart({ el, data, options });
+  }
+
+  function chart5() {
+    const el = document.getElementById('chart-area5');
+    const data = {
+      categories: ['어휘', '문장', '지문'],
+      series: [
+        {
+          name: '평균점수',
+          data: [5000, 3000, 5000],
+        },
+        {
+          name: '나의점수',
+          data: [8000, 4000, 7000],
+        },
+      ],
+    };
+    const options = {
+      chart: { width: 420, height: 330 },
+      legend: {
+        align: 'bottom'
+      },
+      exportMenu: { visible: false },
+      theme: {
+        series: {
+          colors: ['#d4d4d4', '#232750'],
+        },
+      }
+    };
+
+    const chart = toastui.Chart.columnChart({ el, data, options });
+  }
+
+</script>
+</body>
+</html>

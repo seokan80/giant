@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="../../resources/css/styles.css">
+</head>
+<body>
+<div class="test-wrap">
+  <div class="test-header">
+    <div class="d-flex align-items-end flex-fill">
+      <h1>독해력 테스트</h1>
+      <span class="ms-4">결과확인</span>
+    </div>
+  </div>
+  <div class="test-body">
+    <div class="level-test-result">
+      <div class="level-test-result-title">
+        <h3>독해력 검사 결과</h3>
+        <div class="text">
+          <strong>[ 책거인 ]</strong> 학생의 독해력 테스트 결과는 다음과 같습니다.
+        </div>
+      </div>
+
+      <div class="chart-wrap has-item-4">
+        <div class="chart">
+            <div id="chart-area1"></div>
+            <div class="legend">
+                <div>
+                    <p>독해 정확도</p>
+                    <strong>100<i>점</i></strong>
+                </div>
+            </div>
+        </div>
+        <div class="chart">
+            <div id="chart-area2"></div>
+            <div class="legend">
+                <div>
+                    <p>독해 속도</p>
+                    <span>(분당 글 읽는 속도)</span>
+                    <strong>1004<i>자</i></strong>
+                </div>
+            </div>
+        </div>
+        <div class="chart">
+            <div id="chart-area3"></div>
+            <div class="legend">
+                <div>
+                    <p>정보처리 시간</p>
+                    <strong>25<i>분</i>17<i>초</i></strong>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="level-test-result-title mb-5">
+        <h3>레벨</h3>
+        <div class="text">
+          <strong>[ 책거인 ]</strong> 학생의 레벨은 <strong class="bg-warning">[ 1 ]</strong> 입니다.
+        </div>
+      </div>
+
+      <div class="level-test-level-bar">
+        <div class="active" style="left: 0%;">
+          <div class="active-text">1</div>
+        </div>
+      </div>
+
+      <div class="level-test-result-data">
+        <div class="chart">
+          <div id="chart-reading" style="width: 100%; height: 80%;"></div>
+        </div>
+        <div class="reference">
+          <h4>* 독해력 점수와 읽기 속도 참고자료</h4>
+          <table class="table">
+            <colgroup>
+              <col style="width: 25%;">
+              <col>
+            </colgroup>
+            <thead class="text-center">
+              <tr class="table-primary">
+                <th colspan="2">
+                  지문 이해도
+                </th>
+              </tr>
+              <tr>
+                <th>독해 점수</th>
+                <th>독해 능력 평가</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-center">
+                  91점 이상
+                </td>
+                <td>
+                  독서량이 많고 매우 수준 높은 독해 능력을 갖춤
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center">
+                  90점 ~ 81점
+                </td>
+                <td>
+                  우수한 수준의 독해 능력을 갖춤
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center">
+                  80점 ~ 61점
+                </td>
+                <td>
+                  독해 능력은 양호하나 신중함이 요구됨
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center">
+                  60점 ~ 41점
+                </td>
+                <td>
+                  대략적 내용을 이해하고 있으나 글을 깊이 사고하며 읽는 태도가 필요함
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center">
+                  40점 이하
+                </td>
+                <td>
+                  독해 능력과 읽기 태도에 보완이 필요함
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table">
+            <colgroup>
+              <col style="width: 20%;">
+              <col style="width: 30%;">
+              <col>
+            </colgroup>
+            <thead class="text-center">
+              <tr class="table-info">
+                <th colspan="3">
+                  평균적 읽기 속도
+                </th>
+              </tr>
+              <tr>
+                <th>학년</th>
+                <th>평균 속도/1분</th>
+                <th>비고</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-center">
+                  초1 ~ 초2
+                </td>
+                <td class="text-center">
+                  200자 ~ 300자
+                </td>
+                <td rowspan="6">
+                  * <strong>개인별 읽기 속도 판단의 기준</strong> : 글을 읽고 난 후 문제를 풀며 이해도를 측정했을 때 최소 70% 이상의 정확도가 나올 경우 그 속도가 인정됨
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center">
+                  초3 ~ 초4
+                </td>
+                <td class="text-center">
+                  300자 ~ 400자
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center">
+                  초5 ~ 초6
+                </td>
+                <td class="text-center">
+                  500자 ~ 600자
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center">
+                  중1 ~ 중2
+                </td>
+                <td class="text-center">
+                  700자 ~ 800자
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center">
+                  중3 ~ 고1
+                </td>
+                <td class="text-center">
+                  900자 ~ 1000자
+                </td>
+              </tr>
+              <tr>
+                <td class="text-center">
+                  고2 이상
+                </td>
+                <td class="text-center">
+                  1100자 내외
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="level-test-result-page-break"></div>
+
+      <div class="level-test-result-title mb-3">
+        <h3>독해력 테스트 결과 해설</h3>
+      </div>
+
+      <table class="table level-test-result-table">
+        <colgroup>
+          <col style="width: 10%;">
+          <col style="width: 15%;">
+          <col style="width: 8%;">
+          <col style="width: 7%;">
+          <col>
+        </colgroup>
+        <thead class="text-center">
+          <tr>
+            <th>문제 번호</th>
+            <th>진단영역</th>
+            <th>점수</th>
+            <th colspan="2">총평 / 결과 해설</th>
+          </tr>
+        </thead>
+        <tbody class="text-center">
+          <tr>
+            <td rowspan="2">01</td>
+            <td rowspan="2">사실적이해</td>
+            <td rowspan="2">O</td>
+            <td class="bg-1">총<br>평</td>
+            <td class="text-start fw-bold">주인공이란 글에서 사건의 중심이 되는 인물입니다. 이야기 글에서 주인공을 파악하며 읽는 힘이 있습니다.</td>
+          </tr>
+          <tr>
+            <td class="bg-2">해<br>설</td>
+            <td class="text-start">글에서 토끼를 중심으로 사건이 이이지고 있기 때문에 토끼가 주인공이다.</td>
+          </tr>
+          <tr>
+            <td rowspan="2">02</td>
+            <td rowspan="2">추론적이해</td>
+            <td rowspan="2">O</td>
+            <td class="bg-1">총<br>평</td>
+            <td class="text-start fw-bold">주인공이란 글에서 사건의 중심이 되는 인물입니다. 이야기 글에서 주인공을 파악하며 읽는 힘이 있습니다.</td>
+          </tr>
+          <tr>
+            <td class="bg-2">해<br>설</td>
+            <td class="text-start">글에서 토끼를 중심으로 사건이 이이지고 있기 때문에 토끼가 주인공이다.</td>
+          </tr>
+          <tr>
+            <td rowspan="2">03</td>
+            <td rowspan="2">비판적이해</td>
+            <td rowspan="2">O</td>
+            <td class="bg-1">총<br>평</td>
+            <td class="text-start fw-bold">주인공이란 글에서 사건의 중심이 되는 인물입니다. 이야기 글에서 주인공을 파악하며 읽는 힘이 있습니다.</td>
+          </tr>
+          <tr>
+            <td class="bg-2">해<br>설</td>
+            <td class="text-start">글에서 토끼를 중심으로 사건이 이이지고 있기 때문에 토끼가 주인공이다.</td>
+          </tr>
+          <tr>
+            <td rowspan="2">04</td>
+            <td rowspan="2">창의적이해</td>
+            <td rowspan="2">O</td>
+            <td class="bg-1">총<br>평</td>
+            <td class="text-start fw-bold">주인공이란 글에서 사건의 중심이 되는 인물입니다. 이야기 글에서 주인공을 파악하며 읽는 힘이 있습니다.</td>
+          </tr>
+          <tr>
+            <td class="bg-2">해<br>설</td>
+            <td class="text-start">글에서 토끼를 중심으로 사건이 이이지고 있기 때문에 토끼가 주인공이다.</td>
+          </tr>
+          <tr>
+            <td rowspan="2">05</td>
+            <td rowspan="2">어휘력</td>
+            <td rowspan="2">O</td>
+            <td class="bg-1">총<br>평</td>
+            <td class="text-start fw-bold">주인공이란 글에서 사건의 중심이 되는 인물입니다. 이야기 글에서 주인공을 파악하며 읽는 힘이 있습니다.</td>
+          </tr>
+          <tr>
+            <td class="bg-2">해<br>설</td>
+            <td class="text-start">글에서 토끼를 중심으로 사건이 이이지고 있기 때문에 토끼가 주인공이다.</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+  <div class="level-test-result-footer">
+    <img src="../../resources/images/logo.png" alt="태권책거인">
+  </div>
+</div>
+
+<!-- chartjs -->
+<link rel="stylesheet" href="https://uicdn.toast.com/chart/latest/toastui-chart.min.css" />
+<script src="https://uicdn.toast.com/chart/latest/toastui-chart.min.js"></script>
+<script>
+  pieChartScore();
+  pieChartReaidngSpeed();
+  pieChartInfoProcTime();
+  readingChart();
+  function pieChartScore() {
+      const chart = toastui.Chart;
+      const el = document.getElementById('chart-area1');
+      const data = {
+          series: [
+              {
+                  name: '점수', data: 80
+              },
+              {
+                  name: '점수', data: (100 - 80)
+              }
+          ]
+      };
+      const theme = {
+          series: {
+              colors: ['#f19410', '#f3ce9b'],
+              areaOpacity: 1,
+          },
+      };
+      const options = {
+          legend: { visible: false, },
+          exportMenu: { visible: false },
+          chart: { width: 240, height: 240 },
+          series: { radiusRange: { inner: '80%', outer: '100%' }, },
+          theme
+      };
+      chart.pieChart({ el, data, options });
+  }
+  function pieChartReaidngSpeed() {
+      const chart = toastui.Chart;
+      const el = document.getElementById('chart-area2');
+      const data = {
+          series: [
+              {
+                  name: '속도', data: 40
+              },
+              {
+                  name: '속도', data: (100 - 40)
+              }
+          ]
+      };
+      const theme = {
+          series: {
+              colors: ['#232750', '#aeb0c9'],
+              areaOpacity: 1,
+          },
+      };
+      const options = {
+          legend: { visible: false, },
+          exportMenu: { visible: false },
+          chart: { width: 240, height: 240 },
+          series: { radiusRange: { inner: '80%', outer: '100%' }, },
+          theme
+      };
+      chart.pieChart({ el, data, options });
+  }
+  function pieChartInfoProcTime() {
+      const chart = toastui.Chart;
+      const el = document.getElementById('chart-area3');
+      const data = {
+          series: [
+              {
+                  name: '시간', data: 30
+              },
+              {
+                  name: '시간', data: (100 - 30)
+              }
+          ]
+      };
+      const theme = {
+          series: {
+              colors: ['#f8d29c', '#fcead2'],
+              areaOpacity: 1,
+          },
+      };
+      const options = {
+          legend: { visible: false, },
+          exportMenu: { visible: false },
+          chart: { width: 240, height: 240 },
+          series: { radiusRange: { inner: '80%', outer: '100%' }, },
+          theme
+      };
+      chart.pieChart({ el, data, options });
+  }
+  function readingChart() {
+    const el = document.getElementById('chart-reading');
+      const data = {
+        categories: ['사실적 이해', '추론적 이해', '비판적 이해', '창의적 이해', '어휘력'],
+        series: [
+          {
+            name: '평균',
+            data: [5000, 3000, 5000, 7000, 6000],
+          },
+          {
+            name: '결과',
+            data: [8000, 4000, 7000, 2000, 6000],
+          },
+        ],
+      };
+      const options = {
+        chart: { width: 'auto', height: 'auto' },
+        legend: {
+          align: 'bottom'
+        },
+        series: {
+          showArea: true,
+        },
+        exportMenu: {
+          visible: false
+        }
+      };
+
+      const chart = toastui.Chart.radarChart({ el, data, options });
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="../../resources/css/styles.css">
+</head>
+<body>
+<div class="ly-toolbar">
+  <div class="container">
+    <div class="logo">
+      <img src="../../resources/images/logo.png" alt="태권책거인">
+    </div>
+    <div class="logos">
+      <a href="#" class="item">
+        <img src="../../resources/images/logo-kukkiwon.png" alt="국기원">
+      </a>
+      <a href="#" class="item">
+        <img src="../../resources/images/logo-world-ctu.png" alt="">
+      </a>
+      <a href="#" class="item">
+        <img src="../../resources/images/logo-world-sc.png" alt="">
+      </a>
+    </div>
+  </div>
+</div>
+<div class="ly-navbar">
+  <div class="container">
+    <button type="button" class="nav-toggle-button"></button>
+    <div class="ly-navbar-nav">
+      <button type="button" class="nav-close-button"></button>
+      <ul>
+        <li>
+          <a href="../main/main.html#about">
+            회사소개
+          </a>
+        </li>
+        <li>
+          <a href="../main/main.html#program">
+            프로그램 소개
+          </a>
+        </li>
+        <li>
+          <a href="../main/main.html#experience">
+            체험학습
+          </a>
+        </li>
+        <li>
+          <a href="../main/main.html#support">
+            고객지원
+          </a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a href="#" class="text-white">
+            로그인
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            회원가입
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="links">
+      <div class="item">
+        <a href="#">
+          로그인
+        </a>
+      </div>
+      <div class="item">
+        <a href="#">
+          회원가입
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ly-container-title">
+  <div class="container">
+    <h1>마이페이지</h1>
+  </div>
+</div>
+<div class="ly-container">
+  <div class="container">
+    <div class="ly-aside">
+  <div class="ly-aside-nav">
+    <div class="ly-aside-nav-item">
+      <a href="my-info.html" class="ly-aside-nav-item-link">
+        내 정보
+      </a>
+    </div>
+    <div class="ly-aside-nav-item">
+      <a href="students.html" class="ly-aside-nav-item-link active">
+        학생 정보
+      </a>
+    </div>
+    <div class="ly-aside-nav-item">
+      <a href="approval.html" class="ly-aside-nav-item-link">
+        승인 관리
+      </a>
+    </div>
+    <div class="ly-aside-nav-item">
+      <a href="support.html" class="ly-aside-nav-item-link">
+        운영 / 교육지원
+      </a>
+    </div>
+    <div class="ly-aside-nav-item">
+      <a href="content-platform.html" class="ly-aside-nav-item-link">
+        콘텐츠 플랫폼
+      </a>
+    </div>
+    <div class="ly-aside-nav-item">
+      <a href="payment.html" class="ly-aside-nav-item-link">
+        결제 관리
+      </a>
+    </div>
+    <div class="ly-aside-nav-item">
+      <a href="memo.html" class="ly-aside-nav-item-link">
+        쪽지함
+      </a>
+    </div>
+    <div class="ly-aside-nav-item">
+      <a href="sms.html" class="ly-aside-nav-item-link">
+        문자 전송
+      </a>
+    </div>
+    <div class="ly-aside-nav-item">
+      <a href="notice.html" class="ly-aside-nav-item-link">
+        공지사항
+      </a>
+    </div>
+    <div class="ly-aside-nav-item">
+      <a href="qna.html" class="ly-aside-nav-item-link">
+        1:1 문의
+      </a>
+    </div>
+  </div>
+</div>
+    <div class="ly-content">
+
+      <div class="mypage-user-summary">
+  <div class="centername">
+    <strong>000 센터</strong> 님 반갑습니다.
+  </div>
+</div>
+
+      <h2 class="ly-content-title">
+        훈련결과
+      </h2>
+
+      <div class="training-progress-bar">
+        <div class="active-bar" style="width: 30%;">
+          <div class="active-bar-text">
+            2회 훈련하기
+          </div>
+        </div>
+        <div class="total">
+          총 40회차
+        </div>
+      </div>
+
+      <div class="tabs">
+        <a href="#" class="item active">
+          독해력 훈련
+        </a>
+        <a href="#" class="item">
+          태권도 학습
+        </a>
+        <div class="flex-fill fw-bold fs-5 d-flex justify-content-end align-items-center">
+          조유빈 학생 / Lv.6
+        </div>
+      </div>
+
+      <h2 class="ly-content-title border-0">
+        몰입독서법
+      </h2>
+      <div class="mb-4">
+        <canvas id="readingChart" height="100"></canvas>
+      </div>
+      <div class="mypage-chart-legends mb-5">
+        <div class="item">
+          <i class="chart-color-1"></i>
+          집중력훈련
+        </div>
+        <div class="item">
+          <i class="chart-color-2"></i>
+          기억력훈련
+        </div>
+        <div class="item">
+          <i class="chart-color-3"></i>
+          넓게보기
+        </div>
+        <div class="item">
+          <i class="chart-color-4"></i>
+          단문적용
+        </div>
+        <div class="item">
+          <i class="chart-color-5"></i>
+          지문적용
+        </div>
+        <div class="item">
+          <i class="chart-color-6"></i>
+          박학다식
+        </div>
+        <div class="item">
+          <i class="chart-color-7"></i>
+          어휘력테스트
+        </div>
+        <div class="item">
+          <i class="chart-color-8"></i>
+          요약문테스트
+        </div>
+        <div class="item">
+          <i class="chart-color-9"></i>
+          독해평가테스트
+        </div>
+        <div class="item">
+          <i class="chart-color-10"></i>
+          도서테스트
+        </div>
+        <div class="item">
+          <i class="chart-color-11"></i>
+          어휘력훈련
+        </div>
+      </div>
+
+      <h2 class="ly-content-title border-0">
+        독해력 훈련
+      </h2>
+      <div class="mb-4">
+        <canvas id="trainingChart" height="100"></canvas>
+      </div>
+      <div class="mypage-chart-legends mb-5">
+        <div class="item">
+          <i class="chart-color-12"></i>
+          문학(분석적지능)
+        </div>
+        <div class="item">
+          <i class="chart-color-13"></i>
+          문학(감성적지능)
+        </div>
+        <div class="item">
+          <i class="chart-color-14"></i>
+          교과서독해
+        </div>
+        <div class="item">
+          <i class="chart-color-15"></i>
+          비문학독해
+        </div>
+        <div class="item">
+          <i class="chart-color-16"></i>
+          읽기속도
+        </div>
+      </div>
+
+
+      <h2 class="ly-content-title border-0 mb-1">
+        선생님 코멘트
+        <div class="ms-3">
+          <select class="form-select">
+            <option>회차선택</option>
+          </select>
+        </div>
+      </h2>
+
+
+      <div class="row gx-3 align-items-center bg-light px-2 py-3">
+        <div class="col-auto flex-fill">
+          <textarea class="form-control" rows="3"></textarea>
+        </div>
+        <div class="col-auto">
+          <button type="button" class="btn btn-dark">
+            저장
+          </button>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+<div class="ly-footer">
+  <div class="container">
+    <div class="logo">
+      <img src="../../resources/images/logo-footer.png" alt="태권책거인">
+    </div>
+    <div class="body">
+      회사명: 주식회사 메타스콜레 | 대표이사: 정해영<br>
+      사업자등록번호: 856-88-01642 | 통신판매업신고: 제 2021-서울강남-04621 호<br>
+      주소: 서울특별시 강남구 역삼로 423, 7층 (대치동, 화남빌딩) | 이메일: metas@metaschole.co.kr<br>
+      고객센터 운영시간 10:00 ~ 19:00 (점심시간: 13:00~14:00, | 주말, 공휴일 휴무) 대표번호: 1688-3482Copyright ⓒ All rights reserved.
+    </div>
+  </div>
+</div>
+<div class="ly-footer-menu">
+  <div class="container">
+    <a href="#">
+      이용약관
+    </a>
+    <a href="#">
+      <strong>개인정보처리방침</strong>
+    </a>
+  </div>
+</div>
+
+<script src="../../resources/js/vendor/jquery.min.js"></script>
+<script src="../../resources/js/vendor/bootstrap.bundle.min.js"></script>
+<script src="../../resources/js/ui.js"></script>
+<script src="../../resources/js/vendor/chart.min.js"></script>
+<script>
+  var readingCtx = document.getElementById('readingChart').getContext('2d');
+  var readingChart = new Chart(readingCtx, {
+    type: 'bar',
+    data: {
+      labels: ['1회', '2회', '3회', '4회', '5회', '6회', '7회', '8회', '9회', '10회', '11회', '12회'],
+      datasets: [
+        {
+          label: 'Dataset 1',
+          data: [1,2,3,-4,5,6,7,8,9,1,-2,3],
+          backgroundColor: [
+            '#e56785',
+            '#e899a2',
+            '#f9b730',
+            '#e9de4c',
+            '#9ecfb1',
+            '#9fd2d6',
+            '#68b1cf',
+            '#65be88',
+            '#1d5693',
+            '#50438d',
+            '#b7a9c9',
+            '#00a9ff',
+          ],
+        },
+        {
+          label: 'Dataset 2',
+          data: [2,3,4,5,6,7,8,9,1,2,3,4],
+          backgroundColor: [
+            '#9ecfb1',
+            '#9fd2d6',
+            '#68b1cf',
+            '#65be88',
+            '#1d5693',
+            '#50438d',
+            '#b7a9c9',
+            '#00a9ff',
+            '#e56785',
+            '#e899a2',
+            '#f9b730',
+            '#e9de4c',
+          ],
+        },
+      ]
+    },
+    options: {
+      plugins: {
+        legend: {
+          display: false
+        }
+      },
+      scales: {
+          x: {
+            stacked: true
+          },
+          y: {
+            stacked: true,
+            beginAtZero: true
+          }
+      }
+    }
+  });
+
+  var trainingCtx = document.getElementById('trainingChart').getContext('2d');
+  var trainingChart = new Chart(trainingCtx, {
+    type: 'bar',
+    data: {
+      labels: ['1회', '2회', '3회', '4회', '5회', '6회', '7회', '8회', '9회', '10회', '11회', '12회'],
+      datasets: [
+      {
+          label: '읽기속도',
+          yAxisId: 'B',
+          data: [1,2,3,4,5,6,7,8,8,1,2,3],
+          borderColor: '#785fff',
+          backgroundColor: '#785fff',
+          type: 'line',
+          order: 0
+        },
+        {
+          label: 'Dataset 1',
+          yAxisID: 'A',
+          data: [1,2,3,4,5,6,7,8,9,1,2,3],
+          backgroundColor: [
+            '#00a9ff',
+            '#ffb83f',
+            '#ff5a46',
+            '#01bd9f',
+            '#785fff',
+            '#00a9ff',
+            '#ffb83f',
+            '#ff5a46',
+            '#01bd9f',
+            '#785fff',
+            '#00a9ff',
+            '#ffb83f'
+          ],
+          order: 1
+        },
+        {
+          label: 'Dataset 2',
+          yAxisID: 'A',
+          data: [2,3,4,5,6,7,8,9,1,2,3,4],
+          backgroundColor: [
+            '#ff5a46',
+            '#01bd9f',
+            '#785fff',
+            '#00a9ff',
+            '#ffb83f',
+            '#ff5a46',
+            '#01bd9f',
+            '#785fff',
+            '#00a9ff',
+            '#ffb83f',
+            '#00a9ff',
+            '#ffb83f'
+          ],
+          order: 1
+        },
+      ]
+    },
+    options: {
+      plugins: {
+        legend: {
+          display: false
+        }
+      },
+      scales: {
+        A: {
+            type: 'linear',
+            position: 'left',
+        },
+        B: {
+            grid: {
+              display: false
+            },
+            type: 'linear',
+            position: 'right',
+            ticks: {
+              max: 10,
+              min: 0
+            }
+        }
+      }
+    }
+  });
+</script>
+</body>
+</html>
