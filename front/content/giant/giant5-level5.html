@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>책 읽는 거인</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="/front/resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/front/resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="/front/resources/plugin/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="/front/resources/plugin/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="/front/resources/plugin/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="/front/resources/css/bootstrap.css">
+    <link rel="stylesheet" href="/front/resources/css/style.css">
+    <!-- jquery -->
+    <script src="/front/resources/plugin/jquery/jquery.min.js"></script>
+    <!-- jquery ui -->
+    <script src="/front/resources/plugin/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="/front/resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper -->
+    <script src="/front/resources/plugin/swiper/js/swiper.min.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header-block">
+            <div id="header">
+                <div class="container">
+                    <div class="header-wrap">
+                        <h1 class="logo"><a href="/front/content/main/main.html"><span class="sr-only">책 읽는 거인</span></a></h1>
+                        <div class="mobile-header-group">
+                            <div class="h-set">
+                                <div class="h-menu">
+                                    <ul>
+                                        <li><a href="/front/content/login/login.html">로그인</a></li>
+                                        <li><a href="/front/content/join/agree.html">회원가입</a></li>
+                                        <li><a href="/front/content/mypage/mypage_before.html">홍길동님</a></li>
+                                        <li><a href="/front/content/login/login.html">로그아웃</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="gnb">
+                                <ul class="dep1">
+                                    <li>
+                                        <a href="/front/content/company/about.html"><span>회사소개</span></a>
+                                        <ul class="dep2">
+                                            <li><a href="/front/content/company/about.html"><span>회사소개</span></a></li>
+                                            <li><a href="/front/content/company/history.html"><span>연혁</span></a></li>
+                                            <li><a href="/front/content/company/flow.html"><span>학습 FLOW</span></a></li>
+                                            <li><a href="/front/content/company/location.html"><span>오시는 길</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="/front/content/giant/giant1.html"><span>책읽는 거인</span></a>
+                                        <ul class="dep2">
+                                            <li><a href="/front/content/giant/giant1.html"><span>몰입독서법</span></a></li>
+                                            <li><a href="/front/content/giant/giant2.html"><span>사유독평</span></a></li>
+                                            <li><a href="/front/content/giant/giant3.html"><span>독해력훈련</span></a></li>
+                                            <li><a href="/front/content/giant/giant4.html"><span>어휘력훈련</span></a></li>
+                                            <li><a href="/front/content/giant/giant5.html"><span>체험하기</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/front/content/customer/notice.html"><span>고객센터</span></a>
+                                        <ul class="dep2">
+                                            <li><a href="/front/content/customer/notice.html"><span>공지사항</span></a></li>
+                                            <li><a href="/front/content/customer/faq.html"><span>FAQ</span></a></li>
+                                            <li><a href="/front/content/customer/qna.html"><span>1:1 문의</span></a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mobile-menu d-lg-none">
+                            <a role="button" data-id="btn-hamburger"><i class="btn-hamburger"><span class="sr-only">메뉴</span></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="container-block">
+            <div id="container">
+                <div id="content">
+
+                    <!-- 실 컨텐츠 -->
+                    <div class="container">
+
+                        <div class="giant5-header">
+                          <div class="text-center">
+                            <img src="../../resources/images/giant5-title.png" alt="체험수업">
+                          </div>
+                          <div class="giant5-header-text">
+                            책 읽는 거인의 어휘력 훈련, 독해다지기 등 알찬 콘텐츠를 만나보세요
+                          </div>
+                        </div>
+
+                        <div class="giant5-content-select">
+                          <div class="select-container">
+                            <label>
+                              콘텐츠 선택
+                            </label>
+                            <select>
+                              <option>책 읽는 거인 레벨 5</option>
+                            </select>
+                          </div>
+                          <div class="ml-md-4">
+                            <button type="button" class="btn btn-lg btn-secondary select-submit" data-toggle="modal" data-target="#levelGuideModal">
+                              레벨 선택 가이드
+                            </button>
+                          </div>
+                        </div>
+
+                        <!-- 레벨 선택 가이드 Modal -->
+                        <div class="modal fade" id="levelGuideModal">
+                          <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                              <div class="modal-header bg-success">
+                                <h5 class="modal-title">레벨 안내</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                <div class="mb-3">
+                                  레벨은 입학테스트 결과에 따라 자동 부여됩니다.<br>
+                                  레벨 1부터 10까지 있으며 레벨에 따른 학년 기준은 아래와 같습니다.
+                                </div>
+                                <div class="mb-3">
+                                  <img src="../../resources/images/giant5-level-guide.png">
+                                </div>
+                                <strong>
+                                  * 레벨 1,5,10에 한하여 체험 수업이 가능합니다.
+                                </strong>
+                              </div>
+                              <div class="modal-footer justify-content-center">
+                                <button type="button" class="btn btn-success" data-dismiss="modal">닫기</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- // 레벨 선택 가이드 Modal -->
+
+                        <h5 class="giant5-title-c">어휘력 훈련</h5>
+                        <div class="giant5-tr-steps">
+                          <div class="item active">
+                            어휘력 훈련 Ⅰ
+                          </div>
+                          <div class="item">
+                            어휘력 훈련Ⅱ
+                          </div>
+                          <div class="item">
+                            어휘력 테스트Ⅲ
+                          </div>
+                        </div>
+
+                        <h5 class="giant5-title-c">몰입독서법</h5>
+                        <div class="giant5-tr-steps">
+                          <div class="item active">
+                            몰입독서법Ⅰ
+                          </div>
+                          <div class="item">
+                            몰입독서법Ⅱ
+                          </div>
+                          <div class="item">
+                            몰입독서법Ⅲ
+                          </div>
+                        </div>
+
+                        <h5 class="giant5-title-c">몰입독서법(다독) <small>*순차적으로 진행하세요.</small></h5>
+                        <div class="giant5-tr-steps">
+                          <div class="item active">
+                            몰입독서법(다독)Ⅰ-①
+                          </div>
+                          <div class="item">
+                            몰입독서법(다독)Ⅰ-②
+                          </div>
+                          <div class="item">
+                            몰입독서법(다독)Ⅰ-③
+                          </div>
+                        </div>
+
+                        <h5 class="giant5-title-c">독해다지기</h5>
+                        <div class="giant5-tr-steps">
+                          <div class="item active">
+                            독해다지기 체험Ⅰ
+                          </div>
+                          <div class="item">
+                            독해다지기 체험Ⅱ
+                          </div>
+                          <div class="item">
+                            독해다지기 체험Ⅲ
+                          </div>
+                        </div>
+
+                    </div>
+                    <!-- //실 컨텐츠 -->
+
+                </div>
+            </div>
+        </div>
+        <div id="footer-block">
+            <div id="footer">
+                <div class="container">
+                    <ul class="f-menu">
+                        <li><a href="/front/content/company/about.html">회사소개</a></li>
+                        <li><a href="/front/content/util/terms.html">이용약관</a></li>
+                        <li><a href="/front/content/util/privacy.html"><strong>개인정보취급방침</strong></a></li>
+                    </ul>
+                    <div class="f-info">
+                        회사명 : 주식회사 메타스콜레   대표이사 : 정해영   사업자등록번호 : 856-88-01642   이메일 : metas@metaschole.co.kr <br>
+                        팩스 : 02-553-3482  문의전화 : 1688-3482  주소 : (우:06197) 서울특별시 강남구 역삼로 423 7층 (대치동, 화남빌딩)
+                    </div>
+                    <p class="copyright">Copyright ⓒ All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ui 관련 -->
+    <script src="/front/resources/js/ui.js"></script>
+    <script>
+        $(document).ready(function(){
+
+        });
+    </script>
+</body>
+</html>
