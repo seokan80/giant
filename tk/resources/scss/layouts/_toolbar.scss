@@ -17,3 +17,10 @@
     }
   }
 }
+@include media-breakpoint-down(lg) {
+  .ly-toolbar {
+    .logos {
+      display: none;
+    }
+  }
+}

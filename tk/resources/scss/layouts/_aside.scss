@@ -18,3 +18,10 @@
     background-size: 20px auto;
   }
 }
+@include media-breakpoint-down(lg) {
+  .ly-aside {
+    width: 100%;
+    margin: 0;
+    padding: 0 16px;
+  }
+}

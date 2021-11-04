@@ -42,3 +42,41 @@
     }
   }
 }
+@include media-breakpoint-down(lg) {
+  .tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #d8d8d8;
+  
+    .item {
+      width: 33%;
+      height: 50px;
+      line-height: 50px;
+      font-size: 16px;
+  
+      &.active {
+        z-index: 1;
+        background-color: $dark;
+      }
+    }
+    .tooltip-visible {
+      top: -24px;
+      left: 45%;
+      padding: 0.5rem 0.7rem;
+      font-size: 14px;
+      line-height: 1;
+      border-radius: 0.4rem;
+      white-space: nowrap;
+  
+      &::before {
+        content: "";
+        position: absolute;
+        left: 10px;
+        bottom: -12px;
+        width: 20px;
+        height: 12px;
+        background: url('../images/bg-tooltip-visible.png') no-repeat;
+      }
+    }
+  }
+}

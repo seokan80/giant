@@ -11205,6 +11205,11 @@ textarea.form-control-lg {
   text-decoration: none;
 }
 
+@media (max-width: 991.98px) {
+  .ly-toolbar .logos {
+    display: none;
+  }
+}
 .ly-navbar {
   position: sticky;
   top: 0;
@@ -11332,6 +11337,16 @@ textarea.form-control-lg {
   padding: 0;
 }
 
+@media (max-width: 991.98px) {
+  .ly-container-title .container {
+    padding-left: 16px;
+  }
+
+  .ly-container .container {
+    flex-direction: column;
+    padding: 0 16px;
+  }
+}
 .ly-content {
   flex: 1;
 }
@@ -11399,6 +11414,13 @@ textarea.form-control-lg {
   background-size: 20px auto;
 }
 
+@media (max-width: 991.98px) {
+  .ly-aside {
+    width: 100%;
+    margin: 0;
+    padding: 0 16px;
+  }
+}
 .btn-print {
   display: flex;
   align-items: center;
@@ -11488,6 +11510,41 @@ textarea.form-control-lg {
   background: url("../images/bg-tooltip-visible.png") no-repeat;
 }
 
+@media (max-width: 991.98px) {
+  .tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #d8d8d8;
+  }
+  .tabs .item {
+    width: 33%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+  }
+  .tabs .item.active {
+    z-index: 1;
+    background-color: #232750;
+  }
+  .tabs .tooltip-visible {
+    top: -24px;
+    left: 45%;
+    padding: 0.5rem 0.7rem;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 0.4rem;
+    white-space: nowrap;
+  }
+  .tabs .tooltip-visible::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    bottom: -12px;
+    width: 20px;
+    height: 12px;
+    background: url("../images/bg-tooltip-visible.png") no-repeat;
+  }
+}
 .pagination .page-link {
   margin: 0 5px;
   padding: 0.1rem 0.5rem;
@@ -11848,6 +11905,63 @@ textarea.form-control-lg {
   margin-bottom: 50px;
 }
 
+@media (max-width: 991.98px) {
+  .main-about {
+    padding: 50px 0;
+  }
+  .main-about .pag {
+    font-size: 18px;
+    line-height: 32px;
+  }
+  .main-about .sign {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    font-size: 24px;
+  }
+  .main-about h3, .main-about .h3 {
+    font-size: 28px;
+  }
+  .main-about h3::before, .main-about .h3::before {
+    height: 28px;
+    margin-right: 10px;
+  }
+  .main-about .table th,
+.main-about .table td {
+    font-size: 16px;
+  }
+
+  .main-about-visual {
+    min-height: 320px;
+    padding: 0;
+  }
+  .main-about-visual h2, .main-about-visual .h2 {
+    margin-bottom: 30px;
+    font-size: 42px;
+  }
+  .main-about-visual .text {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .main-about-visual .text::before {
+    content: "";
+    display: block;
+    height: 89px;
+    margin-bottom: 50px;
+    background: url("../images/main/main-about-start.png") no-repeat;
+  }
+  .main-about-visual .text::after {
+    content: "";
+    display: block;
+    height: 89px;
+    margin-top: 50px;
+    background: url("../images/main/main-about-end.png") no-repeat;
+  }
+  .main-about-visual .text .text-lg {
+    color: #751721;
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+}
 .main-program {
   padding: 65px 0;
   background-color: #f7f6f5;
@@ -11960,6 +12074,58 @@ textarea.form-control-lg {
   left: 410px;
 }
 
+@media (max-width: 991.98px) {
+  .main-program {
+    padding: 35px 0;
+  }
+  .main-program .container {
+    margin-bottom: 40px;
+    padding: 50px 16px;
+  }
+  .main-program .summary {
+    font-size: 20px;
+    line-height: 1.8;
+  }
+  .main-program .summary2 {
+    margin-bottom: 50px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .main-program .summary2 span {
+    font-size: 24px;
+  }
+  .main-program .summary-box {
+    margin-bottom: 50px;
+    padding: 30px 10px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 36px;
+  }
+  .main-program .summary-box span {
+    font-size: 25px;
+  }
+  .main-program h4, .main-program .h4 {
+    font-size: 29px;
+  }
+  .main-program li {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .main-program h2, .main-program .h2 {
+    margin: -20px -16px 50px -16px;
+    padding-bottom: 20px;
+    font-size: 36px;
+  }
+  .main-program .process img {
+    margin-bottom: 20px;
+  }
+  .main-program .process .btn-con1 {
+    position: static;
+  }
+  .main-program .process .btn-con2 {
+    position: static;
+  }
+}
 .main-training-header {
   margin-bottom: 100px;
   padding-bottom: 50px;
@@ -12025,6 +12191,37 @@ textarea.form-control-lg {
   line-height: 33px;
 }
 
+@media (max-width: 991.98px) {
+  .main-training-header {
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+  }
+  .main-training-header h2, .main-training-header .h2 {
+    font-size: 36px;
+  }
+  .main-training-header p {
+    font-size: 20px;
+    margin: 20px 0 0 0;
+  }
+
+  .main-training {
+    padding: 40px 0;
+  }
+  .main-training h3, .main-training .h3 {
+    font-size: 30px;
+  }
+  .main-training h4, .main-training .h4 {
+    font-size: 21px;
+  }
+  .main-training .pag {
+    font-size: 20px;
+    line-height: 43px;
+  }
+  .main-training .tr-text-fg {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
 .main-experience .main-training-header p {
   font-size: 24px;
 }
@@ -12102,6 +12299,40 @@ textarea.form-control-lg {
   font-size: 14px;
 }
 
+@media (max-width: 991.98px) {
+  .main-experience-item {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  .main-experience-item h3, .main-experience-item .h3 {
+    width: 100%;
+    margin: 0 0 10px 0;
+    font-size: 22px;
+  }
+  .main-experience-item .btns .item {
+    font-size: 14px;
+  }
+
+  .main-experience-levels {
+    margin-top: 30px;
+    padding: 20px 30px;
+  }
+  .main-experience-levels h5, .main-experience-levels .h5 {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  .main-experience-levels .levels {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .main-experience-levels .levels .item {
+    width: 49%;
+    margin: 0 2% 2% 0;
+  }
+  .main-experience-levels .levels .item:nth-child(2n) {
+    margin-right: 0;
+  }
+}
 .main-support {
   padding: 100px 0;
 }
@@ -12161,6 +12392,7 @@ textarea.form-control-lg {
 }
 .mypage-user-summary .badges {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   padding-right: 1rem;
 }
@@ -12185,6 +12417,14 @@ textarea.form-control-lg {
   color: #333;
 }
 
+@media (max-width: 991.98px) {
+  .mypage-user-summary {
+    flex-direction: column;
+  }
+  .mypage-user-summary .badges .badge-item {
+    margin-top: 1rem;
+  }
+}
 .mypage-activity-point .point {
   display: flex;
   align-items: center;
@@ -12257,6 +12497,11 @@ textarea.form-control-lg {
   margin: 0 10px;
 }
 
+@media (max-width: 991.98px) {
+  .mypage-activity-point {
+    margin-bottom: 2rem;
+  }
+}
 .mypage-chart-legends {
   display: flex;
   flex-wrap: wrap;
@@ -12333,6 +12578,14 @@ textarea.form-control-lg {
   text-decoration: underline;
 }
 
+@media (max-width: 991.98px) {
+  .mypage-chart-legends {
+    padding: 15px;
+  }
+  .mypage-chart-legends .item {
+    width: 45%;
+  }
+}
 .memo-container {
   display: flex;
   align-items: stretch;
@@ -12569,25 +12822,29 @@ textarea.form-control-lg {
 .training-step {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .training-step-item {
   width: 23.5%;
   margin-bottom: 20px;
+  margin-right: 2%;
   border-radius: 1rem;
 }
-.training-step-item.active {
-  border: 1px solid #7c99bf;
+.training-step-item:nth-child(4n) {
+  margin-right: 0;
 }
 .training-step-item.active .header {
   background-color: #7c99bf;
+  border: 1px solid #7c99bf;
+  border-bottom: 0;
 }
 .training-step-item.active .header::before {
   border-top-color: #7c99bf;
 }
 .training-step-item.active .body {
   background-color: #e8edf1;
+  border: 1px solid #7c99bf;
+  border-top: 0;
 }
 .training-step-item .header {
   position: relative;
@@ -12638,6 +12895,15 @@ textarea.form-control-lg {
   background-color: #232750;
 }
 
+@media (max-width: 991.98px) {
+  .training-step-item {
+    width: 49%;
+    margin-right: 2%;
+  }
+  .training-step-item:nth-child(2n) {
+    margin-right: 0;
+  }
+}
 .buy-service-cards {
   display: flex;
   justify-content: space-between;
@@ -13349,6 +13615,5 @@ img {
 }
 
 .container {
-  width: 1280px !important;
   max-width: 1280px !important;
 }

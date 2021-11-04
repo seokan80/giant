@@ -43,19 +43,21 @@
 .training-step {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .training-step-item {
   width: 23.5%;
   margin-bottom: 20px;
+  margin-right: 2%;
   border-radius: 1rem;
-
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
   &.active {
-    border: 1px solid #7c99bf;
-
     .header {
       background-color: #7c99bf;
+      border: 1px solid #7c99bf;
+      border-bottom: 0;
 
       &::before {
         border-top-color: #7c99bf;
@@ -63,6 +65,8 @@
     }
     .body {
       background-color: #e8edf1;
+      border: 1px solid #7c99bf;
+      border-top: 0;
     }
   }
 
@@ -116,6 +120,17 @@
       &.active {
         background-color: $dark;
       }
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .training-step-item {
+    width: 49%;
+    margin-right: 2%;
+
+    &:nth-child(2n) {
+      margin-right: 0;
     }
   }
 }
