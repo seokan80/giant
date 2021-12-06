@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>책 읽는 거인</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="/front/resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/front/resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="/front/resources/plugin/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="/front/resources/plugin/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="/front/resources/plugin/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="/front/resources/css/bootstrap.css">
+    <link rel="stylesheet" href="/front/resources/css/style.css">
+    <!-- jquery -->
+    <script src="/front/resources/plugin/jquery/jquery.min.js"></script>
+    <!-- jquery ui -->
+    <script src="/front/resources/plugin/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="/front/resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper -->
+    <script src="/front/resources/plugin/swiper/js/swiper.min.js"></script>
+
+    <!-- chartjs -->
+    <link rel="stylesheet" href="https://uicdn.toast.com/chart/latest/toastui-chart.min.css" />
+    <script src="https://uicdn.toast.com/chart/latest/toastui-chart.min.js"></script>
+</head>
+
+<body>
+
+    <div class="test-wrap">
+        <div class="test-header">
+            <div class="d-flex align-items-end">
+                <h1>독해 다지기</h1>
+                <span class="ml-4">훈련 결과</span>
+            </div>
+        </div>
+        <div class="test-body">
+            <div class="test-result">
+                <div class="test-summary">
+                    <p class="test-desc"><b>[ooo]</b> 학생의 독해 다지기 결과는 다음과 같습니다</p>
+                </div>
+
+                <table class="test-result-report-table text-center">
+                    <thead>
+                        <tr>
+                            <th>지문 제목</th>
+                            <th>읽기 속도</th>
+                            <th>읽기 시간</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>무궁화 꽃이 피었습니다.</td>
+                            <td>1,200자</td>
+                            <td>00분 00초</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="test-training-result-cards">
+
+                    <div class="test-training-result-card">
+                        <div class="step">
+                            1차
+                        </div>
+                        <div class="header">
+                        </div>
+                        <div class="body">
+                            <div class="body-item">
+                                <div class="label label-1">
+                                    <div class="label-text">점수</div>
+                                </div>
+                                <div class="bar bar-fill bar-right">
+                                    <div class="bar-current bar-current-2" style="width: 80%;">
+                                        <div class="text">
+                                            80%
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="body-item">
+                                <div class="label label-2">
+                                    <div class="label-text">문제 풀이 시간</div>
+                                </div>
+                                <div class="bar bar-fill bar-right">
+                                    <div class="bar-current bar-current-4" style="width: 70%;">
+                                        <div class="text">
+                                            1분
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="test-training-result-card">
+                        <div class="step">
+                            2차
+                        </div>
+                        <div class="header">
+                        </div>
+                        <div class="body">
+                            <div class="body-item">
+                                <div class="label label-1">
+                                    <div class="label-text">점수</div>
+                                </div>
+                                <div class="bar bar-fill bar-right">
+                                    <div class="bar-current bar-current-2" style="width: 100%;">
+                                        <div class="text">
+                                            100%
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="body-item">
+                                <div class="label label-2">
+                                    <div class="label-text">문제 풀이 시간</div>
+                                </div>
+                                <div class="bar bar-fill bar-right">
+                                    <div class="bar-current bar-current-4" style="width: 100%;">
+                                        <div class="text">
+                                            1분
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="test-training-result-card">
+                        <div class="step">
+                            3차
+                        </div>
+                        <div class="header">
+                        </div>
+                        <div class="body">
+                            <div class="body-item">
+                                <div class="label label-1">
+                                    <div class="label-text">점수</div>
+                                </div>
+                                <div class="bar bar-fill bar-right">
+                                    <div class="bar-current bar-current-2" style="width: 100%;">
+                                        <div class="text">
+                                            100%
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="body-item">
+                                <div class="label label-2">
+                                    <div class="label-text">문제 풀이 시간</div>
+                                </div>
+                                <div class="bar bar-fill bar-right">
+                                    <div class="bar-current bar-current-4" style="width: 100%;">
+                                        <div class="text">
+                                            1분
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="test-training-result-card">
+                        <div class="step">
+                            4차
+                        </div>
+                        <div class="header">
+                        </div>
+                        <div class="body">
+                          <div class="body-item">
+                                <div class="label label-1">
+                                    <div class="label-text">점수</div>
+                                </div>
+                                <div class="bar bar-fill bar-right">
+                                    <div class="bar-current bar-current-2" style="width: 100%;">
+                                        <div class="text">
+                                            100%
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="body-item">
+                                <div class="label label-2">
+                                    <div class="label-text">문제 풀이 시간</div>
+                                </div>
+                                <div class="bar bar-fill bar-right">
+                                    <div class="bar-current bar-current-4" style="width: 100%;">
+                                        <div class="text">
+                                            1분
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="passed"></div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+        <div class="test-footer">
+            <div class="text-center">
+                <button type="button" class="btn btn-success btn-xl" style="width:265px" onclick="window.print()"><i class="fas fa-print mr-2"></i>출력하기</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ui 관련 -->
+    <script src="/front/resources/js/ui.js"></script>
+</body>
+</html>

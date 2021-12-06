@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-Compatible" content="IE=edge">
+    <title>책 읽는 거인</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="/front/resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="/front/resources/images/favicon-128.png" sizes="128x128">
+    <link rel="stylesheet" href="/front/resources/plugin/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="/front/resources/plugin/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="/front/resources/plugin/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="/front/resources/css/bootstrap.css">
+    <link rel="stylesheet" href="/front/resources/css/style.css">
+    <!-- jquery -->
+    <script src="/front/resources/plugin/jquery/jquery.min.js"></script>
+    <!-- jquery ui -->
+    <script src="/front/resources/plugin/jquery-ui/jquery-ui.min.js"></script>
+    <!-- bootstrap -->
+    <script src="/front/resources/plugin/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper -->
+    <script src="/front/resources/plugin/swiper/js/swiper.min.js"></script>
+
+    <!-- chartjs -->
+    <link rel="stylesheet" href="https://uicdn.toast.com/chart/latest/toastui-chart.min.css" />
+    <script src="https://uicdn.toast.com/chart/latest/toastui-chart.min.js"></script>
+</head>
+
+<body>
+
+    <div class="test-wrap">
+        <div class="test-header">
+            <div class="d-flex align-items-end">
+                <h1>책 읽는 거인 훈련 결과 보고서</h1>
+            </div>
+        </div>
+        <div class="test-body">
+            <div class="test-result">
+                <div class="print-watermark"></div>
+
+                <h2 class="subtitle mb-4">기본 정보</h2>
+                <table class="test-tr-result-report-table">
+                    <colgroup>
+                        <col style="width: 13%;">
+                        <col style="width: 37%;">
+                        <col style="width: 13%;">
+                        <col style="width: 37%;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>
+                                <span>이름 (레벨)</span>
+                            </th>
+                            <td>홍길동 (3레벨)</td>
+                            <th>
+                                <span>학교 정보</span>
+                            </th>
+                            <td>홍길 학교 3학년</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <span>훈련 기간</span>
+                            </th>
+                            <td>조회된 훈련 첫 회 완료일 ~ 마지막 회 완료일</td>
+                            <th>
+                                <span>조회 정보</span>
+                            </th>
+                            <td>ㅇ레벨 ㅇㅇ회차 ~ ㅇㅇ회차</td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <span>센터명</span>
+                            </th>
+                            <td>ㅇㅇㅇ센터</td>
+                            <th>
+                                <span>담당 교사</span>
+                            </th>
+                            <td>센터장 명 또는 배정된 담당교사명</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2 class="subtitle mb-4">훈련 결과</h2>
+                <table class="test-tr-result-report-table2">
+                    <colgroup>
+                        <col style="width: 8%;">
+                        <col style="width: 8%;">
+                        <col style="width: 8%;">
+                        <col style="width: 8%;">
+                        <col style="width: 8%;">
+                        <col style="width: 8%;">
+                        <col style="width: 8%;">
+                        <col style="width: 8%;">
+                        <col style="width: 8%;">
+                        <col style="width: 8%;">
+                        <col style="width: 8%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th colspan="11">몰입독서법</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>항목</th>
+                            <th>집중력 훈련</th>
+                            <th>기억력 훈련</th>
+                            <th>넓게보기</th>
+                            <th>지문적용</th>
+                            <th>단문적용</th>
+                            <th>박학다식<br>Quiz</th>
+                            <th>독서테스트</th>
+                            <th>요약문<br>고르기</th>
+                            <th>독해평가<br>테스트</th>
+                            <th>어희력<br>테스트</th>
+                        </tr>
+                        <tr class="bg-white">
+                            <th>정답률</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="bg">
+                            <th class="text-muted">전체 학생<br>정답률</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                <h2 class="subtitle mb-4">몰입독서법</h2>
+                <div class="mb-4">
+                    <canvas id="readingChart" height="100"></canvas>
+                </div>
+                <div class="test-tr-result-report-chart-legends">
+                    <div class="item">
+                    <i class="chart-color-1"></i>
+                    집중력훈련
+                    </div>
+                    <div class="item">
+                    <i class="chart-color-2"></i>
+                    기억력훈련
+                    </div>
+                    <div class="item">
+                    <i class="chart-color-3"></i>
+                    넓게보기
+                    </div>
+                    <div class="item">
+                    <i class="chart-color-4"></i>
+                    단문적용
+                    </div>
+                    <div class="item">
+                    <i class="chart-color-5"></i>
+                    지문적용
+                    </div>
+                    <div class="item">
+                    <i class="chart-color-6"></i>
+                    박학다식
+                    </div>
+                    <div class="item">
+                    <i class="chart-color-7"></i>
+                    어휘력테스트
+                    </div>
+                    <div class="item">
+                    <i class="chart-color-8"></i>
+                    요약문테스트
+                    </div>
+                    <div class="item">
+                    <i class="chart-color-9"></i>
+                    독해평가테스트
+                    </div>
+                    <div class="item">
+                    <i class="chart-color-10"></i>
+                    도서테스트
+                    </div>
+                    <div class="item">
+                    <i class="chart-color-11"></i>
+                    어휘력훈련
+                    </div>
+                </div>
+
+                <div class="print-page-break-after"></div>
+                <h2 class="subtitle mb-4">몰입독서법 다독 내역</h2>
+                <table class="table table-bordered mb-5">
+                    <colgroup>
+                        <col style="width: 10%;">
+                        <col>
+                        <col style="width: 15%;">
+                        <col style="width: 15%;">
+                        <col style="width: 12%;">
+                        <col style="width: 12%;">
+                    </colgroup>
+                    <thead class="text-center">
+                        <tr>
+                            <th>권수</th>
+                            <th>도서명</th>
+                            <th>읽은 날짜</th>
+                            <th>읽은 시간</th>
+                            <th>이해도</th>
+                            <th>몰입도</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-center">
+                        <tr>
+                            <td>5</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2 class="subtitle mb-4">독해력 훈련</h2>
+                <table class="test-tr-result-report-table2">
+                    <colgroup>
+                        <col style="width: 8%;">
+                        <col style="width: 8%;">
+                        <col style="width: 8%;">
+                        <col style="width: 8%;">
+                        <col style="width: 8%;">
+                        <col style="width: 8%;">
+                        <col style="width: 8%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th colspan="7">독해력 훈련</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>항목</th>
+                            <th>독해다지기(입문)</th>
+                            <th>문학(분석적 지능)</th>
+                            <th>문학(감성적 지능)</th>
+                            <th>비문학독해</th>
+                            <th>교과서독해(기타)</th>
+                            <th>교과서독해(국어)</th>
+                        </tr>
+                        <tr class="bg-white">
+                            <th>평균 점수</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="bg-white">
+                            <th>평균 읽기 속도(분)</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="bg-light">
+                            <th class="text-muted">전체 학생 평균 점수</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="bg-light">
+                            <th class="text-muted">전체 학생 평균 읽기 속도</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="mb-4">
+                    <canvas id="trainingChart" height="100"></canvas>
+                </div>
+                <div class="test-tr-result-report-chart-legends">
+                    <div class="item">
+                        <i class="chart-color-12"></i>
+                        문학(분석적지능)
+                    </div>
+                    <div class="item">
+                        <i class="chart-color-13"></i>
+                        문학(감성적지능)
+                    </div>
+                    <div class="item">
+                        <i class="chart-color-14"></i>
+                        교과서독해
+                    </div>
+                    <div class="item">
+                        <i class="chart-color-15"></i>
+                        비문학독해
+                    </div>
+                    <div class="item">
+                        <i class="chart-color-16"></i>
+                        읽기속도
+                    </div>
+                </div>
+
+                <div class="print-page-break-after"></div>
+                <h2 class="subtitle mb-4">독해력 훈련 상세 정보</h2>
+                <table class="table table-bordered text-center mb-5">
+                    <colgroup>
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                        <col style="width: 10%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th rowspan="2" class="align-middle">회차</th>
+                            <th rowspan="2" class="align-middle">학습일자</th>
+                            <th rowspan="2" class="align-middle">학습내용</th>
+                            <th colspan="2">점수</th>
+                            <th rowspan="2" class="align-middle">읽기 속도</th>
+                            <th rowspan="2" class="align-middle">읽기 시간</th>
+                            <th colspan="2">문제 풀이 시간</th>
+                        </tr>
+                        <tr>
+                            <th>1차</th>
+                            <th>2차</th>
+                            <th>1차</th>
+                            <th>2차</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th rowspan="2">1회</th>
+                            <td rowspan="2">2021.10.01.</td>
+                            <td>문학(분석적지능)</td>
+                            <td rowspan="2"></td>
+                            <td rowspan="2"></td>
+                            <td rowspan="2"></td>
+                            <td rowspan="2"></td>
+                            <td rowspan="2"></td>
+                            <td rowspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td>문학(감성적지능)</td>
+                        </tr>
+                        <tr>
+                            <th>2회</th>
+                            <td>2021.10.03.</td>
+                            <td>교과서독해</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">3회</th>
+                            <td rowspan="2">2021.10.05.</td>
+                            <td>문학(분석적지능)</td>
+                            <td rowspan="2"></td>
+                            <td rowspan="2"></td>
+                            <td rowspan="2"></td>
+                            <td rowspan="2"></td>
+                            <td rowspan="2"></td>
+                            <td rowspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td>문학(감성적지능)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                <h2 class="subtitle mb-4">선생님 회차별 코멘트</h2>
+                <table class="table table-bordered text-center mb-5">
+                    <colgroup>
+                        <col style="width: 10%;">
+                        <col>
+                        <col style="width: 10%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>훈련 과정</th>
+                            <th>내용</th>
+                            <th>작성일</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ㅇ레벨 1회차</td>
+                            <td class="text-left">내용</td>
+                            <td>21.09.26</td>
+                        </tr>
+                        <tr>
+                            <td>ㅇ레벨 1회차</td>
+                            <td class="text-left">내용</td>
+                            <td>21.09.26</td>
+                        </tr>
+                        <tr>
+                            <td>ㅇ레벨 1회차</td>
+                            <td class="text-left">내용</td>
+                            <td>21.09.26</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2 class="subtitle mb-4">총평</h2>
+                <div class="mb-2">
+                    <textarea name="" id="" cols="" rows="5" class="form-control"></textarea>
+                </div>
+                <div class="text-right hide-print">
+                    <button class="btn btn-dark">수정</button>
+                    <button class="btn btn-dark">저장</button>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="test-footer">
+            <div class="text-center">
+                <button type="button" class="btn btn-success btn-xl" style="width:265px" onclick="window.print()"><i class="fas fa-print mr-2"></i>출력하기</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ui 관련 -->
+    <!-- <script src="/front/resources/js/ui.js"></script> -->
+    <script src="/front/resources/plugin/chart/chart.min.js"></script>
+    <script>
+        var readingCtx = document.getElementById('readingChart').getContext('2d');
+        var readingChart = new Chart(readingCtx, {
+          type: 'bar',
+          data: {
+            labels: ['1회', '2회', '3회', '4회', '5회', '6회', '7회', '8회', '9회', '10회', '11회', '12회'],
+            datasets: [
+              {
+                label: 'Dataset 1',
+                data: [1,2,3,-4,5,6,7,8,9,1,-2,3],
+                backgroundColor: [
+                  '#e56785',
+                  '#e899a2',
+                  '#f9b730',
+                  '#e9de4c',
+                  '#9ecfb1',
+                  '#9fd2d6',
+                  '#68b1cf',
+                  '#65be88',
+                  '#1d5693',
+                  '#50438d',
+                  '#b7a9c9',
+                  '#00a9ff',
+                ],
+              },
+              {
+                label: 'Dataset 2',
+                data: [2,3,4,5,6,7,8,9,1,2,3,4],
+                backgroundColor: [
+                  '#9ecfb1',
+                  '#9fd2d6',
+                  '#68b1cf',
+                  '#65be88',
+                  '#1d5693',
+                  '#50438d',
+                  '#b7a9c9',
+                  '#00a9ff',
+                  '#e56785',
+                  '#e899a2',
+                  '#f9b730',
+                  '#e9de4c',
+                ],
+              },
+            ]
+          },
+          options: {
+            plugins: {
+              legend: {
+                display: false
+              }
+            },
+            scales: {
+                x: {
+                  stacked: true
+                },
+                y: {
+                  stacked: true,
+                  beginAtZero: true
+                }
+            }
+          }
+        });
+      
+        var trainingCtx = document.getElementById('trainingChart').getContext('2d');
+        var trainingChart = new Chart(trainingCtx, {
+          type: 'bar',
+          data: {
+            labels: ['1회', '2회', '3회', '4회', '5회', '6회', '7회', '8회', '9회', '10회', '11회', '12회'],
+            datasets: [
+            {
+                label: '읽기속도',
+                yAxisId: 'B',
+                data: [1,2,3,4,5,6,7,8,8,1,2,3],
+                borderColor: '#785fff',
+                backgroundColor: '#785fff',
+                type: 'line',
+                order: 0
+              },
+              {
+                label: 'Dataset 1',
+                yAxisID: 'A',
+                data: [1,2,3,4,5,6,7,8,9,1,2,3],
+                backgroundColor: [
+                  '#00a9ff',
+                  '#ffb83f',
+                  '#ff5a46',
+                  '#01bd9f',
+                  '#785fff',
+                  '#00a9ff',
+                  '#ffb83f',
+                  '#ff5a46',
+                  '#01bd9f',
+                  '#785fff',
+                  '#00a9ff',
+                  '#ffb83f'
+                ],
+                order: 1
+              },
+              {
+                label: 'Dataset 2',
+                yAxisID: 'A',
+                data: [2,3,4,5,6,7,8,9,1,2,3,4],
+                backgroundColor: [
+                  '#ff5a46',
+                  '#01bd9f',
+                  '#785fff',
+                  '#00a9ff',
+                  '#ffb83f',
+                  '#ff5a46',
+                  '#01bd9f',
+                  '#785fff',
+                  '#00a9ff',
+                  '#ffb83f',
+                  '#00a9ff',
+                  '#ffb83f'
+                ],
+                order: 1
+              },
+            ]
+          },
+          options: {
+            plugins: {
+              legend: {
+                display: false
+              }
+            },
+            scales: {
+              A: {
+                  type: 'linear',
+                  position: 'left',
+              },
+              B: {
+                  grid: {
+                    display: false
+                  },
+                  type: 'linear',
+                  position: 'right',
+                  ticks: {
+                    max: 10,
+                    min: 0
+                  }
+              }
+            }
+          }
+        });
+      </script>
+</body>
+</html>
